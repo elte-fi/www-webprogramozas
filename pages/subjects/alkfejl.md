@@ -20,13 +20,13 @@ Környezet
 
 * Összetett feladat megadása funkcionális és nem funkcionális követelmények specifikálásával. 
 * Határidők:
-    * [Projektötlet](#projektötlet)  
+    * [Projektötlet](#/subjects/alkfejl#projektötlet)  
       4\. tanulmányi hét (2017.10.08.)
-    * [Backend megvalósítása](#backend-megvalósítása)  
+    * [Backend megvalósítása](#/subjects/alkfejl#backend-megvalósítása)  
       7\. tanulmányi hét (2017.10.29)
-    * [Működő prototípus megvalósítása](#működő-prototípus)  
+    * [Működő prototípus megvalósítása](#/subjects/alkfejl#működő-prototípus)  
       10\. tanulmányi hét (2017.11.22)
-    * [Kész alkalmazás, dokumentáció, bemutatás](#kész-alkalmazás)  
+    * [Kész alkalmazás, dokumentáció, bemutatás](#/subjects/alkfejl#kész-alkalmazás)  
       Határidő: Utolsó gyakorlat
 
 ### A beadandó feladat

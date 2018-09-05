@@ -2,13 +2,13 @@
   { 
     "name": "Programozási környezet fejlesztése",
     "description": "Különböző oktatási és módszertani igényeket kiszolgáló webes programozási környezet fejlesztése. A felület egy egyoldalas alkalmazás, amely REST API-n keresztül kapcsolódik a szerveroldali logikához, ahol a programkódok virtuális konténerekben futnak le. Jelenleg TypeScript és C++ nyelveket támogatja a környezet.",
-    "url": "#projects/progenv",
+    "url": "#/projects/progenv",
     "color": "green"
   },
   { 
     "name": "Adatvizualizációs projekt",
     "description": "Adatok megjelenítése alacsony és magas szintű eszközök segítségével. Specializált platformok és meglévő függvénykönyvtárak használata, valamint egyedi grafikonok és architektúrák készítése modern webes technológiákkal. Ösztöndíj-lehetőséggel!",
-    "url": "#projects/datavis",
+    "url": "#/projects/datavis",
     "color": "yellow"
   }
 ]

@@ -1,32 +1,14 @@
 [
   { 
-    "name": "Web-fejlesztés 2.", 
-    "details": "Prog. informatikus BSc",
-    "url": "#/subjects/webfejl2-pti",
-    "color": "gray"
-  },
-  { 
     "name": "Alkalmazások fejlesztése", 
     "details": "Prog. informatikus BSc (C)",
     "url": "#/subjects/alkfejl",
     "color": "primary"
   },
   { 
-   "name": "Webes alkalmazásfejlesztés 1.",
-   "details": "Prog. informatikus MSc",
-   "url": "#/subjects/weaf1",
-   "color": "gray"
-  },
-  { 
     "name": "JavaScript techológiák", 
     "details": "Prog. informatikus BSc",
     "url": "#/subjects/jstech",
-    "color": "primary"
-  },
-  { 
-    "name": "Korszerű webfejlesztés", 
-    "details": "Prog. informatikus BSc",
-    "url": "#/subjects/korszweb",
     "color": "primary"
   },
   { 
@@ -40,11 +22,29 @@
     "details": "Informatika osztatlan tanárképzés",
     "url": "#/subjects/webfejl2-otak",
     "color": "primary"
-   },
+  },
+  { 
+    "name": "Web-fejlesztés 2.", 
+    "details": "Prog. informatikus BSc",
+    "url": "#/subjects/webfejl2-pti",
+    "color": "gray"
+  },
+  { 
+    "name": "Webes alkalmazásfejlesztés 1.",
+    "details": "Prog. informatikus MSc",
+    "url": "#/subjects/weaf1",
+    "color": "gray"
+  },
   { 
     "name": "Modern technológiák 2.",
     "details": "Informatika specializáció",
     "url": "#/subjects/moderntech2",
+    "color": "gray"
+  },
+  { 
+    "name": "Korszerű webfejlesztés", 
+    "details": "Prog. informatikus BSc",
+    "url": "#/subjects/korszweb",
     "color": "gray"
   },
   { 

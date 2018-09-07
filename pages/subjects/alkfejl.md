@@ -14,20 +14,38 @@ Célkitűzés
 Környezet
 : Az órai munkákat a lokális gépeken telepített futtató- és fejlesztőkörnyezetek segítségével igyekszünk megoldani. A használt környezetek és szerkesztőprogramok a választott technológiáktól is függenek. Bizonyos esetekben felhőalkalmazások segítségét is igénybe vehetjük.
 
+## Tematika
+
+1. 2018.09.10.-i hét: HTML és CSS alapok
+2. 2018.09.17.-i hét: Java dinamikus weboldalak
+3. 2018.09.24.-i hét: Java REST API -- vezérlők és modellek
+4. 2018.10.01.-i hét: Java REST API -- hitelesítés és jogosultságkezelés
+5. 2018.10.08.-i hét: TypeScript
+6. 2018.10.15.-i hét: Angular -- telepítés, komponensek, stílusok, menü
+7. 2018.10.22.-i hét: 1. bemutató
+8. 2018.10.29.-i hét: Őszi szünet
+9. 2018.11.05.-i hét: Angular -- dinamikus adatok, komponensek kapcsolata
+10. 2018.11.12.-i hét: Angular -- űrlapkezelés, service-ek
+11. 2018.11.19.-i hét: Angular -- aszinkronitás kezelése, REST API használata
+12. 2018.11.26.-i hét: Angular -- hitelesítés
+13. 2018.12.03.-i hét: Konzultáció
+14. 2018.12.10.-i hét: 2. bemutató
+
 ## Számonkérés
 
 ### Az értékelés összetevői
 
-* Összetett feladat megadása funkcionális és nem funkcionális követelmények specifikálásával. 
+* Összetett webes feladat készítése az órán tanult technológiákkal
 * Határidők:
     * [Projektötlet](#/subjects/alkfejl#projektötlet)  
-      4\. tanulmányi hét (2017.10.08.)
-    * [Backend megvalósítása](#/subjects/alkfejl#backend-megvalósítása)  
-      7\. tanulmányi hét (2017.10.29)
+      4\. tanulmányi hét (2017.10.01.)
+    * [Backend megvalósítása](#/subjects/alkfejl#backend-megvalósítása) és 1. bemutató   
+      7\. tanulmányi hét (2018.10.22)
     * [Működő prototípus megvalósítása](#/subjects/alkfejl#működő-prototípus)  
-      10\. tanulmányi hét (2017.11.22)
+      10\. tanulmányi hét (2017.11.12)
     * [Kész alkalmazás, dokumentáció, bemutatás](#/subjects/alkfejl#kész-alkalmazás)  
-      Határidő: Utolsó gyakorlat
+      14\. tanulmányi hét (2018.12.10., utolsó gyakorlat)
+
 
 ### A beadandó feladat
 
@@ -46,7 +64,7 @@ A fejlesztendő alkalmazásnak hasonló komplexitásúnak kell lennie, mint ami 
     + REST API
     + authorizált végpontokkal
 - Kliensoldal
-    + technológiát illetően az órán megismert Angular keretrendszert kell használni (2+ verzió).
+    + technológiát illetően az órán megismert Angular keretrendszert kell használni (6+ verzió).
     + legalább három tábla adatait szerkeszteni kell tudni a felületen: lista, új, módosít, töröl (vagy inaktívvá tesz)
     + legyenek benne csak hitelesítés után elérhető funkciók (autentikáció)
     + ügyelni kell, hogy csak a megfelelő adatokhoz férjen hozzá a megfelelő felhasználó (autorizáció)
@@ -104,7 +122,7 @@ Utolsó fázisban összekötjük a backendet a frontenddel, a felületek működ
 
 ### Bemutatás
 
-A bemutatás az utolsó gyakorlaton történik. Minden csapatra kb. 9 perc jut, de számítsunk arra, hogy ekkor túlléphetjük a gyakorlat időkeretét. A bemutatónak tartalmaznia kell:
+A bemutatás két fázisban történik: a félév közepén és a félév végén. Félév közepén az első két határidőhöz tartozó munka bemutatása történik, azaz a szerveroldali komponensek bemutatása. A teljes alkalmazás bemutatására az utolsó gyakorlaton kerül sor. 20 fős gyakorlatokkal számolva minden csapatra kb. 9 perc jut, de számítsunk arra, hogy bemutatókkor alkalomadtán túlléphetjük a gyakorlat időkeretét. A bemutatónak tartalmaznia kell:
 
 - a feladat ismertetését (fél perc)
 - az alkalmazás bemutatását (2 perc)

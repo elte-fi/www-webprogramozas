@@ -16,10 +16,10 @@ Környezet
 
 ## Tematika
 
-1. 2018.09.10.-i hét: HTML és CSS alapok
-2. 2018.09.17.-i hét: Java dinamikus weboldalak
-3. 2018.09.24.-i hét: Java REST API -- vezérlők és modellek
-4. 2018.10.01.-i hét: Java REST API -- hitelesítés és jogosultságkezelés
+1. 2018.09.10.-i hét: [Alapok: HTTP, JSON, architektúrák, REST](#/subjects/alkfejl/01)
+2. 2018.09.17.-i hét: Java REST API -- vezérlők és modellek
+3. 2018.09.24.-i hét: Java REST API -- hitelesítés és jogosultságkezelés
+4. 2018.10.01.-i hét: HTML és CSS alapok
 5. 2018.10.08.-i hét: TypeScript
 6. 2018.10.15.-i hét: Angular -- telepítés, komponensek, stílusok, menü
 7. 2018.10.22.-i hét: 1. bemutató
@@ -146,14 +146,16 @@ A bemutatás után a gyakorlatvezető és a csoporttagok is kérdéseket tehetne
 
 ## Segédanyagok
 
-* [A tárgy e félévi Github oldala](https://github.com/horvathgyozo/alkfejl-2017)
+* [HTML tananyag (Abonyi-Tóth Andor): A weblapkészítés technikája (HTML5, CSS3) és ergonómiája](http://tamop412.elte.hu/tananyagok/weblapkeszites)
+* [A böngésző mint alkalmazásfejlesztési platform (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/kliens/)
+* [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)
+* [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/)
+* [Webadatbázis-programozás (elektronikus tananyag, PHP alapokon, de a tervezés, az MNV-minta bemutatása és a kliensoldali fejlesztés része itt is aktuális)](http://ade.web.elte.hu/wabp)
+* [A tárgy tavalyi Github oldala](https://github.com/horvathgyozo/alkfejl-2017)
 * [Segítség a dokumentációhoz](https://github.com/horvathgyozo/alkfejl_minta)
 * Mintadokumentációk
     - [Képgalériás alkalmazás (Bartalos Gábor)](https://github.com/KisGabo/gallery-elteik/wiki)
     - [Szerepjáték (Teleki Miklós)](https://github.com/Telmike91/alkfejlszerver)
-* [HTML tananyag (Abonyi-Tóth Andor): A weblapkészítés technikája (HTML5, CSS3) és ergonómiája](http://tamop412.elte.hu/tananyagok/weblapkeszites)
-* [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/)
-* [Webadatbázis-programozás (elektronikus tananyag, PHP alapokon, de a tervezés, az MNV-minta bemutatása és a kliensoldali fejlesztés része itt is aktuális)](http://ade.web.elte.hu/wabp)
 
 ## Oktatók
 

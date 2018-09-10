@@ -20,11 +20,11 @@ Környezet
 
 ### Az értékelés összetevői
 
-* Beadandó feladat: JavaScript (DOM)
+* JavaScript zh (DOM)
     Határidő: TBA
 * Beadandó feladat: JavaScript (canvas)
     Határidő: TBA
-* Beadandó feladat: PHP
+* PHP zh
     Határidő: TBA
 
 ### A beadandók értékelése
@@ -39,13 +39,16 @@ Környezet
 ### Jegyszerzés feltételei
 
 * Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Három elfogadott beadandó
+* Legalább 2-es zh
+* Legalább 2-esre elfogadott beadandó
 
 ### Értékelés
 
-* A három beadandó feladat jegyének átlaga
+* A három értékelési összetevő feladat jegyének átlaga
 
 ## Előadások
+
+1. 2018.09.10. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
 
 ## Segédanyagok
 

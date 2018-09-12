@@ -5,6 +5,12 @@
     "url": "#/projects/progenv",
     "color": "green"
   },
+  {
+    "name": "Elosztott adatfeldolgozó rendszer (DDPS) vizualizációja",
+    "description": "Elosztott adatfeldolgozó rendszerek mint Apache Spark vagy Apache Flink végrehajtási gráfjának vizualizációja.",
+    "url": "#/projects/ddps",
+    "color": "blue"
+  },
   { 
     "name": "Adatvizualizációs projekt",
     "description": "Adatok megjelenítése alacsony és magas szintű eszközök segítségével. Specializált platformok és meglévő függvénykönyvtárak használata, valamint egyedi grafikonok és architektúrák készítése modern webes technológiákkal. Ösztöndíj-lehetőséggel!",

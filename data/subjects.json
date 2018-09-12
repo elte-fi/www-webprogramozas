@@ -24,6 +24,12 @@
     "color": "primary"
   },
   { 
+    "name": "Webes szoftvertechnológia labor",
+    "details": "Prog. informatikus MSc",
+    "url": "#/webtech",
+    "color": "primary"
+  },
+  { 
     "name": "Web-fejlesztés 2.", 
     "details": "Prog. informatikus BSc",
     "url": "#/subjects/webfejl2-pti",

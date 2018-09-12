@@ -21,6 +21,6 @@
 <section class="columns">
   <a href="#/webtech" class="primary card">
     <strong>Webes szoftvertechnológia labor</strong>
-    <p>A webes szoftvertechnológia labor keretében lehetőség van különböző webes projektekben részt venni. A projektek elsősorban a frontendre fókuszálnak, szerveroldalon az üzleti rétegig terjednek.</p>
+    <p>A webes szoftvertechnológia labor keretében lehetőség van különböző webes projektekben részt venni.</p>
   </a>
 </section>

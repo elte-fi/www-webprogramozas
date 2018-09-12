@@ -142,7 +142,7 @@ A bemutatás után a gyakorlatvezető és a csoporttagok is kérdéseket tehetne
 
 ### Értékelés
 
-* A beadandó feladatokra 0-10 pont kapható, ezt a csoport két tagja saját belátása szerint osztja el egymás között.
+* Mindkét bemutatóra 0-10 pont kapható, ezt a csoport két tagja saját belátása szerint osztja el egymás között (1-5). Félév végén ezek átlagból alakul ki a jegy. 
 
 ## Segédanyagok
 

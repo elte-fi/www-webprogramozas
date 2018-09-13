@@ -17,8 +17,9 @@ a.card strong .label {
   margin-left: 10px;
   padding-right: .6em;
   padding-left: .6em;
-  border-radius: 10rem;
-  background-color: darkorange;
+  border-radius: 3px;
+  background-color: white;
+  color: darkgray;
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;
@@ -32,8 +33,9 @@ a.card strong .label {
 <section class="columns">
   <a data-each="projects" href="{{url}}" class="{{color}} card">
     <strong>{{name}}
-      <!-- <span class="label">web</span>
-      <span class="label">web2</span> -->
+      <span data-each="{{labels}}" class="label">
+        {{labels:title}}
+      </span>
     </strong>
     <p>{{description}}</p>
   </a>

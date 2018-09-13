@@ -1,20 +1,57 @@
 [
   { 
-    "name": "Programozási környezet fejlesztése",
+    "name": "Webes programozási környezet fejlesztése",
     "description": "Különböző oktatási és módszertani igényeket kiszolgáló webes programozási környezet fejlesztése. A felület egy egyoldalas alkalmazás, amely REST API-n keresztül kapcsolódik a szerveroldali logikához, ahol a programkódok virtuális konténerekben futnak le. Jelenleg TypeScript és C++ nyelveket támogatja a környezet.",
     "url": "#/projects/progenv",
-    "color": "green"
+    "color": "green",
+    "labels": [
+      { "title": "web", "color": "white" }
+    ]
   },
   {
     "name": "Elosztott adatfeldolgozó rendszer (DDPS) vizualizációja",
     "description": "Elosztott adatfeldolgozó rendszerek mint Apache Spark vagy Apache Flink végrehajtási gráfjának vizualizációja.",
     "url": "#/projects/ddps",
-    "color": "blue"
+    "color": "blue",
+    "labels": [
+      { "title": "web", "color": "white" },
+      { "title": "ddps", "color": "white" }
+    ]
   },
   { 
     "name": "Adatvizualizációs projekt",
     "description": "Adatok megjelenítése alacsony és magas szintű eszközök segítségével. Specializált platformok és meglévő függvénykönyvtárak használata, valamint egyedi grafikonok és architektúrák készítése modern webes technológiákkal. Ösztöndíj-lehetőséggel!",
     "url": "#/projects/datavis",
-    "color": "yellow"
+    "color": "yellow",
+    "labels": [
+      { "title": "web", "color": "white" }
+    ]
+  },
+  { 
+    "name": "Webassembly",
+    "description": "A Webassembly a modern web egyik következő nagy lépése lehet. Más nyelvben írt modulok erre fordítva hatékonyan futnak a böngészőben. A feladat a Webassembly képességeinek próbálgatása.",
+    "url": "#/projects/webassembly",
+    "color": "green",
+    "labels": [
+      { "title": "web", "color": "white" }
+    ]
+  },
+  { 
+    "name": "WebRTC -- Peer-to-peer összekötött böngészők",
+    "description": "A sokféle architekturális lehetőség közül nagyon izgalmasak a közvetlen összeköttetésben álló böngészők, amelyek kollaboratív munkára vagy játékra adnak lehetőséget.",
+    "url": "#/projects/webrtc",
+    "color": "blue",
+    "labels": [
+      { "title": "web", "color": "white" }
+    ]
+  },
+  { 
+    "name": "Testreszabható webes szövegszerkesztő fejlesztése",
+    "description": "Webes WYSIWYG szerkesztő fejlesztése, amely testreszabható és speciális elemekkel kiegészíthető. Komponensalapú fejlesztéssel, az egyik legmodernebb elérhető library-vel. Feladat a szerkesztő további funkciókkal való felruházása tananyagok írásához.",
+    "url": "#/projects/webeditor",
+    "color": "yellow",
+    "labels": [
+      { "title": "web", "color": "white" }
+    ]
   }
 ]

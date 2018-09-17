@@ -165,9 +165,9 @@ Horváth Győző
 
 ### Gyakorlatvezetők
 
-* Godzsák Dávid
 * Horváth Győző
 * Kereszti Krisztián
+* Kereszti Zalán
 * Móger Tibor
 * Rakonczai Sándor
 * Visnovitz Márton

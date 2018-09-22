@@ -18,7 +18,7 @@ Környezet
 
 1. 2018.09.10.-i hét: [Alapok: HTTP, JSON, architektúrák, REST](#/subjects/alkfejl/01)
 2. 2018.09.17.-i hét: [Java REST API -- vezérlők és modellek](#/subjects/alkfejl/02)
-3. 2018.09.24.-i hét: Java REST API -- hitelesítés és jogosultságkezelés
+3. 2018.09.24.-i hét: Java REST API -- [hitelesítés és jogosultságkezelés](#/subjects/alkfejl/03_authentication)
 4. 2018.10.01.-i hét: HTML és CSS alapok
 5. 2018.10.08.-i hét: TypeScript
 6. 2018.10.15.-i hét: Angular -- telepítés, komponensek, stílusok, menü

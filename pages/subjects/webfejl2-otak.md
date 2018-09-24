@@ -12,7 +12,13 @@ Célkitűzés
 : A dinamikus kliens- és szerveroldali webprogramozás alapjainak a megismertetése. A félév első felében a JavaScript nyelvvel és a hozzá kapcsolódó alapfokú webes technológiákkal ismerkednek meg a hallgatók, a félév második felében a PHP nyelven keresztül ismerkednek meg a szerveroldali webprogramozás alapjaival.
 
 Környezet
-: A szerveroldali dinamikus weblapok készítését a webprogramozas.inf.elte.hu szerver segítségével végezzük el. A szerveren Apache webszerver, 7.0.9-es verziójú PHP fut. A szerverre a félév elején, a gyakorlati jelentkezések lejártakor minden hallgató kap hozzáférést. A webprogramozás szerverre kell a beadandó feladatokat feltölteni, ezen folyik a félév második felében a gyakorlati munka.
+: A szerveroldali dinamikus weblapok készítését a webprogramozas.inf.elte.hu szerver segítségével végezzük el. A szerveren NginX webszerver, 7.0.9-es verziójú PHP fut. A szerverre a félév elején, a gyakorlati jelentkezések lejártakor minden hallgató kap hozzáférést. A webprogramozás szerverre kell a beadandó feladatokat feltölteni, ezen folyik a félév második felében a gyakorlati munka.
+
+## Előadások
+
+1. 2018.09.10. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
+2. 2018.09.17. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
+3. 2018.09.24. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
 
 ## Számonkérés
 
@@ -45,11 +51,6 @@ Környezet
 ### Értékelés
 
 * A három értékelési összetevő feladat jegyének átlaga
-
-## Előadások
-
-1. 2018.09.10. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
-2. 2018.09.17. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
 
 ## Segédanyagok
 

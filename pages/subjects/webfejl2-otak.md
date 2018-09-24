@@ -18,7 +18,7 @@ Környezet
 
 1. 2018.09.10. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
 2. 2018.09.17. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
-3. 2018.09.24. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
+3. 2018.09.24. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
 
 ## Számonkérés
 

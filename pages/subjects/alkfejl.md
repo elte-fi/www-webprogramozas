@@ -17,8 +17,8 @@ Környezet
 ## Tematika
 
 1. 2018.09.10.-i hét: [Alapok: HTTP, JSON, architektúrák, REST](#/subjects/alkfejl/01)
-2. 2018.09.17.-i hét: [Java REST API -- vezérlők és modellek](#/subjects/alkfejl/02)
-3. 2018.09.24.-i hét: Java REST API -- [hitelesítés és jogosultságkezelés](#/subjects/alkfejl/03_authentication)
+2. 2018.09.17.-i hét: [Java REST API -- adatbázis, modellek és vezérlők](#/subjects/alkfejl/02) ([Spring Boot cheat sheet](#/subjects/alkfejl/spring_boot_cheat_sheet), [Issue tracker alkalmazás](#/subjects/alkfejl/issue_tracker))
+3. 2018.09.24.-i hét: Java REST API -- [modellek közötti relációk](#/subjects/alkfejl/03), valamint [hitelesítés és jogosultságkezelés](#/subjects/alkfejl/spring_boot_secure_endpoints)
 4. 2018.10.01.-i hét: HTML és CSS alapok
 5. 2018.10.08.-i hét: TypeScript
 6. 2018.10.15.-i hét: Angular -- telepítés, komponensek, stílusok, menü

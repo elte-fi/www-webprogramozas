@@ -135,7 +135,7 @@ http
 
 Now if you try it in your REST client, it will give you a pop-up window, where you can fill out the username and password fields. For valid credentials you will get `200 OK`, for wrong credentials it you will see a `Not authenticated` or `Forbidden` error status for the secured endpoints!
 
-In a real application you have to provide the credentials in HTTP header in base64 format:
+In a real application you have to provide the credentials in HTTP header in [base64 format](http://www.utilities-online.info/base64):
 
 ```
 Authorization: Basic dXNlcjI6cGFzc3dvcmQ=

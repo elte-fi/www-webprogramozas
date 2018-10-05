@@ -101,15 +101,6 @@ protected void configure(HttpSecurity http) throws Exception {
 
 It means that requests are needed to be authorized ([authorizeRequests](https://docs.spring.io/spring-security/site/docs/current/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#authorizeRequests--)), every request should be authenticated, and for that use the form login method, and if it is unavailable, use the in-built HTTP Basic authentication.
 
-We can specify different rules for different endpoints using the `antMatchers()` method, as you can see in the following example:
-
-```java
-http
-    .authorizeRequests()
-        .antMatchers("/admin/**").hasRole("ADMIN")
-        .antMatchers("/**").hasRole("USER");
-```
-
 In our case:
 
 - we do not need form login
@@ -139,6 +130,15 @@ In a real application you have to provide the credentials in HTTP header in [bas
 
 ```
 Authorization: Basic dXNlcjI6cGFzc3dvcmQ=
+```
+
+For further refinements we can specify different rules for different endpoints using the `antMatchers()` method, as you can see in the following example:
+
+```java
+http
+    .authorizeRequests()
+        .antMatchers("/admin/**").hasRole("ADMIN")
+        .antMatchers("/**").hasRole("USER");
 ```
 
 ### Configure authentication entry point (optional)
@@ -197,7 +197,7 @@ public class CustomBasicAuthenticationEntryPoint extends BasicAuthenticationEntr
 
 ### Securing endpoints
 
-We will use the built-in method of Spring Security to secure our controller method endpoints. Put the following annotation [`@EnableGlobalMethodSecurity`](https://docs.spring.io/spring-security/site/docs/4.2.6.RELEASE/apidocs/org/springframework/security/config/annotation/method/configuration/EnableGlobalMethodSecurity.html) to the `WebSecurityConfig` class:
+We will use the built-in method of Spring Security to [secure our controller method endpoints](https://www.baeldung.com/spring-security-method-security). Put the following annotation [`@EnableGlobalMethodSecurity`](https://docs.spring.io/spring-security/site/docs/4.2.6.RELEASE/apidocs/org/springframework/security/config/annotation/method/configuration/EnableGlobalMethodSecurity.html) to the `WebSecurityConfig` class:
 
 ```java
 @EnableGlobalMethodSecurity(securedEnabled = true)
@@ -271,8 +271,8 @@ public class User {
 Seed the database with some user data:
 
 ```sql
-insert into user (username, password, enabled, role) values ('admin', 'a', 1, 'ROLE_ADMIN');
-insert into user (username, password, enabled, role) values ('user', 'u', 1, 'ROLE_USER'); 
+insert into user (username, password, enabled, role) values ('user1', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_ADMIN');
+insert into user (username, password, enabled, role) values ('user2', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER'); 
 ```
 
 Create a user repository with a `findByUsername` method:
@@ -283,7 +283,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 }
 ```
 
-Create a `UserDetailsService` implementation:
+Create a `UserDetailsService` implementation in `security/MyUserDetailsService.java` file:
 
 ```java
 @Service
@@ -308,7 +308,7 @@ public class MyUserDetailsService implements UserDetailsService {
 }
 ```
 
-And finally in `WebSecurityConfig`:
+And finally in `WebSecurityConfig.java` change the authentication service to the UserDetailsService:
 
 ```java
 @Autowired
@@ -324,7 +324,7 @@ protected void configureAuthentication(AuthenticationManagerBuilder auth) throws
 
 ### Registering and login a user
 
-Registering is saving a user into the database if the user does not exist. The login endpoint is authenticated by Spring Security, so if we reach the endpoint, that means, we gave the right credentials in HTTP headers.
+Registering is saving a user into the database if the user does not exist. The login endpoint is authenticated by Spring Security with HTTP Basic (user credential in the HTTP header), so if we reach the endpoint, that means, we gave the right credentials in HTTP headers.
 
 In the `UserController` class:
 
@@ -350,11 +350,88 @@ public ResponseEntity login(@RequestBody User user) {
 } 
 ```
 
+## Get the authenticated user in the controller
+
+There are [three ways](https://www.baeldung.com/get-user-in-spring-security) to achieve getting the logged in user information.
+
+### Principal as a method argument
+
+Asking for the principal as a method argument:
+
+```java
+public String currentUserName(Principal principal) {
+    String username = principal.getName();
+}
+```
+
+### Authentication as a method argument
+
+Authentication token provides more details:
+
+```java
+public String currentUserName(Authentication authentication) {
+    String username = authentication.getName();
+    String role = auth.getAuthorities().iterator().next().getAuthority(); // the first role
+}
+```
+
+### From HTTP request
+
+```java
+public String currentUserNameSimple(HttpServletRequest request) {
+    String username = request.getUserPrincipal().getName();
+}
+```
+
+## Storing the authenticated user during request
+
+To avoid multiple retrieval of the user object by username, we can store the selected user object during authentication into a request-scoped bean, and use it in the controllers. For this, create an `AutenticatedUser` class in the security package:
+
+```java
+@RequestScope
+@Component
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AuthenticatedUser {
+    private User user;
+}
+```
+
+`@Component` will make it a bean, which can be injected to other classes through `@Autowired`, and `@RequestScope` will make it alive during only the lifetime of a request.
+
+Now save the autheinticated user in `MyUserDetailsService` class:
+
+```java
+@Autowired 
+private AuthenticatedUser authenticatedUser;
+
+public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    // ...
+    User user = oUser.get();
+    authenticatedUser.setUser(user);
+    // ...
+}
+```
+
+And use it in the controller methods:
+
+```java
+@Autowired 
+private AuthenticatedUser authenticatedUser;
+
+public ResponseEntity<Iterable<Issue>> getAll() {
+    User user = authenticatedUser.getUser();
+}
+```
+
+
 ## References
 
 - [Spring Security reference](https://docs.spring.io/spring-security/site/docs/4.2.3.RELEASE/reference/htmlsingle/)
 - [Spring Security architecture](https://spring.io/guides/topicals/spring-security-architecture/)
 - [Spring Boot REST API with HTTP basic authentication](http://websystique.com/spring-security/secure-spring-rest-api-using-basic-authentication/#)
+- [JWT authentication in Spring Security](https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/)
 
 
 <!-- 

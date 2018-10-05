@@ -1,4 +1,4 @@
-# Alkalmazások fejlesztése -- 3. gyakorlat: REST API: securing endpoints (authentication and authorization)
+# Alkalmazások fejlesztése -- REST API: securing endpoints (authentication and authorization)
 
 ## Table of contents
 

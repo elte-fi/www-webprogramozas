@@ -85,9 +85,7 @@ Használhatjuk a [Quokka.js](https://quokkajs.com/docs/) plugint, ami helyben fu
 
 1. Define a variable with each basic type!
 
-2. Count
-
-    Define the `count` function, if we would like to use it in this way:
+2. Define the `count` function, if we would like to use it in this way:
 
     ```ts
     count([1, 11, 22, 4, 33], e => e % 2 === 0);
@@ -112,6 +110,12 @@ Használhatjuk a [Quokka.js](https://quokkajs.com/docs/) plugint, ami helyben fu
 
     ```ts
     let bt: BinaryTree<number>;
+    bt = new BinaryTree();
+    bt.createNode(3);
+    bt.Left = new BinaryTree(1);
+    bt.Right = new BinaryTree(5);
+    console.log(f1.Value, f1.Left.Value, f1.Right.Value);
+    console.log(f1.Left.Left.isEmpty());
     ```
 
 8. Define a generic LinkedList class!

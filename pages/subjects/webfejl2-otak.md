@@ -20,6 +20,7 @@ Környezet
 2. 2018.09.17. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
 3. 2018.09.24. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
 4. 2018.10.01. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/)
+5. 2018.10.08. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/)
 
 
 ## Számonkérés

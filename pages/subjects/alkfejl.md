@@ -21,7 +21,7 @@ Környezet
 3. 2018.09.24.-i hét: Java REST API -- [modellek közötti relációk (1-N)](#/subjects/alkfejl/03)
 4. 2018.10.01.-i hét: Java REST API -- [modellek közötti relációk (N-N)](#/subjects/alkfejl/03), valamint [hitelesítés és jogosultságkezelés](#/subjects/alkfejl/spring_boot_secure_endpoints)
 5. 2018.10.08.-i hét: [HTML és CSS alapok](#/subjects/alkfejl/html_css), [TypeScript](#/subjects/alkfejl/typescript), [git](#/subjects/alkfejl/git)
-6. 2018.10.15.-i hét: Angular -- telepítés, komponensek, stílusok, menü
+6. 2018.10.15.-i hét: [Angular -- telepítés, komponensek, stílusok, menü](#/subjects/alkfejl/angular1)
 7. 2018.10.22.-i hét: 1. bemutató
 8. 2018.10.29.-i hét: Őszi szünet
 9. 2018.11.05.-i hét: Angular -- dinamikus adatok, komponensek kapcsolata

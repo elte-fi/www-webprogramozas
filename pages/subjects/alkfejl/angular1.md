@@ -131,7 +131,7 @@ class MyComponent {
 
 my-component.component.html
 ```html
-<h1><{{ greeting }}/h1>
+<h1>{{ greeting }}</h1>
 ```
 
 ## 6. Development method (in this course)

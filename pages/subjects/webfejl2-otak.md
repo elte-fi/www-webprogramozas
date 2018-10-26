@@ -30,7 +30,7 @@ Környezet
 ### Az értékelés összetevői
 
 * JavaScript zh (DOM)
-    Határidő: TBA
+    Időpont: [2018.10.26. 14:00](#/subjects/webfejl2-otak/zh1-14) 2018.10.26. 16:00
 * Beadandó feladat: JavaScript (canvas)
     Határidő: TBA
 * PHP zh

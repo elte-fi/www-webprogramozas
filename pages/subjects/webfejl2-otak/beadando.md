@@ -28,6 +28,6 @@ Feladatod egy egyszerű játék elkészítése Canvas technológia segítségév
 ## Értékelés
 
 10-14 pont : 5  
-5-9 pont : 4
-1-4 pont : 3
-minimum elvárások megvannak : 2
+5-9 pont : 4  
+1-4 pont : 3  
+minimum elvárások megvannak : 2  

@@ -24,8 +24,8 @@ Környezet
 6. 2018.10.15.-i hét: [Angular -- telepítés, komponensek, stílusok, menü](#/subjects/alkfejl/angular1)
 7. 2018.10.22.-i hét: 1. bemutató
 8. 2018.10.29.-i hét: Őszi szünet
-9. 2018.11.05.-i hét: Angular -- dinamikus adatok, komponensek kapcsolata
-10. 2018.11.12.-i hét: Angular -- űrlapkezelés, service-ek
+9. 2018.11.05.-i hét: [Angular -- dinamikus adatok, komponensek kapcsolata](#/subjects/alkfejl/angular2)
+10. 2018.11.12.-i hét: [Angular -- űrlapkezelés, service-ek](#/subjects/alkfejl/angular2#4.-services)
 11. 2018.11.19.-i hét: Angular -- aszinkronitás kezelése, REST API használata
 12. 2018.11.26.-i hét: Angular -- hitelesítés
 13. 2018.12.03.-i hét: Konzultáció

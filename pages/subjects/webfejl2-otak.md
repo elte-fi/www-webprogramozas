@@ -26,6 +26,7 @@ Környezet
 8. 2018.10.29. őszi szünet
 9. 2018.11.05. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)
 10. 2018.11.12. [Bemenet feldolgozása, űrlapok kezelése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/08/)
+11. 2018.11.19. [Adattárolás, fájlkezelés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/09/)
 
 
 ## Számonkérés

@@ -19,7 +19,7 @@
 ## Projektek
 
 <section class="columns">
-  <a href="#/webtech" class="primary card">
+  <a href="#!/webtech" class="primary card">
     <strong>Webes szoftvertechnológia labor</strong>
     <p>A webes szoftvertechnológia labor keretében lehetőség van különböző webes projektekben részt venni.</p>
   </a>

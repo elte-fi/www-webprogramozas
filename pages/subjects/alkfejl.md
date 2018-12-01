@@ -16,17 +16,17 @@ Környezet
 
 ## Tematika
 
-1. 2018.09.10.-i hét: [Alapok: HTTP, JSON, architektúrák, REST](#/subjects/alkfejl/01)
-2. 2018.09.17.-i hét: [Java REST API -- adatbázis, modellek és vezérlők](#/subjects/alkfejl/02) ([Spring Boot cheat sheet](#/subjects/alkfejl/spring_boot_cheat_sheet), [Issue tracker alkalmazás](#/subjects/alkfejl/issue_tracker))
-3. 2018.09.24.-i hét: Java REST API -- [modellek közötti relációk (1-N)](#/subjects/alkfejl/03)
-4. 2018.10.01.-i hét: Java REST API -- [modellek közötti relációk (N-N)](#/subjects/alkfejl/03), valamint [hitelesítés és jogosultságkezelés](#/subjects/alkfejl/spring_boot_secure_endpoints)
-5. 2018.10.08.-i hét: [HTML és CSS alapok](#/subjects/alkfejl/html_css), [TypeScript](#/subjects/alkfejl/typescript), [git](#/subjects/alkfejl/git)
-6. 2018.10.15.-i hét: [Angular -- telepítés, komponensek, stílusok, menü](#/subjects/alkfejl/angular1)
+1. 2018.09.10.-i hét: [Alapok: HTTP, JSON, architektúrák, REST](#!/subjects/alkfejl/01)
+2. 2018.09.17.-i hét: [Java REST API -- adatbázis, modellek és vezérlők](#!/subjects/alkfejl/02) ([Spring Boot cheat sheet](#!/subjects/alkfejl/spring_boot_cheat_sheet), [Issue tracker alkalmazás](#!/subjects/alkfejl/issue_tracker))
+3. 2018.09.24.-i hét: Java REST API -- [modellek közötti relációk (1-N)](#!/subjects/alkfejl/03)
+4. 2018.10.01.-i hét: Java REST API -- [modellek közötti relációk (N-N)](#!/subjects/alkfejl/03), valamint [hitelesítés és jogosultságkezelés](#!/subjects/alkfejl/spring_boot_secure_endpoints)
+5. 2018.10.08.-i hét: [HTML és CSS alapok](#!/subjects/alkfejl/html_css), [TypeScript](#!/subjects/alkfejl/typescript), [git](#!/subjects/alkfejl/git)
+6. 2018.10.15.-i hét: [Angular -- telepítés, komponensek, stílusok, menü](#!/subjects/alkfejl/angular1)
 7. 2018.10.22.-i hét: 1. bemutató
 8. 2018.10.29.-i hét: Őszi szünet
-9. 2018.11.05.-i hét: [Angular -- dinamikus adatok, komponensek kapcsolata](#/subjects/alkfejl/angular2)
-10. 2018.11.12.-i hét: [Angular -- űrlapkezelés, service-ek](#/subjects/alkfejl/angular2#4.-services)
-11. 2018.11.19.-i hét: Angular -- [aszinkronitás kezelése](#/subjects/alkfejl/async), [REST API használata](#/subjects/alkfejl/angular3)
+9. 2018.11.05.-i hét: [Angular -- dinamikus adatok, komponensek kapcsolata](#!/subjects/alkfejl/angular2)
+10. 2018.11.12.-i hét: [Angular -- űrlapkezelés, service-ek](#!/subjects/alkfejl/angular2#4.-services)
+11. 2018.11.19.-i hét: Angular -- [aszinkronitás kezelése](#!/subjects/alkfejl/async), [REST API használata](#!/subjects/alkfejl/angular3)
 12. 2018.11.26.-i hét: Angular -- hitelesítés
 13. 2018.12.03.-i hét: Konzultáció
 14. 2018.12.10.-i hét: 2. bemutató
@@ -37,13 +37,13 @@ Környezet
 
 * Összetett webes feladat készítése az órán tanult technológiákkal
 * Határidők:
-    * [Projektötlet](#/subjects/alkfejl#projektötlet)  
+    * [Projektötlet](#!/subjects/alkfejl#projektötlet)  
       4\. tanulmányi hét (2017.10.01.)
-    * [Backend megvalósítása](#/subjects/alkfejl#backend-megvalósítása) és 1. bemutató   
+    * [Backend megvalósítása](#!/subjects/alkfejl#backend-megvalósítása) és 1. bemutató   
       7\. tanulmányi hét (2018.10.22)
-    * [Működő prototípus megvalósítása](#/subjects/alkfejl#működő-prototípus)  
+    * [Működő prototípus megvalósítása](#!/subjects/alkfejl#működő-prototípus)  
       10\. tanulmányi hét (2017.11.12)
-    * [Kész alkalmazás, dokumentáció, bemutatás](#/subjects/alkfejl#kész-alkalmazás)  
+    * [Kész alkalmazás, dokumentáció, bemutatás](#!/subjects/alkfejl#kész-alkalmazás)  
       14\. tanulmányi hét (2018.12.10., utolsó gyakorlat)
 
 

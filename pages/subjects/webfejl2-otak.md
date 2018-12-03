@@ -28,6 +28,7 @@ Környezet
 10. 2018.11.12. [Bemenet feldolgozása, űrlapok kezelése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/08/)
 11. 2018.11.19. [Adattárolás, fájlkezelés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/09/)
 12. 2018.11.26. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/10/)
+13. 2018.12.03. [AJAX: oldalak részleges frissítése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/11/)
 
 
 ## Számonkérés

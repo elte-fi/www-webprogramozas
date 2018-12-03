@@ -27,7 +27,7 @@ Környezet
 9. 2018.11.05.-i hét: [Angular -- dinamikus adatok, komponensek kapcsolata](#/subjects/alkfejl/angular2)
 10. 2018.11.12.-i hét: [Angular -- űrlapkezelés, service-ek](#/subjects/alkfejl/angular2#4.-services)
 11. 2018.11.19.-i hét: Angular -- [aszinkronitás kezelése](#/subjects/alkfejl/async), [REST API használata](#/subjects/alkfejl/angular3)
-12. 2018.11.26.-i hét: Angular -- hitelesítés
+12. 2018.11.26.-i hét: Angular -- [hitelesítés](#/subjects/alkfejl/angular4)
 13. 2018.12.03.-i hét: Konzultáció
 14. 2018.12.10.-i hét: 2. bemutató
 
@@ -117,7 +117,7 @@ Utolsó fázisban összekötjük a backendet a frontenddel, a felületek működ
 - kapcsolat a szerverrel
 - állapotdiagram (ha szükséges)
 - egy funkció folyamatának leírása, azaz mi történik kattintástól a visszajelzésig
-- tesztelés
+- tesztelés -- nem kell!
 - felhasználói dokumentáció
 
 ### Bemutatás

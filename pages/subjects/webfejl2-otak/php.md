@@ -11,7 +11,7 @@ Készíts egy oldalt, ami képes listázni az adatbázisban található terméke
 ![Séma](assets/images/ab-sema.png)
 
 Az adatbázis-csatlakozáshoz szükséges adatok:
-- DSN sztring: `"mysql:host=localhost;db=wf2_wp1c0x"`
+- DSN sztring: `"mysql:host=localhost;dbname=wf2_wp1c0x"`
 - felhasználónév: `"wp1c0x"`
 - jelszó: `"wp1c0x"`
 - tábla neve: `"wf2zh"`

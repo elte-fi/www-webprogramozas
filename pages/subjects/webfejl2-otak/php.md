@@ -8,7 +8,7 @@ A feladatod egy írószerbolt bolti nyilvántartásához készíteni egy egyszer
 
 Készíts egy oldalt, ami képes listázni az adatbázisban található termékeket! Az adatbázisban az alábbi séma szerint tárolják az adatokat:
 
-![Séma](ab-sema.png)
+![Séma](assets/images/ab-sema.png)
 
 Az adatbázis-csatlakozáshoz szükséges adatok:
 - DSN sztring: `"mysql:host=localhost;db=wf2_wp1c0x"`
@@ -23,4 +23,4 @@ Az `index.php` oldal alján jelenjen meg egy link, ami a `lekerdez.php` oldalra 
 
 #### 3. feladat (atvalt.php)
 
-A bolt nem csak forintban, nanem euróban is elfogad fizetést. Ehhez szüksége van egy gyors átváltó eszközre. Az `index.php` alján szerepeljen még egy link, ami az `atvalt.php` oldalra mutat. Ezen az oldalon két űrlap szerpeljen, mindkettő tartalmazzon egy szám beviteli mezőt, illetve egy küldés gombot. Az űrlap elküldésére az oldal írja ki az adott számértéket átváltva a másik pénznembe. Az oldalról derüljön ki, hogy melyik űrlap milyen irányba végzi az átváltást! Az átváltást 325 Ft/EUR árfolyamon számold!
+A bolt nem csak forintban, hanem euróban is elfogad fizetést. Ehhez szüksége van egy gyors átváltó eszközre. Az `index.php` alján szerepeljen még egy link, ami az `atvalt.php` oldalra mutat. Ezen az oldalon két űrlap szerpeljen, mindkettő tartalmazzon egy szám beviteli mezőt, illetve egy küldés gombot. Az űrlap elküldésére az oldal írja ki az adott számértéket átváltva a másik pénznembe. Az oldalról derüljön ki, hogy melyik űrlap milyen irányba végzi az átváltást! Az átváltást 325 Ft/EUR árfolyamon számold!

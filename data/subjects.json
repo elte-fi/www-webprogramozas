@@ -18,6 +18,12 @@
     "color": "primary"
   },
   { 
+    "name": "Web engineering",
+    "details": "Computer Science MSc",
+    "url": "#!/subjects/webeng",
+    "color": "primary"
+  },
+  { 
     "name": "JavaScript techológiák", 
     "details": "Prog. informatikus BSc",
     "url": "#!/subjects/jstech",

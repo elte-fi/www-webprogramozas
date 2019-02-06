@@ -14,6 +14,39 @@ Célkitűzés
 Környezet
 : A szerveroldali dinamikus weblapok készítését a webprogramozas.inf.elte.hu szerver segítségével végezzük el. A szerveren Nginx webszerver, 7-es verziójú PHP fut. A szerverre a félév elején, a gyakorlati jelentkezések lejártakor minden hallgató kap hozzáférést. A webprogramozás szerverre kell a beadandó feladatokat feltölteni, ezen folyik a félév második felében a gyakorlati munka, illetve ezen írjuk a félév végi évfolyam ZH-t is.
 
+## Előadások
+
+1. 2019.02.11. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2/ea/01/)
+2. 2019.02.18. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2/ea/02/)
+3. 2019.02.25. [Események, nyelvi elemek, beépített objektumok](http://webprogramozas.inf.elte.hu/webfejl2/ea/03/)
+4. 2019.03.04. [Űrlapok, képek, táblázatok, böngésző](http://webprogramozas.inf.elte.hu/webfejl2/ea/04/)
+5. 2019.03.11. [Stílusok, animáció](http://webprogramozas.inf.elte.hu/webfejl2/ea/05/)
+6. 2019.03.18. [HTML5 API-k, rasztergrafika, kódszervezés](http://webprogramozas.inf.elte.hu/webfejl2/ea/06/)
+7. 2019.03.25. [PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2/ea/07/)
+8. 2019.04.01. [Bemenet, űrlapok](http://webprogramozas.inf.elte.hu/webfejl2/ea/08/)
+9. 2019.04.08. [Adattárolás](http://webprogramozas.inf.elte.hu/webfejl2/ea/09/)
+10. 2019.04.15. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/webfejl2/ea/10/)
+11. 2019.04.22. elmarad (tavaszi szünet)
+12. 2019.04.29. [AJAX](http://webprogramozas.inf.elte.hu/webfejl2/ea/11/)
+13. 2019.05.06. [Kitekintés](http://webprogramozas.inf.elte.hu/webfejl2/ea/12/)
+14. 2019.05.13. elmarad
+
+## Gyakorlatok
+
+- [1. gyakorlat](#!/subjects/webfejl2-pti/gyak/01)
+- [2. gyakorlat](#!/subjects/webfejl2-pti/gyak/02)
+- [3. gyakorlat](#!/subjects/webfejl2-pti/gyak/03)
+- [4. gyakorlat](#!/subjects/webfejl2-pti/gyak/04)
+- [5. gyakorlat](#!/subjects/webfejl2-pti/gyak/05)
+- [6. gyakorlat](#!/subjects/webfejl2-pti/gyak/06)
+- [7. gyakorlat](#!/subjects/webfejl2-pti/gyak/07)
+- [8. gyakorlat](#!/subjects/webfejl2-pti/gyak/08)
+- [9. gyakorlat](#!/subjects/webfejl2-pti/gyak/09)
+- [10. gyakorlat](#!/subjects/webfejl2-pti/gyak/10)
+- [11. gyakorlat](#!/subjects/webfejl2-pti/gyak/11)
+- [12. gyakorlat](#!/subjects/webfejl2-pti/gyak/12)
+
+<!-- 
 ## JavaScript beadandók
 
 **A következő információk folyamatosan frissülnek!!!**
@@ -22,7 +55,7 @@ Ebben a félévben az Etológia Tanszék kérésére kisgyerekeknek szóló webe
 
 A játékok leírásai alább találhatók. Ezek egyelőre még nem véglegesek. Az implementálás olyan részleteihez, mint érintésvezérlés, vagy mobilra optimalizálás, adunk segítséget leírás formájában. 
 
-[Játékok és leírásaik](https://drive.google.com/open?id=1Bxc7mUzePM-J7eFUhylTenT4gYXaWDeS) (frissítve 2018.04.10.-én!):
+[Játékok és leírásaik](https://drive.google.com/open?id=1Bxc7mUzePM-J7eFUhylTenT4gYXaWDeS) (frissítve 2019.04.10.-én!):
 
 - Irányok mátrix
 - 2D mátrix
@@ -87,7 +120,7 @@ A HTML5 drag and drop API kiválóan alkalmas asztali böngészőkben egéresem�
 
 1. **onPointerDown**: a container kap egy `.dragging` stílusosztályt, hogy pár elem viselkedését megváltoztathassuk. A vonszolt objektum `.active` lesz. A `setPointerCapture`-rel pedig azt állítjuk be, hogy a vonszolás során az *összes* eseményt a vonszolt objektum kapja meg.
 
-2. **onPointerMove**: először kiszűrjük azokat az elemeket, akikhez valóban tartozik az esemény (`hasPointerCapture`), majd lekérjük az egér x, y koordinátáit. Az `elementFromPoint` metódussal lekérdezzük az egérmutató alatti elemet (átlát a `pointer-events: none` elemeken). A következő if-ekben az ejtési zóna kezelése van: nem-aktív --> aktív, aktív --> aktív, aktív --> nem-aktív. Végül a vonszolt elemet (`e.target`) az egérmutató alá helyezzük.
+2. **onPointerMove**: először kiszűrjük azokat az elemeket, akikhez valóban tartozik az esemény (`hasPointerCapture`), majd lekérjük az egér x, y koordinátáit. Az `elementFromPoint` metódussal lekérdezzük az egérmutató alatti elemet (átlát a `pointer-events: none` elemeken). A következő if-ekben az ejtési zóna kezelése van: nem-aktív -> aktív, aktív -> aktív, aktív -> nem-aktív. Végül a vonszolt elemet (`e.target`) az egérmutató alá helyezzük.
 
 3. **onPointerUp**: a stílusosztályok eltávolítása mellett a legfontosabb, hogy ha ejtési zóna fölött vagyunk, akkor mi történjen: a mi esetünkben az adott elem gyerekeként adjuk hozzá a vonszolt elemet (`appendChild`).
 
@@ -173,7 +206,8 @@ Az alkalmazásnak a következő funkciókat kell tudnia:
 
 Tömörített ZIP állományként kell beadni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr).
 
-Határidő: 2018. május 27. éjfél
+Határidő: 2019. május 27. éjfél
+-->
 
 ## Számonkérés
 
@@ -181,25 +215,22 @@ Határidő: 2018. május 27. éjfél
 
 ### Az értékelés összetevői
 
-* Beadandó feladat: [JavaScript](#javascript-beadandók)
-
-    Határidő: 2018. április 22.
-
+<!-- * Beadandó feladat: [JavaScript](#javascript-beadandók) -->
+* Beadandó feladat: JavaScript  
+    Határidő: 2019. március vége-április eleje  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
-* Beadandó feladat: [PHP](#php-beadandó--könyvespolc)
-
-    Határidő: 2018. május 27. éjfél
-
+<!-- * Beadandó feladat: [PHP](#php-beadandó--könyvespolc) -->
+* Beadandó feladat: PHP  
+    Határidő: 2019. május közepe  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
-* [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html)
+<!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
+* Évfolyam ZH  
+    2019\. május 29. 9:00-12:00, Lovarda
 
-    2018\. május 28. 9:00-12:00, Lovarda és Nyelvi labor
-
-* PótZH
-
-    2018\. június 5. 9:00-12:00, Lovarda
+* PótZH  
+    2019\. június 5. 9:00-12:00, Lovarda
 
 ### A beadandók értékelése
 
@@ -227,14 +258,12 @@ Határidő: 2018. május 27. éjfél
 * Évfolyam ZH jegye + a két beadandó értékelése
 * A kettes érdemjegyhez legalább kettesre megírt évfolyam ZH szükséges
 
-## Előadások
-
-## Gyakorlatok
-
 ## Segédanyagok
 
 ### Elektronikus tananyag
 
+* [A böngésző mint alkalmazásfejlesztési platform (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/kliens/)
+* [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)
 * [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
 
 ### Példa beadandók és ZH-k
@@ -253,9 +282,7 @@ Horváth Győző
 ### Gyakorlatvezetők
 
 * Bende Imre
-* Demsa Miklós
+* Horváth Győző
 * Kereszti Krisztián
 * Kereszti Zalán
-* Horváth Győző
 * Rakonczai Sándor
-* [Visnovitz Márton](https://github.com/vimtaai/elte/tree/master/2017-18-2)

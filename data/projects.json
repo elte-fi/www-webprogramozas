@@ -21,26 +21,17 @@
   { 
     "name": "Adatvizualizációs projekt",
     "description": "Adatok megjelenítése alacsony és magas szintű eszközök segítségével. Specializált platformok és meglévő függvénykönyvtárak használata, valamint egyedi grafikonok és architektúrák készítése modern webes technológiákkal. Ösztöndíj-lehetőséggel!",
-    "url": "#!/projects/datavis",
+    "url": "#",
     "color": "yellow",
     "labels": [
       { "title": "web", "color": "white" }
     ]
   },
   { 
-    "name": "Webassembly",
-    "description": "A Webassembly a modern web egyik következő nagy lépése lehet. Más nyelvben írt modulok erre fordítva hatékonyan futnak a böngészőben. A feladat a Webassembly képességeinek próbálgatása.",
-    "url": "#!/projects/webassembly",
+    "name": "Új technológiák kipróbálása",
+    "description": "A webes technológiák folyamatos fejlődésben vannak. Ez a projekt lehetőséget ad az újabb technológiák kipróbálására. Az egyszerű proof-of-concept kipróbáláson túl elvárás valamilyen valós alkalmazásban való használatuk is.",
+    "url": "#!/projects/newtech",
     "color": "green",
-    "labels": [
-      { "title": "web", "color": "white" }
-    ]
-  },
-  { 
-    "name": "WebRTC -- Peer-to-peer összekötött böngészők",
-    "description": "A sokféle architekturális lehetőség közül nagyon izgalmasak a közvetlen összeköttetésben álló böngészők, amelyek kollaboratív munkára vagy játékra adnak lehetőséget.",
-    "url": "#!/projects/webrtc",
-    "color": "blue",
     "labels": [
       { "title": "web", "color": "white" }
     ]
@@ -49,7 +40,7 @@
     "name": "Testreszabható webes szövegszerkesztő fejlesztése",
     "description": "Webes WYSIWYG szerkesztő fejlesztése, amely testreszabható és speciális elemekkel kiegészíthető. Komponensalapú fejlesztéssel, az egyik legmodernebb elérhető library-vel. Feladat a szerkesztő további funkciókkal való felruházása tananyagok írásához.",
     "url": "#!/projects/webeditor",
-    "color": "yellow",
+    "color": "blue",
     "labels": [
       { "title": "web", "color": "white" }
     ]

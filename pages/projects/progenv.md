@@ -15,6 +15,7 @@ Különböző oktatási és módszertani igényeket kiszolgáló webes programoz
 - **Meglévő feladatsorok használata**: több ezer feladat elérhető más formátumban. Cél ezeknek a feladatoknak a rendszerbe való átkonvertálása és kereshetővé tétele.
 - **Architektúra finomítása**: hibakezelés, újraindítás, több nyelv támogatása, task mód támogatása.
 - **Gyors kereshetőség biztosítása ElasticSearch segítségével**: keresés a feladatok között egy kifejezetten erre szolgáló eszköz segítségével.
+- **Kód evolúciójának megfigyelése**: a kódszerkesztés folyamatának időbeli követése, visszajátszása.
 - **Billentyűleütések vizsgálata gépi tanulással**: cél a gépelő azonosítása a gépelése alapján.
 - **Editor tartalmának streamelése**: tetszőleges editor képének megtekintése egy másik felhasználónál.
 - **Kollaboratív szerkesztés**: két felhasználó közösen dolgozhat egy editorban. Technológiák: [Conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type), [Operational transformation](https://hackernoon.com/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66), WebRTC.

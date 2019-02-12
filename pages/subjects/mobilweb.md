@@ -1,0 +1,47 @@
+# Webtechnológiák mobil környezetben
+
+## Általános információk
+
+Óraszám
+: 2 óra gyakorlat
+
+Előfeltétel
+: Webprogramozás (IP-18cWEBPROGEG)
+
+Célkitűzés
+: A tantárgy célja a hallgatók megismertetése a webes technológiák (HTML, JavaScript, CSS) mobil környezetben nyújtott lehetőségeivel, azon korszerű technológiákkal, melyek lehetővé teszik mobilalkalmazások fejlesztését a böngészőben használt eszközök segítségével. Az utóbbi időben egyre nagyobb tért hódítanak a mobil eszközök, így elengedhetetlenül fontossá vált a mobil platformon való megjelenés is a web (böngésző) mellett. A mobil eszközökre való fejlesztés több szinten is megvalósulhat, beszélhetünk mobilra optimalizált webes tartalomról (reszponzív dizájn - RWD), mobileszközön futó webes alkalmazásról (progresszív webalkalmazás - PWA) és webes eszközökkel készített natív telefonos alkalmazásokról (React Native) is. A tárgy keretében ezekkel a technikákkal ismerkednek meg a hallgatók, ezek használatát sajátítják el.
+
+## Számonkérés
+
+A félév során egy darab beadandó feladatot elkészíteni választott témában: egyedi alkalmazás készítése progresszív webalkalmazásként vagy natív alkalmazásként. A feladatot egy nyilvános GitHub repository-ban kell publikálni, ennek a linkjét elküldeni.
+
+Határidő: TBA
+
+## Részletes tematika
+
+1. A web technológiái (HTML, CSS, JS) ismétlés, ismeretek felfrissítése
+2. A mobil eszközök jellemzői, hagyományos weblapok problémái mobil eszközökön
+3. A CSS nyújtotta lehetőségek a reszponzív megjelenés eléréséhez, CSS keretrendszerek
+4. Egyszerű kliensoldali alkalmazások optimalizálása mobil eszközökre
+5. JavaScript API-k mobil eszközön (GPS, kamera, gyorsulásmérő, storage)
+6. BaaS (Backend as a Service) eszközök használata
+7. Alkalmazás manifest, service worker-ek, „telepíthető” webes alkalmazások
+8. Web alapú natív eszközök, környezet megismerése
+9. Komponens alapú fejlesztés, komponensek összeépítése, nézetek
+10. Natív, interaktív alkalmazások készítése és telepítése mobil eszközökre
+
+## Segédanyagok
+
+- [A böngésző mint alkalmazásfejlesztési platform (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/kliens/)
+- [HTML tananyag (Abonyi-Tóth Andor): A weblapkészítés technikája (HTML5, CSS3) és ergonómiája](http://tamop412.elte.hu/tananyagok/weblapkeszites)
+- [Progressive Web Apps: Bridging the gap between web and mobile apps](https://medium.freecodecamp.org/progressive-web-apps-bridging-the-gap-between-web-and-mobile-apps-a08c76e3e768)
+
+### Órai kódok
+
+[Github](https://github.com/vimtaai/elte)
+
+## Oktatók
+
+### Gyakorlatvezető
+
+Visnovitz Márton

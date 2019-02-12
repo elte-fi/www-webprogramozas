@@ -21,9 +21,9 @@ Környezet
 ### Az értékelés összetevői
 
 * Beadandó feladat: JavaScript
-    Határidő: 2018. május 13.
+    Határidő: 2019. április
 * Beadandó feladat: PHP
-    Határidő: június 10.
+    Határidő: 2019. május
 
 ### A beadandók értékelése
 
@@ -34,6 +34,34 @@ Környezet
 * A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
 * A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
 
+### Jegyszerzés feltételei
+
+* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
+* Két elfogadott beadandó
+
+### Értékelés
+
+* A két beadandó feladat jegyének átlaga
+
+
+## Előadások
+
+1. 2019.02.13. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/moderntech2/ea/01/)
+2. 2019.02.20. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/moderntech2/ea/02/)
+3. 2019.02.27. [Események, nyelvi elemek, beépített objektumok](http://webprogramozas.inf.elte.hu/moderntech2/ea/03/)
+4. 2019.03.06. [DOM, BOM, kódszervezés](http://webprogramozas.inf.elte.hu/moderntech2/ea/04/)
+5. 2019.03.13. [Stílusok, animációk kezelése](http://webprogramozas.inf.elte.hu/moderntech2/ea/05/)
+6. 2019.03.20. [HTML5 JavaScript API-K, 2D Rasztergrafika](http://webprogramozas.inf.elte.hu/moderntech2/ea/06/)
+7. 2019.03.27. [PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/moderntech2/ea/07/)
+8. 2019.04.03. [Bemenet, űrlapok](http://webprogramozas.inf.elte.hu/moderntech2/ea/08/)
+9. 2019.04.10. [Adattárolás](http://webprogramozas.inf.elte.hu/moderntech2/ea/09/)
+10. 2019.04.17. elmarad (tavaszi szünet)
+11. 2019.04.24. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/moderntech2/ea/10/)
+12. 2019.05.01. elmarad (munka ünnepe)
+13. 2019.05.06. [AJAX](http://webprogramozas.inf.elte.hu/moderntech2/ea/11/)
+14. 2019.05.13. gyakorlat
+
+<!--
 ### Beadandó feladat: JavaScript
 
 A feladatod, hogy elkészítsd a "Tic-Tac-Toe" játékot. A játék egy 3x3-as mátrixban játszódik két féle üzemmódban.
@@ -116,20 +144,11 @@ Az alkalmazásnak a következő funkciókat kell tudnia:
 1-2 pont: 3  
 minimum elvárások megvannak: 2
 
-### Jegyszerzés feltételei
-
-* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Két elfogadott beadandó
-
-### Értékelés
-
-* A két beadandó feladat jegyének átlaga
-
-## Előadások
+-->
 
 ## Gyakorlófeladatok
 
-Ezeken az egyszerű feladatokon lehet otthon gyakorolni az órákon érintett témaköröket.
+<!-- Ezeken az egyszerű feladatokon lehet otthon gyakorolni az órákon érintett témaköröket. -->
 
 ## Segédanyagok
 
@@ -148,4 +167,4 @@ Horváth Győző
 
 ### Gyakorlatvezető
 
-[Visnovitz Márton](https://github.com/vimtaai/elte/tree/master/2017-18-2)
+[Visnovitz Márton](https://github.com/vimtaai/elte/tree/master/2018-19-2)

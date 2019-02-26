@@ -27,5 +27,6 @@
 ## Practices
 
 - [1. practice lesson](#!/subjects/webeng/practices/01)
+- [2. practice lesson](#!/subjects/webeng/practices/02)
 
 

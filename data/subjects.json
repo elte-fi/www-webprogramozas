@@ -42,6 +42,12 @@
     "color": "primary"
   },
   {
+    "name": "Web-fejlesztés 2.",
+    "details": "Levelező informatika tanárképzés",
+    "url": "#!/subjects/webfejl2-lev",
+    "color": "primary"
+  },
+  {
     "name": "Alkalmazások fejlesztése",
     "details": "Prog. informatikus BSc (C)",
     "url": "#!/subjects/alkfejl",

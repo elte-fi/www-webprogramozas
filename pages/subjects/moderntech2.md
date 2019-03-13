@@ -148,15 +148,30 @@ minimum elvárások megvannak: 2
 
 ## Gyakorlófeladatok
 
-<!-- Ezeken az egyszerű feladatokon lehet otthon gyakorolni az órákon érintett témaköröket. -->
+- [1. gyakorlat](#!/subjects/webfejl2-pti/gyak/01)
+- [2. gyakorlat](#!/subjects/webfejl2-pti/gyak/02)
+- [3. gyakorlat](#!/subjects/webfejl2-pti/gyak/03)
+- [4. gyakorlat](#!/subjects/webfejl2-pti/gyak/04)
+- [5. gyakorlat](#!/subjects/webfejl2-pti/gyak/05)
+- [6. gyakorlat](#!/subjects/webfejl2-pti/gyak/06)
+- [7. gyakorlat](#!/subjects/webfejl2-pti/gyak/07)
+- [8. gyakorlat](#!/subjects/webfejl2-pti/gyak/08)
+- [9. gyakorlat](#!/subjects/webfejl2-pti/gyak/09)
+- [10. gyakorlat](#!/subjects/webfejl2-pti/gyak/10)
+- [11. gyakorlat](#!/subjects/webfejl2-pti/gyak/11)
+- [12. gyakorlat](#!/subjects/webfejl2-pti/gyak/12)
+
+## Letöltések
+
+- [Aknakereső](http://webprogramozas.inf.elte.hu/moderntech2/gyak/aknakereso.zip)
 
 ## Segédanyagok
 
 ## Elektronikus tananyag
 
-* [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
 * [A böngésző mint alkalmazásfejlesztési platform](http://webprogramozas.inf.elte.hu/tananyag/kliens)
 * [Dinamikus weboldalak előállítása szerveroldali technológiákkal](http://webprogramozas.inf.elte.hu/tananyag/szerver)
+* [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
 * [Webadatbázis-programozás](http://ade.web.elte.hu/wabp)
 
 ## Oktatók

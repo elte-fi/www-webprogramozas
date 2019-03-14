@@ -99,7 +99,7 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-It means that requests are needed to be authorized ([authorizeRequests](https://docs.spring.io/spring-security/site/docs/current/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#authorizeRequests--)), every request should be authenticated, and for that use the form login method, and if it is unavailable, use the in-built HTTP Basic authentication.
+It means that requests need to be authorized ([authorizeRequests](https://docs.spring.io/spring-security/site/docs/current/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#authorizeRequests--)), every request should be authenticated, and for that use the form login method, and if it is unavailable, use the in-built HTTP Basic authentication.
 
 In our case:
 

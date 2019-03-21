@@ -46,94 +46,286 @@ Környezet
 - [11. gyakorlat](#!/subjects/webfejl2-pti/gyak/11)
 - [12. gyakorlat](#!/subjects/webfejl2-pti/gyak/12)
 
-<!-- 
-## JavaScript beadandók
+## Számonkérés
 
-**A következő információk folyamatosan frissülnek!!!**
+Összevont (folyamatos) értékelésű tárgy.
 
-Ebben a félévben az Etológia Tanszék kérésére kisgyerekeknek szóló webes (telefonon futó) játékokat készítünk el. Több játék közül lehet választani, mindegyikre kb. 20 hallgató jut. A megfelelő táblázatban jelentkezni kell majd, hogy ki melyik játék implementálását végzi el. Mindegyik játék esetén a megoldások közül kiválasztjuk a legjobbat. A legjobb megoldások készítői nyereményben részesülnek, bemutatjuk alkalmazásaikat az előadáson és a webprogramozas oldalon is.
+### Az értékelés összetevői
 
-A játékok leírásai alább találhatók. Ezek egyelőre még nem véglegesek. Az implementálás olyan részleteihez, mint érintésvezérlés, vagy mobilra optimalizálás, adunk segítséget leírás formájában. 
+<!-- * Beadandó feladat: JavaScript   -->
+* Beadandó feladat: [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó---robotkaland)  
+    Határidő: 2019. április 14. éjfél  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
-[Játékok és leírásaik](https://drive.google.com/open?id=1Bxc7mUzePM-J7eFUhylTenT4gYXaWDeS) (frissítve 2019.04.10.-én!):
+<!-- * Beadandó feladat: [PHP](#php-beadandó--könyvespolc) -->
+* Beadandó feladat: PHP  
+    Határidő: 2019. május közepe  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
-- Irányok mátrix
-- 2D mátrix
-- Irányok
-- Tangram
-- Szín sudoku
-- Memória
-- TicTacToe
-- Mastermind
+<!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
+* Évfolyam ZH  
+    2019\. május 29. 9:00-12:00, Lovarda
 
-### Technikai segítség
+* PótZH  
+    2019\. június 5. 9:00-12:00, Lovarda
 
-A játékokat szeretnénk mobiltelefonok böngészőjében futtatni. Ehhez összeraktunk egy olyan kis oldalt, amely példát mutathat számos apektusban. A legtöbb játékban ugyanis van drag and drop, az oldal felosztása, stb. Hangsúlyozzuk, ez nem egy sablon, nem egy az egyben kell átvenni, de vannak benne olyan megoldások, amelyeket alkotó módon fel lehet használni a megoldásban:
+### A beadandók értékelése
 
-- [Forráskód](https://repl.it/@horvathgyozo/touch2)
-- [Kipróbálás, pl. mobiltelefonon](https://touch2--horvathgyozo.repl.co)
+* A beadandók értékelése háromértékű skálán történik: -0,5; 0; 0,5 jegy kapható rá.
+* Az értékelés egy mindenki számára elérhető szempontok alapján történik.
+* A beadandókat határidőre kell elkészíteni.
+* A határidő leteltével a beadandó jegyéből a késés mértékének megfelelően vonunk le pontokat
+* A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül. Más módon küldött beadandókat nem fogadunk el.
+* A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
+* A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
 
-#### Delegate
+### Az évfolyam ZH értékelése
 
-```javascript
-function delegate(parent, type, selector, fn) {
+* Az évfolyam ZH értékelése jeggyel történik 1-5 skálán.
+* A megoldások plágiumellenőrzésen esnek át a ZH után. A gyanúsan hasonló megoldást adó hallgatókat megkérhetjük a ZH-ik megvédésére. A másolt ZH-k automatikusan 1-es osztályzatot kapnak.
 
-  function delegatedFunction(e) {
-    if (e.target.matches(`${selector},${selector} *`)) {
-      let target = e.target;
-      while (!target.matches(selector)) {
-        target = target.parentNode;
-      }
-      e.delegatedTarget = target;
-      return fn(e);
-      // vagy
-      // return fn.call(target, e);
-    }
-  }
+### Jegyszerzés feltételei
 
-  parent.addEventListener(type, delegatedFunction, false);
+* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
+* Két elfogadott beadandó
+* Megírt évfolyam ZH
+
+### Értékelés
+
+* Évfolyam ZH jegye + a két beadandó értékelése
+* A kettes érdemjegyhez legalább kettesre megírt évfolyam ZH szükséges
+
+
+
+<style>
+table.robot {
+  border-collapse: collapse;
+}
+.robot td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray
+}
+.mezo {
+  background-color: lightgray;
+}
+.futoszalag {
+  background-color: lightblue;
+}
+.forgato {
+  background-color: orange;
+}
+.start {
+  background-color: lightgreen;
+}
+.cel {
+  background-color: darkgreen;
+}
+.godor {
+  background-color: black;
+}
+.jobb.fal {
+  border-right: 4px solid yellow;
+}
+.bal.fal {
+  border-left: 4px solid yellow;
+}
+.fent.fal {
+  border-top: 4px solid yellow;
+}
+.lent.fal {
+  border-bottom: 4px solid yellow;
+}
+main img {
+  width: 100%;
+  max-width: 600px;
+}
+</style>
+
+## JavaScript beadandó - Robotkaland
+
+:::center aligned
+![](/assets/images/webfejl2/walle.jpg)
+:::
+
+Wall-E, a kis robot egy hatalmas űrhajó alsó szintjén a gépházban dolgozik. Egy nap az űrhajó meteorzáporba kerül, és az egyik meteor lyukat üt az űrhajó testén. A sérülés olyan veszélyes, hogy az automata védelmi rendszer azonnal lezárja ezt a szintet, így emberek nem tudnak a gépházba bemenni. Egyedül Wall-E tartózkodik a gépházban, akinek utasításokat adhatunk. Wall-E memóriája azonban véges, így egyszerre csak 5 parancsot tud megjegyezni és végrehajtani, majd újra és újra be kell őt programozni a következő lépésekre. Ráadásul a meteor a kommunikációs egységet is megrongálta, így mindig csak 9 véletlenszerű utasítás közül választhatjuk ki az 5 parancsot. A dolgot azonban a terep is nehezíti: ami a mindennapi munkát segítette, az most itt akár hátráltathatja is a haladást. A gépházban ugyanis futószalagok, forgatók és gödrök vannak, amelyek befolyásolják a robot mozgását.
+Segíts Wall-E-nak eljutni a gépházban a sérülés helyére és megjavítani azt!
+
+### A főoldal
+
+A nyitóoldalon legyen lehetőség pályát választani. Készítsünk elő két pályát: egy kisebbet és egy nagyobbat. A választás után megjelenik a játék oldala, ahol elkezdődik a játék.
+
+### A játék fázisai
+
+<table border="1">
+    <tr><td>
+    <table class="robot">
+        <tr>
+            <td class="mezo"></td>
+            <td class="cel">✹</td>
+            <td class="mezo"></td>
+            <td class="mezo"></td>
+            <td class="godor"></td>
+            <td class="mezo"></td>
+        </tr>
+        <tr>
+            <td class="mezo"></td>
+            <td class="futoszalag">⮦</td>
+            <td class="futoszalag">⮢</td>
+            <td class="mezo"></td>
+            <td class="mezo"></td>
+            <td class="mezo"></td>
+        </tr>
+        <tr>
+            <td class="mezo"></td>
+            <td class="futoszalag">↓</td>
+            <td class="futoszalag">⮤</td>
+            <td class="futoszalag">←</td>
+            <td class="futoszalag">←</td>
+            <td class="futoszalag">←</td>
+        </tr>
+        <tr>
+            <td class="mezo"></td>
+            <td class="forgato">↺</td>
+            <td class="mezo jobb fal"></td>
+            <td class="mezo bal fent fal"></td>
+            <td class="mezo"></td>
+            <td class="mezo"></td>
+        </tr>
+        <tr>
+            <td class="mezo"></td>
+            <td class="mezo"></td>
+            <td class="godor"></td>
+            <td class="mezo"></td>
+            <td class="start">⮘</td>
+            <td class="mezo"></td>
+        </tr>
+    </table>
+    </td></tr>
+    <tr>
+        <td>
+            9 véletlenszerűen generált kártya
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5 kiválasztott kártya
+        </td>
+    </tr>
+</table>
+
+#### 0. Előkészületek
+
+Adott egy NxM-es pálya, minden mezője a következő lehet:
+
+- padló (`▩`)
+- futószalag (`←`,`↑`,`→`,`↓`,`⮠`,`⮡`,`⮢`,`⮣`,`⮤`,`⮥`,`⮦`,`⮧`)
+- forgató (`↺`,`↻`)
+- gödör (`◼`)
+- start pont egy alap kiindulási iránnyal
+- sérülés (`✹`)
+
+A mezők között fal is lehet, ezen a robot nem tud átmenni. A pályát gödör veszi körbe; a pályáról lelépve ebbe zuhanunk. A robot a start pontról indul, a megadott irányba néz (`⮘`,`⮙`,`⮚`,`⮛`). A játék a következő lépésekből áll.
+
+#### 1. Utasítások generálása
+
+A kiindulási utasításkészlet a következő:
+
+- 1 lépés előre (3db) `⭢`
+- 2 lépés előre (3db) `⮆`
+- 3 lépés előre (3db) `⇶`
+- fordulj balra (3db) `⬏`
+- fordulj jobbra (3db) `⬎`
+- fordulj meg (3db) `⮌`
+- tolass (3db) `⭠`
+
+Ebből kell 9 utasítást véletlenszerűen kiválasztania a gépnek, és a képernyőn megjeleníteni.
+
+#### 2. Utasítások kiválasztása
+
+A feltüntetett 9 utasítás közül kell 5 kártyát kiválasztanunk adott idő alatt, és ezeket az utasításregiszterekbe rakni. Az utasításregiszterek minden kör kezdetén üresek. A választás kattintással történik, és az utasításregisztereket balról jobbra folyamatosan töltjük föl. Visszalépési lehetőség nincs az adott körben. A rendelkezésre álló idő a pályához tartozik, értékét fel kell tüntetni másodpercenként. Ha az idő letelik, akkor az utasításregisztereket a lehetőségek közül véletlenszerűen feltölti a gép. Ha az idő letelte előtt beteltek a regiszterek, akkor a következő fázis jön (utasítások végrehajtása).
+
+#### 3. Utasítások végrehajtása
+
+Ekkor egyesével végrehajtjuk a kiválasztott 5 utasítást. Minden utasításnál először a robot mozog, majd a pálya a következő sorrendben:
+
+1. A robot mozog a megadott irányban (ha tud, pl. falon nem tud átmenni).
+2. Futószalag tol rajta egyet a megadott irányban. Ha ekkor olyan futószalag elemre érkezik, amelyik kanyarodik, akkor a robot is elfordul. (Ha csak ráléptünk egy ilyen kanyarodó futószalagra, akkor nem fordulunk, hanem az a kimeneti irányában tol minket.)
+3. A forgatók az adott irányban 90 fokkal elforgatnak.
+
+Ha gödörbe esünk közben (vagy lelépünk a pályáról), akkor veszítettünk. Ha elérjük a sérülés helyét, akkor nyertünk. Ha mind az 5 utasítás végrehajtódott, akkor az 1. ponttól (utasítások generálása) folytatjuk.
+
+A mozgatások fél másodpercenként kövessék egymást, a felületen jelezni kell, melyik kártya végrehajtása aktuális.
+
+#### 4. Nyer/veszít
+
+A nyerés vagy veszítés tényét kiírjuk a képernyőre.
+
+
+### Működés és segítség
+
+Nincs elvárás arra vonatkozóan, hogy milyen technológiával (táblázat vagy canvas) oldod meg a feladatot, továbbá a megjelenést és működést illetően sincsenek kőbe vésett elvárások.
+
+Érdemes a pályaleírást valamilyen adatszerkezetben megadni. Ez nemcsak a két előre megadott pálya megjelenítését segíti, de a PHP-s beadandónál az adatbázisban való tárolást is megkönnyíti. A leírás pl. történhet így:
+
+```js
+{
+    tabla: [
+        "▩▩▩◼↑▩▩▩✹▩▩▩",
+        "▩▩▩▩↑▩▩▩▩▩▩▩",
+        "▩▩▩▩⮤←←←←←←↺▩▩",
+        "▩▩▩▩▩▩▩▩▩▩▩▩",
+        "▩◼◼▩▩▩▩▩⮘▩▩▩",
+    ],
+    falak: [
+        {sor: 5, oszlop: 6, oldal: "lent"}, // az 5. sor 6. cellájának alsó részén van a fal
+        {sor: 5, oszlop: 6, oldal: "balra"},
+    ],
+    ido: 5000       // 5s van a kártyák kiválasztására
 }
 ```
 
-#### Tesztelés
 
-Az alkalmazás teszteléséhez nem kell állandóan mobiltelefonon kipróbálni a változtatásokat. A Chrome böngészőben pl. a fejlesztői eszköztár bal felső sarkában a 2. ikon épp arra szolgál, hogy az oldalt mobiltelefonos környezetben szimulálja. Ez nemcsak az oldal átméretezését jelenti, hanem az események szinjén is az egéreseményeket érintéseseménnyé alakítja. Ebben ajánlott tesztelni az alkalmazást.
+### Pontozás
 
-#### Eseménykezelés
+Ha szükséges, akkor a pályák átalakíthatók a lenti feltételek kielégítése végett.
 
-Ha azt szeretnénk, hogy az alkalmazásunkat egérrel, érintéssel vagy érintős tollal is lehessen használni, akkor nehéz helyzetbe kerülhetünk, mert külön események vannak az egérhez (`mouse`), az érintéshez (`touch`) és a tollhoz (`pen`). Szerencsére az utóbbi években megjelent egy olyan eseménymodell, amely ezeket egységes interfészen keresztül kezeli: [Pointer Events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events). Gyakorlatilag az egéreseményekben lévő `mouse` kulcsszót kell `pointer`-re cserélni, így lesznek a következő események:
+#### Kötelező (enélkül nincs jegy):
 
-- `pointerdown`
-- `pointermove`
-- `pointerup`
-- stb.
+- Legalább 1 pálya megjelenik.
+- Robot, sérülés, gödör van.
+- Az utasításkészlet elemei megjelennek és rájuk kattintva a robot mozgatható.
+- Végállapot kezelése: nyerés (sérülés helyére eljut) vagy vesztés (gödörbe esik) eldöntése és megjelenítése.
 
-Az eseményeket a következő kiegészítik a következő CSS tulajdonságok:
+#### Nem kötelező
 
-- `touch-action`: a mobilböngészőnek számos alapértelmezett művelete van érintés esetén, pl. az oldal görgetése. Bármelyik elemhez hozzáérünk, akkor ez az alapértelmezett művelet hajtódik végre, és ez megállítja a `pointer` eseményeket. Hogy a böngésző ne reagáljon az alapértelmezett műveletekre, ezt CSS-ben a `touch-action: none;`-nal lehet beállítani. A fenti példában az egész játékfelületet adó `#container` elemre van ez beállítva.
+- A pályák választhatóak, a kiválasztott pálya megjelenik. (1 pont)
+- Működik az utasítások generálása (1 pont)
+- Működik az utasítások kiválasztása (1 pont)
+- Van időlimit az utasítások kiválasztására, és ha letelik, akkor automatikusan feltöltődnek az utasításregiszterek (1 pont)
+- Az utasítások végrehajtása megtörténik (1 pont)
+- Az utasítások végrehajtása léptetve fél másodpercenként történik (2 pont)
+- Van forgató és helyesen működik (1 pont)
+- Van egyenes futószalag és helyesen működik (1 pont)
+- Van kanyarodó futószalag és helyesen működik (futószalagról vagy pályaelemről odalépve) (1 pont)
+- Nincs nagyobb programhiba, nem csalhatók elő furcsa jelenségek (1 pont)
+- 1 hét késés (-2 pont)
+- 2 hét késés (-4 pont)
+- 2 hétnél több késés (nincs elfogadva a beadandó, nincs jegy)
 
-- `pointer-events`: nem összekeverendő a fentebb említett esemény API-val. A `pointer-events` CSS tulajdonsággal azt lehet beállítani, hogy egy adott elem érzékelje-e egyáltalán a kattintást, érintést. A `pointer-events: none;` beállítással például az pointer eseményekre átlátszó elemeket lehet megadni. A példában ott használjuk ezt ki, hogy amikor draggeljük a négyzetet, akkor a négyzet alatti elemre vagyunk kíváncsiak, hogy az droppable zóna-e. Így az elemen kikapcsoljuk az események érzékelését draggelés közben.
+### Értékelés:
 
-#### Drag and drop érintéssel
+- 0-4 pont: -0,5
+- 5-8 pont: 0
+- 9-11 pont: +0,5
 
-A HTML5 drag and drop API kiválóan alkalmas asztali böngészőkben egéreseményekkel. Sajnos azonban egyelőre egyáltalán nem optimalizálták érintésvezérlésre ezt az API-t. Így a drag and drop-ot nekünk kell megvalósítani. Ehhez kétféle segédosztályt vezettem be: `.draggable` jelzi a vonszolható objektumokat, `.dropzone` az ejtési zónákat. Emellett van egy `activeDropZone` nevű globális változó, ami nyomon követi, hogy aktuálisan melyik zóna fölött vagyunk.
+### Beadás
 
-1. **onPointerDown**: a container kap egy `.dragging` stílusosztályt, hogy pár elem viselkedését megváltoztathassuk. A vonszolt objektum `.active` lesz. A `setPointerCapture`-rel pedig azt állítjuk be, hogy a vonszolás során az *összes* eseményt a vonszolt objektum kapja meg.
+A megoldásokat a webprogramozas.inf.elte.hu szerver [beadási felületén](http://webprogramozas.inf.elte.hu/ebr) kell megtenni.
 
-2. **onPointerMove**: először kiszűrjük azokat az elemeket, akikhez valóban tartozik az esemény (`hasPointerCapture`), majd lekérjük az egér x, y koordinátáit. Az `elementFromPoint` metódussal lekérdezzük az egérmutató alatti elemet (átlát a `pointer-events: none` elemeken). A következő if-ekben az ejtési zóna kezelése van: nem-aktív -> aktív, aktív -> aktív, aktív -> nem-aktív. Végül a vonszolt elemet (`e.target`) az egérmutató alá helyezzük.
+Határidő: 2019. április 14. éjfél
 
-3. **onPointerUp**: a stílusosztályok eltávolítása mellett a legfontosabb, hogy ha ejtési zóna fölött vagyunk, akkor mi történjen: a mi esetünkben az adott elem gyerekeként adjuk hozzá a vonszolt elemet (`appendChild`).
-
-
-#### Mobil layout
-
-A legtöbb alkalmazásban szükség lesz egy fejlécre, és egy -- akár több részre osztott -- játéktérre. Mivel különböző oldalarányú eszközökön is futhat a játék, ezt valahogy kezelni kell. A méreteket akár a játék elején JavaScripttel is beállíthatjuk, erre mutat példát az `index.js` elején található pár kikommentelt kódsor. Ugyanakkor a layout nagy része CSS-sel is megoldható. Az `index.css` első része tartalmazza az ehhez kapcsolódó kódot.
-
-- elemek elhelyezése: mind a `body`, mind a `#container` flexboxot használ arra, hogy az elemeket egymás alá, megfelelő módon helyezze el.
-
-- elemek szélessége és magassága: a `width`, `height`, `max-width`, `max-height` tulajdonságokkal, és `vw`, `vh` mértékegységekkel és a `calc` metódussal lehet megoldani pár trükköt. A szélességet például a magasságban lehet limitálni, a magasságot pedig a szélességben, így alakulhat ki a példában egy mindig négyzet alakú játéktér (erre nem biztos, hogy minden játék esetén szükség van!).
-
-
+<!-- 
 ## PHP beadandó
 
 ### Feladatleírás
@@ -208,55 +400,6 @@ Tömörített ZIP állományként kell beadni a [feltöltő felületen](http://w
 
 Határidő: 2019. május 27. éjfél
 -->
-
-## Számonkérés
-
-Összevont (folyamatos) értékelésű tárgy.
-
-### Az értékelés összetevői
-
-<!-- * Beadandó feladat: [JavaScript](#javascript-beadandók) -->
-* Beadandó feladat: JavaScript  
-    Határidő: 2019. március vége-április eleje  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-<!-- * Beadandó feladat: [PHP](#php-beadandó--könyvespolc) -->
-* Beadandó feladat: PHP  
-    Határidő: 2019. május közepe  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-<!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
-* Évfolyam ZH  
-    2019\. május 29. 9:00-12:00, Lovarda
-
-* PótZH  
-    2019\. június 5. 9:00-12:00, Lovarda
-
-### A beadandók értékelése
-
-* A beadandók értékelése háromértékű skálán történik: -0,5; 0; 0,5 jegy kapható rá.
-* Az értékelés egy mindenki számára elérhető szempontok alapján történik.
-* A beadandókat határidőre kell elkészíteni.
-* A határidő leteltével a beadandó jegyéből a késés mértékének megfelelően vonunk le pontokat
-* A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül. Más módon küldött beadandókat nem fogadunk el.
-* A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
-* A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
-
-### Az évfolyam ZH értékelése
-
-* Az évfolyam ZH értékelése jeggyel történik 1-5 skálán.
-* A megoldások plágiumellenőrzésen esnek át a ZH után. A gyanúsan hasonló megoldást adó hallgatókat megkérhetjük a ZH-ik megvédésére. A másolt ZH-k automatikusan 1-es osztályzatot kapnak.
-
-### Jegyszerzés feltételei
-
-* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Két elfogadott beadandó
-* Megírt évfolyam ZH
-
-### Értékelés
-
-* Évfolyam ZH jegye + a két beadandó értékelése
-* A kettes érdemjegyhez legalább kettesre megírt évfolyam ZH szükséges
 
 ## Segédanyagok
 

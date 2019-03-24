@@ -53,7 +53,11 @@ Környezet
 ### Az értékelés összetevői
 
 <!-- * Beadandó feladat: JavaScript   -->
-* Beadandó feladat: [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó---robotkaland)  
+* Beadandó feladat (PTI): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)  
+    Határidő: 2019. április 14. éjfél  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
+* Beadandó feladat (FSZ): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadand%C3%B3-(fsz)-%E2%80%93-break%C2%B7eva%C2%B7out)  
     Határidő: 2019. április 14. éjfél  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
@@ -137,14 +141,13 @@ table.robot {
   border-bottom: 4px solid yellow;
 }
 main img {
-  width: 100%;
-  max-width: 600px;
+  max-width: 80%;
 }
 </style>
 
-## JavaScript beadandó - Robotkaland
+## JavaScript beadandó (PTI) -- Robotkaland
 
-:::center aligned
+:::center aligned walle
 ![](/assets/images/webfejl2/walle.jpg)
 :::
 
@@ -324,6 +327,68 @@ Ha szükséges, akkor a pályák átalakíthatók a lenti feltételek kielégít
 A megoldásokat a webprogramozas.inf.elte.hu szerver [beadási felületén](http://webprogramozas.inf.elte.hu/ebr) kell megtenni.
 
 Határidő: 2019. április 14. éjfél
+
+
+
+
+## JavaScript beadandó (FSZ) -- Break·EVA·out
+
+Amíg WALL·E a kis robot egy űrhajó megjavításával van elfoglalva, szerelme EVA egy akadállyal találja szembe magát mielőtt újra egymásra találhatnának. Ezt a tégla alakú elemekből felépített alakzatot az 1976-ban megjelent [Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game)) nevű játékhoz hasonlóan egy ütővel, labdával és a falak segítségével kell elpusztítania.
+
+### Főoldal
+
+A kezdőlapon legyen lehetőség különböző nehézségű szintek közül választani.
+
+### Játékmenet
+
+:::center aligned walle
+![https://i.imgur.com/oVNgHny.png](https://i.imgur.com/oVNgHny.png)
+:::
+
+A fenti képhez hasonlóan egy tetszőleges méretű pályán jelenjen meg egy felső illetve két oldalsó fal, egy ütő, egy lambda és egy tégla alakú elemekből felépített alakzat.
+
+Az ütőt a bal illetve a jobb kurzorbillentyűkkel lehessen a pályán belül mozgatni rögzített sebességgel.
+
+A szóköz billentyű lenyomására induljon el a labda, kezdetben függőlegesen felfelé.
+
+Ha a labda falba, téglába vagy az ütőbe ütközik, akkor az a beesési merőlegessel (zöld egyenes) bezárt szöggel (alfa) megegyezzően verődjön vissza.
+
+![https://i.imgur.com/2PmgzD7.png](https://i.imgur.com/2PmgzD7.png)
+
+![https://i.imgur.com/uDqIoEk.png](https://i.imgur.com/uDqIoEk.png)
+
+A játék véget ér ha az összes tégla el lett pusztítva, azonban ha a labda elhagyja a pályát akkor veszítettünk. Itt lehetőségünk van két gomb segítségével visszatérni a főoldalra vagy újrakezdeni az adott pályát.
+
+### Pontozás
+
+#### Kötelező részfeladatok
+
+- Legalább 1 pálya megjelenik
+- A játék a megadott játékmenetnek megfelelően működik
+
+#### Opcionális részfeladatok
+
+- A pályák választhatóak, a kiválasztott pálya megjelenik (1 pont)
+- Többféle tégla típus (1 pont/tégla)
+    + Gumi: felgyorsítja a labdát
+    + Szivacs: lelassítja a labdát
+    + Beton: elpusztításához több találatra van szükség
+    + Obszidián: elpusztíthatatlan
+- Ha a labda az ütővel találkozik akkor a visszaverődés irányvektora az x tengellyel 10 és 170 fok közötti szöget zár be az ütközés pontjának az ütő középpontjától vett távolságtól függően. (4 pont)
+- A játék végén pontszámot kapunk a szükséges és tényleges ütközések számától függően. (1 pont)
+- Nincs nagyobb programhiba, nem csalhatók elő furcsa jelenségek (1 pont)
+- 1 hét késés (-2 pont)
+- 2 hét késés (-4 pont)
+- 2 hétnél több késés (nincs jegy)
+
+#### Értékelés
+
+- 0-4 pont: -0.5
+- 5-9 pont: 0
+- 10+ pont: 0.5
+
+
+
 
 <!-- 
 ## PHP beadandó

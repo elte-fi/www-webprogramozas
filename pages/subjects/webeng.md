@@ -30,5 +30,6 @@
 - [2. practice lesson](#!/subjects/webeng/practices/02)
 - [3. practice lesson](#!/subjects/webeng/practices/03)
 - [4. practice lesson](#!/subjects/webeng/practices/04)
+- [Example application: Java](#!/subjects/webeng/practices/issue-tracker-java)
 
 

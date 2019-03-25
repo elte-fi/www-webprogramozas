@@ -349,7 +349,7 @@ A fenti képhez hasonlóan egy tetszőleges méretű pályán jelenjen meg egy f
 
 Az ütőt a bal illetve a jobb kurzorbillentyűkkel lehessen a pályán belül mozgatni rögzített sebességgel.
 
-A szóköz billentyű lenyomására induljon el a labda, kezdetben függőlegesen felfelé.
+A szóköz billentyű lenyomására induljon el a labda felfelé véletlenszerű irányban.
 
 Ha a labda falba, téglába vagy az ütőbe ütközik, akkor az a beesési merőlegessel (zöld egyenes) bezárt szöggel (alfa) megegyezzően verődjön vissza.
 

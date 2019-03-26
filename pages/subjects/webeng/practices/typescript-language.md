@@ -175,22 +175,22 @@ console.log(f1.Left.Left.isEmpty());
 
 2. Count
 
-Define the `count` function, if we would like to use it in this way:
+    Define the `count` function, if we would like to use it in this way:
 
-```ts
-count([1, 11, 22, 4, 33], e => e % 2 === 0);
-count(['alma', 'korte', 'szilva'], e => e.startsWith('a'));
-```
+    ```ts
+    count([1, 11, 22, 4, 33], e => e % 2 === 0);
+    count(['alma', 'korte', 'szilva'], e => e.startsWith('a'));
+    ```
 
 3. What is the difference between the `var`, `let` and `const` keywords?
 
 4. Define the `Square` and `Circle` classes which implement a common interface called `IShape`!
 
-```ts
-interface IShape {
-    getArea(): number;
-}
-```
+    ```ts
+    interface IShape {
+        getArea(): number;
+    }
+    ```
 
 5. Define a generic Stack<T> class!
 
@@ -198,9 +198,9 @@ interface IShape {
 
 7. Define a generic BinaryTree class!
 
-```ts
-let bt: BinaryTree<number>;
-```
+    ```ts
+    let bt: BinaryTree<number>;
+    ```
 
 8. Define a generic LinkedList class!
 

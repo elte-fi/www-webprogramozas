@@ -1,6 +1,6 @@
 # Issue tracker application: Java -- Web engineering
 
-The final version of the issue tracker application can be found amoung the files in Canvas. Beside the features implemented on the practice lessons, it contains the followings:
+The final version of the issue tracker application can be found amoung the files in Canvas (`issue-tracker-java-final.zip`). Beside the features implemented on the practice lessons, it contains the followings:
 
 - Many-to-many relationship between issues and labels. The labels can be set during issue creation and issue editing with a checkbox list. Analyze the Issue and Label entities for creating the many-to-many connection, and the IssueController class to use this relation.
 - Finalized the authentication process with a custom login form and against our own user entity. Just follow the steps in the corresponding tutorial and check the code how it was realized.

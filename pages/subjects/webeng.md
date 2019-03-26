@@ -26,10 +26,11 @@
 
 ## Practices
 
-- [1. practice lesson](#!/subjects/webeng/practices/01)
-- [2. practice lesson](#!/subjects/webeng/practices/02)
-- [3. practice lesson](#!/subjects/webeng/practices/03)
-- [4. practice lesson](#!/subjects/webeng/practices/04)
+- [1. lesson: The basic pillars of the World Wide Web](#!/subjects/webeng/practices/01)
+- [2. lesson: HTML, CSS mockups, Java Spring Boot, and listing from database in Java](#!/subjects/webeng/practices/02)
+- [3. lesson: Form processing and CRUD operations, relations between models](#!/subjects/webeng/practices/03)
+- [4. lesson: Securing a Spring Boot application, authentication](#!/subjects/webeng/practices/04)
 - [Example application: Java](#!/subjects/webeng/practices/issue-tracker-java)
-
-
+- [JavaScript language](#!/subjects/webeng/practices/javascript-language)
+- [TypeScript language](#!/subjects/webeng/practices/typescript-language)
+- [Angular 1.: Installation, preparing pages](#!/subjects/webeng/practices/angular1)

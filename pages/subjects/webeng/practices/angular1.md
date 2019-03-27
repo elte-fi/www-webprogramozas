@@ -192,7 +192,7 @@ A component can be styled in the `*.component.css` file. Those CSS rules are sep
 **Option 1.** Use the CDN source. In `style.css` put the following import statement:
 
 ```css
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 ```
 
 **Option 2.** Install Bootstrap, and include it via `.angular-cli.json` file:

@@ -28,6 +28,8 @@ v10.11.0
 ```sh
 # create a new application
 npx -p @angular/cli ng new my-application-name
+# Routing: yes
+# Stylesheet format: CSS
 ## go into the app directory
 cd my-application-name
 ```
@@ -169,7 +171,7 @@ In this example we will make a main page, a list page for the issues, a page for
 
 - Design the pages with HTML and CSS
 - Make components for each page
-- Introduce routing for navigation
+- Introduce routing for navigation (done by the installer)
 
 First we can work in the `app.component.html`. We can design the main page and another page (e.g. the listing one) and put one under the other. For the design we have many options:
 
@@ -293,16 +295,18 @@ First we box those functionalities into components. Start with the issue-list!
 npx ng generate component issue-list
 ```
 
-In `issue-list.component.ts` change the selector to `issue-list`. Put the necessary HTML and CSS code (if any) into `issue-list.component.html` and `issue-list.component.css`, and in the `app.component.html` file just refer to that component in this way:
+Put the necessary HTML and CSS code (if any) into `issue-list.component.html` and `issue-list.component.css`, and in the `app.component.html` file just refer to that component in this way:
 
 ```html
-<issue-list></issue-list>
+<app-issue-list></app-issue-list>
 ```
 
-Do the same steps with the other component as well (`issue-form`, `issue-detail`).
+Do the same steps with the other component as well (`app-issue-form`, `app-issue-detail`).
 
 
 ### 7.5. Routing
+
+Routing was added suring the installation process. If it were not added, then follow the steps below to add routing manually to the application.
 
 Create a new module `Routing`:
 

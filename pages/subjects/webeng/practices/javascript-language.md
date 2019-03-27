@@ -15,7 +15,7 @@
 
 ## Programming environment
 
-- Running environment
+- Runtime environment
     - Node.js (command-line JavaScript interpreter)
         + npm: Node Package Manager for installing and managing JavaScript modules
     - Browser

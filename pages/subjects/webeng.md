@@ -34,3 +34,4 @@
 - [JavaScript language](#!/subjects/webeng/practices/javascript-language)
 - [TypeScript language](#!/subjects/webeng/practices/typescript-language)
 - [Angular 1.: Installation, preparing pages](#!/subjects/webeng/practices/angular1)
+- [Angular 2.: Dynamic templates, component interaction, form processing, services](#!/subjects/webeng/practices/angular2)

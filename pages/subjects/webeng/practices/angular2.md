@@ -357,6 +357,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     // other imports ...
+    FormsModule,    // needs for normal forms
     ReactiveFormsModule
   ],
 })

@@ -3,8 +3,8 @@
 ## Steps
 
 1. Show dynamic data in the issue-list! (data is coming from the component) (dynamic data, template syntax)
-2. Introduce a button toggle group above the list, this will serve as a filter!
-3. Generate the buttons dynamically!
+2. Introduce a button toggle group above the list, this will serve as a filter! This button group has a JavaScript dependency in Twitter Bootstrap, so we need to use the [radio button group from the ng-bootstrap library](https://ng-bootstrap.github.io/#/components/buttons/examples#radioreactive).
+3. Generate the buttons dynamically! (dynamic data, template syntax)
 4. Filter the table according to the selected filter! (event handling)
 5. Put the status filter into a separate component! (component interaction)
 6. Select an element in the list and show it in a form!
@@ -349,7 +349,22 @@ Reactive forms have many advantages over template-driven forms. The documentatio
 
 ### 6.1. Create a form model and connect to the template
 
-We will use Formbuilder class to create a form modell. First we ask for a FormBuilder instance from the dependeny injection framework:
+We will use Formbuilder class to create a form modell. First we import the `ReactiveFormsModule` to our `app.module`:
+
+```ts
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    // other imports ...
+    FormsModule,    // needs for normal forms
+    ReactiveFormsModule
+  ],
+})
+export class AppModule { }
+```
+
+Then we ask for a FormBuilder instance from the dependeny injection framework:
 
 ```js
 constructor(

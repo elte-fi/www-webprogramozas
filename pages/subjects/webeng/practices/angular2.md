@@ -7,11 +7,30 @@
 3. Generate the buttons dynamically! (dynamic data, template syntax)
 4. Filter the table according to the selected filter! (event handling)
 5. Put the status filter into a separate component! (component interaction)
-6. Select an element in the list and show it in a form!
-7. Show validation errors!
-8. Save the edited element!
-9. Introduce an issue service, and use it in issue-list!
-10. Put the issue form on a separate page!
+    - a. Create a separate component, and copy the necessary code to the `ts` and `html` file!
+    - b. Create an input property and bind its value from the issue-list component to the status-filter component!
+    - c. Create an output property in status filter, and emit value on filter change. In the issue-list component create an event handler for the status-filter change, and filter the issues!
+6. Select an element in the list and show it in a form! Show validation errors! Save the edited element!
+    - a. Refer to the issue-form component in the issue-list template file.
+    - b. Clicking on a list group item, show the form! (delete the `href` attribute, because it will trigger a full page reload; introduce a `selectedIssue` property in the issue-list component)
+    - c. Create an input property in the issue form component, and bind the selected issue to the form, more pricesely to the `value` attribute of an input field.
+    - d. Update the form to a reactive form!
+    - e. Update the form values according to the selected issue (`ngOnChanges`)
+    - f. Introduce validation!
+    - g. Clicking on the submit button, emit an event with the form data. In the issue-list component copy the form data to the selected issue.
+7. Introduce an issue service, and use it in issue-list!
+    - a. Create an issue service, and copy the static issue-data into it.
+    - b. Create a `getIssues()` method and use it in the issue-list component.
+8. Put the issue form on a separate page!
+    - a. Wrap the issue-form component into an issue-edit component.
+    - b. Create `getIssue(id)` method in the issue service, and use it in the issue-edit component.
+    - c. Read the `id` parameter from the URL, and select that issue.
+    - d. On save, redirect the page back to the listing page.
+9. Create a page, where you can add a new issue.
+    - a. Endpoint: `/issues/new`
+    - b. Reuse the issue-edit component
+    - c. In the issue service, add a new method: `addIssue(issue)`
+    
 
 
 ## 1. Dynamic components

@@ -20,29 +20,109 @@ Környezet
 
 ### Az értékelés összetevői
 
-* Beadandó feladat: JavaScript
-    Határidő: 2019. április
-* Beadandó feladat: PHP
-    Határidő: 2019. május
+- Beadandó feladat: JavaScript
+  Határidő: 2019. április 28. 23:59
+- Beadandó feladat: PHP
+  Határidő: 2019. ...
+
+### JavaScript beadandó (Blackjack)
+
+Feladatod a Blackjack kártyajáték (másik nevén 21) megvalósítása JavaScript segítségével. A játék lényege hogy van egy osztó (számítógép) és egy játékos, akinek a célja, hogy a felcsapott kártyákból több pontja legyen, mint az osztónak, de legfeljebb 21. A játékot **négy** pakli francia kártyával játszák.
+
+A játék az alábbi módon zajlik:
+
+- A játékos 100 "zsetonnal" kezdik a játékot
+- Minden kör elején 1-50 zseton tétet tesz fel a következő körre
+- A kör menete:
+  - A játékos megteszi a tétet.
+  - Az osztó oszt egy lapot a játékosnak és magának képpel felfelé.
+  - Az osztó egyből oszt a játékosnak még egy lapot képpel felfelé, illetve magának egyet képpel lefelé.
+  - Ha a játékosnak így 21 pontja van, és az osztónak nem, akkor a játékos automatikusan nyer.
+  - Ha az osztónak így 21 pontja van, és a játékosnak nem, akkor az osztó automatikusan nyer.
+  - Ha az osztónak és a játékosnak is 21 pontja van, akkor döntetlen
+  - Ha a játékosnak kevesebb, mint 21 pontja van, akkor:
+    - Újabb lapot kér (akár többször is)
+      - Ha az új lappal több, mint 21 pontja van, akkor automatikusan veszít.
+      - Ha az új lappal pontosan 21 pontja van, akkor automatikusan nyer.
+      - Különben a játék folytatódik.
+    - Vagy megáll.
+      - A játékos nem kap új lapokat, a meglévő lapjaival játszik tovább.
+  - A játékos után az osztó következik:
+    - Felfordítja a lefordított kártyáját
+      - Ha 17 vagy több pontja van, akkor megáll, nem kap több lapot.
+      - Ha 16 vagy kevesebb pontja van, akkor lapot kell kérnie.
+        - Ha az új lappal 21-nél több pontja van, akkor a játékos nyert.
+        - Ha az új lappal 17-21 pontja van, akkor megáll.
+        - Ha az új lappal 16 vagy kevesebb pontja van, akkor újra lapot kér.
+  - Ezt követően ha
+    - Az osztónak van több pontja, akkor az osztó nyer.
+    - Ha a játékosnak van több pontja, akkor a játékos nyer.
+    - Ha azonos a pontszám, akkor döntetlen.
+  - Zsetonok:
+    - Ha a játékos nyer, akkor kap annyi zsetont, amennyit feltett a körre.
+    - Ha az osztó nyer, akkor a játékos minden zsetont elveszít, amit feltett a körre.
+    - Döntetlen esetén a játékos visszakapja a zsetonjait.
+
+A játék addig tart, amíg a játékosnak el nem fogy minden zsetonja, vagy el nem éri az 1000 zsetont.
+
+További szabályok:
+
+- Minden lap annyi pontot ér, amennyi a rajta szereplő szám, a figurás lapok 10 pontot érnek.
+- Az ász lap 11 pontot ér mindaddig, amíg ezzel túl nem lépné a játékos/osztó a 21 pontot, ha túllépné, akkor a kártya 1 pontot ér csak.
+- Minden kör elején a 4 pakli kártya újra megkeverésre kerül
+
+A programnak nem kell foglalkoznia az alábbi Blackjack szabályokkal:
+
+- "Splitting pairs"
+- "Doubling down"
+- "Insurance"
+
+### Értékelési szempontok
+
+#### Minimum elvárások:
+
+- A játéktér megjelenik, látszanak a játékos kártyái, az osztó kártyái és a pakli
+- A játék elején a játékos kap két lapot, ezek megjelennek
+- A játékosnak van lehetősége újabb lapot kérni vagy megállni
+- A játék elején az osztó kap két lapot
+- Miután a játékos befejezte a körét, az osztó a szabályoknak megfelelően újabb lapokat kap
+- A játék helyesen dönti el, hogy ki nyerte a kört
+
+#### További elvárások
+
+- A játék több körből áll, miután egy kör lement új kör kezdődik (1 pont)
+- A játékosnak vannak zsetonjai, ezek száma megjelenik a játék során (1 pont)
+- A játékos minden kör elején tétet tehet, amit attól függően, hogy nyert, vesztett vagy döntetlen az eredmény megdupláz, elveszít vagy visszakap (2 pont)
+- A játékos 100 zsetonnal kezd és a játék véget ér, ha a játékosnak elfogytak a zsetonjai vagy elérte az 1000 zsetont (2 pont)
+- A kártyák megfelelően képpel lefelé vagy képpel felfelé jelennek meg (1 pont)
+- A játék megfelelően kezeli a négy pakli kártyáit, mintha valós paklik lennének. Minden kör elején a négy pakli megkeveredik és abból osztunk a játék során (2 pont)
+- A játék minden szabályt megfelelően kezel (2 pont)
+- A játék során nincsenek fura jelenségek, bug-ok (1 pont)
+
+#### Érdemjegy
+
+- csak a kötelezők vannak meg: **2**
+- 1-4 pont: **3**
+- 5-8 pont: **4**
+- 9-12 pont: **5**
 
 ### A beadandók értékelése
 
-* A beadandók értékelése jeggyel történik: 1-5 jegy kapható rá.
-* Az értékelés egy mindenki számára elérhető szempontok alapján történik.
-* A beadandókat határidőre kell elkészíteni.
-* A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül.
-* A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
-* A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
+- A beadandók értékelése jeggyel történik: 1-5 jegy kapható rá.
+- Az értékelés egy mindenki számára elérhető szempontok alapján történik.
+- A beadandókat határidőre kell elkészíteni.
+- A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül.
+- A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
+- A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
 
 ### Jegyszerzés feltételei
 
-* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Két elfogadott beadandó
+- Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
+- Két elfogadott beadandó
 
 ### Értékelés
 
-* A két beadandó feladat jegyének átlaga
-
+- A két beadandó feladat jegyének átlaga
 
 ## Előadások
 
@@ -89,9 +169,9 @@ További elvárások:
 
 #### Értékelés
 
-10-14 pont: 5  
-5-9 pont: 4  
-1-4 pont: 3  
+10-14 pont: 5
+5-9 pont: 4
+1-4 pont: 3
 minimum elvárások megvannak: 2
 
 ### Beadandó feladat: PHP
@@ -139,9 +219,9 @@ Az alkalmazásnak a következő funkciókat kell tudnia:
 
 #### Értékelés
 
-5-6 pont: 5  
-3-4 pont: 4  
-1-2 pont: 3  
+5-6 pont: 5
+3-4 pont: 4
+1-2 pont: 3
 minimum elvárások megvannak: 2
 
 -->
@@ -169,10 +249,10 @@ minimum elvárások megvannak: 2
 
 ## Elektronikus tananyag
 
-* [A böngésző mint alkalmazásfejlesztési platform](http://webprogramozas.inf.elte.hu/tananyag/kliens)
-* [Dinamikus weboldalak előállítása szerveroldali technológiákkal](http://webprogramozas.inf.elte.hu/tananyag/szerver)
-* [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
-* [Webadatbázis-programozás](http://ade.web.elte.hu/wabp)
+- [A böngésző mint alkalmazásfejlesztési platform](http://webprogramozas.inf.elte.hu/tananyag/kliens)
+- [Dinamikus weboldalak előállítása szerveroldali technológiákkal](http://webprogramozas.inf.elte.hu/tananyag/szerver)
+- [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
+- [Webadatbázis-programozás](http://ade.web.elte.hu/wabp)
 
 ## Oktatók
 

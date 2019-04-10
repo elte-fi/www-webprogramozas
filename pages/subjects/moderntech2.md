@@ -53,12 +53,12 @@ Környezet
 5. 2019.03.13. [Stílusok, animációk kezelése](http://webprogramozas.inf.elte.hu/moderntech2/ea/05/)
 6. 2019.03.20. [HTML5 JavaScript API-K, 2D Rasztergrafika](http://webprogramozas.inf.elte.hu/moderntech2/ea/06/)
 7. 2019.03.27. [PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/moderntech2/ea/07/)
-8. 2019.04.03. [Bemenet, űrlapok](http://webprogramozas.inf.elte.hu/moderntech2/ea/08/)
-9. 2019.04.10. [Adattárolás](http://webprogramozas.inf.elte.hu/moderntech2/ea/09/)
+8. 2019.04.03. [Bemenet, űrlapok, adattárolás](http://webprogramozas.inf.elte.hu/moderntech2/ea/08/)
+9. 2019.04.10. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/moderntech2/ea/10/)
 10. 2019.04.17. elmarad (tavaszi szünet)
-11. 2019.04.24. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/moderntech2/ea/10/)
+11. 2019.04.24. [AJAX](http://webprogramozas.inf.elte.hu/moderntech2/ea/11/)
 12. 2019.05.01. elmarad (munka ünnepe)
-13. 2019.05.06. [AJAX](http://webprogramozas.inf.elte.hu/moderntech2/ea/11/)
+13. 2019.05.06. gyakorlat
 14. 2019.05.13. gyakorlat
 
 <!--

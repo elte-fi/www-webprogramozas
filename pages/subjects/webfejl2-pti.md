@@ -54,7 +54,7 @@ Környezet
 
 <!-- * Beadandó feladat: JavaScript   -->
 * Beadandó feladat (PTI): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)  
-    Határidő: 2019. április 14. éjfél  
+    Határidő: 2019. április 23. éjfél  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
 * Beadandó feladat (FSZ): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadand%C3%B3-(fsz)-%E2%80%93-break%C2%B7eva%C2%B7out)  
@@ -269,6 +269,8 @@ A nyerés vagy veszítés tényét kiírjuk a képernyőre.
 
 Nincs elvárás arra vonatkozóan, hogy milyen technológiával (táblázat vagy canvas) oldod meg a feladatot, továbbá a megjelenést és működést illetően sincsenek kőbe vésett elvárások.
 
+#### Pályaleírás
+
 Érdemes a pályaleírást valamilyen adatszerkezetben megadni. Ez nemcsak a két előre megadott pálya megjelenítését segíti, de a PHP-s beadandónál az adatbázisban való tárolást is megkönnyíti. A leírás pl. történhet így:
 
 ```js
@@ -287,6 +289,55 @@ Nincs elvárás arra vonatkozóan, hogy milyen technológiával (táblázat vagy
     ido: 5000       // 5s van a kártyák kiválasztására
 }
 ```
+
+#### Időzített léptetés
+
+A kártyák feldolgozását fél másodpercenként kell léptetni. Ehhez időzítőt kell használni. Az alábbiakban az látható, hogyan lehet pl. egy ciklusból eljutni az időzített léptetésig.
+
+A kiindulási pont egy sima ciklus, amiben a feldolgozás most egy sima konzolra írás.
+
+```js
+function vegrehajtas() {
+  for (let i = 0; i < 5; i++) {
+    console.log("feldolgoz", i)
+  }
+}
+```
+
+A számlálós ciklust átírhatjuk elöltesztelősre:
+
+```js
+function vegrehajtas(i = 0) {
+  while (i < 5) {
+    console.log("feldolgoz", i)
+    i = i + 1
+  }
+}
+```
+
+Ebből már könnyű az ismétlődést rekurzióval megoldani, tulajdonképpen a `while` helyett `if`-et kell írni, és a végén egy rekurzív hívást elhelyezni:
+
+```js
+function vegrehajtas(i = 0) {
+  if (i < 5) {
+    console.log("feldolgoz", i)
+    processWithLoop3(i + 1)
+  }
+}
+```
+
+Az időzítés hasonló a rekurzióhoz, csak nem szinkron közvetlen hívás van, hanem egy aszinkron közvetett:
+
+```js
+function vegrehajtas(i = 0) {
+  if (i < 5) {
+    console.log("feldolgoz", i)
+    setTimeout(() => processWithTimeout(i + 1), 500)
+  }
+}
+```
+
+A lényeg, hogy egy állapotváltozóba ki kell szervezni, hogy kell-e újra időzítőt hívni. A mi esetünkben ez az `i` változó volt.
 
 
 ### Pontozás
@@ -326,7 +377,7 @@ Ha szükséges, akkor a pályák átalakíthatók a lenti feltételek kielégít
 
 A megoldásokat a webprogramozas.inf.elte.hu szerver [beadási felületén](http://webprogramozas.inf.elte.hu/ebr) kell megtenni.
 
-Határidő: 2019. április 14. éjfél
+Határidő: 2019. április 23. éjfél
 
 
 

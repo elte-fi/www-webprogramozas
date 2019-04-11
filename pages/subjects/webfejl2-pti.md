@@ -58,7 +58,7 @@ Környezet
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
 * Beadandó feladat (FSZ): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadand%C3%B3-(fsz)-%E2%80%93-break%C2%B7eva%C2%B7out)  
-    Határidő: 2019. április 14. éjfél  
+    Határidő: 2019. április 23. éjfél  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
 <!-- * Beadandó feladat: [PHP](#php-beadandó--könyvespolc) -->

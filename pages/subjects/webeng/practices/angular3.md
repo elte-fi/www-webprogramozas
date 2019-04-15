@@ -1,8 +1,65 @@
 # Angular: HTTP communication
 
+## Tasks
+
+1. Add REST functionalities to the server-side (Java) application! Try it with a REST client!
+2. Async-await
+3. Add `HttpClientModule` to the client-side application, and use for sending HTTP request towards the server!
+4. Get issues from the REST API, and so on
+
 ## Server-side improvements
 
-We need to enable Cross-Origin Resource Sharing (CORS) in the REST API. In the simplest cases this can be done in two steps:
+### Controllers
+
+REST controllers should be annotated by `@RestController`:
+
+```java
+@RestController
+@RequestMapping("/api")
+public class FooController {
+  @Autowired
+  private FooRepository fooRepository;
+}
+```
+
+### Endpoint methods
+
+For a REST HTTP response use the `ResponseEntity` class for generating output (JSON). Input parameters usually come in the path (`@PathVariable`) or in the request body (`@RequestBody`):
+
+```java
+@GetMapping("")
+public ResponseEntity<Iterable<Foo>> getAll() {}
+
+@GetMapping("/{id}")
+public ResponseEntity<Foo> get(@PathVariable Integer id) {}
+
+@PostMapping("")
+public RepsonseEntity<Foo> post(@RequestBody Foo foo) {}
+
+@DeleteMapping("/{id}")
+public ResponseEntity delete(@PathVariable Integer id) {}
+
+@PutMapping("/{id}")
+public ResponseEntity<Foo> put(@PathVariable Integer id, @RequestBody Foo foo) {}
+```
+
+### Preventing circular JSON generation
+
+```java
+// Foo.java
+@OneToMany(mappedBy = "bar")
+private List<Bar> bars;
+
+// Bar.java
+@ManyToOne
+@JoinColumn
+@JsonIgnore       // important!
+private Foo foo;
+```
+
+### Cross-Origin Resource Sharing
+
+If we need to enable Cross-Origin Resource Sharing (CORS) in the REST API, then in the simplest cases this can be done in two steps:
 
 1. Annotate the controller classes with the `@CrossOrigin` annotation.
 
@@ -55,9 +112,9 @@ const httpOptions = {
 };
 
 @Injectable()
-export class IssueService {
+export class FooService {
 
-  private issueUrl = 'http://localhost:8080/issues';
+  private fooUrl = '/api/foos';
 
   constructor(
     private http: HttpClient
@@ -75,27 +132,68 @@ The `http` object has high-level method for sending HTTP request, and can cast t
 The return value will be an observable, which can be transformed into a promise:
 
 ```ts
-getIssue(id: number): Promise<Issue> {
-  return this.http.get<Issue>(`${this.issueUrl}/${id}`).toPromise();
+getFoo(id: number): Promise<Foo> {
+  return this.http.get<Foo>(`${this.fooUrl}/${id}`).toPromise();
 }
 ```
 
 In the caller environment we can use async-await functions to handle the responses:
 
 ```js
-export class IssueListComponent implements OnInit {
+export class FooListComponent implements OnInit {
 
-    issues: Issue[];
+    foos: Foo[];
 
     constructor(
-        private issueService: IssueService
+        private fooService: FooService
     ) { }
 
     async ngOnInit() {
-        this.issues = await this.issueService.getIssues();
+        this.foos = await this.fooService.getFoos();
     }
 }
 ```
+
+### Setting up a proxy to prevent CORS issues
+
+CORS:
+
+![](https://juristr.com/blog/assets/imgs/ngdevserver-noproxy.png)
+
+Using proxy:
+
+![](https://juristr.com/blog/assets/imgs/ngdevserver-proxy.png)
+
+1. Create a file `proxy.conf.json` in the `src/` folder.
+
+2. Add the following content to the new proxy file:
+
+    ```json
+    {
+        "/api": {
+            "target": "http://localhost:8080",
+            "secure": false
+        }
+    }
+    ```
+
+3. In the CLI configuration file, `angular.json`, add the `proxyConfig` option to the serve target:
+
+    ```json
+    ...
+    "architect": {
+      "serve": {
+        "builder": "@angular-devkit/build-angular:dev-server",
+        "options": {
+          "browserTarget": "your-application-name:build",
+          "proxyConfig": "src/proxy.conf.json"    // important!
+        },
+    ...
+    ```
+
+References: 
+- [Official guide](https://angular.io/guide/build#proxying-to-a-backend-server)
+- [Another tutorial](https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/)
 
 
 ### Transforming the response

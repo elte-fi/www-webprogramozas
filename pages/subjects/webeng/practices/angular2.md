@@ -1,6 +1,6 @@
 # Angular: dynamic templates, component interaction, processing, services
 
-## Steps
+## Tasks
 
 1. Show dynamic data in the issue-list! (data is coming from the component) (dynamic data, template syntax)
 2. Introduce a button toggle group above the list, this will serve as a filter! This button group has a JavaScript dependency in Twitter Bootstrap, so we need to use the [radio button group from the ng-bootstrap library](https://ng-bootstrap.github.io/#/components/buttons/examples#radioreactive).
@@ -26,10 +26,11 @@
     - b. Create `getIssue(id)` method in the issue service, and use it in the issue-edit component.
     - c. Read the `id` parameter from the URL, and select that issue.
     - d. On save, redirect the page back to the listing page.
+    - e. In the issue service add a new method: `modifyIssue(id, formData)`
 9. Create a page, where you can add a new issue.
     - a. Endpoint: `/issues/new`
     - b. Reuse the issue-edit component
-    - c. In the issue service, add a new method: `addIssue(issue)`
+    - c. In the issue service, add a new method: `addIssue(formData)`
     
 
 

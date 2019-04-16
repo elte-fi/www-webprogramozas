@@ -36,3 +36,4 @@
 - [Angular 1.: Installation, preparing pages](#!/subjects/webeng/practices/angular1)
 - [Angular 2.: Dynamic templates, component interaction, form processing, services](#!/subjects/webeng/practices/angular2)
 - [Angular 3.: HTTP communication with a REST API](#!/subjects/webeng/practices/angular3)
+- [Handling asynchrony in JavaScript](#!/subjects/webeng/practices/async)

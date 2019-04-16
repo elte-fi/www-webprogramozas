@@ -22,15 +22,19 @@
     - a. Create an issue service, and copy the static issue-data into it.
     - b. Create a `getIssues()` method and use it in the issue-list component.
 8. Put the issue form on a separate page!
-    - a. Wrap the issue-form component into an issue-edit component.
-    - b. Create `getIssue(id)` method in the issue service, and use it in the issue-edit component.
-    - c. Read the `id` parameter from the URL, and select that issue.
-    - d. On save, redirect the page back to the listing page.
-    - e. In the issue service add a new method: `modifyIssue(id, formData)`
+    - a. On the listing page by clicking on an issue, navigate to `/issues/id/edit`! (`[routerLink]="['/issues', issue.id, 'edit']"`)
+    - b. Wrap the issue-form component into an issue-edit component.
+    - c. Create `getIssue(id)` method in the issue service, and use it in the issue-edit component.
+    - d. Read the `id` parameter from the URL, and select that issue.
+    - e. On save, redirect the page back to the listing page.
+    - f. In the issue service add a new method: `modifyIssue(id, formData)`
 9. Create a page, where you can add a new issue.
     - a. Endpoint: `/issues/new`
     - b. Reuse the issue-edit component
     - c. In the issue service, add a new method: `addIssue(formData)`
+10. Create the page for showing the issue details.
+    - a. By clicking on an issue in the issue list, navigate to `/issues/id`
+    - b. Read the id from the URL, get the corresponding issue from the service, and show it with the help of the issue-detail component!
     
 
 

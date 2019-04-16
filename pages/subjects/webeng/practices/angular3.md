@@ -3,9 +3,18 @@
 ## Tasks
 
 1. Add REST functionalities to the server-side (Java) application! Try it with a REST client!
-2. Async-await
-3. Add `HttpClientModule` to the client-side application, and use for sending HTTP request towards the server!
-4. Get issues from the REST API, and so on
+    - a. Download the the prepared server-side application!
+    - b. Analyze the `IssueRestController` class!
+    - c. Note the `@JsonIgnore` annotation in the entity files.
+    - d. Try it with a REST client (e.g. [Advanced Rest Client in Chrome](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo))
+2. Before using the REST API from the client, [read about the different solutions on handling asynchrony in JavaScript](#!/subjects/webeng/practices/async).
+3. Manage issues from the REST API in the issue service!
+    - a. Add `HttpClientModule` to the client-side application, and use for sending HTTP request towards the server!
+    - b. Get issues from the REST API, and so on!
+    - c. Get one issue from the REST API!
+    - d. Create a new issue on the server from the service.
+    - e. Modify an issue!
+    - f. Delete an issue!
 
 ## Server-side improvements
 
@@ -231,4 +240,3 @@ export class IssueService {
   }
 }
 ```
-

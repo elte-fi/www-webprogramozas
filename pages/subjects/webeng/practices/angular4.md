@@ -2,15 +2,28 @@
 
 ## Tasks
 
-1. Introduce an auth service with the necessary properties.
-2. Use this information to update the navigation bar.
-3. Protect endpoints with route guards.
-4. Create a login page and a serverless fake login logic.
-5. Connect your login logic to the REST API.
-6. Introduce role-based authorization.
+1. Secure the REST API!
+2. Introduce an auth service with the necessary properties.
+3. Use this information to update the navigation bar.
+4. Protect endpoints with route guards.
+5. Create a login page and a serverless fake login logic.
+6. Connect your login logic to the REST API.
+7. Introduce role-based authorization.
 
 
-## 1. Auth service
+## 1. Securing the REST API
+
+- WebSecurityConfig httpBasic metódusa
+- @Secured használata
+- User információk lekérdezése
+- login metódus kell még!
+
+
+## 2. Auth service
+
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
+https://medium.com/nuculabs/angular-http-interceptors-what-are-they-and-how-to-use-them-52e060321088
+https://angular.io/api/common/http/HttpInterceptor#description
 
 Authentication related data and methods will be encapsulated in an authentication service, e.g. `auth.service.js`. Generate it with:
 
@@ -65,7 +78,7 @@ export const httpOptions = {
 httpOptions.headers = httpOptions.headers.set('Authorization', `Basic ${token}`);
 ```
 
-## 2. Navigation bar
+## 3. Navigation bar
 
 Switch menu items according to the login state in `app.component.html`. The `AuthService` needs to be injected to the class.
 
@@ -81,7 +94,7 @@ Switch menu items according to the login state in `app.component.html`. The `Aut
 </div>
 ```
 
-## 3. Protecting endpoints with route guards
+## 4. Protecting endpoints with route guards
 
 To protect endpoints, use route guards during routing.
 
@@ -116,7 +129,7 @@ In `routing.module.ts` protect the endpoints with the `canActivate` attribute:
 }
 ```
 
-## 4. Login form
+## 5. Login form
 
 ```html
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -168,7 +181,7 @@ async onSubmit() {
 }
 ```
 
-## 5. Authenticating with the REST API
+## 6. Authenticating with the REST API
 
 ```ts
 async login(username: string, password: string): Promise<User> {
@@ -192,7 +205,7 @@ logout() {
 }
 ```
 
-## 6. Role based authorization
+## 7. Role based authorization
 
 In `routing.module.ts` add a `data` attribute to the desired route:
 

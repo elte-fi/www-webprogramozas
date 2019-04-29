@@ -13,7 +13,7 @@
 
 ## 1. Securing the REST API
 
-- WebSecurityConfig httpBasic metódusa
+- Multi config WebSecurityConfig httpBasic metódusa
 - @Secured használata
 - User információk lekérdezése
 - login metódus kell még!
@@ -21,6 +21,7 @@
 
 ## 2. Auth service
 
+HttpInterceptor használata
 https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
 https://medium.com/nuculabs/angular-http-interceptors-what-are-they-and-how-to-use-them-52e060321088
 https://angular.io/api/common/http/HttpInterceptor#description

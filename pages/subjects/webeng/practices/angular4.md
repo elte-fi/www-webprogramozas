@@ -13,18 +13,106 @@
 
 ## 1. Securing the REST API
 
-- Multi config WebSecurityConfig httpBasic metódusa
-- @Secured használata
-- User információk lekérdezése
-- login metódus kell még!
+### Concepts
+
+We will use *Spring Security* for securing our REST API. It provides different types of authentication and authorization, but in this case we will use the so-called HTTP Basic authentication method. This is part of the HTTP standard, all the necessary information is transferred in HTTP headers. In this case we need to send an `Authorization` header with username and password [encoded in base64](http://www.utilities-online.info/base64) in `username:password` format:
+
+```txt
+Authorization: Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0...
+```
+
+Spring Security intercepts the server process and should check two things:
+
+1. The username and password pair is a valid credential. (authentication)
+2. The authenticated user has rights to access the required resource. (authorization)
+
+In a REST API the authentication process should be stateless, so neither sessions, nor cookies are stored during the process. On the other side, on every request the credentials should be validated, which gives pressure on the authentication service (e.g. on the database).
+
+A much better solution would be using Json Web Tokens (JWT). In this case, after the authentication, a token is generated and sent to the client. From here, the client sends this token in every request, and the server needs to check only the validity of the token and its content, which may contain several useful informations, like roles, etc. However, while HTTP Basic is well supported by Spring Security, there is no easy solution to integrate JWT authentication into the security workflow. 
+
+
+### Different security configuration for different endpoints
+
+We put our REST API into the traditional server-side application. `/api/**` endpoints are for the REST API, the others for the normal application. The former needs to use HTTP Basic authentication, the latter uses form login and session based authentication. These need different configuration. Spring Security makes it available to include multiple configurations. E.g. introduce a `MultipleEntryPointsSecurityConfig.java` class in the security package with the following content:
+
+```java
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
+public class MultipleEntryPointsSecurityConfig {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+    }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Configuration
+    @Order(1)
+    public static class RestWebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.antMatcher("/api/**")
+              .authorizeRequests()
+                  .anyRequest().authenticated()
+                  .and()
+              .httpBasic();
+        }
+    }
+    
+    @Configuration
+    @Order(2)
+    public static class ApplWebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.antMatcher("/**")
+                .authorizeRequests()
+                    .antMatchers("/", "/h2/**", "/register").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .permitAll()
+                    .and()
+                .logout()
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                    .logoutSuccessUrl("/")
+                    .and()
+                .csrf() // important!
+                    .ignoringAntMatchers("/h2/**")
+                    .and()
+                .headers()
+                    .frameOptions().disable(); // important!
+        }
+    }
+}
+```
+
+Just look at the two inner static classes with the `configure` method. The `@Order` annotation defines the order of the execution of those configurations.
+
+### Securing endpoints
+
+We can use the [same concepts for securing a controller method](#!/subjects/webeng/practices/04#securing-endpoints) as in the traditional server-side application. We can use the `@EnableGlobalMethodSecurity` and the `@Secured` annotation for this purpose.
+
+### Getting user information
+
+Getting user information is the same: we can get the authenticated username through a `Principal` object, and from this we can read the user information from the database with the help of the `UserRepository`.
+
+### Login method
+
+Finally we can introduce a `login` method in an `AuthRestController`. If we reach this endpoint we can be sure that we went through the validation process by providing the necessary and rigth user credentials.
 
 
 ## 2. Auth service
-
-HttpInterceptor használata
-https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
-https://medium.com/nuculabs/angular-http-interceptors-what-are-they-and-how-to-use-them-52e060321088
-https://angular.io/api/common/http/HttpInterceptor#description
 
 Authentication related data and methods will be encapsulated in an authentication service, e.g. `auth.service.js`. Generate it with:
 
@@ -36,6 +124,7 @@ Data properties:
 
 - `isLoggedIn`: boolean value for the state of the login
 - `user`: the user object (a `User` class is needed)
+- `token`: the authentication token
 - `redirectUrl`: storing the URL of the protected page where the application was redirected from to the login page (optional).
 
 Methods:
@@ -53,31 +142,18 @@ window.localStorage.removeItem('token');
 
 The access token should be sent with HTTP request in the `Authorization` header:
 
-```js
-private httpOptions() {
-  const headers = { 'Content-Type': 'application/json' };
-  if (window.localStorage.getItem('token')) {
-    headers['Authorization'] = window.localStorage.getItem('token');
-  }
-  return {
-    headers: new HttpHeaders(headers)
-  };
-}
-```
-
-But for simple scenarios we can store it in-memory in a JavaScript object and import it into the necessary modules:
-
 ```ts
 export const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': ''
+    'Authorization': 'Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0...',
+    'X-Requested-With': 'XMLHttpRequest',
   })
 };
-
-// Later
-httpOptions.headers = httpOptions.headers.set('Authorization', `Basic ${token}`);
 ```
+
+But for simple scenarios we can store it in-memory in the authentication service and import it into the necessary modules:
+
 
 ## 3. Navigation bar
 
@@ -187,8 +263,7 @@ async onSubmit() {
 ```ts
 async login(username: string, password: string): Promise<User> {
   try {
-    const token = btoa(`${username}:${password}`);
-    httpOptions.headers = httpOptions.headers.set('Authorization', `Basic ${token}`);
+    this.token = btoa(`${username}:${password}`);
     const user = await this.http.post<User>(`${this.authUrl}/login`, {}, httpOptions).toPromise();
     this.isLoggedIn = true;
     this.user = user;
@@ -200,13 +275,57 @@ async login(username: string, password: string): Promise<User> {
 }
 
 logout() {
-  httpOptions.headers = httpOptions.headers.set('Authorization', ``);
+  this.token = '';
   this.isLoggedIn = false;
   this.user = null;
 }
 ```
 
-## 7. Role based authorization
+## 7. HTTP interceptor for sending the token
+
+Angular makes it possible to intercept the HTTP process and change the HTTP headers on demand. In our case we need to include the necessary authentication token. For this create a new class:
+
+```sh
+npx ng generate class AuthInterceptor
+```
+
+```ts
+@Injectable()
+export class AuthInterceptor implements HttpInterceptor {
+
+  constructor(private authService: AuthService) {}
+
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    request = request.clone({
+      setHeaders: {
+        Authorization: `Basic ${authService.token}`
+      }
+    });
+    return next.handle(request);
+  }
+}
+```
+
+In the `app.module` register the new interceptor:
+
+```ts
+@NgModule({
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
+})
+```
+
+[Medium article](https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8)
+
+## 8. Role based authorization
 
 In `routing.module.ts` add a `data` attribute to the desired route:
 

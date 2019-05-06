@@ -37,3 +37,4 @@
 - [Angular 2.: Dynamic templates, component interaction, form processing, services](#!/subjects/webeng/practices/angular2)
 - [Angular 3.: HTTP communication with a REST API](#!/subjects/webeng/practices/angular3)
 - [Handling asynchrony in JavaScript](#!/subjects/webeng/practices/async)
+- [Angular 4.: Authentication (client and server)](#!/subjects/webeng/practices/angular4)

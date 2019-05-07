@@ -38,3 +38,4 @@
 - [Angular 3.: HTTP communication with a REST API](#!/subjects/webeng/practices/angular3)
 - [Handling asynchrony in JavaScript](#!/subjects/webeng/practices/async)
 - [Angular 4.: Authentication (client and server)](#!/subjects/webeng/practices/angular4)
+- [GraphQL (client and server)](#!/subjects/webeng/practices/graphql)

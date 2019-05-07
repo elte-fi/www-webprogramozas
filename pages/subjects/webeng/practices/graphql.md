@@ -12,6 +12,8 @@
 
 3. Create an issue through a GraphQL mutation!
 
+4. Follow [this guide](https://www.apollographql.com/docs/apollo-server/getting-started), and create a GraphQL server in JavaScript. Collect the data from your Java REST API! (Use the `request` library for sending HTTP requests towards your REST API.)
+
 
 ## GraphQL
 

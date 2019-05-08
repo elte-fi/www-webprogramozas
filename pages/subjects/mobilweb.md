@@ -13,9 +13,35 @@ Célkitűzés
 
 ## Számonkérés
 
-A félév során egy darab beadandó feladatot elkészíteni választott témában: egyedi alkalmazás készítése progresszív webalkalmazásként vagy natív alkalmazásként. A feladatot egy nyilvános GitHub repository-ban kell publikálni, ennek a linkjét elküldeni.
+A félév során egy darab beadandó feladatot elkészíteni választott témában: egyedi alkalmazás készítése progresszív webalkalmazásként (PWA) vagy natív alkalmazásként (React Native). A feladatot egy **nyilvános GitHub repository-ban kell publikálni, ennek a linkjét elküldeni**.
 
-Határidő: TBA
+### Feladat
+
+Beadandóként olyan alkalmazást kell készíteni, ami valamilyen backend szolgáltatást használva (pl. Firebase, Azure, AWS) adat-vezérelt módon működik mobil eszközön.
+
+A beadandó elkészíthető progresszív webalkalmazásként:
+
+- Reszponzív megjelenés
+- Alkalmazás manifeszt
+- Splash screen, ikonok
+- Offline caching
+- PWA-ként hozzáadható a kezdőképernyőhöz
+
+Vagy React Native alkalmazásként:
+
+- Csak Androidra kell fordulnia, az iOS nem elvárás
+
+### "Alap feladat"
+
+Ha nincs saját ötlet az alkalmazáshoz, akkor az alábbi alkalmazást is el lehet készíteni beadandóként.
+
+Pontszám-nyilvántartó alkalmazás kártyajátékokhoz:
+
+- Válaszható kártyajátékhoz elkészíthető (pl. Canasta, Rummy, Rikiki vagy akár nem "hagyományos" játékok, pl. Munchkin)
+- Felvehetők a játékosok, az egyes körökben rögzíthető, hogy ki hány pontot szerzett
+- Az egyes játékok online is tárolhatók, visszatölthetők (nem feltétlenül kell felhasználókat kezelni, lehet pl. jelszó alapú, hogy csak egy kódot kell megadni és az adott kódhoz tartozó játékok jelennek meg)
+
+Határidő: **2019. június 23. vasárnap**
 
 ## Részletes tematika
 

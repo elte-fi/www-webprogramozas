@@ -61,9 +61,8 @@ Környezet
     Határidő: 2019. április 23. éjfél  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
-<!-- * Beadandó feladat: [PHP](#php-beadandó--könyvespolc) -->
-* Beadandó feladat: PHP  
-    Határidő: 2019. május közepe  
+* Beadandó feladat (PTI): [PHP](#!/subjects/webfejl2-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)  
+    Határidő: 2019. május 28.  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
 <!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
@@ -441,81 +440,83 @@ A játék véget ér ha az összes tégla el lett pusztítva, azonban ha a labda
 
 
 
-<!-- 
-## PHP beadandó
+## PHP beadandó (PTI) -- Robotkaland
 
-### Feladatleírás
+Wall-E kalandjai a szerveroldalon folytatódnak. Egészítsd ki a JavaScript beanadóban megírt játékot szerveroldali funkcionalitással.
 
-Készíts egy alkalmazást, amelyben nyilván tarthatod az elolvasott és elolvasandó könyveidet! Az adatok tárolása tetszőleges formában (adatbázis, fájl) történhet.
+### Feladatok
 
-Az alkalmazásnak a következő funkciókat kell tudnia:
+1. **Főoldal** A főoldalon legyen egy logó és egy rövid leírás a játékról.
 
-1. **Főoldal** A főoldal megjelenít egy üdvözlő szöveget, és kiírja, hogy jelenleg hány felhasználónak összesen hány könyve van az alkalmazásban.
+2. **Próbajáték** A főoldalon legyen egy link, amelyre kattintva bejön az első beadandó oldala, és ahol bárki játszhat a játékkal.
 
-2. **Hitelesítés** Minden további funkció csak hitelesítés után érhető el. A főoldalon legyen lehetőség bejelentkezni: ehhez email címet és jelszót kérjünk be. Ugyancsak a főoldalon legyen egy link, amin keresztül a regisztrációs oldalra mehetünk. Itt meg kell adni a teljes nevet (kötelező), az email címet (kötelező, email formátum) és a jelszót (kötelező, legalább 6 karakter hosszú). Sikeres regisztráció után újra a főoldalra kerülünk, ahol bejelentkezhetünk. Bejelentkezés után legyen lehetőség kijelentkezni!
+3. **Regisztráció** Legyen lehetőség regisztrálni az alkalmazásba. Ehhez név, jelszó, email cím megadása szükséges. Mindegyik kötelező mező, email cím formátumának ellenőrzése szükséges (a formátum legyen feltüntetve az email mező környékén, pl. placeholderként).
 
-3. **Listázó oldal** Sikeres bejelentkezés után a listázó oldalra kerülünk, ahol táblázatos formában megjelennek a bejelentkezett felhasználóhoz tartozó könyvek: szerző, cím, kategória, elolvasva-e.
+4. **Hitelesítés** Legyen lehetőség bármikor belépni az alkalmazásba. Ehhez az email címet és jelszót kell megadni, mindkettő kötelező legyen, és vizsgáljuk az email mező megfelelő formátumát! Bejelentkezés után a regisztrációkor megadott név jelenik meg a felületeken. Bejelentkezett felhasználónak kilépésre is lehetőséget kell adni.
 
-4. **Új könyv** A listázó oldalról egy link vigyen át egy olyan oldalra, ahol új könyv adatait lehet felvenni. Egy könyvről a következőket kell megadni:
+5. **Pályalista** Bejelentkezés után egy listaoldalra kerülünk, ahol a rendszerben tárolt pályák kerülnek felsorolásra. Egy pályánál fel kell tüntetni a nevét (pl. vagy azonosítóját, pl. "Advanced13"), a nehézségét, hányan oldották már meg, illetve a bejelentkezett felhasználó megoldotta-e már.
 
-    - szerző (kötelező)
-    - cím (kötelező)
-    - oldalszám (csak egész szám)
-    - kategória (legördülő, szabadon megadható, ld. [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist))
-    - ISBN szám (10 vagy 13 hosszú számsor)
-    - elolvasva-e (jelölőmező).
+6. **Játék egy pályával** A listában egy pályára kattintva egy másik oldalon a kiválasztott pályával lehet játszani. A játék végeztével a sikerességet AJAX hívással kell a szerverrel közölni és elmenteni a játékhoz, válaszként pedig az adott pályát sikeresen elvégzett játékosok listáját kell visszaadni és megjeleníteni.
 
-    Hibás kitöltés esetén a hibákat jelezni kell! Siker esetén irányítsuk át az oldalt a listázó oldalra!
+7. **Új pálya** Legyen egy speciális felhasználó (név: admin, email: admin@admin.hu, jelszó: admin), aki belépve még egy funkcióhoz hozzáfér: új pálya felviteléhez. Itt megadhatja az új pálya nevét, nehézségét, és szerkesztheti a pályaelemeket: hányszor hányas a tábla, az egyes mezőkön milyen elemek vannak, Wall-E honnan indul, milyen irányba néz, hol van a sérülés. Hogy ezek megadása miként történik, nincs megkötve. 
+    
+    - Lehet az, hogy valaki kirajzolja a pályát, és egy palettából a megfelelő elemet kiválasztva a pályán kattintással jelöli meg, hol mi van.
+    - Lehet az is, hogy valaki egy `textarea`-ban egy olyan JSON szöveg szerkesztését követeli meg, amit a JavaScript beadandóban pályaleírásként ötletként már megadtam (esetleg saját JSON formátumot). A JSON helyességét feltételezhetjük, ellenőrizni nem kell.
 
-5. **Könyv módosítása** A listázó oldalon minden könyv mellett jelenjen meg egy "Módosít" feliratú link. Erre kattintva egy külön oldalon jelenjen meg az új könyv felviteléhez hasonló űrlap, amelyen keresztül módosítani lehet a kívánt könyvet. Első megjelenéskor az űrlapmezők legyenek kitöltve az adott könyv adataival. Módosítás után ellenőrizzük a bevitt adatokat! Ha hibás, jelezzük az oldalon, ekkor már a felküldött adatokat jelenítve meg az űrlapmezőkben. Sikeres módosítás esetén irányítsuk az oldalt a listázó oldalra!
+        ```json
+        {
+            tabla: [
+                "▩▩▩◼↑▩▩▩✹▩▩▩",
+                "▩▩▩▩↑▩▩▩▩▩▩▩",
+                "▩▩▩▩⮤←←←←←←↺▩▩",
+                "▩▩▩▩▩▩▩▩▩▩▩▩",
+                "▩◼◼▩▩▩▩▩⮘▩▩▩",
+            ],
+            falak: [
+                {sor: 5, oszlop: 6, oldal: "lent"},
+                {sor: 5, oszlop: 6, oldal: "balra"},
+            ],
+            ido: 5000
+        }
+        ```
 
-6. **Könyv törlése** A listázó oldalon minden könyv mellett jelenjen meg egy "Törlés" link is. Erre kattintva az adott könyvet töröljük az adatbázisból, és újra jelenjen meg a listázó oldal.
+        Elmentve az új pálya megjelenik a listaoldalon.
 
-7. **AJAX lapozás** A táblázatban mindig csak 5 elem jelenjen meg. Ha ennél több van, akkor legyen lapozás funkció, azaz a táblázat alatt legyen egy "Előző"-"Következő" link, amire kattintva az előző 5 vagy következő 5 elem jelenik meg a táblázatban. Ha tovább nem lehet menni, akkor az a link ne jelenjen meg. A megoldást AJAX segítségével készítsd el, azaz a teljes oldal újratöltése nélkül.
+        Az admin képes a pályákat törölni is.
 
-    A listázó oldal kaphassa meg paraméterként, hogy hányadik oldal töltődik be (pl. `list.php?page=2` -- ez a 6-10. sort fogja mutatni)
 
-    Technikai segítség:
+### Beadás
 
-    - A tábla sorainak megszámolása: `SELECT count(1) FROM table`.
-    - A tábla rendezése: `SELECT * FROM table ORDER BY id`.
-    - A tábla sorai közül valahonnan csak bizonyos mennyiséget lekérdezni: `SELECT * FROM table LIMIT 5 OFFSET 10`.
-    - A megjelenő URL átírása: `history.replaceState(null, null, '?page=10')`
+A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül kell feltölteni. Ehhez az elkészült alkalmazást be kell csomagolni ZIP formátumba, ugyanis csak így fogadja el a feltöltő felület.
 
-    Könyv törlése után a `page` paraméter őrizze meg az értékét!
+Határidő: 2017. május 28. éjfél
 
-#### Pontozás
 
-- Főoldal: megjelenik (kötelező)
-- Főoldal: számláló (1 pont)
-- Hitelesítés: Regisztráció (1 pont)
-- Hitelesítés: Bejelentkezés (kötelező)
-- Hitelesítés: Kijelentkezés (kötelező)
-- Listázó oldal: könyvlista (kötelező)
-- Új könyv oldal: hibaellenőrzés (1 pont)
-- Új könyv oldal: sikeres mentés (kötelező)
-- Könyv módosítása: űrlap kitöltve (1 pont)
-- Könyv módosítása: hibaellenőrzés, űrlap állapotmegőrzése további küldéseknél (1 pont)
-- Könyv módosítása: sikeres mentés (1 pont)
-- Könyv törlése: sikeres törlés (1 pont)
-- Könyv törlése: megőrzi a `page` paraméter értékét (1 pont)
-- AJAX lapozás (3 pont)
+### Pontozás
+
+- Főoldal: A főoldalról a játék elérhető és játszható.  (kötelező)
+- Regisztráció: Lehet regisztrálni, és a regisztrált adatokkal bejelentkezni. (1 pont)
+- Hitelesítés: Be és ki lehet jelentkezni. (kötelező)
+- Pályalista: Bejelentkezve megjelenik egy pályalista a pályák nevével és nehézségével. (kötelező)
+- Pályalista: A pályalista feltünteti a teljesítők számát. (1 pont)
+- Pályalista: A pályalista feltünteti azt, hogy a bejelentkezett felhasználó megoldotta-e már. (1 pont)
+- Játék: Egy pályát választva, az játszható. (kötelező)
+- Játék: Bejelentkezett felhasználó sikeres megoldás után a sikerességet elmenti a szerveren. (1 pont)
+- Játék: Bejelentkezett felhasználó sikeres megoldás után a sikerességet elmenti a szerveren, a mentéshez és a teljesítők listája lekérdezéséhez AJAX technológiát használ. (2 pont)
+- Új pálya: Az admin felhasználónak elérhető az új pálya felvétele, és ott új pályát tud felvenni. (2 pont)
+- Pálya törlése: Az admin felhasználó tud pályát törölni. (1 pont)
+- Nincs nagyobb programhiba, nem csalhatók elő furcsa jelenségek (2 pont)
+- Május 24-ig beadja (+2 pont)
 - 1 hét késés (-2 pont)
 - 2 hét késés (-4 pont)
 - 2 hétnél több késés (nincs elfogadva a beadandó, nincs jegy)
 
-#### Értékelés
+### Értékelés:
 
-- 0-4: -0,5
-- 5-8: 0
-- 9-11: 0,5
+- 0-4 pont: -0,5
+- 5-8 pont: 0
+- 9-11: +0,5
 
-#### Beadás
-
-Tömörített ZIP állományként kell beadni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr).
-
-Határidő: 2019. május 27. éjfél
--->
 
 ## Segédanyagok
 
@@ -542,6 +543,5 @@ Horváth Győző
 
 * Bende Imre
 * Horváth Győző
-* Kereszti Krisztián
 * Kereszti Zalán
 * Rakonczai Sándor

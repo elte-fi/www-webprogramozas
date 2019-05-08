@@ -2,7 +2,7 @@
 
 ## Tasks
 
-1. Secure the REST API!
+1. Secure the REST API! Try it with a REST client!
 2. Introduce an auth service with the necessary properties.
 3. Use this information to update the navigation bar.
 4. Protect endpoints with route guards.
@@ -64,7 +64,11 @@ public class MultipleEntryPointsSecurityConfig {
               .authorizeRequests()
                   .anyRequest().authenticated()
                   .and()
-              .httpBasic();
+              .httpBasic()
+                  .and()
+              .csrf()
+                  .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+
         }
     }
     
@@ -152,23 +156,30 @@ export const httpOptions = {
 };
 ```
 
-But for simple scenarios we can store it in-memory in the authentication service and import it into the necessary modules:
-
-
 ## 3. Navigation bar
 
 Switch menu items according to the login state in `app.component.html`. The `AuthService` needs to be injected to the class.
 
 ```html
-<div *ngIf="authService.isLoggedIn">
-  <button mat-button routerLink="/issues">My issues</button>
-  <button mat-button routerLink="/issues/add">New issues</button>
-  <span>Hello, {{ authService.user.username }}!</span>
-  <button mat-button (click)="logout()">Logout</button>
-</div>
-<div *ngIf="!authService.isLoggedIn">
-  <button mat-button routerLink="/login">Login</button>
-</div>
+<ul class="navbar-nav mr-auto" *ngIf="authService.isLoggedIn">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/issues">List issues</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/issues/new">New issue</a>
+  </li>
+  <li class="nav-item">
+    <button class="btn btn-link nav-link" (click)="logout()">Logout</button>
+  </li>
+</ul>
+<span class="navbar-text" *ngIf="authService.isLoggedIn">
+  Hello, {{ authService.user.username }}!
+</span>
+<ul class="navbar-nav mr-auto" *ngIf="!authService.isLoggedIn">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/login">Login</a>
+  </li>
+</ul>
 ```
 
 ## 4. Protecting endpoints with route guards
@@ -215,50 +226,70 @@ In `routing.module.ts` protect the endpoints with the `canActivate` attribute:
     {{ message }}
   </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Username" formControlName="username" required>
-    <mat-error *ngIf="username.invalid">Username is required</mat-error>
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Password" formControlName="password" required [type]="hidePassword ? 'password' : 'text'">
-    <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-    <mat-error *ngIf="password.invalid">Password is required</mat-error>
-  </mat-form-field>
-
-  <div>
-    <button mat-flat-button type="submit" color="primary" [disabled]="form.invalid">Mentés</button>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="Username" required formControlName="username"
+      [class.is-invalid]="username.invalid && (username.dirty || username.touched)" />
+    <div class="invalid-feedback">
+      Please provide a username!
+    </div>
   </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" required formControlName="password"
+      [class.is-invalid]="password.invalid && (password.dirty || password.touched)" />
+    <div class="invalid-feedback">
+      Please provide a password!
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
 </form>
 ```
 
 Show a message above the form about the status of the login process. After a successful submission navigate the browser to the `redirectUrl` or to the main page:
 
 ```js
-message: string;
-hidePassword = true;
+export class LoginComponent implements OnInit {
 
-constructor(
-  private authService: AuthService,
-  private router: Router
-) { }
-// ...
-async onSubmit() {
-  try {
-    this.message = null;
-    await this.authService.login(this.username.value, this.password.value);
-    if (this.authService.redirectUrl) {
-      this.router.navigate([this.authService.redirectUrl]);
-    } else {
-      this.router.navigate(['/']);
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) { }
+
+  form = this.fb.group({
+    username: ['', [Validators.required]],
+    password: ['', [Validators.required]],
+  });
+  message: string;
+
+  get username() { return this.form.get('username'); }
+  get password() { return this.form.get('password'); }
+
+  ngOnInit() { }
+
+  async onSubmit() {
+    try {
+      await this.authService.login(this.username.value, this.password.value);
+      if (this.authService.redirectUrl) {
+        this.router.navigate([this.authService.redirectUrl]);
+      } else {
+        this.router.navigate(['/']);
+      }
     }
-  } catch (e) {
-    this.message = 'Cannot log in!';
+    catch(e) {
+      this.message = 'Cannot log in!'
+    }
   }
+
 }
 ```
 
 ## 6. Authenticating with the REST API
+
+`auth.service.ts`
 
 ```ts
 async login(username: string, password: string): Promise<User> {

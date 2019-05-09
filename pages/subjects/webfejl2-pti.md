@@ -562,12 +562,14 @@ Határidő: 2017. május 28. éjfél
 * [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)
 * [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/index.html)
 
-### Példa beadandók és ZH-k
+## Példa beadandók és ZH-k
 
-* [Példa JavaScript beadandó feladat](webfejl2/gyak/js_grafilogika.html)
-* [Példa PHP beadandó feladat](webfejl2/gyak/php_grafilogika.html)
-* [Példa évfolyam ZH (névjegy)](webfejl2/gyak/pelda_zh.html)
-* [Példa évfolyam ZH (csillag)](webfejl2/gyak/pelda_zh2.html)
+* [Vetületek (2017-18 2. félév zh)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/vetuletek.html)
+* [Ügynökök (2017-18 2. félév pótzh)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/ugynokok.html)
+* [Példa JavaScript beadandó feladat](http://webprogramozas.inf.elte.hu/webfejl2/gyak/js_grafilogika.html)
+* [Példa PHP beadandó feladat](http://webprogramozas.inf.elte.hu/webfejl2/gyak/php_grafilogika.html)
+* [Példa évfolyam ZH (névjegy)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/pelda_zh.html)
+* [Példa évfolyam ZH (csillag)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/pelda_zh2.html)
 
 ## Oktatók
 

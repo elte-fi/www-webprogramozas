@@ -493,7 +493,7 @@ Wall-E kalandjai a szerveroldalon folytatódnak. Egészítsd ki a JavaScript bea
 
 A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül kell feltölteni. Ehhez az elkészült alkalmazást be kell csomagolni ZIP formátumba, ugyanis csak így fogadja el a feltöltő felület.
 
-Határidő: 2017. május 28. éjfél
+Határidő: 2019. május 28. éjfél
 
 
 ### Pontozás
@@ -550,7 +550,7 @@ Egészítsd ki az előző beadandó feladatban elkészített játékot egy eredm
 
 A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül kell feltölteni. Ehhez az elkészült alkalmazást be kell csomagolni ZIP formátumba, ugyanis csak így fogadja el a feltöltő felület.
 
-Határidő: 2017. május 28. éjfél
+Határidő: 2019. május 28. éjfél
 
 
 

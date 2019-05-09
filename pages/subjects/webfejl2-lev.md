@@ -154,6 +154,14 @@ Az alábbiak közül mindegyik egy-egy plusz jegyet jelent:
 - diavetítés
 - bejelentkezés és a hozzá tartozó funkciók
 
+### Beadás
+
+A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül kell feltölteni. Ehhez az elkészült alkalmazást be kell csomagolni ZIP formátumba, ugyanis csak így fogadja el a feltöltő felület.
+
+Határidő: 2019. május 28. éjfél
+
+
+
 
 
 ## 1. gyakorlat

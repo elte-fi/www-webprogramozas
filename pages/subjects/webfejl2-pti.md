@@ -65,6 +65,10 @@ Környezet
     Határidő: 2019. május 28.  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
+* Beadandó feladat (FSZ): [PHP](#!/subjects/webfejl2-pti#php-beadand%C3%B3-(pti)-%E2%80%93-break%C2%B7eva%C2%B7out-2.)  
+    Határidő: 2019. május 28.  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
 <!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
 * Évfolyam ZH  
     2019\. május 29. 9:00-12:00, Lovarda
@@ -516,6 +520,38 @@ Határidő: 2017. május 28. éjfél
 - 0-4 pont: -0,5
 - 5-8 pont: 0
 - 9-11: +0,5
+
+
+## PHP beadandó (PTI) -- Break·EVA·out 2.
+
+EVA úgy döntött, hogy sportot akar űzni az alakzatok elpusztításából és szívesen versenyezne robottársaival.
+
+Egészítsd ki az előző beadandó feladatban elkészített játékot egy eredménytáblával.
+
+### Pontozás
+
+#### Kötelező részfeladatok
+
+- A játék végén a program kérdezze meg, hogy szeretnénk-e elmenteni a frissen megszerzett pontszámunkat.
+- Az elmentett legjobb 10 pontszám egy másik oldalon csökkenő sorrendben jelenjen meg.
+
+#### Opcionális részfeladatok
+
+- A pontok mentéséhez regisztációra illetve bejelentkezésre legyen szükség, hogy a robotok ne tudjanak egymás nevében játszani. (4*1 pont)
+- Bejelentkezés után legyen lehetőség egy harmadik oldalon megtekinteni az összes eddigi pontszámunkat annak dátumával. (2*1 pont)
+
+### Értékelés
+
+- 0-2 pont: -0.5
+- 3-5 pont: 0
+- 6 pont: 0.5
+
+### Beadás
+
+A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül kell feltölteni. Ehhez az elkészült alkalmazást be kell csomagolni ZIP formátumba, ugyanis csak így fogadja el a feltöltő felület.
+
+Határidő: 2017. május 28. éjfél
+
 
 
 ## Segédanyagok

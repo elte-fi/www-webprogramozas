@@ -1,3 +1,9 @@
+<style type="text/css">
+main ul p, main ol p {
+  display: block;
+}
+</style>
+
 # Webfejlesztés 2. (Levelező informatika tanárképzés)
 
 ## Előadások
@@ -8,6 +14,147 @@
 
 * [A böngésző mint alkalmazásfejlesztési platform (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/kliens/)
 * [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)
+
+## Beadandó feladat
+
+Készíts egy albumokat és képeket kezelő alkalmazást. Képeket az interneten keresünk, és csak URL-jüket tároljuk el (azaz nem kell képeket feltölteni, csak szöveget tárolni). Az egyszerűség kedvéért a képek és albumok tárolását elég egy táblában megoldani. A tábla a következő adatokat tartalmazza:
+
+- id: a kép azonosítója (szám, elsődleges kulcs, automatikusan növekvő)
+- url: a kép URL-je (szöveg, kötelező, nem null, legyen elég hosszú)
+- felirat: a képhez tartozó felirat (szöveg, opcionális, lehet null)
+- album neve: az album neve, amihez a kép tartozik (szöveg, kötelező)
+- felhasznalo_id: melyik azonosítójú felhasználóhoz tartozik a kép (szám)
+
+A hitelesítéshez szükséges adatok tárolásához használhatjuk az órán vett táblaszerekezet (ld. `felhasznalok` tábla):
+
+- id: a felhasznaló azonosítója
+- felhasználónév
+- jelszó
+
+Oldd meg a következő feladatokat:
+
+1. **Albumok** 
+
+    - a. Listázd ki az albumokat, pl. felsorolásként! (kötelező)
+
+        Technikai segítség: válogasd ki a képeket tartalmazó táblából a különböző albumneveket (`select distinct`...).
+
+    - b. Tedd az albumokat hivatkozássá! Az URL, amire mutatnak: `nezoke.php?id={albumnev}`, ahol az `{albumnev}` helyébe a megfelelő album azonosítóját kell behelyettesíteni.
+
+2. **Album megjelenítése**
+
+    A `nezoke.php` oldalon olvasd ki az URL-ben érkező albumnevet, majd kérdezd le az ahhoz az albumhoz tartozó képeket. Jelenítsd meg ezeket egymás alatt egy felsorolás elemeiként! (kötelező)
+
+3. **Diavetítés**
+
+    Fejleszd tovább a `nezoke.php` oldalt úgy, hogy felsorolás helyett csak egy kép jelenjen meg, és a balra-jobbra nyíllal lehessen váltogatni közöttük. Ilyenkor a megjelent kép kiúszik a keretből és beúszik a következő kép. Első kép elé és az utolsó mögé nem lehet menni.
+
+    Technikai segítség: ha adott az alábbi szerkezet:
+
+    ```html
+    <div class="kepkeret">
+        <ul>
+            <li>
+            <img src="https://cdn3.tropicalsky.co.uk/images/800x600/huay-mae-kamin-waterfall-thailand.jpg">
+            </li>
+            <li>
+            <img src="https://cdn1.tropicalsky.co.uk/images/800x600/pagodas-doi-intanon-mountains.jpg">
+            </li>
+            <li>
+            <img src="https://cdn1.tropicalsky.co.uk/images/800x600/walking-rainforests-northern-thailand.jpg">
+            </li>
+        </ul>
+    </div>
+    ```
+
+    és a hozzá tartozó stílusok:
+
+    ```css
+    div.kepkeret * {
+        box-sizing: border-box;
+    }
+    div.kepkeret {
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        border: 2px solid orange;
+    }
+    div.kepkeret ul {
+        width: 600px;
+        position: relative;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        transition: all 1s;
+    }
+    div.kepkeret ul li {
+        width: 200px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none outside none;
+        float: left;
+    }
+    div.kepkeret ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    ```
+
+    akkor ez azt jelenti, hogy a 200px széles `div.kepkeret` mögött egy 600px széles csíkban helyezkedik el az `ul`. Az animációt ki lehet próbálni, ha a fenti CSS-t kiegészítjük a következővel:
+
+    ```css
+    div.kepkeret ul:hover {
+        left: -200px;
+    }
+    ```
+
+    Ekkor a képkeret fölé víve az egeret, az `ul` odébb csúszik. [Működés közben lásd még itt.](https://jsbin.com/viyoyazexa/edit?html,css,js,output)
+
+    A programnak ennek működéséhez két dolgot kell tennie:
+
+    1. Az `ul` szélességét annyiszor 200px-re kell állítani, ahány listaelem van az `ul`-ben.
+    2. A jobbra-balra nyíl megnyomására az `ul` stílusai közül a `left` tulajdonságot kell 200px megfelelő számú többszörösére állítani. Az animálást a CSS automatikusan elvégzi.
+
+4. **Új kép felvitele**
+
+    - a. Az albumlistázó oldalon legyen hivatkozás, amelyre kattintva új oldal nyílik meg. Itt egy új képet vihetünk fel. 
+    
+        Meg kell adni:
+
+        - kép URL-jét (kötelező, http-vel vagy https-sel kezdődik, [ld. a PHP `substr` függvényét](https://www.php.net/manual/en/function.substr.php))
+        - a kép nevét (lehet üres is)
+        - az album nevét (kötelező)
+
+        Az ellenőrzéseket szükséges elvégezni, a hibákat az oldalon meg kell jeleníteni. 
+        
+        Ha nincs hiba, akkor az adatokat a képek táblába el kell menteni, és az albumlistázó oldalra kell irányítani a böngészőt.
+
+    - b. A kép URL-jének megadásakor az űrlap alatt jelenjen meg a beszúrandó kép. (kötelező)
+
+5. **Bejelentkezés** Egészítsd ki az alkalmazást regisztráció és bejelentkezés lehetőségével (ahogy gyakorlatokon is tettük). Az előző funkciókat egészítsd ki a következőképpen:
+
+    - az albumlistánál csak az adott felhasználóhoz tartozó képek albumnevei jelenjenek meg.
+    - diavetítésnél az adott albumhoz és felhasználóhoz tartozó képek jelenjenek meg.
+    - új kép felvitelénél a bejelentkezett felhasználóhoz mentsük el képet.
+
+### Értékelés
+
+2-eshez:
+
+- a táblaszerkezet létrehozása az adatbázisban
+- a kötelezőnek jelölt elemek megvalósítása
+
+Az alábbiak közül mindegyik egy-egy plusz jegyet jelent:
+
+- új kép felvitele
+- diavetítés
+- bejelentkezés és a hozzá tartozó funkciók
+
+
 
 ## 1. gyakorlat
 

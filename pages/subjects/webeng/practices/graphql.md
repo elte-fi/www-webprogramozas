@@ -141,13 +141,13 @@ POST http://localhost:8080/graphql
 
 ```
 {
-	"query": "{ issueById(id: 1) { id title description place status user { username role } } }"
+  "query": "{ issueById(id: 1) { id title description place status user { username role } } }"
 }
 ```
 
 ```
 {
-	"query": "query($id: Int){ issueById(id: $id) { id title description place status user { username role } } }",
+  "query": "query($id: Int){ issueById(id: $id) { id title description place status user { username role } } }",
   "variables": { "id": 3 }
 }
 ```
@@ -278,14 +278,16 @@ HTTP requests
 
 ```
 {
-	"query": "mutation($issue: IssueInput){ createIssue(issue: $issue) { id, title, description, created_at } }",
-    "variables": {
-      "issue": {
-        "title": "new issue",
-        "description": "well well well",
-        "place": "PC12",
-        "status": "NEW"
-      }
+  "query": "mutation($issue: IssueInput){ createIssue(issue: $issue) { id, title, description, created_at } }",
+  "variables": {
+    "issue": {
+      "title": "new issue",
+      "description": "well well well",
+      "place": "PC12",
+      "status": "NEW"
     }
+  }
 }
 ```
+
+For the Angular side, follow the [mutation documentation in apollo-angular](https://www.apollographql.com/docs/angular/basics/mutations).

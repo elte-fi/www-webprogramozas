@@ -106,6 +106,72 @@ A programnak nem kell foglalkoznia az alábbi Blackjack szabályokkal:
 - 5-8 pont: **4**
 - 9-12 pont: **5**
 
+### PHP beadandó - Mini Kvízjáték
+
+Feladatod egy mini kvíz rendszer készítése, amiben létre lehet hozni egyszerű, többszörös választás kérdéseket, majd mások ki tudják tölteni a kész kvízt.
+
+Oldalak:
+
+- Főoldal
+- Bejelentkezés
+- Regisztráció
+- Kérdés beküldése
+- Kitöltés
+- Kérdéslista
+
+#### Általános elvárások
+
+- Az adatokat adatbázisban tároljuk
+- A játék rendelkezik egy menüvel, melyben az egyes oldalak és a kijelentkezés - bejelentkezés funkciók elérhetőek, illetve látszik, ha valaki be van jelentkezve. Ha senki nincs bejelentkezve, akkor jelenjen meg az "Anonymus" felirat a felhasználónál. Ha a felhasználó adott meg képet a profiljához, akkor az is látszódjon egy kis "avatarként" a menüben.
+- Ha valamilyen hiba történik, akkor a hiba olvasható formában jelenjen meg az oldalon egy hibaüzenetként.
+- Csak azok a menüpontok jelenjenek meg, melyek elérhetőek az adott felhasználó számára (ha nincs bejelentkezve, akkor ne látszódjanak a csak bejelentkezéssel elérhető oldalak)
+
+#### Oldalak leírása
+
+- **Főoldal**: kép (logó) és egy rövid leírása az alkalmazásról.
+- **Bejelentkezés**: Űrlap, melyen e-mail cím és jelszó segítségével van lehetőség bejelentkezni.
+- **Regisztráció**: Űrlap új felhasználó létrehozására. Szükséges adatok: _teljes név_*, _e-mail cím_*, _jelszó_*, _kép_. Az e-mail címnél ellenőrizni kell, hogy megfelelő-e a formátuma. A jelszót úgy kérd be, hogy felhasználóbarát legyen és nehéz legyen hibázni (vagy kétszer, vagy legyen lehetőség a jelszó megjelenítésére). A kép megadása nem kötelező, de ha a felhasználó szeretné, akkor egy URL formában tudja megadni a kép elérhetőségét. Ha megadott képet, akkor ellenőrizni kell, hogy az URL helyes formátumú-e. Egy e-mail címmel csak egy felhasználó regisztrálhat.
+- **Kérdés beküldése**: Csak bejelentkezett felhasználó számára elérhető. Az oldalon egy űrlap látható: egy hosszú szöveges beviteli mező (a feladat leírása), 4 rövid szöveges mező az A, B, C és D válaszlehetőségeknek, illetve valamilyen módon (legördülő lista, választókapcsoló) kiválasztható, hogy melyik a megadott 4 közül a helyes megoldás. Az oldal alján egy küldés gomb látható, mellyel ha nincs hiba, akkor az adatbázisba be tudjuk küldeni az adatokat.
+- **Kitöltés**: Bárki számára elérhető oldal, melyen a rendszer sorsol az adatbázisból véletlenszerűen 5 db kérdést, melyek egymás alatt jelennek meg. Minden kérdésnél látszik a leírás, illetve a 4 válaszlehetőség véletlenszerű sorrendben. Az űrlap végén egy küldés gomb látható. Beküldés után egy olyan oldalra kerülünk, ahol látszik a kitöltés eredménye, a kérdések leírása, az általunk megjelölt válasz és a helyes válasz is. Ha nincs legalább 5 kérdés az adatbázisban, akkor ezt hibaüzenet jelzi és nem lehet kitölteni a kvízt.
+- **Kérdéslista**: Csak bejelentkezett felhasználók számára elérhető oldal, melyen egy táblázatban szerepel az összes adatbázisban lévő kérdés az alábbi adatokkal: kérdés sorszáma, feladat, eddigi kitöltések száma, elért átlagos pontszám (minden helyes válasz 1 pontot ér) és egy törlés gomb az adott kérdéshez.
+
+### Értékelési szempontok
+
+#### Minimum elvárások:
+
+- Főoldal megjelenik, navigáció működik
+- Be lehet jelentkezni az oldalra
+- Létre lehet hozni felhasználót
+- Ki lehet jelentkezni az oldalról
+- Létre lehet hozni feladatot
+- Van lehetőség megoldani feladatot
+- Van lehetőség listázni a feladatokat
+
+#### További elvárások
+
+- A regisztrációnál az e-mail cím formátum ellenőrzése helyes (1 pont)
+- A regisztrációnál a kép URL formátum ellenőrzése helyes (1 pont)
+- A regisztrációnál a jelszó megadása felhasználóbarát és biztonságos (1 pont)
+- A regisztrációnál minden szükséges ellenőrzést helyesen elvégez (1 pont)
+- A kérdés beküldésénél helyesen ellenőrzi az alábbiakat: minden megfelelően ki van töltve és meg van adva a helyes válasz (1 pont)
+- A kitöltésnél 5 db véletlenszerűen választott kérdés jelenik meg (1 pont)
+- A kitöltésnél ha nincs elegendő feladat, akkor egy hibaüzenet jelenik meg (1 pont)
+- A kitöltésnél a válaszlehetőségek véletlen sorrendben jelennek meg (1 pont)
+- Kitöltés után az eredményoldal megjelenik, azon minden elvárt információ látszik (2 pont)
+- A kérdéslista oldalon megfelelően megjelenik az összes feladat és a hozzájuk tartozó kitöltési statisztikák (kitöltések száma, átlag pontszám) (3 pont)
+- A kérdéslistában lehet törölni az egyes kérdéseket (1 pont)
+- A kérdések törlése AJAX-szal történik, nem szükséges hozzá az oldal újratöltése (2 pont)
+- A kérdés beküldése és a kérdéslista oldalak csak bejelentkezés után érhetőek el (1 pont)
+- A hibaüzenetek minden oldalon jól jelennek meg (1 pont)
+- Nincsenek hibásan működő oldalak, bugok (1 pont)
+
+#### Érdemjegy
+
+- csak a kötelezők vannak meg: **2**
+- 1-7 pont: **3**
+- 8-14 pont: **4**
+- 15-19 pont: **5**
+
 ### A beadandók értékelése
 
 - A beadandók értékelése jeggyel történik: 1-5 jegy kapható rá.

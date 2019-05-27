@@ -553,6 +553,21 @@ A megoldásokat a [beadási felületen](http://webprogramozas.inf.elte.hu/ebr) k
 Határidő: 2019. május 28. éjfél
 
 
+## A ZH tesztelőrendszeréről
+
+A zárthelyi dolgozatnál a megoldásokat egy automatikus tesztelőrendszerbe kell feltölteni. A tesztelő a megoldást a feladatban megadott könyvtárban keresi, ezért először is nagyon fontos, hogy a megoldást a megfelelő könyvtárban helyezzük el.
+
+A tesztelő egy headless browsert futtat a háttérben és programozottan vizsgálja azt, amit mi magunk kézzel végeznénk. Minden feladathoz egy tesztcsoport tartozik. Egy teszt esetén számos lépést végez el a tesztelő: betölti az oldalt a böngészőbe, megvizsgálja, hogy a szükséges elemek megvannak-e az oldalon, kattintásokat, gépeléseket végez, majd újra vizsgál.
+
+Az egyes lépéseket a tesztelés eredményéről szóló összegző képernyőn lehet megtekinteni. Ha egy teszt sikeresen lefutott, akkor zöld pipa látszik mellette. Ha rákattintunk a teszt nevére, akkor FÖLÖTTE megjelennek az elvégzett lépések, mindegyik mellett OK felirattal. Ha egy teszt nem sikerült, akkor az adott teszt futtatása félbeszakad. Ekkor fehér szöveggel megjelennek az egyes lépések, mindegyik mellett OK felirattal, kivéve az utolsót, amely alatt pirossal jelzi, hogy nem sikerült a teszt. A pontos hibaleírást a tesztlog végén lehet elolvasni. 
+
+Hibalehetőségek:
+- A hibák egy része abból fakad, hogy a tesztelő nem találja a keresett elemet. Ekkor érdemes a CSS szelektor megnézni, és összehasonlítani, hogy az oldalunkon található-e ilyen.
+- Előfordul, hogy az elvárt érték nem egyezik meg a programunk eredményével. A tesztelő mindig a programunk értékét írja ki.
+- Van úgy, hogy egy custom function jelzi a hibát, ekkor valamilyen bonyolultabb vizsgálat nem sikerült, itt is a nem várt eredményt tartalmazta az oldal.
+
+Ha hibával találkozol, amit nem tudsz értelmezni, akkor mindenképpen szólj egy felügyelő tanárnak!
+
 
 ## Segédanyagok
 

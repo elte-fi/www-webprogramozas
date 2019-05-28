@@ -14,6 +14,62 @@ Célkitűzés
 Környezet
 : A szerveroldali dinamikus weblapok készítését a webprogramozas.inf.elte.hu szerver segítségével végezzük el. A szerveren Nginx webszerver, 7-es verziójú PHP fut. A szerverre a félév elején, a gyakorlati jelentkezések lejártakor minden hallgató kap hozzáférést. A webprogramozás szerverre kell a beadandó feladatokat feltölteni, ezen folyik a félév második felében a gyakorlati munka, illetve ezen írjuk a félév végi évfolyam ZH-t is.
 
+## Számonkérés
+
+Összevont (folyamatos) értékelésű tárgy.
+
+### Az értékelés összetevői
+
+<!-- * Beadandó feladat: JavaScript   -->
+* Beadandó feladat (PTI): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)  
+    Határidő: 2019. április 23. éjfél  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
+* Beadandó feladat (FSZ): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadand%C3%B3-(fsz)-%E2%80%93-break%C2%B7eva%C2%B7out)  
+    Határidő: 2019. április 23. éjfél  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
+* Beadandó feladat (PTI): [PHP](#!/subjects/webfejl2-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)  
+    Határidő: 2019. május 28.  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
+* Beadandó feladat (FSZ): [PHP](#!/subjects/webfejl2-pti#php-beadand%C3%B3-(pti)-%E2%80%93-break%C2%B7eva%C2%B7out-2.)  
+    Határidő: 2019. május 28.  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
+
+<!-- * Évfolyam ZH   -->
+* [Évfolyam ZH](#!/subjects/webfejl2-pti/zh/avengers)  
+    2019\. május 29. 9:00-12:00, Lovarda
+
+* PótZH  
+  2019\. június 5. 9:00-12:00, Lovarda
+
+### A beadandók értékelése
+
+* A beadandók értékelése háromértékű skálán történik: -0,5; 0; 0,5 jegy kapható rá.
+* Az értékelés egy mindenki számára elérhető szempontok alapján történik.
+* A beadandókat határidőre kell elkészíteni.
+* A határidő leteltével a beadandó jegyéből a késés mértékének megfelelően vonunk le pontokat
+* A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül. Más módon küldött beadandókat nem fogadunk el.
+* A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
+* A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
+
+### Az évfolyam ZH értékelése
+
+* Az évfolyam ZH értékelése jeggyel történik 1-5 skálán.
+* A megoldások plágiumellenőrzésen esnek át a ZH után. A gyanúsan hasonló megoldást adó hallgatókat megkérhetjük a ZH-ik megvédésére. A másolt ZH-k automatikusan 1-es osztályzatot kapnak.
+
+### Jegyszerzés feltételei
+
+* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
+* Két elfogadott beadandó
+* Megírt évfolyam ZH
+
+### Értékelés
+
+* Évfolyam ZH jegye + a két beadandó értékelése
+* A kettes érdemjegyhez legalább kettesre megírt évfolyam ZH szükséges
+
 ## Előadások
 
 1. 2019.02.11. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2/ea/01/)
@@ -45,63 +101,6 @@ Környezet
 - [10. gyakorlat](#!/subjects/webfejl2-pti/gyak/10)
 - [11. gyakorlat](#!/subjects/webfejl2-pti/gyak/11)
 - [12. gyakorlat](#!/subjects/webfejl2-pti/gyak/12)
-
-## Számonkérés
-
-Összevont (folyamatos) értékelésű tárgy.
-
-### Az értékelés összetevői
-
-<!-- * Beadandó feladat: JavaScript   -->
-* Beadandó feladat (PTI): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)  
-    Határidő: 2019. április 23. éjfél  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-* Beadandó feladat (FSZ): [JavaScript](#!/subjects/webfejl2-pti#javascript-beadand%C3%B3-(fsz)-%E2%80%93-break%C2%B7eva%C2%B7out)  
-    Határidő: 2019. április 23. éjfél  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-* Beadandó feladat (PTI): [PHP](#!/subjects/webfejl2-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)  
-    Határidő: 2019. május 28.  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-* Beadandó feladat (FSZ): [PHP](#!/subjects/webfejl2-pti#php-beadand%C3%B3-(pti)-%E2%80%93-break%C2%B7eva%C2%B7out-2.)  
-    Határidő: 2019. május 28.  
-    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
-
-<!-- * [Évfolyam ZH](http://webprogramozas.inf.elte.hu/webfejl2/gyak/zh.html) -->
-* Évfolyam ZH  
-    2019\. május 29. 9:00-12:00, Lovarda
-
-* PótZH  
-    2019\. június 5. 9:00-12:00, Lovarda
-
-### A beadandók értékelése
-
-* A beadandók értékelése háromértékű skálán történik: -0,5; 0; 0,5 jegy kapható rá.
-* Az értékelés egy mindenki számára elérhető szempontok alapján történik.
-* A beadandókat határidőre kell elkészíteni.
-* A határidő leteltével a beadandó jegyéből a késés mértékének megfelelően vonunk le pontokat
-* A beadandókat a webprogramozás szerverre kell feltölteni a [feltöltő felületen](http://webprogramozas.inf.elte.hu/ebr) keresztül. Más módon küldött beadandókat nem fogadunk el.
-* A beadandók plágiumellenőrzésen mennek keresztül az esetleges másolásokat kiszűrendő.
-* A beadandók készítőit szükség esetén megkérhetjük megoldásaik megvédésére.
-
-### Az évfolyam ZH értékelése
-
-* Az évfolyam ZH értékelése jeggyel történik 1-5 skálán.
-* A megoldások plágiumellenőrzésen esnek át a ZH után. A gyanúsan hasonló megoldást adó hallgatókat megkérhetjük a ZH-ik megvédésére. A másolt ZH-k automatikusan 1-es osztályzatot kapnak.
-
-### Jegyszerzés feltételei
-
-* Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Két elfogadott beadandó
-* Megírt évfolyam ZH
-
-### Értékelés
-
-* Évfolyam ZH jegye + a két beadandó értékelése
-* A kettes érdemjegyhez legalább kettesre megírt évfolyam ZH szükséges
-
 
 
 <style>

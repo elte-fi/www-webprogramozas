@@ -13,10 +13,12 @@ _2019. május 29._
 
 ## Tudnivalók:
 
-- A feladatokat a `webprogramozas.inf.elte.hu` szerveren kell elkészíteni. A `www` mappádon belül hozzál létre egy `avengers` mappát, és abban készítsd el a megoldásodat. 
+- A feladatokat a `webprogramozas.inf.elte.hu` szerveren kell elkészíteni. A `www` mappádon belül hozzál létre egy `avengers` mappát, és abban készítsd el a megoldásodat.
+- A feladat tesztelését az [ellenőrző felületen](http://webprogramozas.inf.elte.hu:1701/tester) tudod elvégezni.
+- A feladatra elkészítésére 3 óra áll rendelkezésre.
 - A megoldás kinézete nem számít, csak az oldalak funkcionalitása.
 - A feladatokat nem szükségszerű a leírás sorrendjében elvégezni, a feladatok többsége nem épül a másikra, viszont ha kell, akkor a szükséges előfeltételeket, akár statikusan is, de biztosítani kell.
-- **Fontos** A műveletek helyességét csak a felületen keresztül tudjuk ellenőrizni az adatok megjelenítésével.
+- **Fontos** A műveletek helyességét csak a felületen keresztül tudjuk ellenőrizni az adatok megjelenítésével, a háttérben tárolt adatokat közvetlenül nem vizsgáljuk.
 - A zh-n bármilyen segédanyag használható, de humán segítség a jelenlévő gyakorlatvezetőkön kívül nem vehető igénybe.
 - A zh után a megoldásokon plágiumellenőrzést végzünk, az esetlegesen hasonló megoldások készítőit védésre behívhatjuk.
 - Ponthatárok:

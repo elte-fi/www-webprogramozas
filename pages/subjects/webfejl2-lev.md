@@ -6,6 +6,11 @@ main ul p, main ol p {
 
 # Webfejlesztés 2. (Levelező informatika tanárképzés)
 
+## Számonkérés
+
+- [Beadandó feladat](#!/subjects/webfejl2-lev#beadand%C3%B3-feladat)
+- [Zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/zh)
+
 ## Előadások
 
 1. 2019.02.28. [Javascript, felületi elemek programozása, eseménykezelés, kódszervezés](http://webprogramozas.inf.elte.hu/webfejl2tl/ea/01/)

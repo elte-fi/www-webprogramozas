@@ -283,7 +283,7 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     </div>
     ```
 
-    **A főoldal ajánlott szerkezete**
+    **A részlet oldal ajánlott szerkezete**
 
     A részlet oldal (`card.php`) szerkezete legyen ilyen:
 
@@ -386,7 +386,7 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
 
     - b. Helytelenül kitöltve a fenti hibaüzenetek közül a megfelelőek jelenjenek meg egy `alert-danger` stílusosztályú elemben (nem feltétlenül strukturáltan).
 
-    - c. Ebben az esetben gondoskodj at űrlap állapottartásáról, azaz írd vissza a beviteli mezőkbe a felküldött adatokat!
+    - c. Ebben az esetben gondoskodj az űrlap állapottartásáról, azaz írd vissza a beviteli mezőkbe a felküldött adatokat!
 
     - d. Helyesen kitöltve vedd fel az adatokat a háttérrendszerben, majd jelenjen meg a főoldal, a küldetések listájában már az új elemmel.
 

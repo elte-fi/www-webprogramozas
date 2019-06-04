@@ -41,7 +41,8 @@ Környezet
 * [Évfolyam ZH](#!/subjects/webfejl2-pti/zh/avengers)  
     2019\. május 29. 9:00-12:00, Lovarda
 
-* PótZH  
+<!-- * PótZH   -->
+* [PótZH](#!/subjects/webfejl2-pti/zh/thor)  
   2019\. június 5. 9:00-12:00, Lovarda
 
 ### A beadandók értékelése

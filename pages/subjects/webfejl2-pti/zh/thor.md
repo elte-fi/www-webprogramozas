@@ -264,7 +264,7 @@ Thor Thanos csettintése után mély letargiába került, és alaposan elhízott
                 </div>
                 <p class="mb-1">hús,saláta,mogyoró</p>
                 <div class="d-flex w-100 justify-content-between">
-                  <small>2019</small>
+                  <small>2019-06-05</small>
                   <button class="btn btn-secondary btn-sm">Megevés</button>
                 </div>
               </li>

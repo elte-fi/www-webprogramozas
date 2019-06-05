@@ -442,7 +442,7 @@ Thor Thanos csettintése után mély letargiába került, és alaposan elhízott
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/thor/4.png)
     
     
-5. **Aktuális időtől függő funkciók (10 pt)** Thornak nem szabad akármikor ennie, csak reggel 8 óra előtt és 18 óra után. Erre figyelmezteti őt a főoldalon lévő óra a jobb fölső sarokban.
+5. **Aktuális időtől függő funkciók (10 pt)** Thornak nem szabad akármikor ennie, csak reggel 8 óra után és 18 óra előtt. Erre figyelmezteti őt a főoldalon lévő óra a jobb fölső sarokban.
 
     - a. Az oldal betöltése után jelenítsd meg az aktuális időt az óramezőben!
 

@@ -435,7 +435,7 @@ Thor Thanos csettintése után mély letargiába került, és alaposan elhízott
 
     - a. Az űrlap mellett listázd ki az elérhető ételeket jelölőmezőkként!
 
-    - b. Egy vagy több jelölőmezőt választva állítsd elő az ételek listáját vesszővel elválasztva, és írd a megfelelő beviteli mezőbe.
+    - b. Egy vagy több jelölőmezőt választva (jelölőmező `click` eseménye) állítsd elő az ételek listáját vesszővel elválasztva, és írd a megfelelő beviteli mezőbe.
 
     - c. Ugyancsak választáskor számold ki automatikusan a kijelölt elemek összkalóriaértékét. Egy étel kalóriaértéke a jelölőmező `data-kcal` attribútumában van tárolva.
     
@@ -446,7 +446,7 @@ Thor Thanos csettintése után mély letargiába került, és alaposan elhízott
 
     - a. Az oldal betöltése után jelenítsd meg az aktuális időt az óramezőben!
 
-    - b. Ha megváltoztatjuk az időt (átírjuk az értékét), akkor a "tiltott" tartományba érve:
+    - b. Ha megváltoztatjuk az időt (átírjuk az értékét, `change` eseményre kell feliratkozni), akkor a "tiltott" tartományba érve:
 
         - A fejléc legyen piros: a `navbar` stílusosztályú elemhez kell a `bg-danger` stílusosztályt is felvenni.
         - A menülista gombjait ("Megevés") le kell tiltani (`disabled`)
@@ -461,7 +461,7 @@ Thor Thanos csettintése után mély letargiába került, és alaposan elhízott
 
     - a. A `sport` stílusosztályú elemben (=mező) 14 `giant` stílusosztályú elem és 1 `thor` stílusosztályú elem van előkészítve. Ezeket ne módosítsd!
 
-    - b. A mezőn bárhova kattintva Thor odarepül a kalapácsával. Ehhez a `thor` stílusosztályú eleme `top` és `left` stílustulajdonságát kell a mező méretéhez képest százalékosan megadni (pl. `top: 23%`). Technikai segítség: egy elem pozícióját és méreteit a `getBoundingClientRect()` metódussal lehet lekérdezni (pl. `elem.getBoundingClientRect()`). A kattintás adataiból (`clientX`, `clientY`) és a mező adataiból ki lehet számolni, hogy Thornak a mezőn százalékosan hol kellene elhelyezkednie.
+    - b. A mezőn bárhova kattintva (`click` esemény) Thor odarepül a kalapácsával. Ehhez a `thor` stílusosztályú eleme `top` és `left` stílustulajdonságát kell a mező méretéhez képest százalékosan megadni (pl. `top: 23%`). Technikai segítség: egy elem pozícióját és méreteit a `getBoundingClientRect()` metódussal lehet lekérdezni (pl. `elem.getBoundingClientRect()`). A kattintás adataiból (`clientX`, `clientY`) és a mező adataiból ki lehet számolni, hogy Thornak a mezőn százalékosan hol kellene elhelyezkednie.
 
     - c. Thor repülésének animációja végén a `smashed` stílusosztályt kell adni azoknak az óriásoknak, akiknek területe átfed Thor területével. Ekkor az óriás eltűnik. 
     

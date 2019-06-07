@@ -67,7 +67,7 @@ _2019.06.07._
         A következő SQL utasítással gyorsan létrehozható a tábla, csak másold a [phpmyadmin](http://webprogramozas.inf.elte.hu/phpmyadmin/index.php) SQL fülén található szövegdobozba.
 
         ```sql
-        CREATE TABLE `nyaralas` (
+        CREATE TABLE `kutya` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
           `fajta` varchar(50) NOT NULL,
           `nev` varchar(50) NOT NULL,

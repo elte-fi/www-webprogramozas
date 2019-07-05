@@ -13,6 +13,7 @@ main ul p, main ol p {
 - [Pót zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/potzh)
 - [Pót pót zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/potpotzh)
 
+
 ## Előadások
 
 1. 2019.02.28. [Javascript, felületi elemek programozása, eseménykezelés, kódszervezés](http://webprogramozas.inf.elte.hu/webfejl2tl/ea/01/)

@@ -11,6 +11,7 @@ main ul p, main ol p {
 - [Beadandó feladat](#!/subjects/webfejl2-lev#beadand%C3%B3-feladat)
 - [Zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/zh)
 - [Pót zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/potzh)
+- [Pót pót zárthelyi dolgozat](#!/subjects/webfejl2-lev/zh/potpotzh)
 
 ## Előadások
 

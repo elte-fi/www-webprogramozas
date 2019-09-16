@@ -70,7 +70,7 @@ Környezet
 ## Előadások
 
 1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webprog/ea/01/)
-2. 2019.09.16. 
+2. 2019.09.16. [Felületi elemek programozása: a DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/)
 3. 2019.09.23. 
 4. 2019.09.30. 
 5. 2019.10.07. 

@@ -10,17 +10,45 @@ Különböző oktatási és módszertani igényeket kiszolgáló webes programoz
 
 ## Feladatok
 
-- **Hitelesítés és jogosultságkezelés**: JSON Web Token alapú hitelesítés kidolgozása és React integrációja. Google és Github azonosítás támogatása. Hasonló megoldás már implementálva volt az előző verzióban, most cél ennek elkülönítése és megbízható kidolgozása.
-- **LDAP hitelesítés implementálása**: célunk az INF-es authentikáció használata, ebben a részben ennek megvalósítása a cél.
-- **Meglévő feladatsorok használata**: több ezer feladat elérhető más formátumban. Cél ezeknek a feladatoknak a rendszerbe való átkonvertálása és kereshetővé tétele.
-- **Architektúra finomítása**: hibakezelés, újraindítás, több nyelv támogatása, task mód támogatása.
+A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást bővíteni. Ezeket először egy független projekt keretében kell implementálni, és onnan kerülnek az alkalmazásba.
+
+- **Versenyarchitektúra kialakítása**: a jelenlegi rendszer a kezdő programozásoktatásra lett tervezve, ahol haladó hatékonysági megfontolásokat nem vesz figyelembe, azaz nincsenek feladatonkénti memória- és időlimitek.
+    - a futtató és ellenőrző rendszer kiegészítése a memória- és időlimitek figyelembevételére
+    - a jelenlegi elosztott architektúra robosztusságának ellenőrzése, és hibatűrésének javítása
+    - feladatok újrafuttatásának lehetőségének vizsgálata
 - **Gyors kereshetőség biztosítása ElasticSearch segítségével**: keresés a feladatok között egy kifejezetten erre szolgáló eszköz segítségével.
+    - ElasticSearch megismerése
+    - feladatok adatainak bevitele az ElasticSearch katalógusába
+    - összetett keresés megvalósítása a feladat szövege és a hozzá tartozó metaadatok alapján
+    - szótövezés beállítása
+    - implementálás JavaScript modulként (Node.js)
 - **Kód evolúciójának megfigyelése**: a kódszerkesztés folyamatának időbeli követése, visszajátszása.
-- **Billentyűleütések vizsgálata gépi tanulással**: cél a gépelő azonosítása a gépelése alapján.
+    - megfelelő adatszerkezet keresése, vizsgálata (billentyűleütések, snapshot diffs)
+    - az adatok tárolása
+    - kód fejlődés visszajátszása
+    - statisztikák és diagramok
+- **Billentyűleütések vizsgálata**: cél a gépelő azonosítása a gépelése alapján. A vizsgálat lehetséges statisztikai módszerekkel vagy gépi tanulással is.
+    - nyers billentyűleütési adatok gyűjtése és hatékony tárolása
+    - különböző metrikák kipróbálása
+    - példaimplementáció
 - **Editor tartalmának streamelése**: tetszőleges editor képének megtekintése egy másik felhasználónál.
-- **Kollaboratív szerkesztés**: két felhasználó közösen dolgozhat egy editorban. Technológiák: [Conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type), [Operational transformation](https://hackernoon.com/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66), WebRTC.
-- **Tanári tesztek írásához szükséges keretrendszer** készítése különböző típusú tesztekhez. Pl. I/O testing, unit testing, functional testing.
-- **In-browser language server és fordító** WebAssemblyvel (pl. clang).
+    - megfelelő technológia kiválasztása (pl. WebRTC, Websockets, stb)
+    - két gép közötti kapcsolat (pl. tanár belenéz a hallgató kódjába)
+    - broadcast üzemmód (1 gépet többen is láthatnak)
+- **Kollaboratív szerkesztés**: két felhasználó közösen dolgozhat egy editorban. Technológiák: Conflict-free replicated data type, Operational transformation, WebRTC.
+    - megfelelő adatszerkezet kiválasztása
+    - hozzá tartozó függvénykönyvtár keresése és megismerése
+    - 1 böngészőn belüli 2 textarea közötti közös szerkesztés
+    - 1 böngészőn belüli több textarea közötti közös szerkesztés
+    - 2 böngészőben lévő textareák közötti közös szerkesztés
+    - Több böngészőben lévő textareák közötti közös szerkesztés
+    - Monaco editor használata textarea helyett
+- **Online feladatszerkesztő**
+    - Új feladat felvitele
+    - Meglévő feladatok módosítása
+    - A feladatokhoz tartozó adatok ellenőrzése
+- **Függvénykönyvtár készítése funkcionális tesztek készítéséhez**: funkcionális tesztekhez jelenleg a puppeteer eszközt használjuk. Ennek az API-ja azonban nagyon alacsony szintű és a rengeteg aszinkron funkció miatt bonyolult. Ezt szeretnénk egy egyszerűbb API-val elfedni, ami a tipikus tesztelési lépéseknek felel meg. Az új API-hoz egy kiindulási specifikációt tudunk adni.
+- **In-browser language server és fordító** WebAssemblyvel (pl. clang). Cél, hogy backend sandbox környezet nélkül magában a böngészőben történjen a C++ kód fordítása és futtatása.
 - **In-browser debugger**.
 
 

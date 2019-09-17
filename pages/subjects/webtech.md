@@ -1,3 +1,6 @@
+---
+projects: !file projects
+---
 # Webes szoftvertechnológia labor
 
 ## Leírás
@@ -31,12 +34,16 @@ a.card strong .label {
 }
 </style>
 <section class="columns">
-  <a data-each="projects" href="{{url}}" class="{{color}} card">
+  {{#projects}}
+  <a href="{{url}}" class="{{color}} card">
     <strong>{{name}}
-      <span data-each="{{labels}}" class="label">
-        {{labels:title}}
+      {{#labels}}
+      <span class="label">
+        {{title}}
       </span>
+      {{/labels}}
     </strong>
     <p>{{description}}</p>
   </a>
+  {{/projects}}
 </section>

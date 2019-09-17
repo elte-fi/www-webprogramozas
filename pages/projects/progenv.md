@@ -4,9 +4,7 @@
 
 Különböző oktatási és módszertani igényeket kiszolgáló webes programozási környezet fejlesztése. A felület egy egyoldalas alkalmazás, amely REST API-n keresztül kapcsolódik a szerveroldali logikához, ahol a programkódok virtuális konténerekben futnak le. Jelenleg a C++ nyelvet támogatja a környezet.
 
-::: center aligned
-![Képernyőkép a környezetről](assets/images/progenv.png)
-:::
+<img src="assets/images/progenv.png" alt="Képernyőkép a környezetetről" style="width: 100%">
 
 ## Feladatok
 

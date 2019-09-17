@@ -1,6 +1,6 @@
 - name: Webes programozási környezet fejlesztése
   description: Különböző oktatási és módszertani igényeket kiszolgáló webes programozási környezet fejlesztése. A felület egy egyoldalas alkalmazás amely REST API-n keresztül kapcsolódik a szerveroldali logikához ahol a programkódok virtuális konténerekben futnak le. Jelenleg TypeScript és C++ nyelveket támogatja a környezet.
-  url: #!/projects/progenv
+  url: "#!/projects/progenv"
   color: green
   labels:
     - title: web
@@ -8,7 +8,7 @@
 
 - name: Elosztott adatfeldolgozó rendszer (DDPS) vizualizációja
   description: Elosztott adatfeldolgozó rendszerek mint Apache Spark vagy Apache Flink végrehajtási gráfjának vizualizációja.
-  url: #!/projects/ddps
+  url: "#!/projects/ddps"
   color: blue
   labels:
     - title: web
@@ -18,7 +18,7 @@
 
 - name: Új technológiák kipróbálása
   description: A webes technológiák folyamatos fejlődésben vannak. Ez a projekt lehetőséget ad az újabb technológiák kipróbálására. Az egyszerű proof-of-concept kipróbáláson túl elvárás valamilyen valós alkalmazásban való használatuk is.
-  url: #!/projects/newtech
+  url: "#!/projects/newtech"
   color: yellow
   labels:
     - title: web
@@ -26,7 +26,7 @@
 
 - name: Testreszabható webes szövegszerkesztő fejlesztése
   description: Webes WYSIWYG szerkesztő fejlesztése amely testreszabható és speciális elemekkel kiegészíthető. Komponensalapú fejlesztéssel az egyik legmodernebb elérhető library-vel. Feladat a szerkesztő további funkciókkal való felruházása tananyagok írásához.
-  url: #!/projects/webeditor
+  url: "#!/projects/webeditor"
   color: green
   labels:
     - title: web

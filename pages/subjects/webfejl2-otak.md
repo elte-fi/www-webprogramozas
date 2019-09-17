@@ -38,13 +38,11 @@ Környezet
 ### Az értékelés összetevői
 
 * JavaScript ZH (DOM)  
-    Időpont: [2018.10.26. 14:00](#!/subjects/webfejl2-otak/zh1-14), [2018.10.26. 16:00](#!/subjects/webfejl2-otak/zh1-16)
-* Beadandó feladat: [JavaScript (canvas)](#!/subjects/webfejl2-otak/beadando)  
-    Határidő: 2018.12.09. 23:59
+    Időpont: [2019.10.21. 12:00](#)
+* Beadandó feladat: [JavaScript (canvas)](#)  
+    Határidő: 2019.12.15. 23:59
 * PHP ZH  
-    Időpont: [2018.12.20. 11:00](#!/subjects/webfejl2-otak/zh2)
-* JavaScript javító ZH (DOM)
-    Időpont: [2019.01.08. 10:00](#!/subjects/webfejl2-otak/zhjav)
+    Időpont: [2019.12.16. 12:00](#)
 
 ### A beadandók értékelése
 

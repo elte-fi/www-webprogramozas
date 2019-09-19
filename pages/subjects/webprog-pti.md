@@ -1,4 +1,4 @@
-# Webfejlesztés 2. (PTI)
+# Webprogramozás (PTI)
 
 ## Általános információk
 

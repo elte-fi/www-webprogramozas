@@ -65,7 +65,7 @@ Environment
 
 1. 2019.09.09. [Requirements, JavaScript](http://webprogramozas.inf.elte.hu/webprog/ea/01/index.eng.html)
 2. 2019.09.16. [Programming the user interface: the DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html)
-3. 2019.09.23. 
+3. 2019.09.23. [Interactive programs in the browser: event handling](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html)
 4. 2019.09.30. 
 5. 2019.10.07. 
 6. 2019.10.14. 

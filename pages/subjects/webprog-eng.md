@@ -82,6 +82,7 @@ Environment
 
 - [1. practice](#!/subjects/webprog-eng/practices/01)
 - [2. practice](#!/subjects/webprog-eng/practices/02)
+- [3. practice](#!/subjects/webprog-eng/practices/03)
 
 ## Educators
 

@@ -16,19 +16,19 @@ Környezet
 
 ## Előadások
 
-1. 2018.09.10. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
-2. 2018.09.17. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
-3. 2018.09.24. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
-4. 2018.10.01. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/)
-5. 2018.10.08. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/)
-6. 2018.10.15. elmaradt (ZH miatt)
-7. 2018.10.22. elmaradt (október 23.-a miatt)
-8. 2018.10.29. őszi szünet
-9. 2018.11.05. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)
-10. 2018.11.12. [Bemenet feldolgozása, űrlapok kezelése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/08/)
-11. 2018.11.19. [Adattárolás, fájlkezelés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/09/)
-12. 2018.11.26. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/10/)
-13. 2018.12.03. [AJAX: oldalak részleges frissítése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/11/)
+1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
+2. 2019.09.16. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
+3. 2019.09.23. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
+4. 2019.09.30. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/)
+5. 2019.10.07. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/)
+6. 2019.10.14. elmarad (ZH miatt)
+7. 2019.10.21. elmaradt (október 23.-a miatt)
+8. 2019.10.28. őszi szünet
+9. 2019.11.04. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)
+10. 2019.11.11. [Bemenet feldolgozása, űrlapok kezelése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/08/)
+11. 2019.11.18. [Adattárolás, fájlkezelés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/09/)
+12. 2019.11.25. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/10/)
+13. 2019.12.02. [AJAX: oldalak részleges frissítése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/11/)
 
 
 ## Számonkérés

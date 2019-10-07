@@ -16,11 +16,11 @@ Környezet
 
 ## Előadások
 
-1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/) ([pdf](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/?print-pdf))
-2. 2019.09.16. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/) ([pdf](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/?print-pdf))
-3. 2019.09.23. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/) ([pdf](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/?print-pdf))
-4. 2019.09.30. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/) ([pdf](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/?print-pdf))
-5. 2019.10.07. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/) ([pdf](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/?print-pdf))
+1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/01/)
+2. 2019.09.16. [A HTML programozás alapjai](http://webprogramozas.inf.elte.hu/webfejl2t/ea/02/)
+3. 2019.09.23. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
+4. 2019.09.30. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/)
+5. 2019.10.07. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/)
 6. 2019.10.14. Kódszervezés
 7. 2019.10.21. Űrlapok, táblázatok, képek, BOM
 8. 2019.10.28. őszi szünet

@@ -63,11 +63,11 @@ Environment
 
 ## Lectures
 
-1. 2019.09.09. [Requirements, JavaScript](http://webprogramozas.inf.elte.hu/webprog/ea/01/index.eng.html)
-2. 2019.09.16. [Programming the user interface: the DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html)
-3. 2019.09.23. [Interactive programs in the browser: event handling](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html)
-4. 2019.09.30. [Additional JavaScript language elements, code structure](http://webprogramozas.inf.elte.hu/webprog/ea/04/index.eng.html)
-5. 2019.10.07. 
+1. 2019.09.09. [Requirements, JavaScript](http://webprogramozas.inf.elte.hu/webprog/ea/01/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/01/index.eng.html?print-pdf))
+2. 2019.09.16. [Programming the user interface: the DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html?print-pdf))
+3. 2019.09.23. [Interactive programs in the browser: event handling](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html?print-pdf))
+4. 2019.09.30. [Additional JavaScript language elements, code structure](http://webprogramozas.inf.elte.hu/webprog/ea/04/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/04/index.eng.html?print-pdf))
+5. 2019.10.07. [Code structure, context of this, special DOM elements, progressive enhancement](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html?print-pdf))
 6. 2019.10.14. 
 7. 2019.10.21. 
 8. 2019.10.28. no lecture (autumn break)

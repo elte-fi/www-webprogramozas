@@ -69,11 +69,11 @@ Környezet
 
 ## Előadások
 
-1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webprog/ea/01/)
-2. 2019.09.16. [Felületi elemek programozása: a DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/)
-3. 2019.09.23. [Interaktív programok készítése a böngészőben: eseménykezelés](http://webprogramozas.inf.elte.hu/webprog/ea/03/)
-4. 2019.09.30. [További JavaScript nyelvi elemek, kódszervezés](http://webprogramozas.inf.elte.hu/webprog/ea/04/)
-5. 2019.10.07. 
+1. 2019.09.09. [Bevezetés, követelmények, JavaScript nyelvi alapok](http://webprogramozas.inf.elte.hu/webprog/ea/01/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/01/?print-pdf))
+2. 2019.09.16. [Felületi elemek programozása: a DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/02/?print-pdf))
+3. 2019.09.23. [Interaktív programok készítése a böngészőben: eseménykezelés](http://webprogramozas.inf.elte.hu/webprog/ea/03/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/03/?print-pdf))
+4. 2019.09.30. [További JavaScript nyelvi elemek, kódszervezés](http://webprogramozas.inf.elte.hu/webprog/ea/04/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/04/?print-pdf))
+5. 2019.10.07. [Kódszervezés, this kontextusa, speciális DOM elemek, progresszív fejlesztés](http://webprogramozas.inf.elte.hu/webprog/ea/05/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/05/?print-pdf))
 6. 2019.10.14. 
 7. 2019.10.21. 
 8. 2019.10.28. elmarad (őszi szünet)
@@ -83,6 +83,15 @@ Környezet
 12. 2019.11.25. 
 13. 2019.12.02. 
 14. 2019.12.09. 
+
+PDF-ben nyomtatáshoz válasszuk a `pdf` linket, majd állítsuk be a következőket:
+
+1. Nyomtatás (`Ctrl-p`)
+2. Cél: **Mentés PDF-ként**
+3. Elrendezés: **Landscape**
+4. Margók: **Nincs**
+5. Beállítások: **Háttérgrafika bekapcsolása**
+6. **Mentés**
 
 ## Gyakorlatok
 

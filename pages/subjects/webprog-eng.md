@@ -67,8 +67,8 @@ Environment
 2. 2019.09.16. [Programming the user interface: the DOM](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/02/index.eng.html?print-pdf))
 3. 2019.09.23. [Interactive programs in the browser: event handling](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/03/index.eng.html?print-pdf))
 4. 2019.09.30. [Additional JavaScript language elements, code structure](http://webprogramozas.inf.elte.hu/webprog/ea/04/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/04/index.eng.html?print-pdf))
-5. 2019.10.07. [Code structure, context of this, special DOM elements, progressive enhancement](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html?print-pdf))
-6. 2019.10.14. 
+5. 2019.10.07. [Special DOM elements, progressive enhancement, code structure](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/05/index.eng.html?print-pdf))
+6. 2019.10.14. [Window, canvas, API, this, error handling](http://webprogramozas.inf.elte.hu/webprog/ea/06/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/06/index.eng.html?print-pdf))
 7. 2019.10.21. 
 8. 2019.10.28. no lecture (autumn break)
 9. 2019.11.04. 

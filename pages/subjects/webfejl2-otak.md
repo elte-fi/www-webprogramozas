@@ -21,7 +21,7 @@ Környezet
 3. 2019.09.23. [Eseménykezelés részletei, beépített objektumok, nyelvi elemek](http://webprogramozas.inf.elte.hu/webfejl2t/ea/03/)
 4. 2019.09.30. [Időzítők, stílusok, animációk](http://webprogramozas.inf.elte.hu/webfejl2t/ea/04/)
 5. 2019.10.07. [2D rasztergrafika, HTML5 JavaScript API-k](http://webprogramozas.inf.elte.hu/webfejl2t/ea/05/)
-6. 2019.10.14. Kódszervezés
+6. 2019.10.14. [Nyelvi elemek, kódszervezés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/06/)
 7. 2019.10.21. Űrlapok, táblázatok, képek, BOM
 8. 2019.10.28. őszi szünet
 9. 2019.11.04. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)

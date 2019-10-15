@@ -1,5 +1,5 @@
 ---
-subjects: !file subjects
+subjects: !file subjects.yaml
 ---
 # Tantárgyak
 

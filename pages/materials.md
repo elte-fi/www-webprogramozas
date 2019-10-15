@@ -1,5 +1,5 @@
 ---
-materials: !file materials
+materials: !file materials.yaml
 ---
 # Tananyagok
 

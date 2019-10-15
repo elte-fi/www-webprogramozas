@@ -1,5 +1,5 @@
 ---
-projects: !file projects
+projects: !file projects.yaml
 ---
 # Projektek
 

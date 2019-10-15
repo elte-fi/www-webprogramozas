@@ -4,9 +4,11 @@
 
 Az Apache Spark job-execution vizualizációjának kiterjesztése más elosztott adatfeldolgozó rendszerre. Feladat az általánosítások kidolgozása, és az egyes adatkezelő rendszerek specialitásainak implementációja és leképezése a jelenlegi vizualizációs rendszerbe. További feladat a megjelenítés bővítése és finomítása (React, SVG).
 
-::: center aligned
+<div class="center aligned">
+
 ![Képernyőkép a környezetről](assets/images/ddps.gif)
-:::
+
+</div>
 
 ## Feladatok
 

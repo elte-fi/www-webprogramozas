@@ -121,22 +121,20 @@ table.game td {
 }
 </style>
 
-# Küldöncök -- Webprogramozás JavaScript beadandó
+# Messengers -- Web programming JavaScript home project
 
-> Hol volt, hol nem volt, volt egyszer egy király. Ez a király olyan hatalmas volt, hogy ha eltüsszentette magát, az egész ország népének rá kellett mondani: adj’ Isten egészségére! Hogyha náthás volt, nem is lehetett más szót hallani az országban, mint: “Adj’ Isten egészségére!”
+<img src="assets/images/webprog/king.png" class="floated"> There is a Hungarian tale in which when a great king sneezes, everyone in his kingdom needs to wish him good health. However, the realization of this simple principle has led to serious problems. Its execution was entrusted to the main chamberlain. The main chamberlain had to think long and hard, because the messengers' routes had to be planned, so that leaving the designated castles the messengers had to reach their destinations without crossing or touching each other's route, and passing through the whole kingdom. Help the main chamberlain plan the messengers' route!
 
-<img src="assets/images/webprog/king.png" class="floated"> A csillagszemű juhász még gondolat sem volt szülei fejében, mikor Nekeresdországban már az volt a szokás, hogy ha a király tüsszent, akkor mindenkinek jó egészséget kell kívánnia neki. Az egyszerű elv megvalósítása azonban komoly fejtörést okozott. A kivitelezésével Furfangot, a főkamarást bízták meg. Főtt is a főkamarás feje, mert úgy kellett a küldöncök útvonalát megtervezni, hogy a kijelölt várakból a küldöncök elindulva, egymás útját nem keresztezve, nem érintve, az egész birodalmat bejárva jussanak el a kijelölt célba. Segíts Furfangnak a küldöncök útvonalának megtervezésében!
+The kingdom can be represented by a square grid. It has a few special cells from which the messengers depart and arrive. The endpoints of each messenger's route are indicated by the same number. The messenger can start from any of its endpoint. The routes of the messengers must be planned in accordance with the following rules:
 
-Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett cella, ahonnan a küldöncök indulnak és ahova érkeznek. Egy-egy küldönc útvonalának végpontjait ugyanaz a szám jelzi. A küldönc bármelyik végpontból elindulhat. A küldöncök útvonalait az alábbi szabályok betartásával kell megtervezni:
-
-- Az azonos számokat folytonos útvonallal kell összekötni.
-- Az útvonalak csak vízszintesen és függőlegesen haladhatnak úgy, hogy a mezők közepét érinteniük kell, de ott 90 fokkal elfordulhatnak.
-- Az útvonalak nem keresztezhetik egymást és nem ágazhatnak el.
-- Az útvonalak számozott mezőkön nem mehetnek keresztül, viszont az összes fehér mezőn útvonalnak kell áthaladnia.
+- Identical numbers must be connected by a continuous route.
+- Routes can only run horizontally and vertically touching the center of the fields, and they can be turned 90 degrees at that point.
+- Routes must not cross or divide.
+- Routes cannot pass through numbered fields, but all white fields must be passed by a route.
 
 <div class="table-container">
 <table class="game">
-    <caption>Kiindulási állapot</caption>
+    <caption>Before departure</caption>
     <tr>
         <td>1</td>
         <td>2</td>
@@ -175,7 +173,7 @@ Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett
 </table>
 
 <table class="game">
-    <caption>Megoldva</caption>
+    <caption>After arrival</caption>
     <tr>
         <td class="color1 bottom">1</td>
         <td class="color2 bottom">2</td>
@@ -214,25 +212,25 @@ Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett
 </table>
 </div>
 
-## Feladatok
+## Tasks
 
-- A nyitóképernyőn lehessen választani nehézséget: könnyű, közepes és nehéz.
-- A nehézséget kiválasztva megjelenik az adott feladat.
-- Az egér segítségével legyen lehetőség az egyforma számokat a szabályok betartásával összekötni. 
-  + Egy számozott mezőn lenyomjuk az egérgombot (`mousedown`), majd nyomva tartva kijelöljük a küldönc útvonalát (`mouseover` vagy `mouseenter`) a szabályok betartásával. 
-  + Ugyanahhoz a számhoz érve elengedve az egérgombot (`mousedown`) a vonal rögzül. 
-  + Ha nem ugyanazon a szám mezőn engedjük el a gombot, akkor a vonal megszűnik. 
-  + Ha a vonallal rossz irányban mentünk, akkor a vonalat visszafele követve lehetőség van az utolsó lépéseket törölni. 
-  + Ha szabálytalan mezőre lépnénk (pl. egy másik vonalat kereszteznénk vagy rossz szám mezőre lépünk), akkor a vonal nem hosszabbodik meg. 
-  + Egy már rögzült vonalon jobb gombot nyomva, a vonal törlődik.
-- Ha az összes küldönc útvonala a helyére került, és az egész ország le van fedve, akkor a játék írja ki, hogy a felhasználó nyert. Ezután legyen lehetőség a főoldalra visszamenni, és új játékot választani.
-- Legyen lehetőség mindhárom pályánál a játékállást elmenteni. Ha már van ilyen játékállás, akkor kérdezzen rá, hogy valóban felül akarja-e írni. Később az adott pályához egy már mentett állás legyen betölthető.
+- On the home screen first the difficulty needs to be chosen: easy, medium and hard.
+- Choosing the difficulty, the appropriate task is displayed.
+- Using the mouse you need to connect the same numbers according to the rules above.
+  + In a numbered field, press the left mouse button (`mousedown`), and with keeping down, select the messenger's route (`mouseover` or `mouseenter`) following the rules.
+  + Release the mouse button (`mousedown`) when you reach the same number, and then the line should be fixed.
+  + If you release the mouse button not on the same number field, the line will be dropped.
+  + If you went in the wrong direction with the line, you can undo the last steps by following the line backwards.
+  + If you move to a wrong field (e.g. crossing another line or entering a wrong number field), the line will not be extended.
+  + Pressing the right mouse button on an already fixed line, will delete the line.
+- If all the messengers' route are in place and the whole kingdom is covered, the user wins and it should be written on the screen. You should then be able to go back to the home page and select a new game.
+- Make it possible to save a game position on all three levels. If you already have such a game save, confirm if you really want to overwrite it. Later, you should be able to load an already saved position for that level.
 
-## A három feladat
+## The three tasks
 
 <div class="table-container">
 <table class="game">
-    <caption>Könnyű</caption>
+    <caption>Easy</caption>
     <tr>
         <td></td>
         <td></td>
@@ -271,7 +269,7 @@ Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett
 </table>
 
 <table class="game">
-    <caption>Közepes</caption>
+    <caption>Medium</caption>
     <tr>
         <td>2</td>
         <td></td>
@@ -374,7 +372,7 @@ Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett
 </table>
 
 <table class="game">
-    <caption>Nehéz</caption>
+    <caption>Hard</caption>
     <tr>
         <td>1</td>
         <td></td>
@@ -477,11 +475,11 @@ Nekeresdország egy négyzetráccsal ábrázolható. Van benne pár kitüntetett
 </table>
 </div>
 
-## Működés és segítség
+## Technical help
 
-Nincs elvárás arra vonatkozóan, hogy milyen technológiával (táblázat, div-ek vagy canvas) oldod meg a feladatot, továbbá a megjelenést és működést illetően sincsenek kőbe vésett elvárások. A vonal meghúzását akár a mező háttérszínével is jelezheted. Ha tetszik az ezen az oldalon alkalmazott megoldás, akkor vizsgáld meg a fejlesztői eszköztárral.
+There is no requirement as to what technology (table, divs or canvas) you should use to solve the task, and there will be no stone-cut requirements for appearance and exact operations. You can draw a line even by setting the background color of the field. If you like the solution on this page, check it out with the developer toolbar.
 
-Érdemes a pályaleírást valamilyen adatszerkezetben megadni. Ez nemcsak a három előre megadott pálya megjelenítését segíti, de a PHP-s beadandónál az adatbázisban való tárolást is megkönnyíti majd. A leírás pl. történhet így:
+It is worthwhile to provide the task description in some data structure. Not only will this help you to display the three predefined paths, but it will also make it easier for submitting to the database when we will use PHP. The task description may look like this:
 
 ```js
 [
@@ -494,41 +492,42 @@ Nincs elvárás arra vonatkozóan, hogy milyen technológiával (táblázat, div
 ```
 
 Az egér nyomon követésénél a `mouseover` vagy a `mouseenter` eseményt érdemes használni. Ezeknél az eseményeknél az eseményobjektum egy [`relatedTarget` tulajdonságban](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget) azt az elemet tartalmazza, ahonnan az egér érkezett. Igény szerint ezt is ki lehet használni.
+It is worth using the `mouseover` or` mouseenter` event when following the mouse track. For these events, the event object contains a [`relatedTarget` property](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget) which refers to the element from which the mouse came. This can be used as needed.
 
-## Pontozás
+## Points
 
-### Kötelező (enélkül nincs jegy)
+### Required (no grade without them)
 
-- Legalább 1 pálya megjelenik.
-- A pontok valamilyen módon (pl. kattintgatással), de egyértelműen (pl. különböző színekkel, vagy számokkal) összeköthetők.
-- A végállapot ellenőrzése, nyerés kiírása.
+- At least 1 task is displayed.
+- The points can be connected in some way (e.g. by clicking), but clearly (e.g. with different colors or numbers).
+- Checking the final state, announcing the win.
 
-### Nem kötelező
+### Extras
 
-- A pályák választhatóak, a kiválasztott pálya megjelenik. (1 pont)
-- Az egérgombot lenyomva tartva és az egeret mozgatva a küldönc útvonala kijelölhető. (2 pont)
-- Az útvonal csak számból indulhat. (1 pont)
-- Ha a kiindulásival megegyező számon végzünk, akkor a vonal rögzül. (1 pont)
-- Ha nem a kiindulásival megegyező számon végzünk, akkor a húzott vonal eltűnik. (1 pont)
-- A vonal a szabályok betartásával húzható, nem mehet át másik vonalon vagy számmezőn. (1 pont)
-- A vonal visszafele menve rövidíthető, az utolsó elrontott lépések így visszavonhatók. (2 pont)
-- Egy kész vonalra jobb gombbal kattintva a vonal eltűnik. (1 pont)
-- Játékállás mindegyik pályánál elmenthető. (1 pont)
-- Mentéskor ellenőrzi, hogy van-e már mentett pálya. (1 pont)
-- Egy adott pályánál a játékállás betölthető. (1 pont)
-- Nincs nagyobb programhiba, nem csalhatók elő furcsa jelenségek (1 pont)
-- 1 hét késés (-2 pont)
-- 2 hét késés (-4 pont)
-- 2 hétnél több késés (nincs elfogadva a beadandó, nincs jegy)
+- Difficulty can be chosen, the appropriate task is displayed. (1 point)
+- By holding down the left mouse button and moving the mouse, the messenger's route can be defined. (2 points)
+- The route can only start from a number field. (1 point)
+- If we finish on the same number as the starting point, the line will be fixed. (1 point)
+- If we do not finish on the same number as the starting point, the drawn line disappears. (1 point)
+- The line can be drawn following the rules, it cannot cross another line or number field. (1 point)
+- The line can be shortened by going backwards, so that the last steps can be undone. (2 points)
+- When you right-click on a finished line, the line disappears. (1 point)
+- A game position can be saved for each level. (1 point)
+- It is checked and the overwrite is confirmed, if there is any saved track when saving. (1 point)
+- The game position can be loaded for a given level. (1 point)
+- No major bugs, no strange phenomena during playing (1 point)
+- 1 week delay (-2 points)
+- 2 weeks delay (-4 points)
+- more than 2 weeks late (not accepted, no grade)
 
-## Értékelés
+## Evaluation
 
-- 0-6 pont: -0,5
-- 7-11 pont: 0
-- 12-14 pont: +0,5
+- 0-6 points: -0,5
+- 7-11 points: 0
+- 12-14 points: +0,5
 
-## Beadás
+## Submission
 
-A megoldásokat a webprogramozas.inf.elte.hu szerver [beadási felületén](http://webprogramozas.inf.elte.hu/ebr) kell megtenni.
+Solutions must be submitted to the [evaluation system](http://webprogramozas.inf.elte.hu/ebr).
 
-Határidő: 2019. november 10. éjfél
+Deadline: 2019. november 10. midnight

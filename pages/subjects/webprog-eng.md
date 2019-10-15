@@ -18,11 +18,10 @@ Environment
 
 ### Components
 
-<!-- * Home project (PTI): [JavaScript](#!/subjects/webprog-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)   -->
-* Home project: JavaScript  
-    Deadline: 2019. october  
-    <!-- Deadline: 2019. április 23. éjfél   -->
-    <!-- [Beadás](http://webprogramozas.inf.elte.hu/ebr) -->
+<!-- * Home project: JavaScript   -->
+* Home project: [JavaScript](#!/subjects/webprog-eng/projects/messenger.js)  
+    Deadline: 2019. november 10. midnight  
+    [Submission](http://webprogramozas.inf.elte.hu/ebr)
 
 <!-- * Home project: [PHP](#!/subjects/webprog-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)   -->
 * Home project: PHP  

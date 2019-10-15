@@ -20,11 +20,10 @@ Környezet
 
 ### Az értékelés összetevői
 
-<!-- * Beadandó feladat (PTI): [JavaScript](#!/subjects/webprog-pti#javascript-beadandó-(pti)-%E2%80%93-robotkaland)   -->
-* Beadandó feladat: JavaScript  
-    Határidő: 2019. október vége, november eleje  
-    <!-- Határidő: 2019. április 23. éjfél   -->
-    <!-- [Beadás](http://webprogramozas.inf.elte.hu/ebr) -->
+<!-- * Beadandó feladat: JavaScript   -->
+* Beadandó feladat: [JavaScript](#!/subjects/webprog-pti/beadando/kuldonc.js)  
+    Határidő: 2019. november 10. éjfél  
+    [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 
 <!-- * Beadandó feladat: [PHP](#!/subjects/webprog-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)   -->
 * Beadandó feladat: PHP  

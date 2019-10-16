@@ -19,7 +19,7 @@ Environment
 ### Components
 
 <!-- * Home project: JavaScript   -->
-* Home project: [JavaScript](#!/subjects/webprog-eng/projects/messenger.js)  
+* Home project: [JavaScript](#!/subjects/webprog-eng/projects/messenger)  
     Deadline: 2019. november 10. midnight  
     [Submission](http://webprogramozas.inf.elte.hu/ebr)
 

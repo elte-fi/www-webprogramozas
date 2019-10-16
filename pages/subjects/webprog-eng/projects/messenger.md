@@ -491,7 +491,6 @@ It is worthwhile to provide the task description in some data structure. Not onl
 ]
 ```
 
-Az egér nyomon követésénél a `mouseover` vagy a `mouseenter` eseményt érdemes használni. Ezeknél az eseményeknél az eseményobjektum egy [`relatedTarget` tulajdonságban](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget) azt az elemet tartalmazza, ahonnan az egér érkezett. Igény szerint ezt is ki lehet használni.
 It is worth using the `mouseover` or` mouseenter` event when following the mouse track. For these events, the event object contains a [`relatedTarget` property](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget) which refers to the element from which the mouse came. This can be used as needed.
 
 ## Points

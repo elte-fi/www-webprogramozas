@@ -21,7 +21,7 @@ Környezet
 ### Az értékelés összetevői
 
 <!-- * Beadandó feladat: JavaScript   -->
-* Beadandó feladat: [JavaScript](#!/subjects/webprog-pti/beadando/kuldonc)  
+* Beadandó feladat: [JavaScript](#!/subjects/webprog-pti/beadando/kuldonc-js)  
     Határidő: 2019. november 10. éjfél  
     [Beadás](http://webprogramozas.inf.elte.hu/ebr)
 

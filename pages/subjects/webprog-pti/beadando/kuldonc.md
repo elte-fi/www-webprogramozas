@@ -1,5 +1,5 @@
 <style>
-img.floated {
+main img.floated {
   float: left;
   width: 20%;
   margin: 10px;

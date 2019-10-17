@@ -502,20 +502,20 @@ It is worth using the `mouseover` or` mouseenter` event when following the mouse
 - Checking the final state, announcing the win.
 - The page should contain the following statements:
 
-  ```txt
-  <Name>
-  <Neptun ID>
-  <Subject & Assignment name>
-  <Submission date>
-  This solution was submitted and prepared by <Name, Neptun ID> for the <Assignment name> assignment of the <Course name> course. 
-  I declare that this solution is my own work. 
-  I have not copied or used third party solutions. 
-  I have not passed my solution to my classmates, neither  made it public. 
-  Students’ regulation of Eötvös Loránd University (ELTE Regulations Vol. II. 74/C. § ) states 
-  that as long as a student presents another student’s work - or at least the significant part of it - as his/her own performance, 
-  it will count as a disciplinary fault. 
-  The most serious consequence of a disciplinary fault can be dismissal of the student from the University.
-  ```
+```txt
+<Name>
+<Neptun ID>
+<Subject & Assignment name>
+<Submission date>
+This solution was submitted and prepared by <Name, Neptun ID> for the <Assignment name> assignment of the <Course name> course. 
+I declare that this solution is my own work. 
+I have not copied or used third party solutions. 
+I have not passed my solution to my classmates, neither  made it public. 
+Students’ regulation of Eötvös Loránd University (ELTE Regulations Vol. II. 74/C. § ) states 
+that as long as a student presents another student’s work - or at least the significant part of it - as his/her own performance, 
+it will count as a disciplinary fault. 
+The most serious consequence of a disciplinary fault can be dismissal of the student from the University.
+```
 
 ### Extras
 

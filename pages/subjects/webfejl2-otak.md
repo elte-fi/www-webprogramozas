@@ -46,7 +46,7 @@ Környezet
 ### Az értékelés összetevői
 
 * JavaScript ZH (DOM)  
-    Időpont: [2019.10.21. 12:00](#)
+    Időpont: [2019.10.21. 12:00](#/webfejl2-otak/zh-js)
 * Beadandó feladat: [JavaScript (canvas)](#)  
     Határidő: 2019.12.15. 23:59
 * PHP ZH  

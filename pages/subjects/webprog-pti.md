@@ -73,8 +73,8 @@ Környezet
 3. 2019.09.23. [Interaktív programok készítése a böngészőben: eseménykezelés](http://webprogramozas.inf.elte.hu/webprog/ea/03/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/03/?print-pdf))
 4. 2019.09.30. [További JavaScript nyelvi elemek, kódszervezés](http://webprogramozas.inf.elte.hu/webprog/ea/04/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/04/?print-pdf))
 5. 2019.10.07. [Speciális DOM elemek, progresszív fejlesztés, kódszervezés](http://webprogramozas.inf.elte.hu/webprog/ea/05/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/05/?print-pdf))
-6. 2019.10.14. [Window, canvas, API, this, hibakezelés](http://webprogramozas.inf.elte.hu/webprog/ea/06/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/06/?print-pdf))
-7. 2019.10.21. 
+6. 2019.10.14. [Window, canvas, API](http://webprogramozas.inf.elte.hu/webprog/ea/06/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/06/?print-pdf))
+7. 2019.10.21. [Aszinkron műveletek, AJAX, JSON, this, hibakezelés](http://webprogramozas.inf.elte.hu/webprog/ea/07/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/07/?print-pdf))
 8. 2019.10.28. elmarad (őszi szünet)
 9. 2019.11.04. 
 10. 2019.11.11. 

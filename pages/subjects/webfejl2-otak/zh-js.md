@@ -7,7 +7,7 @@
 - A megoldás kinézete nem számít, csak a funkcionalitás
 - A feladatokat - az egymásra épülő 2. és 3. feladat kivételével - nem szükséges sorrendben megoldani
 - Pontozás: minden helyesen megoldott feladat +1 jegy
-- Beadás: [http://webprogramozas.inf.elte.hu/ebr]
+- Beadás: <http://webprogramozas.inf.elte.hu/ebr>
 
 ## 1. feladat
 

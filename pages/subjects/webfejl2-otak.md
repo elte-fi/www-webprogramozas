@@ -45,11 +45,12 @@ Környezet
 
 ### Az értékelés összetevői
 
-* JavaScript ZH (DOM)  
+- JavaScript ZH (DOM)  
     Időpont: [2019.10.21. 12:00](#!/subjects/webfejl2-otak/zh-js)
-* Beadandó feladat: [JavaScript (canvas)](#)  
+    **([meoldás](https://github.com/vimtaai/elte/tree/master/2019-20-1/wf2/zh-js))**
+- Beadandó feladat: [JavaScript (canvas)](#)  
     Határidő: 2019.12.15. 23:59
-* PHP ZH  
+- PHP ZH  
     Időpont: [2019.12.16. 12:00](#)
 
 ### A beadandók értékelése

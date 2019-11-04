@@ -70,7 +70,7 @@ Environment
 6. 2019.10.14. [Window, canvas, API](http://webprogramozas.inf.elte.hu/webprog/ea/06/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/06/index.eng.html?print-pdf))
 7. 2019.10.21. [Asynchronous operations, AJAX, JSON, this, error handling](http://webprogramozas.inf.elte.hu/webprog/ea/07/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/07/index.eng.html?print-pdf))
 8. 2019.10.28. no lecture (autumn break)
-9. 2019.11.04. 
+9. 2019.11.04. [Server-side web programming, HTTP, PHP, output generation](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html?print-pdf))
 10. 2019.11.11. 
 11. 2019.11.18. 
 12. 2019.11.25. 

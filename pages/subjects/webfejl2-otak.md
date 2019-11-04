@@ -24,7 +24,7 @@ Környezet
 6. 2019.10.14. [Nyelvi elemek, kódszervezés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/06/)
 7. 2019.10.21. [Űrlapok, táblázatok, képek, BOM](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)
 8. 2019.10.28. őszi szünet
-9. 2019.11.04. Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok
+9. 2019.11.04. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/08/)
 10. 2019.11.11. Bemenet feldolgozása, űrlapok kezelése
 11. 2019.11.18. Adattárolás, fájlkezelés
 12. 2019.11.25. Munkamenet-kezelés, hitelesítés

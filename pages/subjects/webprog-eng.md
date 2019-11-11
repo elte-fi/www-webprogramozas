@@ -71,7 +71,7 @@ Environment
 7. 2019.10.21. [Asynchronous operations, AJAX, JSON, this, error handling](http://webprogramozas.inf.elte.hu/webprog/ea/07/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/07/index.eng.html?print-pdf))
 8. 2019.10.28. no lecture (autumn break)
 9. 2019.11.04. [Server-side web programming, HTTP, PHP, output generation](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html?print-pdf))
-10. 2019.11.11. 
+10. 2019.11.11. [Client-side data as input, form processing](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html?print-pdf))
 11. 2019.11.18. 
 12. 2019.11.25. 
 13. 2019.12.02. 

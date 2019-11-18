@@ -72,7 +72,7 @@ Environment
 8. 2019.10.28. no lecture (autumn break)
 9. 2019.11.04. [Server-side web programming, HTTP, PHP, output generation](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/08/index.eng.html?print-pdf))
 10. 2019.11.11. [Client-side data as input, form processing](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html?print-pdf))
-11. 2019.11.18. 
+11. 2019.11.18. [Data storage](http://webprogramozas.inf.elte.hu/webprog/ea/10/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/10/index.eng.html?print-pdf))
 12. 2019.11.25. 
 13. 2019.12.02. 
 14. 2019.12.09. 

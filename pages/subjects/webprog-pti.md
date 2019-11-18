@@ -517,6 +517,6 @@ Horváth Győző
 * Rakonczai Sándor
 * Visnovitz Márton
 
-## Offtopic
+## Off-topic
 
 - [Gépelésvizsgálat](http://webprogramozas.inf.elte.hu/hallgatok/csduaai/): jelentkezz be az INF-es azonosítóddal, és gépeld be a fent megjelenő szöveget az alatta lévő szövegdobozba. Ha végeztél, akkor egyszerűen csukd be az ablakot!

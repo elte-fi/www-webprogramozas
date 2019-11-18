@@ -57,6 +57,7 @@ Környezet
 
 ### Jegyszerzés feltételei
 
+* Részvétel az előadások legalább 75%-án (maximum 3 hiányzás)
 * Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
 * Két elfogadott beadandó
 * Megírt évfolyam ZH

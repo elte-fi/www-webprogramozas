@@ -108,3 +108,7 @@ Horváth Győző
 Horváth Győző
 
 -->
+
+## Off-topic
+
+- [Typing analysis](http://webprogramozas.inf.elte.hu/hallgatok/csduaai/): Log in with your INF account, and type the upper text into the textbox below. When you're done, just close the window!

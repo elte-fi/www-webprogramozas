@@ -47,9 +47,9 @@ Környezet
 
 - JavaScript ZH (DOM)  
     Időpont: [2019.10.21. 12:00](#!/subjects/webfejl2-otak/zh-js)
-    **([meoldás](https://github.com/vimtaai/elte/tree/master/2019-20-1/wf2/zh-js))**
-- Beadandó feladat: [JavaScript (canvas)](#)  
-    Határidő: 2019.12.15. 23:59
+    **([megoldás](https://github.com/vimtaai/elte/tree/master/2019-20-1/wf2/zh-js))**
+- Beadandó feladat: [JavaScript (canvas)](#!/subjects/webfejl2-otak/beadando)  
+    Határidő: 2019.12.31. 23:59
 - PHP ZH  
     Időpont: [2019.12.16. 12:00](#)
 

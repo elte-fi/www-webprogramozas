@@ -80,7 +80,7 @@ Környezet
 9. 2019.11.04. [Szerveroldali webprogramozás, HTTP, PHP, kimenet generálás](http://webprogramozas.inf.elte.hu/webprog/ea/08/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/08/?print-pdf))
 10. 2019.11.11. [Kliensoldali adatok mint bemenet, űrlapfeldolgozás](http://webprogramozas.inf.elte.hu/webprog/ea/09/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/09/?print-pdf))
 11. 2019.11.18. [Adattárolás](http://webprogramozas.inf.elte.hu/webprog/ea/10/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/10/?print-pdf))
-12. 2019.11.25. 
+12. 2019.11.25. [Munkamenet, hitelesítés](http://webprogramozas.inf.elte.hu/webprog/ea/11/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/11/?print-pdf))
 13. 2019.12.02. 
 14. 2019.12.09. 
 

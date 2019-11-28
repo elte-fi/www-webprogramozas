@@ -1,0 +1,326 @@
+@import url(https://bootswatch.com/4/superhero/bootstrap.min.css);
+@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);
+
+.avenger {
+  background-image: url("avengers.jpg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 40px;
+  display: inline-block;
+  background-size: 860% 761.25%;
+  min-width: 30px;
+}
+
+.list-group-item {
+  position: relative;
+  overflow: hidden;
+  transition: opacity 4s ease-in;
+}
+
+.list-group-item > div {
+  transition: transform, opacity, filter;
+  transition-duration: 4s;
+  transition-delay: 1s;
+  transform-origin: left;
+}
+
+.list-group-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+  opacity: 0;
+  visibility: hidden;
+  filter: brightness(0.5) sepia(1) hue-rotate(-190deg) brightness(0.6);
+  transition: opacity 1.5s ease-out, transform 5s ease-out;
+}
+
+.list-group-item.dust {
+  transition-delay: 1s;
+  opacity: 0;
+}
+
+.list-group-item.dust > div {
+  transform: translateX(50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.list-group-item.dust > img {
+  transform: translateX(-20%) scaleX(1.5);
+  opacity: 1;
+  visibility: visible;
+}
+
+.card.thanos {
+    position: relative;
+}
+
+.gauntlet {
+    /* border: 1px solid orange; */
+    position: absolute;
+    width: 23%;
+    height: 66%;
+    transform: rotate(-36deg);
+    top: 24%;
+    left: 63%;
+}
+.gauntlet.activated {
+    background-color: orange;
+    filter: blur(20px);
+    opacity: 0.6;
+    border-radius: 50px;
+}
+
+.stone-place {
+    width: 4%;
+    height: 5%;
+    /* border: 1px solid orange; */
+    /* transform: rotate(-36deg); */
+    position: absolute;
+}
+.stone-place.stone1 { top: 42%; left: 55%; }
+.stone-place.stone2 { top: 36.5%; left: 57.5%; }
+.stone-place.stone3 { top: 30.5%; left: 62%; }
+.stone-place.stone4 { top: 27.5%; left: 66.5%; }
+.stone-place.stone5 { top: 33%; left: 79.5%; }
+.stone-place.stone6 { top: 42%; left: 65%; }
+
+.stone {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    transition: top, left;
+    transition-duration: 2s;
+    border-radius: 10px;
+    z-index: 100;
+    animation: pulse 5s infinite alternate;
+    /* transform: rotate(36deg); */
+}
+.stone.collected { 
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+.stone1 .stone { background-color: orange; top: 50vh; left: 0vw; } /* transform: translate(-100%, 100%); */
+.stone2 .stone { background-color: red;    top: 75vh; left: 20vw; } /* transform: translate(-100%, 100%); */
+.stone3 .stone { background-color: blue;   top: 23vh; left: 30vw; } /* transform: translate(-100%, 100%); */
+.stone4 .stone { background-color: purple; top: 45vh; left: 50vw; } /* transform: translate(-100%, 100%); */
+.stone5 .stone { background-color: green;  top: 3vh; left: 70vw; } /* transform: translate(-100%, 100%); */
+.stone6 .stone { background-color: yellow; top: 88vh; left: 90vw; } /* transform: translate(-100%, 100%); */
+
+@keyframes pulse {
+    from { filter: blur(0px); box-shadow: 0 0 0 white; }
+    to   { filter: blur(2px); box-shadow: 0 0 10px white; }
+}
+
+.form-group [type=range] + * {
+  white-space: nowrap;
+}
+
+
+
+.iron-man {
+  background-position: 0% 23.4%;
+}
+.captain-america {
+  background-position: 14.2% 23.4%;
+}
+.thor {
+  background-position: 28.2% 23.4%;
+}
+.hulk {
+  background-position: 42.7% 23.4%;
+}
+.black-widow {
+  background-position: 56.7% 23.4%;
+}
+.hawkeye {
+  background-position: 71% 23.4%;
+}
+.scarlet-witch {
+  background-position: 85.3% 23.4%;
+}
+.vision {
+  background-position: 99.9% 23.4%;
+}
+
+.doctor-strange {
+  background-position: 0% 45.4%;
+}
+.black-panther {
+  background-position: 14.2% 45.4%;
+}
+.ant-man {
+  background-position: 28.2% 45.4%;
+}
+.star-lord {
+  background-position: 42.7% 45.4%;
+}
+.gamora {
+  background-position: 56.7% 45.4%;
+}
+.drax {
+  background-position: 71% 45.4%;
+}
+.groot {
+  background-position: 85.3% 45.4%;
+}
+.rocket-raccoon {
+  background-position: 99.9% 45.4%;
+}
+
+.mantis {
+  background-position: 0% 69.4%;
+}
+.nebula {
+  background-position: 14.2% 69.4%;
+}
+.spider-man {
+  background-position: 28.2% 69.4%;
+}
+.war-machine {
+  background-position: 42.7% 69.4%;
+}
+.falcon {
+  background-position: 56.7% 69.4%;
+}
+.winter-soldier {
+  background-position: 71% 69.4%;
+}
+.fury {
+  background-position: 85.3% 69.4%;
+}
+.maria {
+  background-position: 99.9% 69.4%;
+}
+
+.wong {
+  background-position: 0% 93.4%;
+}
+.okuye {
+  background-position: 14.2% 93.4%;
+}
+.shuri {
+  background-position: 28.2% 93.4%;
+}
+.mbaku {
+  background-position: 42.7% 93.4%;
+}
+.ayo {
+  background-position: 56.7% 93.4%;
+}
+.ned {
+  background-position: 71% 93.4%;
+}
+.collector {
+  background-position: 85.3% 93.4%;
+}
+.loki {
+  background-position: 99.9% 93.4%;
+}
+
+/* 
+
+.iron-man {
+    background-position: -3px -118px;
+}
+.captain-america {
+    background-position: -63px -118px;
+}
+.thor {
+    background-position: -124px -118px;
+}
+.hulk {
+    background-position: -187px -118px;
+}
+.black-widow {
+    background-position: -250px -118px;
+}
+.hawkeye {
+    background-position: -313px -118px;
+}
+.scarlet-witch {
+    background-position: -376px -118px;
+}
+.vision {
+    background-position: -439px -118px;
+}
+
+.dr-strange {
+    background-position: -3px -242px;
+}
+.black-panther {
+    background-position: -63px -242px;
+}
+.ant-man {
+    background-position: -124px -242px;
+}
+.star-lord {
+    background-position: -187px -242px;
+}
+.gamora {
+    background-position: -250px -242px;
+}
+.drax {
+    background-position: -313px -242px;
+}
+.groot {
+    background-position: -376px -242px;
+}
+.rocket-rackoon {
+    background-position: -439px -242px;
+}
+
+.mantis {
+    background-position: -3px -367px;
+}
+.nebula {
+    background-position: -63px -367px;
+}
+.spider-man {
+    background-position: -124px -367px;
+}
+.war-machine {
+    background-position: -187px -367px;
+}
+.falcon {
+    background-position: -250px -367px;
+}
+.winter-soldier {
+    background-position: -313px -367px;
+}
+.fury {
+    background-position: -376px -367px;
+}
+.maria {
+    background-position: -439px -367px;
+}
+
+.wong {
+    background-position: -3px -497px;
+}
+.okuye {
+    background-position: -63px -497px;
+}
+.shuri {
+    background-position: -124px -497px;
+}
+.mbaku {
+    background-position: -187px -497px;
+}
+.ayo {
+    background-position: -250px -497px;
+}
+.ned {
+    background-position: -313px -497px;
+}
+.collector {
+    background-position: -376px -497px;
+}
+.loki {
+    background-position: -439px -497px;
+}
+
+*/

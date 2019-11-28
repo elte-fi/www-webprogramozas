@@ -1,0 +1,37 @@
+@import url(https://bootswatch.com/4/minty/bootstrap.min.css);
+@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);
+
+.navbar .navbar-nav {
+  flex-grow: 1;
+}
+
+.sport {
+  height: 400px;
+  position: relative;
+}
+
+.sport .thor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8%;
+  height: 8%;
+  background-image: url(thor.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: top 0.5s, left 0.5s;
+}
+
+.sport .giant {
+  position: absolute;
+  width: 8%;
+  height: 8%;
+  background-image: url(giant.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sport .giant.smashed {
+  /* display: none; */
+  background-image: none;
+}

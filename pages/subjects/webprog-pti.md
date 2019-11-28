@@ -493,8 +493,10 @@ Ha hibával találkozol, amit nem tudsz értelmezni, akkor mindenképpen szólj 
 
 ## Példa beadandók és ZH-k
 
-* [Vetületek (2017-18 2. félév zh)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/vetuletek.html)
-* [Ügynökök (2017-18 2. félév pótzh)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/ugynokok.html)
+* [Avengers](#!/subjects/webprog-pti/zh/2018-19-2/avengers)
+* [Thor](#!/subjects/webprog-pti/zh/2018-19-2/thor)
+* [Ügynökök](#!/subjects/webprog-pti/zh/2017-18-2/ugynokok)
+* [Vetületek](#!/subjects/webprog-pti/zh/2017-18-2/vetuletek)
 * [Példa JavaScript beadandó feladat](http://webprogramozas.inf.elte.hu/webfejl2/gyak/js_grafilogika.html)
 * [Példa PHP beadandó feladat](http://webprogramozas.inf.elte.hu/webfejl2/gyak/php_grafilogika.html)
 * [Példa évfolyam ZH (névjegy)](http://webprogramozas.inf.elte.hu/webfejl2/gyak/pelda_zh.html)

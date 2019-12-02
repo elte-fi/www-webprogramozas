@@ -81,7 +81,7 @@ Környezet
 10. 2019.11.11. [Kliensoldali adatok mint bemenet, űrlapfeldolgozás](http://webprogramozas.inf.elte.hu/webprog/ea/09/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/09/?print-pdf))
 11. 2019.11.18. [Adattárolás](http://webprogramozas.inf.elte.hu/webprog/ea/10/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/10/?print-pdf))
 12. 2019.11.25. [Munkamenet, hitelesítés](http://webprogramozas.inf.elte.hu/webprog/ea/11/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/11/?print-pdf))
-13. 2019.12.02. 
+13. 2019.12.02. [Tervezési minták, AJAX](http://webprogramozas.inf.elte.hu/webprog/ea/12/) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/12/?print-pdf))
 14. 2019.12.09. 
 
 PDF-ben nyomtatáshoz válasszuk a `pdf` linket, majd állítsuk be a következőket:

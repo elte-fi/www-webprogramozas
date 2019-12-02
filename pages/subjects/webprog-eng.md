@@ -74,7 +74,7 @@ Environment
 10. 2019.11.11. [Client-side data as input, form processing](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/09/index.eng.html?print-pdf))
 11. 2019.11.18. [Data storage](http://webprogramozas.inf.elte.hu/webprog/ea/10/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/10/index.eng.html?print-pdf))
 12. 2019.11.25. [Session handling, authentication](http://webprogramozas.inf.elte.hu/webprog/ea/11/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/11/index.eng.html?print-pdf))
-13. 2019.12.02. 
+13. 2019.12.02. [Session handling, authentication](http://webprogramozas.inf.elte.hu/webprog/ea/12/index.eng.html) ([pdf](http://webprogramozas.inf.elte.hu/webprog/ea/12/index.eng.html?print-pdf))
 14. 2019.12.09. 
 
 ## Practices

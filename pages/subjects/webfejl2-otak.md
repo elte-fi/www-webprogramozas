@@ -28,7 +28,8 @@ Környezet
 10. 2019.11.11. [Kliensoldali bemenet feldolgozása, űrlapok kezelése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/09/)
 11. 2019.11.18. [Adattárolás, fájlkezelés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/10/)
 12. 2019.11.25. [Munkamenet-kezelés, hitelesítés](http://webprogramozas.inf.elte.hu/webfejl2t/ea/11/)
-13. 2019.12.02. AJAX: oldalak részleges frissítése
+13. 2019.12.02. [AJAX: oldalak részleges frissítése](http://webprogramozas.inf.elte.hu/webfejl2t/ea/12/)
+13. 2019.12.09. Összefoglalás, kitekintés
 
 <!-- 
 9. 2019.11.04. [Dinamikus szerveroldali webprogramozás, PHP nyelvi alapok](http://webprogramozas.inf.elte.hu/webfejl2t/ea/07/)

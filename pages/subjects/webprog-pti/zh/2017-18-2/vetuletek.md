@@ -52,13 +52,23 @@ Ponthatárok:
     ```txt
     id          név         szélesség   magasság    kedvenc    alakzat
     1           alma        2           2           igen       [[1,3],[0,2]]
-    2           korte       3           3           nem       [[1,2,1],[0,0,3],[4,0,1]]
+    2           korte       3           3           nem        [[1,2,1],[0,0,3],[4,0,1]]
     200000000   szilva      3           2           nem        [[2,1,1],[2,0,0]] 
     ```
 
     A 10-100000000 `id` tartományba ne vegyél fel új elemet, azt a tesztelő használja majd a véletlen `id` generáláskor. A 200000000 sorra azért van szükség, hogy adatbázis használata esetén az üresen hagyott `auto_increment`-es mező onnantól adja hozzá az `id`-kat.
 
     Az automatikus tesztelő új elemeket vesz fel. Az így létrehozott elemeket bármikor törölheted az adataid közül, csak a fent említett 3 rekord maradjon változatlan!
+
+    JSON formátumban:
+
+    ```json
+    [
+        {"id": "1", "név": "alma", "szélesség": 2, "magasság": 2, "kedvenc": true, "alakzat": "[[1,3],[0,2]]"},
+        {"id": "2", "név": "korte", "szélesség": 3, "magasság": 3, "kedvenc": false, "alakzat": "[[1,2,1],[0,0,3],[4,0,1]]"},
+        {"id": "200000000", "név": "szilva", "szélesség": 3, "magasság": 2, "kedvenc": false, "alakzat": "[[2,1,1],[2,0,0]]"}
+    ]
+    ```
 
     Ha adatbázist használsz, akkor az alábbi SQL utasítás bemásolásával létre tudod hozni (phpmyadminban kiválasztva az adatbázisod, SQL fül):
 

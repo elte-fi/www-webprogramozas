@@ -41,6 +41,23 @@ Az angol titkosszolgálat, az MI6 nyilvántartást vezet minden ügynökéről. 
     10  Ügynök5       217       412         1       Skyfall             kocsivezetés
     ```
 
+    JSON formátumban:
+
+    ```json
+    [
+        {"id": "1", "Név": "James Bond", "Szélesség": 100, "Hosszúság": 100, "Aktív": true, "Projekt": "Skyfall", "Feladat": "M megmentése"},
+        {"id": "2", "Név": "Jason Bourne", "Szélesség": 50, "Hosszúság": 300, "Aktív": true, "Projekt": "ultimátum", "Feladat": "csapda"},
+        {"id": "3", "Név": "Ethan Hunt", "Szélesség": 200, "Hosszúság": 180, "Aktív": true, "Projekt": "Mission impossible", "Feladat": "Szindikátus megtalálása"},
+        {"id": "4", "Név": "Mr Irdatlan", "Szélesség": 120, "Hosszúság": 350, "Aktív": false, "Projekt": "szilánk", "Feladat": "család"},
+        {"id": "5", "Név": "Nyúlányka", "Szélesség": 120, "Hosszúság": 340, "Aktív": false, "Projekt": "szilánk", "Feladat": "család"},
+        {"id": "6", "Név": "Ügynök1", "Szélesség": 230, "Hosszúság": 216, "Aktív": true, "Projekt": "Skyfall", "Feladat": "Q biztosítása"},
+        {"id": "7", "Név": "Ügynök2", "Szélesség": 109, "Hosszúság": 33, "Aktív": false, "Projekt": "ultimátum", "Feladat": "rejtély"},
+        {"id": "8", "Név": "Ügynök3", "Szélesség": 227, "Hosszúság": 50, "Aktív": false, "Projekt": "szilánk", "Feladat": "gyerekvigyázás"},
+        {"id": "9", "Név": "Ügynök4", "Szélesség": 148, "Hosszúság": 195, "Aktív": false, "Projekt": "Mission impossible", "Feladat": "számítógép"},
+        {"id": "10", "Név": "Ügynök5", "Szélesség": 217, "Hosszúság": 412, "Aktív": true, "Projekt": "Skyfall", "Feladat": "kocsivezetés"}
+    ]
+    ```
+
     Ha adatbázist használsz, akkor az alábbi SQL utasítás bemásolásával létre tudod hozni (phpmyadminban kiválasztva az adatbázisod, SQL fül):
 
     ```sql

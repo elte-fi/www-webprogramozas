@@ -73,6 +73,39 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     2    Escape from prison  0        20        70     40          star-lord rocket-raccoon
     ```
     
+    JSON formátumban:
+
+    ```json
+    [
+        {"id": "1", "name": "Iron Man", "real_name": "Tony Stark", "strength": 85, "speed": 58, "durability": 85, "terrial": true},
+        {"id": "2", "name": "Captain America", "real_name": "Steven Rogers", "strength": 19, "speed": 35, "durability": 56, "terrial": true},
+        {"id": "3", "name": "Thor", "real_name": "Thor", "strength": 100, "speed": 92, "durability": 100, "terrial": false},
+        {"id": "4", "name": "Hulk", "real_name": "Bruce Banner", "strength": 100, "speed": 47, "durability": 100, "terrial": true},
+        {"id": "5", "name": "Black Widow", "real_name": "Natasha Romanova", "strength": 13, "speed": 27, "durability": 32, "terrial": true},
+        {"id": "6", "name": "Hawkeye", "real_name": "Clint Barton", "strength": 12, "speed": 23, "durability": 14, "terrial": true},
+        {"id": "7", "name": "Scarlet Witch", "real_name": "Wanda Maximoff", "strength": 10, "speed": 23, "durability": 42, "terrial": true},
+        {"id": "8", "name": "Vision", "real_name": "", "strength": 72, "speed": 54, "durability": 95, "terrial": true},
+        {"id": "9", "name": "Doctor Strange", "real_name": "Stephen Strange", "strength": 10, "speed": 12, "durability": 84, "terrial": true},
+        {"id": "10", "name": "Black Panther", "real_name": "T'Challa", "strength": 16, "speed": 30, "durability": 60, "terrial": true},
+        {"id": "11", "name": "Ant-Man", "real_name": "Scott Lang", "strength": 10, "speed": 23, "durability": 28, "terrial": true},
+        {"id": "12", "name": "Star Lord", "real_name": "Peter Quill", "strength": 20, "speed": 20, "durability": 30, "terrial": false},
+        {"id": "13", "name": "Groot", "real_name": "", "strength": 85, "speed": 33, "durability": 70, "terrial": false},
+        {"id": "14", "name": "Rocket Raccoon", "real_name": "", "strength": 5, "speed": 23, "durability": 28, "terrial": false},
+        {"id": "15", "name": "Spider-Man", "real_name": "Peter Parker", "strength": 55, "speed": 60, "durability": 74, "terrial": true},
+        {"id": "16", "name": "War Machine", "real_name": "James Rhodes", "strength": 80, "speed": 63, "durability": 100, "terrial": true},
+        {"id": "17", "name": "Falcon", "real_name": "Sam Wilson", "strength": 13, "speed": 50, "durability": 28, "terrial": true},
+        {"id": "18", "name": "Winter Soldier", "real_name": "Bucky Barnes", "strength": 32, "speed": 35, "durability": 65, "terrial": true},
+        {"id": "19", "name": "Fury", "real_name": "Nick Fury", "strength": 11, "speed": 23, "durability": 42, "terrial": true},
+        {"id": "20", "name": "Loki", "real_name": "Loki", "strength": 57, "speed": 47, "durability": 85, "terrial": false}
+    ]
+    ```
+    ```json
+    [
+        {"id": "1", "name": "Sokovia", "terrial": true, "strength": 50, "speed": 30, "durability": 60, "avenger1": "iron-man", "avenger2": "captain-america"},
+        {"id": "2", "name": "Escape from prison", "terrial": false, "strength": 20, "speed": 70, "durability": 40, "avenger1": "star-lord", "avenger2": "rocket-raccoon"}
+    ]
+    ```
+
     Ha adatbázist használsz, akkor az alábbi SQL utasítás bemásolásával létre tudod hozni (phpmyadminban kiválasztva az adatbázisod, SQL fül):
 
     ```sql

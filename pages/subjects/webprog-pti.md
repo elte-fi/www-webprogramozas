@@ -158,7 +158,3 @@ Horváth Győző
 * Móger Tibor
 * Rakonczai Sándor
 * Visnovitz Márton
-
-## Off-topic
-
-- [Gépelésvizsgálat](http://webprogramozas.inf.elte.hu/hallgatok/csduaai/): jelentkezz be az INF-es azonosítóddal, és gépeld be a fent megjelenő szöveget az alatta lévő szövegdobozba. Ha végeztél, akkor egyszerűen csukd be az ablakot!

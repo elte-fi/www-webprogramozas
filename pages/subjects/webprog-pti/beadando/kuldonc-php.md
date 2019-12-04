@@ -80,7 +80,7 @@ Furfang és a küldöncök kalandjai a szerveroldalon folytatódnak. Egészítsd
 
 - 0-6 pont: -0,5
 - 7-11 pont: 0
-- 12-14: +0,5
+- 12-14 pont: +0,5
 
 ## Beadás
 

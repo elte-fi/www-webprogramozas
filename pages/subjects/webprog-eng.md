@@ -20,14 +20,14 @@ Environment
 
 <!-- * Home project: JavaScript   -->
 * Home project: [JavaScript](#!/subjects/webprog-eng/projects/messenger-js)  
-    Deadline: 2019. november 10. midnight  
+    Deadline: 2019. November 10. midnight  
     [Submission](http://webprogramozas.inf.elte.hu/ebr)
 
-<!-- * Home project: [PHP](#!/subjects/webprog-pti#php-beadandó-(pti)-%E2%80%93-robotkaland)   -->
-* Home project: PHP  
-    Deadline: 2019. december  
+<!-- * Home project: PHP   -->
+* Home project: [PHP](#!/subjects/webprog-eng/projects/messenger-php)  
+    Deadline: 2020. January 5. midnight  
+    [Submission](http://webprogramozas.inf.elte.hu/ebr)
     <!-- Deadline: 2019. május 28.   -->
-    <!-- [Beadás](http://webprogramozas.inf.elte.hu/ebr) -->
 
 <!-- * [Test](#!/subjects/webprog-pti/zh/avengers)   -->
 * Test  
@@ -108,7 +108,3 @@ Horváth Győző
 Horváth Győző
 
 -->
-
-## Off-topic
-
-- [Typing analysis](http://webprogramozas.inf.elte.hu/hallgatok/csduaai/): Log in with your INF account, and type the upper text into the textbox below. When you're done, just close the window!

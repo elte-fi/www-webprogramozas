@@ -123,9 +123,7 @@ Hibalehetőségek:
 Ha hibával találkozol, amit nem tudsz értelmezni, akkor mindenképpen szólj egy felügyelő tanárnak!
 
 
-## Segédanyagok
-
-### Elektronikus tananyag
+## Elektronikus tananyag
 
 * [A böngésző mint alkalmazásfejlesztési platform (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/kliens/)
 * [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)

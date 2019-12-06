@@ -83,6 +83,27 @@ Environment
 - [2. practice](#!/subjects/webprog-eng/practices/02)
 - [3. practice](#!/subjects/webprog-eng/practices/03)
 
+## Testing system
+
+During test the solutions have to be uploaded to an automatic testing system. The tester looks for the solution in the directory specified in the task, so it is very important to first place the solution in the appropriate directory.
+
+The tester runs a headless browser in the background and programmedly examines what we would do manually. Each task has one test group. For a test, the tester takes a number of steps: loads the page into the browser, verifies that the required items are on the page, clicks, types, and then checks again.
+
+Each step can be viewed on the test results summary screen. If a test has passed successfully, a green check mark will appear. If you click on the name of the test, you will see the completed steps ABOVE, with OK next to it. If a test fails, that test will be interrupted. Each step will then appear with white text, with OK next to each step, except for the last one, below which will indicate in red that the test failed. The exact error description can be read at the end of the test log.
+
+Possible errors:
+- Some of the errors are due to the tester cannot find the item it is looking for. In this case check the CSS selector to see whether the appropriate element is on the page.
+- The expected value may not match the results of our program. The tester always prints the value of our program.
+- Van úgy, hogy egy custom function jelzi a hibát, ekkor valamilyen bonyolultabb vizsgálat nem sikerült, itt is a nem várt eredményt tartalmazta az oldal.
+- Sometimes a custom function reports a bug. In this case some more complex validation failed, and the page contained the unexpected result.
+
+If you encounter a mistake that you cannot interpret, make sure to tell a supervising teacher!
+
+## Previous tests
+
+* [Avengers](#!/subjects/webprog-pti/zh/2018-19-2/avengers-eng)
+
+
 ## Educators
 
 - Győző Horváth (lecturer)

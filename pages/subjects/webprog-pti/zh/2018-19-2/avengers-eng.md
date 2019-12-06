@@ -7,39 +7,39 @@ main ul p, main ol p {
 }
 </style>
 
-# Webfejlesztés 2. zh -- Bosszúállók
+# Web programming zh -- Avengers
 
-_2019. május 29._
+_2019. May 29._
 
-## Tudnivalók
+## About
 
-- A feladatokat a `webprogramozas.inf.elte.hu` szerveren kell elkészíteni. A `www` mappádon belül hozzál létre egy `avengers` mappát, és abban készítsd el a megoldásodat.
-- A feladat tesztelését az [ellenőrző felületen](http://webprogramozas.inf.elte.hu:1701/tester) tudod elvégezni.
-- A feladatra elkészítésére 3 óra áll rendelkezésre.
-- A megoldás kinézete nem számít, csak az oldalak funkcionalitása.
-- A feladatokat nem szükségszerű a leírás sorrendjében elvégezni, a feladatok többsége nem épül a másikra, viszont ha kell, akkor a szükséges előfeltételeket, akár statikusan is, de biztosítani kell.
-- **Fontos** A műveletek helyességét csak a felületen keresztül tudjuk ellenőrizni az adatok megjelenítésével, a háttérben tárolt adatokat közvetlenül nem vizsgáljuk.
-- A zh-n bármilyen segédanyag használható, de humán segítség a jelenlévő gyakorlatvezetőkön kívül nem vehető igénybe.
-- A zh után a megoldásokon plágiumellenőrzést végzünk, az esetlegesen hasonló megoldások készítőit védésre behívhatjuk.
-- Ponthatárok:
-    + 0-19 pont: 1
-    + 20-29 pont: 2
-    + 30-39 pont: 2,5
-    + 40-49 pont: 3
-    + 50-59 pont: 3,5
-    + 60-66 pont: 4
-    + 67-74 pont: 4,5
-    + 75-80 pont: 5
+- Tasks must be solved on the `webprogramming.inf.elte.hu` server. Within your `www` folder, create an `avengers` folder and create your solution there.
+- You can test this task on the [tester page](http://webprogramozas.inf.elte.hu:1701/tester).
+- There are 3 hours to complete the task.
+- The look-out of the solution doesn't matter, just the functionality of the pages.
+- The tasks are not necessarily have to be sold in the order of the description, because most of the tasks are not based on the other, but if necessary, the prerequisites, even statically, must be provided.
+- **Important** We can only verify the correctness of the operations through the user interface by displaying the data, not directly checking the data stored in the background.
+- During the test you can use any kind of support material, but using human assistance is prohibited, except for the help from the present teachers.
+- After the test, we will perform a plagiarism check on the solutions, and we may call the creators of similar solutions for defending their solutions.
+- Points:
+    + 0-19 points: 1
+    + 20-29 points: 2
+    + 30-39 points: 2,5
+    + 40-49 points: 3
+    + 50-59 points: 3,5
+    + 60-66 points: 4
+    + 67-74 points: 4,5
+    + 75-80 points: 5
 
-## Feladatleírás
+## Task description
 
-A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csapat és a küldetések szervezésében az egyik oldalon, a kövek gyűjtésében és a csettintésben a másik oldalon!
+The Avengers and Thanos prepare for their final fight. Help organizing the team and the missions on one side, and collecting the infinity stones and snapping on the other!
 
-0. **Előkészületek**
+0. **Preparations**
 
-    **Adatok előkészítése** Az adatok tárolását fájlban vagy adatbázisban is elvégezheted, bár az adatbázis használata az ajánlott. Az alkalmazás kétféle adattal dolgozik: a Bosszúállók adataival és az egyes küldetések nyilvántartásával. 
+    **Preparing the data** You can store the data in a file or database, although using the database is recommended (in that semester). The application works with two types of data: the data of Avengers and the log of each mission.
     
-    Minden bosszúállóról nyilvántartjuk a nevét, a valódi nevét, az erejét, sebességét és kitartását, valamint, hogy földi származású-e (`terrial`). Ezeket az adatokat ne módosítsd, ne adj hozzá újat, ne töröld!
+    We keep a record of each avenger's name, real name, strength, speed and durability, and whether he/she is of terrial or not. Do not modify, add or delete this data!
     
     ```txt
     id  name            real_name          strength  speed  durability  terrial
@@ -65,7 +65,7 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     20  Loki            Loki               57        47     85          0
     ```
 
-    A küldetéseknél nyilvántartjuk a küldetés nevét, azt, hogy milyen erő, sebesség és kitartás szükségeltetik hozzá, illetve azt, hogy a küldetésre melyik két bosszúállót küldjük. Az alábbi rekordokat ne módosítsd, de később újabb adatokat kell ezekhez hozzáadni.
+    For missions, we keep track of the name of the mission, the strength, speed, and durability it requires, and the two avengers sent on the mission. Please do not modify these records below, but you will need to add new data later.
 
     ```txt
     id   name                terrial  strength  speed  durability  avenger1  avenger2
@@ -73,7 +73,7 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     2    Escape from prison  0        20        70     40          star-lord rocket-raccoon
     ```
     
-    JSON formátumban:
+    In JSON format:
 
     ```json
     [
@@ -106,7 +106,7 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     ]
     ```
 
-    Ha adatbázist használsz, akkor az alábbi SQL utasítás bemásolásával létre tudod hozni (phpmyadminban kiválasztva az adatbázisod, SQL fül):
+    For database, import this SQL:
 
     ```sql
     CREATE TABLE `avengers` (
@@ -159,9 +159,9 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     (2, 'Escape from prison', 0, 20, 70, 40, 'star-lord', 'rocket-raccoon');
     ```
 
-    **A főoldal ajánlott szerkezete**
+    **Recommended page structure for the main page**
 
-    A főoldal (`index.php`) szerkezete legyen ilyen:
+    The main page (`index.php`) should be structured like this:
 
     ```html
     <!DOCTYPE html>
@@ -316,9 +316,9 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     </div>
     ```
 
-    **A részlet oldal ajánlott szerkezete**
+    **Recommended structure of the detail page**
 
-    A részlet oldal (`card.php`) szerkezete legyen ilyen:
+    The detail page (`card.php`) should be structured like this:
 
     ```html
     <!DOCTYPE html>
@@ -368,93 +368,83 @@ A Bosszúállók és Thanos végső összecsapásukra készülnek. Segíts a csa
     </div>    
     ```
 
-    **Csatlakozás az adatbázishoz**
+1. **Avengers list (10 pts)** List the avengers and their missions on the main page! Filename: `index.php`.
 
-    Lényeg a `charset=utf8` a kapcsolódási szövegben:
+    - a. Display the avengers in the list with `avengers-list` class attribute. An avenger takes place in a list item with `list-group-item` class attribute. Display the name, real name (if any), strength, speed and durability of the avenger. The `data-id` attribute of the list item should include the avenger's `id`.
 
-    ```php
-    $kapcsolat = kapcsolodas(
-      'mysql:host=localhost;dbname=wf2_neptun;charset=utf8',
-      'neptun', 'neptun');
-    ```
+    - b. If the avenger is terrial (`terrial` is true), then the `fa-globe-africa` icon should appear inside the `i` element. If not terrial, then `fa-rocket`.
 
-1. **Listázás (10 pt)** Listázd ki a bosszúállókat és küldetéseiket a főoldalon! Fájlnév: `index.php`.
-
-    - a. A bosszúállókat az `avengers-list` stílusosztályú felsorolásban sorold fel. Egy bosszúállónak egy `list-group-item` stílusosztályú listaelem felel meg. Jelenítsd meg benne a bosszúálló nevét, valódi nevét (ha van), erejét, sebességét és kitartását. A listaelem `data-id` attribútumába a bosszúálló `id`-ja kerüljön.
-
-    - b. Ha a bosszúálló földi (`terrial` igaz), akkor az `i` elemen belül `fa-globe-africa` ikon jelenjen meg. Ha nem földi, akkor `fa-rocket`.
-
-    - c. A bosszúálló képének megjelenítéséhez az `avenger` stílusosztályú `span` elemen belül a bosszúálló nevéből képzett stílusosztályt kell írni. A képzés szabálya:
-        - csupa kisbetű
-        - szóköz helyett kötőjel
-        - pl. Iron Man --> `iron-man`
+    - c. To display the avenger's picture, you need to write a classname derived from the avenger's name to the `span` element with `avenger` classname. Rewriting rules:
+        - lowercase
+        - dash instead of space
+        - e.g. Iron Man --> `iron-man`
     
-    - d. A bosszúálló neve egy hivatkozás. Ez mutasson a `card.php`-ra, átadva az `id` értékét `id` név alatt GET paraméterként.
+    - d. The avenger's name is a hyperlink. This should point to `card.php`, passing the value of `id` under the name `id` as a GET parameter.
     
-    - e. A küldetéseket a `mission-list` stílusosztályú lista elemeiként kell felsorolni. Mindegyik küldetésnél jelenítsd meg a küldetés nevét, a küldetéshez szükséges erő, sebesség és kitartás adatokat! A listaelem `data-id` attribútumába a küldetés `id`-ja kerüljön.
+    - e. Missions must be displayed as list items in the list with `mission-list` classname. For each mission, display the mission name, power, speed, and durability required for the mission. The `data-id` attribute of the list item should contain the `id` of the mission.
 
-    - f. Ha a küldetés földi (`terrial` igaz), akkor az `i` elemen belül `fa-globe-africa` ikon jelenjen meg. Ha nem földi, akkor `fa-rocket`.
+    - f. If the mission is terrial (`terrial` is true), then the `fa-globe-africa` icon should appear inside the `i` element. If not terrial, then `fa-rocket`.
 
-    - g. Jelenítsd meg a küldetésben részt vevő bosszúálló páros arcképét! Ehhez az `avenger` stílusosztályú `span` elemeken belül a bosszúállók nevéből képzett kisbetűs, kötőjeles stílusnevet kell használni (ld. a c. pontot).
+    - g. Display the portrait of the avenger duo in the mission! To do so, use the lowercase dash-styled name of the Avengers in the `span` element with `avenger` classname (see subtask c.).
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/1.png)
 
-2. **Egy bosszúálló adatainak megjelenítése (8 pt)** A `card.php` oldalon jelenítsd meg az URL-ben paraméterként kapott `id`-jú bosszúálló adatait: név, valódi név (ha van), erő, sebesség, kitartás; földi-e vagy űrbéli (`terrial` alapján `Yes` vagy `No`).
+2. **Show the details of an avenger (8 pts)** On the `card.php` page, display the data of an avenger, whose `id` is received as a parameter in the URL. The displayed data: name, real name (if any), power, speed, durability; earth or space (`terrial` based on `yes` or `no`).
 
-    Az oldalon legyen hivatkozás is, amely visszavezet a főoldalra!
+    The page should also have a link back to the main page!
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/2.png)
 
-3. **Új küldetés felvitele (17 pt)** A főoldalon a középső oszlop tetején található egy űrlap új küldetések felvitelére.
+3. **Add new mission (17 pts)** There is a form for adding new missions at the top of the middle column on the main page.
 
-    - a. Az űrlap az alábbi mezőket tartalmazza:
+    - a. The form contains the following fields:
 
-      - küldetés neve (neve: `name`, kötelező, hibaüzenetek: `Name is required`)
-      - föld vagy űrbéli küldetés (neve: `terrial`, radio gombok, kötelező, értéke: `1` (földi), `0` (űrbéli), hibaüzenetek: `Terrial is required`)
-      - erő (neve: `strength`, range slider, kötelező, szám, értéke 1 és 100 között változhat, hibaüzenetek: `Strength is required`, `Strength is not an integer`, `Strength should be between 1 and 100`)
-      - sebesség (neve: `speed`, range slider, kötelező, szám, értéke 1 és 100 között változhat, hibaüzenetek: `Speed is required`, `Speed is not an integer`, `Speed should be between 1 and 100`)
-      - kitartás (neve: `durability`, range slider, kötelező, szám, értéke 1 és 100 között változhat, hibaüzenetek: `Durability is required`, `Durability is not an integer`, `Durability should be between 1 and 100`)
-      - 1\. bosszúálló kötőjeles, kisbetűs neve (neve: `avenger1`, szöveges beviteli mező, kötelező, hibaüzenetek: `Avenger1 is required`, `Avenger1's name should be dashed`)
-      - 2\. bosszúálló kötőjeles, kisbetűs neve (neve: `avenger2`, szöveges beviteli mező, kötelező, hibaüzenetek: `Avenger2 is required`, `Avenger2's name should be dashed`)
+      - mission name (name: `name`, required, error messages:` Name is required`)
+      - earth or space mission (name: `terrial`, radio buttons, required, value: `1` (terrial), `0` (space), error messages: `Terrial is required`)
+      - strength (name: `strength`, range slider, required, number, value between 1 and 100, error messages: `Strength is required`, `Strength is not an integer`, `Strength should be between 1 and 100`)
+      - speed (name: `speed`, range slider, required, number, value between 1 and 100, error messages: `Speed ​​is required`, `Speed is not an integer`, `Speed should be between 1 and 100`)
+      - durability (name: `durability`, range slider, required, number, value between 1 and 100, error messages: `Durability is required`, `Durability is not an integer`, `Durability should be between 1 and 100`)
+      - 1\. avenger dash-styled, lowercase name (name: `avenger1`, text input field, required, error messages: `Avenger1 is required`, `Avenger1's name should be dashed`)
+      - 2\. avenger dash-styled, lowercase name (name: `avenger2`, text input field, required, error messages: `Avenger2 is required`, `Avenger2's name should be dashed`)
 
-    - b. Helytelenül kitöltve a fenti hibaüzenetek közül a megfelelőek jelenjenek meg egy `alert-danger` stílusosztályú elemben (nem feltétlenül strukturáltan).
+    - b. For invalid data, the appropriate error messages (see above) should appear in an element with `alert-danger` classname (not necessarily in a  structured way, e.g. list, instead `var_dump` is enough).
 
-    - c. Ebben az esetben gondoskodj az űrlap állapottartásáról, azaz írd vissza a beviteli mezőkbe a felküldött adatokat!
+    - c. In this case, make sure that the form maintains its state, that is, by writing back the submitted data in the input fields.
 
-    - d. Helyesen kitöltve vedd fel az adatokat a háttérrendszerben, majd jelenjen meg a főoldal, a küldetések listájában már az új elemmel.
+    - d. For valid data, save them in the backend, and then display the new mission in the mission list on the main page.
 
-    - e. Sikeres adatfelvitel esetén jelenjen meg egy `alert-success` stílusosztályú elem, benne a sikerességet jelző felirattal.
+    - e. In this case show a success message in an element with `alert-success` classname with a text indicating the success.
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/3.png)
 
-4. **Range slider értékének kiírása (10 pt)** A küldetések felvitelénél a range slider húzogatásakor nem látjuk annak értékét. Jelenítsük ezeket meg mind a három slider esetében!
+4. **Display the range slider value (10 pts)** When adding missions, you do not see the range slider value when dragging the slider. Let's display them for all three sliders!
 
-    - a. Az oldal betöltése után a slider aktuális értékét jelenítsük meg a slider-ek után közvetlenül elhelyezkedő `span` elemeken belül!
+    - a. After loading the main page, display the current value of the slider within the `span` elements immediately after the sliders.
 
-    - b. Húzogatva a slidert, a kiírt érték aktualizálódik. Technikai segítség: használd az `input` eseményt!
+    - b. Dragging the slider, update the displayed value. Technical support: use the `input` event!
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/4.png)
 
-5. **A végtelen kövek megszerzése (10 pt)** Thanos eltökélt szándéka a végtelen kövek begyűjtése. A kövek kis színes, pulzáló pontokként jelennek meg a képernyőn. Szerkezetileg a kövek `stone` stílusosztályú `div`-ek, amelyek a helyükön belül (`stone-place` stílusosztály) helyezkednek el.
+5. **Collecting the Inifinity Stones (10 pts)** Thanos is determined to collect the infinity stones. The stones appear as small, pulsating circles on the screen. Structurally, the stones are `divs` with `stone` classname, which are located in their place (the `stone-place` classname).
 
-    - a. Egy kőre kattintva, adj a kőnek `collected` stílusosztályt! Ez a követ a helyére helyezi.
+    - a. Clicking on a stone, give the stone a `collected` classname! This puts the stone in its place.
 
-    - b. Finomítsd ezt úgy, hogy először a kő mozogjon a helyére, majd akkor alkalmazd rá a `collected` stílusosztályt. A mozgáshoz elég a kő stílusai közül a `top` és `left` tulajdonságot beállítani a követ tartalmazó, `stone-place` stílusosztályú `div` pozíciójára. Ezt a pozíciót a `getBoundingClientRect()` metódussal tudod lekérdezni. Ha a kő a helyére került (a mozgás végén), akkor alkalmazd rá a `collected` stílusosztályt!
+    - b. Refine this process by first moving the stone into its place, and then applying the `collected` classname on it. To move, simply set the `top` and `left` properties of the style of the stone to the position of the `div` element with `stone-place` classname containing the stone. You can get this position using the `getBoundingClientRect()` method. Once the stone is in its place (at the end of the movement), apply the `collected` classname to it.
 
     - c. Ha az összes kő begyűjtésre került, azaz mindegyiknek van `collected` stílusosztálya, akkor a `gauntlet` stílusosztályú `div`-nek add az `activated` stílusosztályt, ezzel a kesztyűt aktiválod.
+    - c. If all the stones have been collected, that is, each has a `collected` classname, then add the `activated` classname to the `div` with `gauntlet` class to activate the glove.
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/5.png)
 
-6. **Thanos csettintése (10 pt)** Ha a kesztyű aktív, akkor Thanos csettintésével megfelezi a bosszúállók számát.
+6. **Thanos snap (10 pts)** If the glove is active, then Thanos can snap to halve the number of Avengers.
     
-    - a. Ha a kesztyű aktív (a `gauntlet` stílusosztályú `div`-nek van `activated` stílusosztálya is), akkor rákattintva válasszunk ki a 20 bosszúálló közül 10-et véletlenszerűen, és azokra a listaelemekre alkalmazzuk a `dust` stílusosztályt. Ennek hatására a megfelelő bosszúállók porrá válnak.
+    - a. If the glove is active (the `div` of the `gauntlet` class has an `activated` class, too), then by clicking on it, select 10 of the 20 avengers randomly, and apply the `dust` class to those list items. As a result, the appropriate avengers will turn into dust.
 
-    - b. Még egyszer kattintva az aktív kesztyűre, a bosszúállók visszatérnek, azaz levesszük róluk a `dust` stílusosztályt.
+    - b. By clicking on the active glove again, the avengers return, that is, remove the `dust` style class.
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/6.png)
 
-7. **Legalkalmasabb két bosszúálló kiválasztása új küldetéshez (15 pt)** Új küldetés megadásakor a range sliderekkel tudjuk megadni az adott küldetés egyes paramétereinek a nehézségét. Készítsünk egy AJAX-os ajánlót hozzá, amely a sliderek aktuális értékének megfelelően kiválasztja, melyik két bosszúálló a legalkalmasabb a küldetésre. Az alkalmasságot úgy határozzuk meg, hogy minden bosszúálló párosra megnézzük, hogy az egyes paramétereiknek (erő, sebesség, kitartás) az átlaga mennyire tér el a küldetés adott paraméterének értékétől. Ezeket az eltéréseket mindhárom paraméterre (erő, sebesség, kitartás) meghatározzuk és összegezzük, és az a legalkalmasabb páros, akinél ez az érték a legkisebb. A sliderek `change` eseményére küldj el egy AJAX kérést egy általad írt PHP szkriptnek, GET paraméterként megadva az erő (`strength`), sebesség (`speed`) és kitartás (`durability`) értékét. A szervertől kapott válasz alapján pedig jelenítsd meg a kiválasztott két bosszúálló képét az `avenger1` és `avenger2` nevű input mező utáni `avenger` stílusosztályú `span` elemekben úgy, hogy ennek a `span` elemnek a bosszúálló nevéből képzett kisbetűs, kötőjeles nevét kell stílusosztályként megadni.
+7. **Selecting the two most suitable avengers for a new mission (15 pts)** When creating a new mission, you can use the range sliders to determine the difficulty of each parameter of that mission. Let's make an AJAX function that selects which two avengers suit the mission based on the current value of the sliders. Suitability is determined by looking at how much the average of each parameter (power, speed, durability) for each avenger duo differ from the value of a given parameter of the mission. These differences are calculated and summed for each of the three parameters (force, velocity, durability) and the most appropriate pair will be those for whom this value is the smallest. For the `change` event of the sliders, send an AJAX request to a PHP script you have written, specifying `strength`, `speed` and `durability` as GET parameters. And, based on the response from the server, display the two avatars of your choice in the `avenger` classed `span` elements after the input fields named `avenger1` and` avenger2`, by writing a dash-styled lower case name to the class attribute of the `span` element.
 
     ![](http://webprogramozas.inf.elte.hu/webfejl2/zh/avengers/7.png)
-
 

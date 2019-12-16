@@ -52,7 +52,11 @@ Környezet
 - Beadandó feladat: [JavaScript (canvas)](#!/subjects/webfejl2-otak/beadando)  
     Határidő: 2019.12.31. 23:59
 - PHP ZH  
-    Időpont: [2019.12.16. 12:00](#)
+    Időpont: [2019.12.16. 12:00](#!/subjects/webfejl2-otak/zh-php)
+
+<a class="primary card" href="#!/subjects/webfejl2-otak/zh-php">
+  Ugrás a ZH-ra!
+</a>
 
 ### A beadandók értékelése
 

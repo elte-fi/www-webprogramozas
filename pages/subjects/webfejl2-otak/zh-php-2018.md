@@ -8,13 +8,13 @@ A feladatod egy írószerbolt bolti nyilvántartásához készíteni egy egyszer
 
 Készíts egy oldalt, ami képes listázni az adatbázisban található termékeket! Az adatbázisban az alábbi séma szerint tárolják az adatokat:
 
-![Séma](assets/images/ab-sema.png)
+![Séma](assets/images/webfejl2-otak/ab-sema-2018.png)
 
 Az adatbázis-csatlakozáshoz szükséges adatok:
 - DSN sztring: `"mysql:host=localhost;dbname=wf2_wp1c0x"`
 - felhasználónév: `"wp1c0x"`
 - jelszó: `"wp1c0x"`
-- tábla neve: `"wf2zh"`
+- tábla neve: `"wf2zh-2018"`
 
 Az adatokat táblázatos formában (értelmező fejlécekkel együtt) jelenítsd meg. Ha egy adott termék darabszáma 0, akkor jelenjen meg az adott oszlopban az "Elfogyott" szöveg.
 

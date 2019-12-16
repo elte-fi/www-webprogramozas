@@ -66,7 +66,7 @@ Környezet
 ### Jegyszerzés feltételei
 
 * Részvétel a gyakorlatok legalább 75%-án (maximum 3 hiányzás)
-* Legalább 2-es zh
+* Legalább 2-es ZH
 * Legalább 2-esre elfogadott beadandó
 
 ### Értékelés

@@ -1,0 +1,7 @@
+| id | name        | category | instrument | color   | notes                                                                                                                                              |
+|----|-------------|----------|------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1  | Hi hat 1    | Drum     | 114        | #ffeb3b | [{"note":"C","start":100,"end":600}]                                                                                                               |
+| 2  | Base bass   | Bass     | 45         | #ff5722 | [{"note":"D","start":0,"end":500},{"note":"A","start":1000,"end":2000},{"note":"B","start":2000,"end":2500},{"note":"C+","start":2500,"end":3000}] |
+| 3  | Main melody | Melody   | 4          | #03a9f4 | [{"note":"C","start":0,"end":100},{"note":"D","start":100,"end":200},{"note":"E","start":300,"end":400}]                                           |
+| 4  | Beat        | Drum     | 114        | #ffc107 | [{"note":"C","start":1000,"end":1500},{"note":"E","start":2000,"end":2500},{"note":"G","start":3000,"end":3500}]                                   |
+| 5  | Cello       | String   | 27         | #8bc34a | [{"note":"D","start":0,"end":2000},{"note":"F","start":2000,"end":4000},{"note":"B","start":4000,"end":6000},{"note":"A","start":6000,"end":8000}] |

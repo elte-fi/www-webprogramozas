@@ -38,11 +38,11 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
 0. **Előkészületek**
 
-    A feladathoz kétféle adatot használunk. Az alábbi adatokat JSON formában alább le lehet tölteni, és ezzel ajánott dolgozni. Ha mégis más formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni azt, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
+    A feladathoz kétféle adatot használunk. Az adatokat JSON formában alább le lehet tölteni, és ezzel ajánlott dolgozni. Ha mégis más formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
 
     1. **Track**: egy zenei hangsávért felelős adatszerkezet. Tároljuk az azonosítóját (`id`), nevét (`name`), kategóriáját (`category`), a társított hangszer azonosítóját (`instrument`), a track színét (`color`) és a hozzá tartozó hangjegyek idősorát (`notes`). A hangjegysor tartalmazza, hogy melyik hang (`note`) mettől (`start`) meddig (`end`) van megszólaltatva ms-okban. 
         
-        Ezeket az adatokat ne változtasd (`id` 1-től 5-ig), de később újakat hozzáadhatsz. A tesztelő a 4-es és 5-ös azonosítójú sor `notes` mezőit változtathatja.
+        Ezeket az adatokat ne változtasd (`id` 1-től 5-ig), de később újakat hozzáadhatsz. A tesztelő a 4-es és 5-ös azonosítójú sor `notes` mezőjét változtathatja.
 
         ```md
         | id | name        | category | instrument | color   | notes                                                                                                                                              |
@@ -89,9 +89,9 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 2. **Trackek listázása (?? pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
 
     - a. A trackeket a `tracks` stílusosztályú `div`-ben található felsorolás listaelemeiként kell megjeleníteni. Egy tracknek egy listaelem felel meg. Jelenítsd meg benne a track nevét, hangszerét zárójelben és a kategóriáját `span`-ban.
-    - A listaelem háttérszínét a `style` attribútumon keresztül adjuk meg.
-    - A listaelem `data-id` attribútumába a track `id`-ja kerüljön.
-    - A listaelem `data-notes` attribútumába a track hangjegysora kerüljön JSON formátumban. **Technikai segítség**: mivel a JSON `"`-ket tartalmaz, ezért az attribútum értékét `'` között adjuk meg:
+    - b. A listaelem háttérszínét a `style` attribútumon keresztül adjuk meg.
+    - c. A listaelem `data-id` attribútumába a track `id`-ja kerüljön.
+    - d. A listaelem `data-notes` attribútumába a track hangjegysora kerüljön JSON formátumban. **Technikai segítség**: mivel a JSON `"`-ket tartalmaz, ezért az attribútum értékét `'` között adjuk meg:
 
         ```html
         <li data-id="1" data-notes='[{"note":"C","start":100,"end":600}]'>
@@ -118,7 +118,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
 4. **Track kiválasztása és hangjegysorának megjelenítése (?? pt tesztben: előtte nincs kiválasztva és más nincsen kiválasztva, több kattintásnál mindig csak egy legyen kiválasztva)**: A főoldalon egy trackre kattintva jelenítsd meg a többsoros beviteli mezőben a track hangjegysorát JSON formátumban, illetve fölötte grafikus formátumban is (pianoroll).
 
-    - a. Egy trackre kattintva legyen kiválasztva, azaz a listaelem legyen `selected`stílusosztályú!
+    - a. Egy trackre kattintva legyen kiválasztva, azaz a listaelem legyen `selected` stílusosztályú!
     - b. Egy trackre kattintva olvasd ki a `data-notes` attribútumában tárolt JSON hangjegysort és jelenítsd meg az oldalon található többsoros szöveges beviteli mezőben!
     - c. A többsoros szöveges beviteli mezőben megjelenő JSON-t jelenítsd meg grafikusan a mező fölötti pianoroll részen. Ezt a "Show JSON in SVG" feliratú gombra kattintva érhetjük el. A grafikus megjelenítést az oldalon található SVG elemben kell megtenni. A hangjegysor minden egyes eleme egy-egy `rect` elem lesz: 
         - `x` attribútuma a `start` értéket tartalmazza, 
@@ -145,7 +145,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
 5. **Track kiválasztása billentyűkkel (?? pt)**: Tedd lehetővé a főoldalon, hogy a trackek kiválasztása a le-föl billentyűkkel is lehetséges legyen!
 
-    - a. Ha még nincs kiválasztva egy track sem, akkor a lefele billentyűvel az első track kerül kiválasztásra.
+    - a. Ha még nincs kiválasztva egy track sem, akkor a lefele billentyűvel az első track kerül kiválasztásra (azaz a listaelem legyen `selected` stílusosztályú).
     - b. Ha még nincs kiválasztva egy track sem, akkor a felfele billentyűvel az utolsó track kerül kiválasztásra.
     - c. További le-föl billentyűt nyomogatva a következő, illetve előző track kerül kiválasztásra.
     - d. Az első trackről az előzőre lépve az utolsó kerül kiválasztásra.

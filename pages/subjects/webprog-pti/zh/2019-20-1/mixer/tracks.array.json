@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "name": "Drum 1",
+        "filename": "drum1.wav",
+        "balance": -10,
+        "volume": 35,
+        "filters": [
+            "XCompressor"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Drum 2",
+        "filename": "drum2.wav",
+        "balance": 15,
+        "volume": 40,
+        "filters": [
+            "Compressor",
+            "FFT"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Lead guitar",
+        "filename": "lead.wav",
+        "balance": -20,
+        "volume": 60,
+        "filters": [
+            "Compressor",
+            "Equalizer",
+            "Reverb"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Acoustic guitar",
+        "filename": "acoustic.wav",
+        "balance": 20,
+        "volume": 30,
+        "filters": [
+            "Pitch",
+            "Reverb"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Keyboard",
+        "filename": "piano.wav",
+        "balance": 3,
+        "volume": 75,
+        "filters": [
+            "FFT"
+        ]
+    }
+]

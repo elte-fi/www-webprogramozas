@@ -23,14 +23,14 @@ _2020. január 7. 9-12_
 - A zh-n bármilyen segédanyag használható, de humán segítség a jelenlévő gyakorlatvezetőkön kívül nem vehető igénybe.
 - A zh után a megoldásokon plágiumellenőrzést végzünk, az esetlegesen hasonló megoldások készítőit védésre behívhatjuk.
 - Ponthatárok:
-    + 0-19 pont: 1
-    + 20-29 pont: 2
-    + 30-39 pont: 2,5
-    + 40-49 pont: 3
-    + 50-59 pont: 3,5
-    + 60-66 pont: 4
-    + 67-74 pont: 4,5
-    + 75-80 pont: 5
+    + 0- pont: 1
+    + 65- pont: 2
+    + 97- pont: 2,5
+    + 130- pont: 3
+    + 162- pont: 3,5
+    + 195- pont: 4
+    + 218- pont: 4,5 
+    + 240-260 pont: 5
 
 ## Feladatleírás
 
@@ -38,7 +38,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
 0. **Előkészületek**
 
-    A feladathoz kétféle adatot használunk. Az adatokat JSON formában alább le lehet tölteni, és ezzel ajánlott dolgozni. Ha mégis más formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
+    A feladathoz kétféle adatot használunk. Az adatokat JSON formában alább le lehet tölteni, és ezzel ajánlott dolgozni. A JSON-t kétféle formában adjuk meg: az egyikben a külső adatszerkezet objektum, amiben az azonosítók kulcsok, az értékek pedig az egyes rekordok; a másikban a külső adatszerkezet tömb és ebben vannak felsorolva az egyes rekordok mint objektumok. Válaszd a számodra kényelmes formátumot. Ha mégis JSON-től eltérő formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
 
     1. **Track**: egy zenei hangsávért felelős adatszerkezet. Tároljuk az azonosítóját (`id`), nevét (`name`), kategóriáját (`category`), a társított hangszer azonosítóját (`instrument`), a track színét (`color`) és a hozzá tartozó hangjegyek idősorát (`notes`). A hangjegysor tartalmazza, hogy melyik hang (`note`) mettől (`start`) meddig (`end`) van megszólaltatva ms-okban. 
         
@@ -71,22 +71,22 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
     1. főoldal (`index.php`)
     2. új track oldal (`new.php`)
 
-    [SEGÉDANYAGOK LETÖLTÉSE](midi.zip)
+    [SEGÉDANYAGOK LETÖLTÉSE](http://webprogramozas.inf.elte.hu/webprog/zh/midi/midi.zip)
 
-    Ha valaki adatbáziskezelőt szeretne használni, akkor az SQLite lokális, fájl alapú adatbáziskezelőt ajánljuk, amihez van támogatás a webprogramozás szerveren PHP-ban. Grafikus felülethez a [phpLiteAdmin](phpliteadmin.zip) programot ajánljuk: kicsomagolva a php fájlt csak be kell másolni a projektmappába, és meghívni böngészőből; a jelszó `admin`. A mappára írásjogot kell adni, hogy az adatbázisok létre tudjanak jönni.
+    Ha valaki adatbáziskezelőt szeretne használni, akkor az SQLite lokális, fájl alapú adatbáziskezelőt ajánljuk, amihez van támogatás a webprogramozás szerveren PHP-ban. Grafikus felülethez a [phpLiteAdmin](http://webprogramozas.inf.elte.hu/webprog/zh/midi/phpliteadmin.zip) programot ajánljuk: kicsomagolva a php fájlt csak be kell másolni a projektmappába, és meghívni böngészőből; a jelszó `admin`. A mappára írásjogot kell adni, hogy az adatbázisok létre tudjanak jönni.
     
-1. **Oldal egyes részeinek elrejtése (?? pt)** A főoldalon (`index.php`) URL-ben megadott paraméter (`hide`) segítségével add meg, hogy az oldal mely részei tűnjenek el (ne jelenjenek meg a markupban, DOM-ban). A lehetséges részek: `tracks`, `pianoroll`, `keyboard`. Ezek a részek az ugyanilyen stílusosztályú `div` elemeknek felelnek meg. Ha többet is el akarunk tűntetni, akkor vesszővel kell elválasztani a részeket.
+1. **Oldal egyes részeinek elrejtése (20 pt)** A főoldalon (`index.php`) URL-ben megadott paraméter (`hide`) segítségével add meg, hogy az oldal mely részei tűnjenek el (ne jelenjenek meg a markupban, DOM-ban). A lehetséges részek: `tracks`, `pianoroll`, `keyboard`. Ezek a részek az ugyanilyen stílusosztályú `div` elemeknek felelnek meg. Ha többet is el akarunk tűntetni, akkor vesszővel kell elválasztani a részeket.
 
     - a. Paraméter nélkül (`index.php`) minden jelenjen meg.
-    - c. `index.php?hide=tracks`: a tracklista (`tracks` stílusosztályú `div`) nem jelenik meg
-    - d. `index.php?hide=pianoroll`: a hangjegysor (`pianoroll` stílusosztályú `div`) nem jelenik meg
-    - e. `index.php?hide=keyboard`: a zongorabillentyűk (`keyboard` stílusosztályú `div`) nem jelenik meg
-    - f. `index.php?hide=tracks,pianoroll`: a tracklista és a hangjegysor nem jelenik meg
-    - g. stb.
+    - b. `index.php?hide=tracks`: a tracklista (`tracks` stílusosztályú `div`) nem jelenik meg
+    - c. `index.php?hide=pianoroll`: a hangjegysor (`pianoroll` stílusosztályú `div`) nem jelenik meg
+    - d. `index.php?hide=keyboard`: a zongorabillentyűk (`keyboard` stílusosztályú `div`) nem jelenik meg
+    - e. `index.php?hide=tracks,pianoroll`: a tracklista és a hangjegysor nem jelenik meg
+    - f. stb.
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/1.png)
 
-2. **Trackek listázása (?? pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
+2. **Trackek listázása (20 pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
 
     - a. A trackeket a `tracks` stílusosztályú `div`-ben található felsorolás listaelemeiként kell megjeleníteni. Egy tracknek egy listaelem felel meg. Jelenítsd meg benne a track nevét, hangszerét zárójelben és a kategóriáját `span`-ban.
     - b. A listaelem háttérszínét a `style` attribútumon keresztül adjuk meg.
@@ -99,14 +99,14 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/2.png)
 
-3. **Új track hozzáadása (?? pt)**: Adjunk lehetőséget új tracket hozzáadni az "Add new track..." hivatkozásra kattintva. Fájlnév: `new.php`
+3. **Új track hozzáadása (70 pt)**: Adjunk lehetőséget új tracket hozzáadni az "Add new track..." hivatkozásra kattintva. Fájlnév: `new.php`
 
     - a. Az űrlap az alábbi mezőket tartalmazza:
 
-      - track neve (neve: `name`, típusa: szöveges beviteli mező, kötelező, hibaüzenetek: `The track name is required`)
-      - track színe (neve: `color`, típusa: szín, kötelező, formátuma: hexa színkód, pl. `#1234af`, hibaüzenetek: `The track color is required`, `The track color has a wrong format`)
-      - track kategóriája (neve: `category`, típusa: szöveges beviteli mező adatlistával, kötelező, hibaüzenetek: `The category is required`)
-      - megszólaló hangszer (neve: `instrument`, típusa: legördülő mező, kötelező, szám, hibaüzenetek: `The instrument is required`, `The instrument has to be an integer`)
+        - track neve (neve: `name`, típusa: szöveges beviteli mező, kötelező, hibaüzenetek: `The track name is required`)
+        - track színe (neve: `color`, típusa: szín, kötelező, formátuma: hexa színkód, pl. `#1234af`, hibaüzenetek: `The track color is required`, `The track color has a wrong format`)
+        - track kategóriája (neve: `category`, típusa: szöveges beviteli mező adatlistával, kötelező, hibaüzenetek: `The category is required`)
+        - megszólaló hangszer (neve: `instrument`, típusa: legördülő mező, kötelező, szám, hibaüzenetek: `The instrument is required`, `The instrument has to be an integer`)
 
     - b. A fenti elemek hiányozhatnak a POST kérésből, üresek vagy rosszul kitöltöttek is lehetnek. Ezekben az esetekben a fenti hibaüzenetek közül a megfelelőek jelenjenek meg egy `errors` stílusosztályú elemben (nem feltétlenül strukturáltan, azaz lehet a hibaüzeneteket pl. `var_dump`-pal kiíratni). Ez a hibaüzenet elem az űrlap első betöltésekor nem jelenik meg az oldalon.
 
@@ -116,9 +116,9 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/3.png)
 
-4. **Track kiválasztása és hangjegysorának megjelenítése (?? pt tesztben: előtte nincs kiválasztva és más nincsen kiválasztva, több kattintásnál mindig csak egy legyen kiválasztva)**: A főoldalon egy trackre kattintva jelenítsd meg a többsoros beviteli mezőben a track hangjegysorát JSON formátumban, illetve fölötte grafikus formátumban is (pianoroll).
+4. **Track kiválasztása és hangjegysorának megjelenítése (35 pt)**: A főoldalon egy trackre kattintva jelenítsd meg a többsoros beviteli mezőben a track hangjegysorát JSON formátumban, illetve fölötte grafikus formátumban is (pianoroll).
 
-    - a. Egy trackre kattintva legyen kiválasztva, azaz a listaelem legyen `selected` stílusosztályú!
+    - a. Egy trackre kattintva legyen kiválasztva, azaz a tracknek megfelelő listaelem legyen `selected` stílusosztályú!
     - b. Egy trackre kattintva olvasd ki a `data-notes` attribútumában tárolt JSON hangjegysort és jelenítsd meg az oldalon található többsoros szöveges beviteli mezőben!
     - c. A többsoros szöveges beviteli mezőben megjelenő JSON-t jelenítsd meg grafikusan a mező fölötti pianoroll részen. Ezt a "Show JSON in SVG" feliratú gombra kattintva érhetjük el. A grafikus megjelenítést az oldalon található SVG elemben kell megtenni. A hangjegysor minden egyes eleme egy-egy `rect` elem lesz: 
         - `x` attribútuma a `start` értéket tartalmazza, 
@@ -143,7 +143,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/4.png)
 
-5. **Track kiválasztása billentyűkkel (?? pt)**: Tedd lehetővé a főoldalon, hogy a trackek kiválasztása a le-föl billentyűkkel is lehetséges legyen!
+5. **Track kiválasztása billentyűkkel (25 pt)**: Tedd lehetővé a főoldalon, hogy a trackek kiválasztása a le-föl billentyűkkel is lehetséges legyen!
 
     - a. Ha még nincs kiválasztva egy track sem, akkor a lefele billentyűvel az első track kerül kiválasztásra (azaz a listaelem legyen `selected` stílusosztályú).
     - b. Ha még nincs kiválasztva egy track sem, akkor a felfele billentyűvel az utolsó track kerül kiválasztásra.
@@ -156,7 +156,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/5.png)
 
-6. **Felvétel rögzítése(?? pt)**: Tedd lehetővé, hogy egy kiválasztott trackhez felvehessük a hangjegysort. A műveleteket billentyűkkel vezéreljük.
+6. **Felvétel rögzítése(50 pt)**: Tedd lehetővé, hogy egy kiválasztott trackhez felvehessük a hangjegysort. A műveleteket billentyűkkel vezéreljük.
 
     - a. Az 1-8 billentyűket lenyomva a zongora megfelelő elemei kerülnek kijelölésre, ahogy az a zongorabillentyűkön fel is van tüntetve (azaz pl. az 1-es gomb a C hangnak felel meg). A `keyboard` stílusosztályú elemen belül a megfelelő `div` elem `active` stílusosztállyal való ellátása aktivál egy billentyűt. A billentyűt elengedve az aktiválás megszűnik.
     - b. A szóköz megnyomásával felvétel üzemmódba kerülünk. Ehhez az SVG elem `active` stílusosztályú lesz. A szóköz újbóli megnyomásával a felvétel üzemmód kikapcsol, az `active` stílusosztály lekerül az SVG elemről.
@@ -166,6 +166,6 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/6.png)
 
-7. **Felvétel AJAX mentése (?? pt)**: Kiválasztás és felvétel után a többsoros beviteli mezőben megjelenő hangjegysor JSON-t mentsük el a kiválasztott track `notes` mezőjében a háttérrendszerben AJAX POST kéréssel! Ehhez ki kell választani egy tracket, érvényes JSON-nel kitölteni a többsoros beviteli mezőt (nem kell feltétlenül felvétellel megtenni ezt), majd a "Save to selected track" feliratú gomb megnyomásával AJAX POST kérést küldeni a szervernek, amely az adott trackhez elmenti a JSON-t. A kérés során a kiválasztott track azonosítóját az URL-ben `id` néven küldjük fel! Sikeres mentés után a gombban lévő `span` elembe írjunk egy `✔` jelet!
+7. **Felvétel AJAX mentése (40 pt)**: Kiválasztás és felvétel után a többsoros beviteli mezőben megjelenő hangjegysor JSON-t mentsük el a kiválasztott track `notes` mezőjében a háttérrendszerben AJAX POST kéréssel! Ehhez ki kell választani egy tracket, érvényes JSON-nel kitölteni a többsoros beviteli mezőt (nem kell feltétlenül felvétellel megtenni ezt), majd a "Save to selected track" feliratú gomb megnyomásával AJAX POST kérést küldeni a szervernek, amely az adott trackhez elmenti a JSON-t. A kérés során a kiválasztott track azonosítóját az URL-ben `id` néven küldjük fel! Sikeres mentés után a gombban lévő `span` elembe írjunk egy `✔` jelet!
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/midi/7.png)

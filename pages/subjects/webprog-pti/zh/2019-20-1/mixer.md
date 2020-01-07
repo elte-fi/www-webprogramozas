@@ -23,14 +23,14 @@ _2020. január 7. 13-16_
 - A zh-n bármilyen segédanyag használható, de humán segítség a jelenlévő gyakorlatvezetőkön kívül nem vehető igénybe.
 - A zh után a megoldásokon plágiumellenőrzést végzünk, az esetlegesen hasonló megoldások készítőit védésre behívhatjuk.
 - Ponthatárok:
-    + 0-19 pont: 1
-    + 20-29 pont: 2
-    + 30-39 pont: 2,5
-    + 40-49 pont: 3
-    + 50-59 pont: 3,5
-    + 60-66 pont: 4
-    + 67-74 pont: 4,5
-    + 75-80 pont: 5
+    + 0- pont: 1
+    + 65- pont: 2
+    + 97- pont: 2,5
+    + 130- pont: 3
+    + 162- pont: 3,5
+    + 195- pont: 4
+    + 218- pont: 4,5 
+    + 240-260 pont: 5
 
 ## Feladatleírás
 
@@ -38,18 +38,37 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
 
 0. **Előkészületek**
 
-    A feladathoz kétféle adatot használunk. Az adatokat JSON formában alább le lehet tölteni, és ezzel ajánlott dolgozni. Ha mégis más formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
+    A feladathoz kétféle adatot használunk. Az adatokat JSON formában alább le lehet tölteni, és ezzel ajánlott dolgozni. A JSON-t kétféle formában adjuk meg: az egyikben a külső adatszerkezet objektum, amiben az azonosítók kulcsok, az értékek pedig az egyes rekordok; a másikban a külső adatszerkezet tömb és ebben vannak felsorolva az egyes rekordok mint objektumok. Válaszd a számodra kényelmes formátumot. Ha mégis JSON-től eltérő formátumban szeretnél dolgozni, akkor a letöltésnél mellékelve vannak az adatok Markdown formátumban is, és ezt a [tableconvert.com](https://tableconvert.com) oldalon beimportálva tetszőleges formátumban ki tudod exportálni, pl. SQL-ben is. De erre csak akkor van szükség, ha a JSON fájllal nem tudsz dolgozni. Minden tekintetben a JSON fájl az irányadó.
 
     1. **Track**: egy zenei hangfelvételért felelős adatszerkezet. Tároljuk az azonosítóját (`id`), nevét (`name`), a felvétel fájlnevét (`filename`), a bal-jobb eltolás mértékét (`balance`), a hangerejét (`volume`) és az alkalmazott szűrők listáját (`filters`). 
         
         Ezeket az adatokat ne változtasd (`id` 1-től 5-ig), de később újakat hozzáadhatsz. A tesztelő a 4-es és 5-ös azonosítójú sor `volume` mezőjét változtathatja.
 
         ```md
+        | id | name            | filename     | balance | volume | filters                             |
+        |----|-----------------|--------------|---------|--------|-------------------------------------|
+        | 1  | Drum 1          | drum1.wav    | -10     | 35     | ["XCompressor"]                     |
+        | 2  | Drum 2          | drum2.wav    | 15      | 40     | ["Compressor","FFT"]                |
+        | 3  | Lead guitar     | lead.wav     | -20     | 60     | ["Compressor","Equalizer","Reverb"] |
+        | 4  | Acoustic guitar | acoustic.wav | 20      | 30     | ["Pitch","Reverb"]                  |
+        | 5  | Keyboard        | piano.wav    | 3       | 75     | ["FFT"]                             |
         ```
 
     2. **Szűrők** (filters): egy lista a lehetséges szűrőkről. Egy azonosító (`id`) és egy név (`name`) mezőből áll. Nem szabad megváltoztatni, nem kell hozzáadni, nem kell elvenni belőle.
 
         ```md
+        | id | name                     |
+        |----|--------------------------|
+        | 1  | Compressor               |
+        | 2  | XCompressor              |
+        | 3  | Delay                    |
+        | 4  | Reverb                   |
+        | 5  | Equalizer                |
+        | 6  | FFT                      |
+        | 7  | Gate                     |
+        | 8  | Pitch                    |
+        | 9  | Tune                     |
+        | 10 | Low-frequency oscillator |
         ```
 
     A feladat két oldalból áll:
@@ -57,24 +76,25 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
     1. főoldal (`index.php`)
     2. új track oldal (`new.php`)
 
-    [SEGÉDANYAGOK LETÖLTÉSE](mixer.zip)
+    [SEGÉDANYAGOK LETÖLTÉSE](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/mixer.zip)
 
-    Ha valaki adatbáziskezelőt szeretne használni, akkor az SQLite lokális, fájl alapú adatbáziskezelőt ajánljuk, amihez van támogatás a webprogramozás szerveren PHP-ban. Grafikus felülethez a [phpLiteAdmin](phpliteadmin.zip) programot ajánljuk: kicsomagolva a php fájlt csak be kell másolni a projektmappába, és meghívni böngészőből; a jelszó `admin`. A mappára írásjogot kell adni, hogy az adatbázisok létre tudjanak jönni.
+    Ha valaki adatbáziskezelőt szeretne használni, akkor az SQLite lokális, fájl alapú adatbáziskezelőt ajánljuk, amihez van támogatás a webprogramozás szerveren PHP-ban. Grafikus felülethez a [phpLiteAdmin](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/phpliteadmin.zip) programot ajánljuk: kicsomagolva a php fájlt csak be kell másolni a projektmappába, és meghívni böngészőből; a jelszó `admin`. A mappára írásjogot kell adni, hogy az adatbázisok létre tudjanak jönni.
     
-1. **A státuszsorban lévő hangerőkijelző elemeinek száma (?? pt) teszt: | karakter vizsgálata** A főoldalon (`index.php`) URL-ben megadott paraméter (`bars`) segítségével add meg, hogy a státuszsorban lévő hangerősáv hány karakterből álljon. Az "Average volume" szöveg után kell megfelelő számú `span` elemet generálni, benne a `|` karakterrel. Pl. `index.php?bars=145`. Ha nincs megadva vagy nem nemnegatív számot tartalmaz, akkor alapértelmezetten 100 elemet generáljunk. Egyéb esetben a paraméterben érkező értéknek megfelelő számút.
+1. **A státuszsorban lévő hangerőkijelző elemeinek száma (10 pt)** A főoldalon (`index.php`) URL-ben megadott paraméter (`bars`) segítségével add meg, hogy a státuszsorban lévő hangerősáv hány karakterből álljon. Az "Average volume" szöveg után kell megfelelő számú `span` elemet generálni, benne a `|` karakterrel. Pl. `index.php?bars=145`. Ha nincs megadva vagy nem nemnegatív számot tartalmaz, akkor alapértelmezetten 100 elemet generáljunk. Egyéb esetben a paraméterben érkező értéknek megfelelő számút.
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/1.png)
 
-2. **Trackek listázása (?? pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
+2. **Trackek listázása (10 pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
 
     - a. A trackeket a `tracks` azonosítójú elemben kell megjeleníteni. Egy tracknek egy `track` stílusosztályú `div` felel meg. 
     - b. Az ezen belüli `header` elemben jelenítsd meg a track nevét.
     - c. A track neve legyen hivatkozás, amely a főoldalra mutat, GET paraméterként átadva a track azonosítóját `id` név alatt. (`index.php?id=1`)
     - d. A range slider elem értékét állítsd be a track hangerejének megfelelően!
+    - e. A státuszorban (`status` azonosítójú elem) ki kell írni a megjelenített trackek számát: pl. `Number of tracks: 10`
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/2.png)
 
-3. **Track részleteinek megtekintése (?? pt)**: Egy track nevének hivatkozására kattintva a főoldal jöjjön be, de jelenjen meg alul egy részletező panel, ahol a track részleteit láthatjuk.
+3. **Track részleteinek megtekintése (20 pt)**: Egy track nevének hivatkozására kattintva a főoldal jöjjön be, de jelenjen meg alul egy részletező panel, ahol a track részleteit láthatjuk.
 
     - a. A részletező panel (`details` azonosítójú elem) alapértelmezetten nem jelenik meg.
     - b. Ha az URL egy track id-t tartalmaz, akkor megjelenik, és a benne lévő definíciós lista a track megfelelő adatait tartalmazza: név, fájlnév, balansz és hangerő.
@@ -83,7 +103,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/3.png)
 
 
-4. **Új track hozzáadása (?? pt)**: Adjunk lehetőséget új tracket hozzáadni az "Add new track..." hivatkozásra kattintva. Fájlnév: `new.php`
+4. **Új track hozzáadása (80 pt)**: Adjunk lehetőséget új tracket hozzáadni az "Add new track..." hivatkozásra kattintva. Fájlnév: `new.php`
 
     - a. Az űrlap az alábbi mezőket tartalmazza:
 
@@ -101,7 +121,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/4.png)
 
-5. **Szűrők megadása (?? pt)**: Az új track felvivő oldalon (`new.php`) tegyük egyszerűbbé a szűrők megadását úgy, hogy a felhasználó egy listából válogathatja össze a szűrőket.
+5. **Szűrők megadása (45 pt)**: Az új track felvivő oldalon (`new.php`) tegyük egyszerűbbé a szűrők megadását úgy, hogy a felhasználó egy listából válogathatja össze a szűrőket.
 
     - a. Adott az oldalon két listadoboz. A baloldali az `all` azonosítójú, a jobboldali a `selected` azonosítójú. 
     - b. Az `all` azonosítójúban (bal) jelenjenek meg a háttérrendszerben tárolt szűrőnevek. 
@@ -113,7 +133,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
     
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/5.png)
 
-6. **Hangerő slider értékeinek és színének megjelenítése (?? pt)**: A főoldalon az oldal betöltése után jelenítsd meg a hangerő slider értékét a fölötte lévő elemben, és ugyanennek az elemnek a háttérszínét állítsd be a hangerőnek megfelelően!
+6. **Hangerő slider értékeinek és színének megjelenítése (15 pt)**: A főoldalon az oldal betöltése után jelenítsd meg a hangerő slider értékét a fölötte lévő elemben, és ugyanennek az elemnek a háttérszínét állítsd be a hangerőnek megfelelően!
 
     - a. Mindegyik tracknél olvasd ki a hangerő slider értékét, majd írd ki a fölötte levő `span` elembe!
     - b. Ugyanennek a `span` elemnek a háttérszínét állítsd be a hangerőnek megfelelően a következő szabályok szerint: a HSL színtérben a hue érték a 100-tól való eltérést tartalmazza, a saturation érték a hangerőnek legyen megfelelő, a lightness pedig legyen 50%. Azaz pl. egy 80-as hangerőnél: `hsl(20, 80%, 50%)`.
@@ -121,7 +141,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/6.png)
 
-7. **Hangerőkezelés billentyűkkel (?? pt)**: Tedd lehetővé a főoldalon, hogy a trackek kiválasztása és hangereik változtatása a bal-jobb-le-föl billentyűkkel is lehetséges legyen!
+7. **Hangerőkezelés billentyűkkel (40 pt)**: Tedd lehetővé a főoldalon, hogy a trackek kiválasztása és hangereik változtatása a bal-jobb-le-föl billentyűkkel is lehetséges legyen!
 
     - a. Ha még nincs kiválasztva egy track sem, akkor a jobb billentyűvel az első track kerül kiválasztásra (azaz a tracknek megfelelő `div` legyen `active` stílusosztályú).
     - b. Ha még nincs kiválasztva egy track sem, akkor a bal billentyűvel az utolsó track kerül kiválasztásra.
@@ -129,12 +149,14 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
     - d. Az első trackről az előzőre lépve az utolsó kerül kiválasztásra.
     - e. Az utolsó trackről a következőre lépve az első kerül kiválasztásra.
     - f. A szóköz billentyűt megnyomva a tracknél található jelölőmező jelöltsége megváltoztatható. Bejelöléskor a track-nek megfelelő `div` `selected` stílusosztályú lesz. Jelölés elvételekor a stílusosztály is megszűnik a tracken. Jobbra-balra mozgáskor több is kijelölhető.
-    - g. A föl-le billentyűkkel a kijelölt trackek hangereje 5 értékkel növekszik, illetve csökken.
+    - g. Az `s` billentyű lenyomásával az összes track kijelölésre kerül (jelölőmező + `selected` stílusosztály).
+    - h. A `d` billentyű lenyomásával az összes track kijelölése megszűnik (jelölőmező + `selected` stílusosztály).
+    - i. A föl-le billentyűkkel a kijelölt trackek hangereje 5 értékkel növekszik, illetve csökken.
     
     **Technikai segítség**: dokumentumszinten érdemes a billentyűleütéseket vizsgálni, ahova csak a `keydown` és `keyup` események érkeznek meg.
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/7.png)
 
-7. **Hangerők AJAX mentése (?? pt)**: A felül található "Save" feliratú gombra kattintva mentsük el a beállított hangerőket minden trackhez a háttérrendszerben AJAX POST kéréssel! Ehhez állítsuk valamilyen módon át a trackek hangereit, majd a "Save" feliratú gomb megnyomásával AJAX POST kéréssel küldjük el a hangerőadatokat. Sikeres mentés után a gombban lévő `span` elembe írjunk egy `✔` jelet!
+8. **Hangerők AJAX mentése (40 pt)**: A felül található "Save" feliratú gombra kattintva mentsük el a beállított hangerőket minden trackhez a háttérrendszerben AJAX POST kéréssel! Ehhez állítsuk valamilyen módon át a trackek hangereit, majd a "Save" feliratú gomb megnyomásával AJAX POST kéréssel küldjük el a hangerőadatokat. Sikeres mentés után a gombban lévő `span` elembe írjunk egy `✔` jelet!
 
     ![](http://webprogramozas.inf.elte.hu/webprog/zh/mixer/8.png)

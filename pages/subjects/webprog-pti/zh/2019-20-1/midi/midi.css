@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+  font-family: "Consolas", "Monaco", "Ubuntu Mono", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#main .row {
+  display: flex;
+}
+
+#main .row.tracks-container {
+  flex: 2;
+  overflow: hidden;
+}
+
+#main .row.keyboard-container {
+  flex: 1;
+}
+
+#main .tracks {
+  flex: 1;
+  overflow: auto;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: double 7px cyan;
+  font-size: 18px;
+}
+
+#main .tracks h3,
+#main .tracks p,
+#main .tracks a {
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+#main .tracks h3 {
+  position: absolute;
+  top: -12px;
+  background: black;
+  color: cyan;
+}
+
+#main .tracks h3:before {
+  content: "[ ";
+}
+
+#main .tracks h3:after {
+  content: " ]";
+}
+
+a {
+  color: yellow;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+a:hover {
+  background: yellow;
+  color: black;
+}
+
+#main .tracks ul {
+  overflow: auto;
+  list-style: none;
+  padding-left: 0;
+}
+
+#main .tracks ul li {
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#main .tracks li.selected {
+  color: orange;
+  border-left: 2px solid white;
+}
+
+#main .pianoroll-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  margin: 10px 0;
+}
+
+#main .pianoroll {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#main .pianoroll .row {
+  flex: 0;
+  border: solid 2px white;
+  padding: 9px 0;
+  position: relative;
+  padding-right: 9px;
+}
+
+#main .pianoroll .row:before {
+  content: "[ PIANOROLL ]";
+  position: absolute;
+  top: -12px;
+  left: 9px;
+  background: black;
+  padding: 0 8px;
+}
+
+#main .pianoroll textarea {
+  flex: 1;
+  background: black;
+  color: white;
+  border: solid white 2px;
+  padding: 18px;
+  margin: 18px 0 0 0;
+  position: relative;
+}
+
+#main .pianoroll button,
+button[type="submit"] {
+  border: none;
+  background: none;
+  color: yellow;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#main .pianoroll button:hover,
+button[type="submit"]:hover {
+  color: black;
+  background: yellow;
+}
+
+#main .pianoroll .row:after {
+  content: "[ NOTES ]";
+  position: absolute;
+  bottom: -30px;
+  left: 9px;
+  background: black;
+  z-index: 2;
+  padding: 0 8px;
+}
+
+#main .keyboard {
+  flex: 1;
+  display: flex;
+  background: black;
+  border: solid white 2px;
+  margin-top: 5px;
+}
+
+#main .keyboard div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  border: solid white 3px;
+  margin: 10px;
+  background: black;
+}
+
+#main .keyboard div.active {
+  background-color: orange;
+  color: brown;
+}
+
+svg rect {
+  vector-effect: non-scaling-stroke;
+  fill: white;
+}
+
+svg text {
+  font: 8px sans-serif;
+}
+
+#main .notes {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 200px;
+  text-align: center;
+}
+
+#main .notes div {
+  flex: 1;
+  border: 1px solid black;
+  color: yellow;
+}
+
+svg.active {
+  background-color: orange;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-left: 18px;
+}
+
+h2 {
+  position: absolute;
+  top: -12px;
+  left: 27px;
+  background: black;
+  color: yellow;
+  padding: 0 9px;
+}
+
+h2::before {
+  content: "[ ";
+}
+
+h2::after {
+  content: " ]";
+}
+
+form {
+  margin: 10px;
+  border: double yellow 7px;
+  padding: 18px;
+  line-height: 32px;
+}
+
+label {
+  display: block;
+}
+
+input,
+select {
+  border: solid white 2px;
+  background: none;
+  padding: 2px 9px;
+  color: white;
+  font-family: inherit;
+}
+
+input[type="color"] {
+  padding: 0 3px;
+}
+
+input:focus,
+select:focus {
+  border-color: yellow;
+  outline: none;
+  color: yellow;
+}
+
+button[type="submit"] {
+  margin-top: 18px;
+}
+
+form + a {
+  margin: 18px;
+  color: cyan;
+}
+
+form + a:hover {
+  background: cyan;
+}
+
+.errors {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+
+  background: maroon;
+  border: solid yellow 2px;
+  padding: 9px 18px;
+  outline: solid maroon 3px;
+}

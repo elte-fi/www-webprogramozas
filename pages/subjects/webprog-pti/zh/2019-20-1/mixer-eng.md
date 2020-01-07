@@ -14,7 +14,7 @@ _January 7th, 2020. 1 pm - 4 pm_
 ## Preparations
 
 - Use the `webprogramming.inf.elte.hu` server to work. In your `www` folder, create a `mixer` subfolder. Work in this subfolder.
-- Use the  [automated tester](http://webprogramozas.inf.elte.hu:1701/tester). Always select the problem you're
+- Use the  [automated tester](http://webprogramozas.inf.elte.hu:2020/tester). Always select the problem you're
 working on. You'll see the results sooner, and it also eases the load on the server. As the end of the exam approaches, also make sure to run the complete test suite at once. The tester's score will determine your
 grade.
 - You have 3 hours for the exam.

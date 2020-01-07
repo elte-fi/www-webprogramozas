@@ -75,7 +75,7 @@ Your task is to create a MIDI editor in which you can create, list and modify (a
     1. main page (`index.php`)
     2. new tack page (`new.php`)
 
-    [DOWNLOAD STARTER PACK](http://webprogramozas.inf.elte.hu/webprog/zh/midi/midi.zip)
+    [DOWNLOAD STARTER PACK](http://webprogramozas.inf.elte.hu/webprog/zh/midi/midi2.zip)
 
     If you wish to use a database manager in your solution then you can use the local, file based SQLite database manager. The server's PHP supports this. For a graphical interface you can use [phpLiteAdmin](http://webprogramozas.inf.elte.hu/webprog/zh/midi/phpliteadmin.zip): you have to extract the PHP file into your project folder and open it in your browser. The password is `admin`. You have to give write permissions to the server on your project folder to make the database manager work.
     

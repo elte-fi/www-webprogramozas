@@ -71,7 +71,7 @@ Készíts egy MIDI editort, amelyben zenei MIDI trackeket tudsz felvenni, listá
     1. főoldal (`index.php`)
     2. új track oldal (`new.php`)
 
-    [SEGÉDANYAGOK LETÖLTÉSE](http://webprogramozas.inf.elte.hu/webprog/zh/midi/midi.zip)
+    [SEGÉDANYAGOK LETÖLTÉSE](http://webprogramozas.inf.elte.hu/webprog/zh/midi/midi2.zip)
 
     Ha valaki adatbáziskezelőt szeretne használni, akkor az SQLite lokális, fájl alapú adatbáziskezelőt ajánljuk, amihez van támogatás a webprogramozás szerveren PHP-ban. Grafikus felülethez a [phpLiteAdmin](http://webprogramozas.inf.elte.hu/webprog/zh/midi/phpliteadmin.zip) programot ajánljuk: kicsomagolva a php fájlt csak be kell másolni a projektmappába, és meghívni böngészőből; a jelszó `admin`. A mappára írásjogot kell adni, hogy az adatbázisok létre tudjanak jönni.
     

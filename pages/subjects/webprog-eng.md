@@ -32,7 +32,7 @@ Environment
 <!-- * [Test](#!/subjects/webprog-pti/zh/avengers)   -->
 * Test  
     [2020. januar 7. Tuesday, 9-12](#!/subjects/webprog-pti/zh/2019-20-1/midi-eng), Lovarda, Nyelvi és Adatbázis labor  
-    2020. januar 7. Tuesday, 13-16, Lovarda, Nyelvi és Adatbázis labor
+    [2020. januar 7. Tuesday, 13-16](#!/subjects/webprog-pti/zh/2019-20-1/mixer-eng), Lovarda, Nyelvi és Adatbázis labor
 
 <!-- * [Retake test](#!/subjects/webprog-pti/zh/thor)   -->
 * Retake test  

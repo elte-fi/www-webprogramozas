@@ -33,7 +33,7 @@ Környezet
 <!-- * [Évfolyam ZH](#!/subjects/webprog-pti/zh/avengers)   -->
 * Évfolyam ZH  
     [2020. január 7. kedd, 9-12](#!/subjects/webprog-pti/zh/2019-20-1/midi), Lovarda, Nyelvi és Adatbázis labor  
-    2020. január 7. kedd, 13-16, Lovarda, Nyelvi és Adatbázis labor
+    [2020. január 7. kedd, 13-16](#!/subjects/webprog-pti/zh/2019-20-1/mixer), Lovarda, Nyelvi és Adatbázis labor
 
 <!-- * [PótZH](#!/subjects/webprog-pti/zh/thor)   -->
 * PótZH  

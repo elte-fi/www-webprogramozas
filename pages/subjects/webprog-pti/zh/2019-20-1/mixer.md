@@ -113,7 +113,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
       - hangerő (neve: `volume`, típusa: szám, kötelező, egész szám, 0 és 100 között, 5 többszöröse, hibaüzenetek: `The volume is required`, `The volume has to be an integer`, `The volume has to be between 0 and 100`, `The volume has to be a multiple of 5`)
       - szűrők (neve: `filters`, típusa: többsoros beviteli mező, lehet üres, ha nem, akkor egy szűrő soronként, hibaüzenetek: nincsen)
 
-    - b. A fenti elemek hiányozhatnak a POST kérésből, üresek vagy rosszul kitöltöttek is lehetnek. Ezekben az esetekben a fenti hibaüzenetek közül a megfelelőek jelenjenek meg egy `errors` stílusosztályú elemben (nem feltétlenül strukturáltan, azaz lehet a hibaüzeneteket pl. `var_dump`-pal kiíratni). Ez a hibaüzenet elem az űrlap első betöltésekor nem jelenik meg az oldalon.
+    - b. A fenti elemek **hiányozhatnak a POST kérésből**, üresek vagy rosszul kitöltöttek is lehetnek. Ezekben az esetekben a fenti hibaüzenetek közül a megfelelőek jelenjenek meg egy `errors` stílusosztályú elemben (nem feltétlenül strukturáltan, azaz lehet a hibaüzeneteket pl. `var_dump`-pal kiíratni). Ez a hibaüzenet elem az űrlap első betöltésekor nem jelenik meg az oldalon.
 
     - c. Hiba esetén gondoskodj az űrlap állapottartásáról, azaz írd vissza a beviteli mezőkbe a felküldött adatokat!
 

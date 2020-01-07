@@ -121,7 +121,7 @@ Extend the main page (`index.php`) with a URL parameter (`bars`) to set the numb
       - volume (name: `volume`, type: number, required, integer between 0 and 100, a multiple of 5, error messages:  `The volume is required`, `The volume has to be an integer`, `The volume has to be between 0 and 100`, `The volume has to be a multiple of 5`)
       - filters (name: `filters`, type: multiline text input, not required, one filter a line, no error messages)
 
-    - b. Your application should be prepared for any of these elements missing from the POST request, or being present with an empty or a malformed value. In such a case, include the appropriate error message in an
+    - b. Your application should be prepared for any of these elements **missing from the POST request**, or being present with an empty or a malformed value. In such a case, include the appropriate error message in an
     element with the `errors` class (it's okay to just `var_dump` the messages into this element). Don't show
     this element when the user first visits the page.
 

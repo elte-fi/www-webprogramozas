@@ -98,7 +98,7 @@ Extend the main page (`index.php`) with a URL parameter (`bars`) to set the numb
 
 2. **Track listing (10 pt)** On the main page (`index.php`), show a list of tracks based on the data on the server.
 
-    - a. Show the tracks in an HTML element with the id `tracks`. For each track, generate a div with the `track` class.
+    - a. Show the tracks in an HTML element with the id `tracks`. For each track, generate a div with the `track` class. The id of the track should be inserted as the `data-id` attribute of this `div`.
     - b. Within the div, use a `header` element to show the name of the track.
     - c. Track names should be links pointing to the main page. As a GET parameter, they should pass the track id. (`index.php?id=1`)
     - d. Set the value of the range slider according to the track's volume.

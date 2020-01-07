@@ -86,7 +86,7 @@ Készíts egy olyan alkalmazást, ahol egy zeneszámhoz tartozó különböző h
 
 2. **Trackek listázása (10 pt)** Listázd ki a háttérrendszerben tárolt trackeket a főoldalon (`index.php`)!
 
-    - a. A trackeket a `tracks` azonosítójú elemben kell megjeleníteni. Egy tracknek egy `track` stílusosztályú `div` felel meg. 
+    - a. A trackeket a `tracks` azonosítójú elemben kell megjeleníteni. Egy tracknek egy `track` stílusosztályú `div` felel meg. A track azonosítóját ennek a `div`-nek a `data-id` attribútumába kell írni.
     - b. Az ezen belüli `header` elemben jelenítsd meg a track nevét.
     - c. A track neve legyen hivatkozás, amely a főoldalra mutat, GET paraméterként átadva a track azonosítóját `id` név alatt. (`index.php?id=1`)
     - d. A range slider elem értékét állítsd be a track hangerejének megfelelően!

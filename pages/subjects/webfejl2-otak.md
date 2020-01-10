@@ -53,9 +53,11 @@ Környezet
     Határidő: 2019.12.31. 23:59
 - PHP ZH  
     Időpont: [2019.12.16. 12:00](#!/subjects/webfejl2-otak/zh-php)
+- Javító ZH  
+    Időpont: [2020.01.10. 10:00](#!/subjects/webfejl2-otak/zh-javito)
 
-<a class="primary card" href="#!/subjects/webfejl2-otak/zh-php">
-  Ugrás a ZH-ra!
+<a class="flex primary card" href="#!/subjects/webfejl2-otak/zh-javito">
+  Ugrás a javító ZH-ra!
 </a>
 
 ### A beadandók értékelése

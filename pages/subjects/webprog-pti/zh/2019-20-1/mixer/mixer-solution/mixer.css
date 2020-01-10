@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  font-family: "Consolas", "Monaco", "Ubuntu Mono", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+a,
+button {
+  color: yellow;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  display: inline-block;
+  height: 32px;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  background: yellow;
+  color: black;
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  background: darkcyan;
+  height: 26px;
+  overflow: hidden;
+  min-width: 1150px;
+}
+
+nav h3 {
+  padding: 3px 18px;
+  margin: 0;
+  display: inline-block;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 13px;
+}
+
+nav ul li {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+nav ul li span {
+  color: yellow;
+  margin-right: 9px;
+  font-size: 14px;
+}
+
+nav ul li button {
+  width: 120px;
+}
+
+nav ul li button span {
+  font-size: 12px;
+}
+
+nav ul li button:hover span {
+  color: black;
+}
+
+#tracks {
+  flex: 2;
+  display: flex;
+  border: none;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+#tracks .track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  max-width: 200px;
+  border: 2px solid white;
+  margin: 9px;
+  position: relative;
+}
+
+#tracks .track.active {
+  border: 2px solid #ff5555;
+}
+
+#tracks .track.selected header {
+  background-color: #ff5555;
+}
+
+#tracks .track header {
+  width: calc(100%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+#tracks .track header a {
+  margin: -4px;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+#tracks .track span {
+  width: calc(100%);
+  text-align: center;
+  padding: 2px 0;
+}
+
+#tracks .track input[type="range"] {
+  width: 20px;
+  border: solid 2px cyan;
+  padding: 2px;
+  -webkit-appearance: none;
+  appearance: none;
+  transform: rotate(-90deg);
+  min-width: 250px;
+  width: 100vh;
+  max-width: calc(100vh - 520px);
+  position: absolute;
+  top: 48%;
+  background: none;
+  outline: none;
+}
+
+#tracks .track input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  cursor: pointer;
+}
+
+#tracks .track input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: solid #ff5555 2px;
+  outline: none;
+  position: absolute;
+  bottom: 9px;
+  margin-left: 3px;
+}
+
+#tracks .track input[type="checkbox"]:checked {
+  background: #ff5555;
+}
+
+#tracks .track input[type="checkbox"]:checked::after {
+  content: "×";
+  font-size: 46px;
+  font-family: monospace;
+  font-weight: bold;
+  position: absolute;
+  top: -18px;
+  left: -2px;
+  color: black;
+}
+
+#details {
+  flex: 1;
+  display: flex;
+  border: double 7px cyan;
+  margin: 9px;
+}
+
+#details dl {
+  padding: 5px;
+}
+
+#details dl dt {
+  color: yellow;
+}
+
+#details .filters {
+  flex: 1;
+  display: flex;
+}
+
+#details .filters span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid white;
+}
+
+#status {
+  box-sizing: content-box;
+  padding: 5px 9px 10px;
+}
+
+#status span {
+  opacity: 0.2;
+  font-weight: bold;
+  margin-left: -2px;
+}
+
+#status span.active {
+  opacity: 1;
+  color: red;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-left: 18px;
+}
+
+h2 {
+  position: absolute;
+  top: -12px;
+  left: 27px;
+  background: black;
+  color: yellow;
+  padding: 0 9px;
+}
+
+h2::before {
+  content: "[ ";
+}
+
+h2::after {
+  content: " ]";
+}
+
+form {
+  margin: 10px;
+  border: double yellow 7px;
+  padding: 18px;
+  line-height: 32px;
+}
+
+label {
+  display: block;
+}
+
+input,
+select,
+textarea {
+  border: solid white 2px;
+  background: none;
+  padding: 2px 9px;
+  color: white;
+  font-family: inherit;
+}
+
+input[type="color"] {
+  padding: 0 3px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: yellow;
+  outline: none;
+  color: yellow;
+}
+
+input:focus::after {
+  color: black;
+}
+
+button[type="submit"] {
+  margin-top: 18px;
+}
+
+form + a {
+  margin: 0 18px;
+  color: cyan;
+}
+
+form + a:hover {
+  background: cyan;
+}
+
+select {
+  width: 340px;
+  overflow: hidden;
+}
+
+select + button,
+button + button {
+  font-size: 36px;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  vertical-align: 90px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+
+.errors {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+
+  background: maroon;
+  border: solid yellow 2px;
+  padding: 9px 18px;
+  outline: solid maroon 3px;
+}

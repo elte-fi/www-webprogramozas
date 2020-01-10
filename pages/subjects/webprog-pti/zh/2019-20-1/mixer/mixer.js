@@ -270,7 +270,8 @@ describe(__('Webprogramozás zh: Mixer'), function () {
 
     it(__('Paraméter nélkül nem jelenik meg a részletek panel (4 pt)'), runner(() => {
       tester.visit(url + 'index.php')
-      tester.element(`#details`).should('equal', null);
+      tester.$('body').eval(body => document.querySelector('#details') === null || document.querySelector('#details').style.display === 'none' || document.querySelector('#details').style.visibility === 'hidden').should('equal', true)
+      // tester.element(`#details`).should('equal', null);
       tester.point(4);
     }));
 

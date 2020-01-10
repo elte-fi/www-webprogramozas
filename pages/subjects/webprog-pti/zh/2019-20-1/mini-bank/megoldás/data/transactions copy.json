@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "timestamp": "1/1/2020 11:30:00 AM",
+        "sourceAccountId": 1,
+        "target": {
+            "name": "McDonald's",
+            "accountNumber": null
+        },
+        "text": null,
+        "value": 650,
+        "category": "Restaurants"
+    },
+    {
+        "id": 2,
+        "timestamp": "1/7/2020 7:30:00 AM",
+        "sourceAccountId": 1,
+        "target": {
+            "name": "Tamp & Pull",
+            "accountNumber": null
+        },
+        "text": null,
+        "value": 690,
+        "category": "Restaurants"
+    },
+    {
+        "id": 3,
+        "timestamp": "1/7/2020 4:30:00 PM",
+        "sourceAccountId": 1,
+        "target": {
+            "name": "Flat Mate",
+            "accountNumber": "30000000-00000000-00000000"
+        },
+        "text": "Rent",
+        "value": 80000,
+        "category": "Transfers"
+    },
+    {
+        "id": 4,
+        "timestamp": "1/10/2020 8:00:00 AM",
+        "sourceAccountId": 2,
+        "target": {
+            "name": "John Doe",
+            "accountNumber": "10000000-00000000-00000000"
+        },
+        "text": "Monthly Salary",
+        "value": 200000,
+        "category": "Transfers"
+    },
+    {
+        "id": 5,
+        "timestamp": "1/10/2020 8:00:00 AM",
+        "sourceAccountId": 2,
+        "target": {
+            "name": "Flat Mate",
+            "accountNumber": "30000000-00000000-00000000"
+        },
+        "text": "Alexander Victor LLC - Monthly Salary",
+        "value": 300000,
+        "category": "Transfers"
+    },
+    {
+        "id": 6,
+        "timestamp": "1/10/2020 5:00:00 PM",
+        "sourceAccountId": 1,
+        "target": {
+            "name": "Lidl",
+            "accountNumber": null
+        },
+        "text": null,
+        "value": 50000,
+        "category": "Groceries"
+    }
+]

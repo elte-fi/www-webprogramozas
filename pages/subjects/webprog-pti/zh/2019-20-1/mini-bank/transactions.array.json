@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "timestamp": "1/1/2020 11:30:00 AM",
+        "sourceAccount": "10000000-00000000-00000000",
+        "targetName": "McDonalds",
+        "targetAccount": "12345678-12345678-12345677",
+        "text": null,
+        "value": 650,
+        "category": "Other"
+    },
+    {
+        "id": 2,
+        "timestamp": "1/7/2020 7:30:00 AM",
+        "sourceAccount": "10000000-00000000-00000000",
+        "targetName": "Coffee shop",
+        "targetAccount": "12345678-12345678-12345678",
+        "text": null,
+        "value": 690,
+        "category": "Restaurants"
+    },
+    {
+        "id": 3,
+        "timestamp": "1/7/2020 4:30:00 PM",
+        "sourceAccount": "10000000-00000000-00000000",
+        "targetName": "Flat Mate",
+        "targetAccount": "30000000-00000000-00000000",
+        "text": "Rent",
+        "value": 80000,
+        "category": "Transfers"
+    },
+    {
+        "id": 4,
+        "timestamp": "1/10/2020 8:00:00 AM",
+        "sourceAccount": "20000000-00000000-00000000",
+        "targetName": "John Doe",
+        "targetAccount": "10000000-00000000-00000000",
+        "text": "Monthly Salary",
+        "value": 200000,
+        "category": "Transfers"
+    },
+    {
+        "id": 5,
+        "timestamp": "1/10/2020 8:00:00 AM",
+        "sourceAccount": "20000000-00000000-00000000",
+        "targetName": "Flat Mate",
+        "targetAccount": "30000000-00000000-00000000",
+        "text": "Alexander Victor LLC - Monthly Salary",
+        "value": 300000,
+        "category": "Transfers"
+    },
+    {
+        "id": 6,
+        "timestamp": "1/10/2020 5:00:00 PM",
+        "sourceAccount": "10000000-00000000-00000000",
+        "targetName": "Lidl",
+        "targetAccount": "12345678-12345678-12345679",
+        "text": null,
+        "value": 50000,
+        "category": "Groceries"
+    },
+    {
+        "id": 7,
+        "timestamp": "1/10/2020 11:34:26 AM",
+        "sourceAccount": "10000000-00000000-00000000",
+        "targetName": "Alexander Victor LLC",
+        "targetAccount": "20000000-00000000-00000000",
+        "text": "Test",
+        "value": 10000,
+        "category": "Other"
+    }
+]

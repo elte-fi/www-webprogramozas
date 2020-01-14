@@ -1,17 +1,14 @@
 [
     {
         "id": 1,
-        "account_number": "10000000-00000000-00000000",
         "name": "John Doe"
     },
     {
         "id": 2,
-        "account_number": "20000000-00000000-00000000",
         "name": "Alexander Victor LLC"
     },
     {
         "id": 3,
-        "account_number": "30000000-00000000-00000000",
         "name": "Flat Mate"
     }
 ]

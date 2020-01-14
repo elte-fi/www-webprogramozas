@@ -1,0 +1,57 @@
+@import url(https://bootswatch.com/4/cosmo/bootstrap.min.css);
+
+#transactions tr.transaction > td:nth-child(3) {
+    white-space: nowrap;
+}
+#transactions tr.transaction > td:nth-child(2) > div:nth-child(1)::before {
+    content: '👨 ';
+}
+#transactions tr.transaction > td:nth-child(2) > div:nth-child(2)::before {
+    content: '✉ ';
+}
+#transactions tr.transaction > td:nth-child(2) > div:nth-child(4) > div:nth-child(2)::before {
+    content: '↦ ';
+}
+#transactions tr.transaction > td:nth-child(2) > div:nth-child(4) > div:nth-child(3)::before {
+    content: '⇥ ';
+}
+.badge {
+    font-size: 100%;
+}
+.red {
+    color: red;
+}
+
+.green {
+    color: darkgreen;
+}
+
+.left-aligned {
+    text-align: left;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+.debit {
+    color: red;
+    text-align: left;
+}
+
+.credit {
+    color: darkgreen;
+    text-align: right;
+}
+
+.empty {
+    font-style: italic;
+}
+
+.marked > td {
+    background-color: lightyellow;
+}
+
+.hidden {
+    display: none;
+}

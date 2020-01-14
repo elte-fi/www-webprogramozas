@@ -140,7 +140,7 @@ Készíts egy egyszerű webes felületet, ahol számlákhoz tartozó tranzakció
 
 5. **A minimális és maximális érték szűréséhez használt range sliderek értékének kiírása (PHP + JS, 20 pt)**: A "Filters" feliratú blokkban található két csúszka (`min-value` és `max-value` azonosító beviteli mezők), amellyel később majd a megjelenítendő tranzakciók értékhatárait lehet beállítani. Ebben a részben az a feladat, hogy
 
-    - a. a csúszkák `min` és `max` attribútumának értékeit állítsd az oldal betöltésekor kilistázott tranzakciók értékének legkisebb, illetve legnagyobb értékére, a `value` attribútumukat pedig a `min-value` elem esetén a `min` értékre, a `max-value` elem esetén a `max` értékre állítsd (PHP);
+    - a. a csúszkák `min` és `max` attribútumának értékeit állítsd az oldal betöltésekor kilistázott tranzakciók **abszolút értékének** legkisebb, illetve legnagyobb értékére, a `value` attribútumukat pedig a `min-value` elem esetén a `min` értékre, a `max-value` elem esetén a `max` értékre állítsd (PHP);
     - b. az oldal betöltésekor jelenítsd meg a csúszkák értékeit a nekik megfelelő, `min-value-span` és `max-value-span` azonosítójú `span` elemekben (PHP/JS);
     - c. a csúszkák mozgatására frissítsd a megjelenített értékeket (JS). Ehhez használd az `input` eseményt!
     

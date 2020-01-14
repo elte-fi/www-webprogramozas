@@ -37,7 +37,7 @@ Környezet
 
 <!-- * [PótZH](#!/subjects/webprog-pti/zh/thor)   -->
 * PótZH  
-    2020. január 14. kedd, 9-12, Lovarda és Nyelvi labor
+    [2020. január 14. kedd, 9-12](#!/subjects/webprog-pti/zh/2019-20-1/minibank), Lovarda és Nyelvi labor
 
 ### A beadandók értékelése
 

@@ -36,7 +36,7 @@ Environment
 
 <!-- * [Retake test](#!/subjects/webprog-pti/zh/thor)   -->
 * Retake test  
-    2020. januar 14. Tuesday, 9-12, Lovarda és Nyelvi labor
+    [2020. januar 14. Tuesday, 9-12](#!/subjects/webprog-pti/zh/2019-20-1/minibank-eng), Lovarda és Nyelvi labor
 
 <!--Összevont (folyamatos) értékelésű tárgy.
 

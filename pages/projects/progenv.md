@@ -48,7 +48,7 @@ A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást 
 - **Függvénykönyvtár készítése funkcionális tesztek készítéséhez**: funkcionális tesztekhez jelenleg a puppeteer eszközt használjuk. Ennek az API-ja azonban nagyon alacsony szintű és a rengeteg aszinkron funkció miatt bonyolult. Ezt szeretnénk egy egyszerűbb API-val elfedni, ami a tipikus tesztelési lépéseknek felel meg. Az új API-hoz egy kiindulási specifikációt tudunk adni.
 - **In-browser language server és fordító** WebAssemblyvel (pl. clang). Cél, hogy backend sandbox környezet nélkül magában a böngészőben történjen a C++ kód fordítása és futtatása.
 - **In-browser debugger**.
-
+- **PHP backend**
 
 ## Felhasznált technológiák
 

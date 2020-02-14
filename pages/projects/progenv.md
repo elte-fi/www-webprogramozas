@@ -11,9 +11,9 @@ Különböző oktatási és módszertani igényeket kiszolgáló webes programoz
 A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást bővíteni. Ezeket először egy független projekt keretében kell implementálni, és onnan kerülnek az alkalmazásba.
 
 - **Versenyarchitektúra kialakítása**: a jelenlegi rendszer a kezdő programozásoktatásra lett tervezve, ahol haladó hatékonysági megfontolásokat nem vesz figyelembe, azaz nincsenek feladatonkénti memória- és időlimitek.
-    - a futtató és ellenőrző rendszer kiegészítése a memória- és időlimitek figyelembevételére
     - a jelenlegi elosztott architektúra robosztusságának ellenőrzése, és hibatűrésének javítása
-    - feladatok újrafuttatásának lehetőségének vizsgálata
+    - jól tesztelhető rétegek és komponensek kialakítása
+    - Logok aggregálása a különböző részrendszerekből, folyamat nyomon követése a logok alapján
 - **Gyors kereshetőség biztosítása ElasticSearch segítségével**: keresés a feladatok között egy kifejezetten erre szolgáló eszköz segítségével.
     - ElasticSearch megismerése
     - feladatok adatainak bevitele az ElasticSearch katalógusába
@@ -29,6 +29,7 @@ A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást 
     - nyers billentyűleütési adatok gyűjtése és hatékony tárolása
     - különböző metrikák kipróbálása
     - példaimplementáció
+    - [Tanulmány](pages/projects/progenv/billentyuleutesek_vizsgalata.pdf)
 - **Editor tartalmának streamelése**: tetszőleges editor képének megtekintése egy másik felhasználónál.
     - megfelelő technológia kiválasztása (pl. WebRTC, Websockets, stb)
     - két gép közötti kapcsolat (pl. tanár belenéz a hallgató kódjába)
@@ -41,6 +42,7 @@ A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást 
     - 2 böngészőben lévő textareák közötti közös szerkesztés
     - Több böngészőben lévő textareák közötti közös szerkesztés
     - Monaco editor használata textarea helyett
+    - [Tanulmány](pages/projects/progenv/kollaborativ_szerkesztes.pdf)
 - **Online feladatszerkesztő**
     - Új feladat felvitele
     - Meglévő feladatok módosítása
@@ -48,7 +50,6 @@ A jelenlegi funkciók mellett számos további feladattal lehet az alkalmazást 
 - **Függvénykönyvtár készítése funkcionális tesztek készítéséhez**: funkcionális tesztekhez jelenleg a puppeteer eszközt használjuk. Ennek az API-ja azonban nagyon alacsony szintű és a rengeteg aszinkron funkció miatt bonyolult. Ezt szeretnénk egy egyszerűbb API-val elfedni, ami a tipikus tesztelési lépéseknek felel meg. Az új API-hoz egy kiindulási specifikációt tudunk adni.
 - **In-browser language server és fordító** WebAssemblyvel (pl. clang). Cél, hogy backend sandbox környezet nélkül magában a böngészőben történjen a C++ kód fordítása és futtatása.
 - **In-browser debugger**.
-- **PHP backend**
 
 ## Felhasznált technológiák
 

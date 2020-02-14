@@ -25,17 +25,11 @@ Az Apache Spark job-execution vizualizációjának kiterjesztése más elosztott
    - Eseménykezelés, buborékolás szimulálása
    - Animációk
 
+   [Egy jelenlegi megoldás Canvas-WebGL-Pixi.js alapokon](http://istvandonko.web.elte.hu/WebLabor/ddps-visualization/www/)
+
 2. Hatékony canvas alapú megjelenítés Quadtree-kkel
 
    A megjelenítés során sokszor kell komponenseket keresni, akár a megjelenítés szűréséhez, akár az eseménykezeléshez. Ezt a lineáris szűrést lehet hatékonyabbá tenni az ún. [Quadtree](https://en.wikipedia.org/wiki/Quadtree)-k alkalmazásával. A feladatot vállalóknak meg kellene ismerkednie a Quadtree-k működésével, és ezzel proof-of-concept canvases alkalmazást kellene készíteni, lehetőleg valamilyen egyszerűbb fa megjelenítésével.
-
-3. Különböző méretű csomópontokból álló fák kirajzolása jó helykihasználtsággal
-
-   A jelenlegi fa kirajzolása ún. dobozmodellen alapul, azaz egy csomópontot és gyerekeit egy befoglaló dobozba képzeljük, majd a gyerek és azok gyerekeit is ugyanígy, végig rekurzívan. Így határozzuk meg a csomópontok helyét. A gond ezzel az, hogy így nagyon szellős fák jöhetnek létre, amelyeket "függőleges" irányban összébb lehetne húzni. A feladat olyan fa elrendezés kiszámolása, amely függőleges irányban a legjobb helykihasználást adja. Erre több megközelítést kellene megvizsgálni:
-
-   - A d3 függvénykönyvtár [tree layout modulja](https://github.com/d3/d3-hierarchy#tree) tudja ezt azonos méretű csúcspontokra. Kérdés, hogy az alkalmazott Reingold-Tilford algoritmus módosítható-e eltérő méretű csomópontokra.
-   - Fizikai relaxációs modellt is lehetne alkalmazni. Ekkor a csomópontok egy ideig vonzzák egymást, majd bizonyos közelségben taszítják. Több lépéses iterációban relaxáltatni lehetne a fa elrendezését. Ehhez ki lehet indulni a [d3 forced layout](https://github.com/d3/d3-force) modelljéből, de érdemes lehet sajátot írni.
-
 
 ## Felhasznált technológiák
 

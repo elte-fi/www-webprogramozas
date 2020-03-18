@@ -15,7 +15,7 @@ Célunk egy akasztófa játék egyszerű változatát megírni. Az általános l
 
 ## A felület megtervezése
 
-![](http://webprogramozas.inf.elte.hu/webfejl2-lev/leirasok/akasztofa.png)
+![](pages/subjects/webfejl2-lev/leirasok/akasztofa.png)
 
 A kiindulási kód (HTML és CSS) adott a sablonban.
 

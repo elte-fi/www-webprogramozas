@@ -42,20 +42,42 @@ settings.json fájl létrehozása. A fájl tartalma:
 }
 ```
 
+A _.eslintrc.js_ fájl egy lehetséges módja az ESlint eszköz konfigurációjának megadására. Azon a könyvtáron belül érvényes, amelyben el van helyezve, illetve az azon belüli könyvtárakban is. Az `extends` tömbben kész konfigurációkat sorolhatunk fel, ezek balról jobbra felülírják egymást. A `react-app` konfigurációt kapjuk a create-react-app eszköztől, a másikhoz szükséges volt telepítenünk további 3 npm csomagot a következő paranccsal:
+`npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier`
+A prettier-es konfiguráció figyelembe veszi a _package.json_-ben megadott Prettier beállításainkat.
+A `--save-dev` kapcsolónak köszönhetően a _package.json_ állományon belül a `devDependencies` részbe kerültek. Ide jellemzően azokat a függőségeket helyezzük, melyeket a fejlesztés során használunk, viszont a készített alkalmazásunknak nem fogják részét képezni (nem importáljuk az src mappában). Az alkalmazás gyökérmappájában futtatva az `npx eslint src --fix` parancsot, a `react-app` konfiguráció által figyelt szabályokra is lefut az ellenőrzés és a Prettier szabályokra is, és az automatikusan javíthatóakra el is végzi a javítást.
+
+```js
+module.exports = {
+  parser: "babel-eslint",
+  parserOptions: {
+    sourceType: "module"
+  },
+  extends: ["react-app", "plugin:prettier/recommended"],
+  env: {
+    jest: true
+  },
+  globals: {
+    window: true,
+    document: true
+  }
+};
+```
+
 ## A létrehozott projekt áttekintése
 
 - **README.md**: Ebben a fájlban lehet leírást elhelyezni a projektről. Például,
-hogy miről szól, hogyan kell használni, hogyan lehet elindítani, milyen dolgokra
-kell esetleg figyelni a fejlesztés közben, stb.
+  hogy miről szól, hogyan kell használni, hogyan lehet elindítani, milyen dolgokra
+  kell esetleg figyelni a fejlesztés közben, stb.
 - **package.json**: A projekt leírója. Ebben találhatók npm scriptek, amik például
-a projekt futtatásához, teszteléséhez, buildeléséhez szükségesek. Továbbá itt
-vannak leírva a projekt függőségei is.
+  a projekt futtatásához, teszteléséhez, buildeléséhez szükségesek. Továbbá itt
+  vannak leírva a projekt függőségei is.
 - **.gitignore**: A verziókezelésből kizárt fájlok.
 - **package-lock.json**: A projekt függőségeit pontosan leíró fájl. Habár ez egy
-generált fájl, általában mégis érdemes verziókezelni.
+  generált fájl, általában mégis érdemes verziókezelni.
 - **public**: A build artifactba változás nélkül, vagy csak jól definiált
-változtatásokkal bekerülő fájlok (pl.: index.html-be bekerül a projektből
-generált scriptet behúzó tag).
+  változtatásokkal bekerülő fájlok (pl.: index.html-be bekerül a projektből
+  generált scriptet behúzó tag).
 - **src**: A projekt forráskódja
   - **index.js**: Az alkalmazás belépési pontja.
   - **setupTests.js**: A tesztek futtatásához szükséges globális előkészítések.
@@ -109,12 +131,13 @@ felületén olyan elemeket, amelyek valamilyen szempontból összetartoznak, jó
 esetben többször is előfordulnak. Keressünk a példában ilyen részeket!
 
 Egy lehetséges felbontás:
+
 - zeneszám,
 - zeneszám lista,
 - az egész oldal.
-Habár ez a legutóbbi kicsit furcsa lehet, de erre is érdemes komponensként
-gondolni. Esetleg egy kitüntetett szerepű komponensként, amit nevezhetünk
-page-nek.
+  Habár ez a legutóbbi kicsit furcsa lehet, de erre is érdemes komponensként
+  gondolni. Esetleg egy kitüntetett szerepű komponensként, amit nevezhetünk
+  page-nek.
 
 ## Komponensek implementációja
 
@@ -122,14 +145,18 @@ Elsőként, még szétbontás nélkül, készítsünk komponenst a htmlből. Mó
 alábbira az App.js fájl tartalmát:
 
 ```jsx
-import React from 'react';
+import React from "react";
 
 export function App() {
   return (
     <div className="w-screen h-screen bg-gray-200 pt-2">
       <div className="max-w-sm mx-auto flex flex-col bg-gray-700 rounded-lg shadow-xl">
         <div className="flex px-6 py-2 items-center border-b border-white">
-          <img alt="" className="mr-2 w-20 h-20" src="https://via.placeholder.com/70" />
+          <img
+            alt=""
+            className="mr-2 w-20 h-20"
+            src="https://via.placeholder.com/70"
+          />
           <div>
             <div className="text-xl text-white">Shooting Stars</div>
             <div className="text-gray-400">Bag Raiders</div>
@@ -143,7 +170,11 @@ export function App() {
           </div>
         </div>
         <div className="flex px-6 py-2 items-center border-b border-white">
-          <img alt="" className="mr-2 w-20 h-20" src="https://via.placeholder.com/70" />
+          <img
+            alt=""
+            className="mr-2 w-20 h-20"
+            src="https://via.placeholder.com/70"
+          />
           <div>
             <div className="text-xl text-white">Sandstorm</div>
             <div className="text-gray-400">Darude</div>
@@ -169,8 +200,8 @@ következő hibaüzenet jelenik meg:
 én szívesen megmutatnám gyakorlaton is a hallgatóknak -->
 
 React komponenseket többféle módon is létre lehet hozni. A tárgy keretén belül
-általában az előbb látott ```function component``` típusú komponensekkel fogunk
-találkozni. A másik lehetőség az úgynevezett ```class component```, de ezzel
+általában az előbb látott `function component` típusú komponensekkel fogunk
+találkozni. A másik lehetőség az úgynevezett `class component`, de ezzel
 kevesebbet fogunk foglalkozni.
 
 Bontsuk tovább a komponenseinket.
@@ -178,7 +209,7 @@ Bontsuk tovább a komponenseinket.
 TrackList.js:
 
 ```jsx
-import React from 'react';
+import React from "react";
 
 export function TrackList() {
   return (
@@ -220,8 +251,8 @@ export function TrackList() {
 App.js:
 
 ```jsx
-import React from 'react';
-import { TrackList } from './TrackList';
+import React from "react";
+import { TrackList } from "./TrackList";
 
 export function App() {
   return (
@@ -243,13 +274,14 @@ megjeleníteniük. Hogyan tudunk adatok megjeleníteni? Egyelőre dolgozzunk egy
 track adataival.
 
 Track.js
+
 ```jsx
-import React from 'react';
+import React from "react";
 
 const track = {
-  thumbnailSrc: 'https://via.placeholder.com/70',
-  name: 'Shooting Stars',
-  author: 'Bag Raiders',
+  thumbnailSrc: "https://via.placeholder.com/70",
+  name: "Shooting Stars",
+  author: "Bag Raiders"
 };
 
 export function Track() {
@@ -303,21 +335,23 @@ függvény paraméterében jelennek meg. A komponensek paramétereit **prop**-ok
 nevezzük.
 
 ```jsx
-export function Track({ track }) { /* ... */ }
+export function Track({ track }) {
+  /* ... */
+}
 ```
 
 A karbantarthatóság kedvéért érdemes felírni, hogy milyen típusú paramétert
 várunk. Erre használhatóak az ún. PropType-ok.
 
 ```jsx
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 // ...
 Track.propTypes = {
   track: PropTypes.shape({
     thumbnailSrc: PropTypes.string,
     name: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }),
+    author: PropTypes.string.isRequired
+  })
 };
 ```
 
@@ -328,21 +362,21 @@ adatokat egy tömbben a TrackList.js-ben.
 const trackList = [
   {
     id: 1,
-    thumbnailSrc: 'https://via.placeholder.com/70',
-    name: 'Shooting Stars',
-    author: 'Bag Raiders',
+    thumbnailSrc: "https://via.placeholder.com/70",
+    name: "Shooting Stars",
+    author: "Bag Raiders"
   },
   {
     id: 2,
-    name: 'All Start',
-    author: 'Smash Mouth',
+    name: "All Start",
+    author: "Smash Mouth"
   },
   {
     id: 3,
-    thumbnailSrc: 'https://via.placeholder.com/70',
-    name: 'Sandstorm',
-    author: 'Darude',
-  },
+    thumbnailSrc: "https://via.placeholder.com/70",
+    name: "Sandstorm",
+    author: "Darude"
+  }
 ];
 ```
 
@@ -376,6 +410,5 @@ A trackeknek ebben a hierarchiában igazából egy szinttel magasabban kellene
 lennie, mert a TrackListre csak megjelenítő komponensként érdemes gondolni (hisz
 máshol is akarjuk majd használni). Próbáljuk meg a trackek listáját még eggyel
 magasabb szintre emelni!
-
 
 <!-- TODO: JSX: Mi az alternatíva? pro-con? ez nem biztos, hogy gyakorlatra kell. -->

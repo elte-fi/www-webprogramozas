@@ -10,14 +10,14 @@ To style React components you have to include a CSS library globally in your app
 
 #### `CLI`
 ```bash
-npm install --save fomantic-ui
+npm install --save fomantic-ui-css
 ```
 
 To include the necessary CSS in your application you have to import the CSS file in the `index.js` file of your application.
 
 #### `index.js`
 ```jsx
-import "node_modules/fomantic-ui/dist/semantic.min.css";
+import "fomantic-ui-css/semantic.css";
 ```
 
 Once you included the necessary CSS files in your app, you can use the global classes defined in your CSS framework on your React component. Use the `className` property to set CSS classes.

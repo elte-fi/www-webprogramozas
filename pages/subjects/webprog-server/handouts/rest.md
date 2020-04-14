@@ -6,7 +6,6 @@
 - Testing
 - Manual REST API
 - Semi-manual REST API with `sequelize-cli`
-- Automatic REST API with Feathers.js
 
 ## REST API
 

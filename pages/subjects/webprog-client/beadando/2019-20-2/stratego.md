@@ -4,7 +4,10 @@
 
 ## Feladat
 
-![](https://www.playmonster.com/wp-content/uploads/2019/07/7476_Stratego_Original_Contents.png)
+- [A táblajáték szabálya](http://www.ketaklub.hu/letoltes/Stratego%20Aoriginal%20Piatnik.pdf)
+- [Az online játék bemutatója](https://www.youtube.com/watch?v=uX2Y5CK5OIY)
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/05/Stratego.png)
 
 Feladatod a Stratego nevű társasjáték számítógépes megvalósítása. A játékban két játékos játszik egymással egy-egy hadsereg élén. Cél az ellenfél zászlójának megszerzése. A tábla 10x10 cellából áll. Eredetileg mindkét félnek 40 bábuja van: 1 zászló, 5 bomba, és katonák 1-től 10-es erővel. Egymás bábuit azonban nem látják, csak akkor, amikor két bábu csatázni kezd. Ekkor az erősebb bábu marad a pályán, a gyengébbik leesik a tábláról. Ha két azonos bábu harcol egymással, akkor mindkettő lekerül a tábláról. Minden bábu csak 1-et léphet előre, hátra, jobbra, balra. a zászló és az akna értelemszerűen nem tud lépni. A táblán lehetnek olyan mezők, amelyre nem lehet lépni (tó). Van pár speciális figura:
 - a 2-es a felderítő, ő akárhány mezőt átugorva léphet vagy támadhat. Tavat ő sem tudja átugrani.
@@ -96,9 +99,3 @@ Az Eötvös Loránd Tudományegyetem Hallgatói Követelményrendszere (ELTE sze
 hogy mindaddig, amíg egy hallgató egy másik hallgató munkáját - vagy legalábbis annak jelentős részét - saját munkájaként mutatja be, 
 az fegyelmi vétségnek számít. A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az egyetemről.
 ```
-
-## Linkek
-
-- [A táblajáték szabálya](http://www.ketaklub.hu/letoltes/Stratego%20Aoriginal%20Piatnik.pdf)
-- [Az online játék bemutatója](https://www.youtube.com/watch?v=uX2Y5CK5OIY)
-

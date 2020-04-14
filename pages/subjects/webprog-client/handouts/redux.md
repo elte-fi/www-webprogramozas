@@ -1,3 +1,9 @@
+<style>
+main img {
+  max-width: 800px;
+}
+</style>
+
 # Redux
 
 Ha nagyra nő az alkalmazás, érdemes lehet a React komponensekből kiszervezni az állapotkezelést, elvégre a React csak egy nézet réteget megvalósító könyvtár. A legelterjedtebb JavaScript állapotkezelő könyvtár a Redux.

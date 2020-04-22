@@ -25,10 +25,13 @@ A diák a következő feladatokat végezheti el:
 A feladatot Laravel alkalmazásként kell megvalósítani, lokális SQLite adatbázis használatával. A táblákat migrációval kell feltölteni, és pár adattal előre feltölteni. A következő utasításokkal kell tudni üzembe helyezni az alkalmazást:
 
 ```bash
+composer install
 php artisan migrate:fresh
 php artisan seed --class=LmsSeeder
 php artisan serve
 ```
+
+A feladatot Canvas rendszerbe kell feltölteni zip állományba csomagolva. Feltöltés előtt a `vendor` mappát törölni kell!
 
 ## Modellek
 

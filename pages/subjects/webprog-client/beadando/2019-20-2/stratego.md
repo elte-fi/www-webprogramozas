@@ -28,7 +28,7 @@ Játék folyamata: az 1. játékos választ egy figurát. Ekkor opcionálisan je
 
 ## 1. felvonás (20 pont)
 
-React használatával készítsd el az egyes oldalak kvázi-statikus komponenseit és működését. AZ első felvonásban alapvetően a HTML és CSS ismereteidre lesz szükség (sitebuild), majd az így elkészített prototípusokat komponensekbe kell helyezned. Ekkor már átgondolhatod, hogy mely oldalrészeket kell külön komponensbe kiszervezned. Annyi dinamikát kell tartalmaznia az oldalnak, hogy az egyes képernyők a megfelelő gombnyomásokra bejárhatóak legyenek. A következő képernyőket kell elkészíteni:
+React használatával készítsd el az egyes oldalak kvázi-statikus komponenseit és működését. Az első felvonásban alapvetően a HTML és CSS ismereteidre lesz szükség (sitebuild), majd az így elkészített prototípusokat komponensekbe kell helyezned. Ekkor már átgondolhatod, hogy mely oldalrészeket kell külön komponensbe kiszervezned. Annyi dinamikát kell tartalmaznia az oldalnak, hogy az egyes képernyők a megfelelő gombnyomásokra bejárhatóak legyenek. A következő képernyőket kell elkészíteni:
 - főoldal
 - várakozó szoba
 - előkészítő oldal
@@ -99,3 +99,22 @@ Az Eötvös Loránd Tudományegyetem Hallgatói Követelményrendszere (ELTE sze
 hogy mindaddig, amíg egy hallgató egy másik hallgató munkáját - vagy legalábbis annak jelentős részét - saját munkájaként mutatja be, 
 az fegyelmi vétségnek számít. A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az egyetemről.
 ```
+
+## Beadás és futtatás
+
+Az egyes felvonásokat a Canvas rendszerbe kell határidőre feltölteni. Feltöltés előtt a `node_modules` mappa törlése kötelező! Az így kapott projektmappát kell zip állományba tömörítve feltölteni.
+
+Az értékelés során a gyakorlatvezetők a mappát letöltik, kitömörítik és a következő parancsokat futtatják:
+
+```
+npm install
+npm start
+```
+
+Erre az alkalmazásnak el kell indulnia egy új böngészőablakban.
+
+Nagy segítség lenne nekünk, ha a projektet egy online platformon is elérhetővé tennétek, és ennek linkjét beírnátok a README fájlba. Ekkor nem kellene nekünk helyben minden projekthez a függőségeket egyesével feltelepítenünk.
+- [Codesandbox](https://codesandbox.io)
+- [Stackblitz](https://stackblitz.com/)
+
+A használt eszközök igény szerint bővíthetők. Pl. nagyon ajánlott git és privát Github repo használata is. Ez utóbbit egyébként a Codesandboxba be lehet húzni, és az automatikusan frissül az újabb commitokkal.

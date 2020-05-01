@@ -44,6 +44,23 @@ Az egyes oldalakat nem kell külön útvonal alá tenni, és nem is szükséges 
 
 Elvárás az igényes kinézet. Ehhez érdemes valamilyen CSS keretrendszert vagy komponenskönyvtárat használni. Egy-egy háttérkép vagy háttérszín már sokat dob a megjelenésen.
 
+### Értékelés:
+
+- Create-React-App használata (1pt)
+- Legalább 4 komponens (1pt)
+- Főoldal: megvan (1pt)
+- Főoldal: szükséges elemeket tartalmazza (2pt)
+- Főoldal: igényes megjelenésű (1pt)
+- Várakozó szoba: megvan (1pt)
+- Várakozó szoba: szükséges elemeket tartalmazza (2pt)
+- Várakozó szoba: igényes megjelenésű (1pt)
+- Előkészítő oldal: megvan (1pt)
+- Előkészítő oldal: szükséges elemeket tartalmazza (3pt)
+- Előkészítő oldal: igényes megjelenésű (1pt)
+- Játékoldal: megvan (1pt)
+- Játékoldal: szükséges elemeket tartalmazza (3pt)
+- Játékoldal: igényes megjelenésű (1pt)
+
 ## 2. felvonás (30 pont)
 
 Ebben a felvonásban adjuk hozzá a játéklogikát az alkalmazáshoz. Ehhez használjunk redux-ot. Gondoljuk át, hogy milyen adatokat kell tárolni ahhoz, hogy az egyes funkciók működtethetők legyenek. Gondoljuk át az akciókat is, bár ezek majd fejlesztés közben szépen bővülnek majd. Két fő részt kell itt megoldani.
@@ -67,9 +84,43 @@ Gondold meg, milyen adatok kellenek a játék működtetéséhez. Gondold át az
 
 ### Előkészítő oldal
 
-Az előzőleg elmondott 6x6-os pályára kell felrakosgatni az előzőleg felsorolt bábukat. Jelenjen meg a tábla, és legyen egy külön hely, ahol a felteendő bábuk vannak. Oda kattintunk, majd a tábla egy cellájára. Csak az alsó két sorba rakhatunk. Hosszú távon jó lenne meghatározni azokat a cellákat is, ahova felhelyezhető bábu. A tábláról le is vehető bábu. A Tovább gomb csak akkor aktív, ha minden bábu fel van rakva a táblára.
+Az előzőleg elmondott 6x6-os pályára kell felrakosgatni az előzőleg felsorolt bábukat. Elég csak az egyik játékos bábuinak felrakását elvégezni, a másik játékos bábuit egyelőre fixen rakjuk fel, égessük be!
 
-## 3. felvonás (20 pont)
+Jelenjen meg a tábla, és legyen egy külön hely, ahol a felteendő bábuk vannak (nevezzük kéznek). Oda kattintunk, majd a tábla egy cellájára. Csak az alsó két sorba rakhatunk. Hosszú távon jó lenne meghatározni azokat a cellákat is, ahova felhelyezhető bábu (engedélyezett mezők). A tábláról le is vehető bábu vissza a kézbe. Összességében ez az oldal úgy működik, hogy tetszőleges bábura kattintva, az kijelölődik, függetlenül attól, hogy korábban volt-e bábu kijelölve vagy sem. Üres és engedélyezett mezőkre kattintva pedig -- legyen az a táblán vagy a kézben -- a kijelölt bábu odahelyeződik.
+
+A Tovább gomb csak akkor aktív, ha minden bábu fel van rakva a táblára.
+
+### Értékelés
+
+- Redux használata (1pt)
+- Legalább 2 action (1pt)
+- Minden actionhöz action creator (1pt)
+- A root reducer legalább két alreducerre van bontva (1pt)
+- Jól szervezett könyvtárstruktúra (1pt)
+- Redux-dev-tool-lal oda-vissza léptethető állapottér (1pt)
+- Játékoldal: a bábuk megjelennek, mindegyiknek látszik a száma (1pt)
+- Játékoldal: aktív játékos jelölése (1pt)
+- Játékoldal: üres cellára kattintva nem történik semmi (1pt)
+- Játékoldal: ellenséges bábura kattintva nem történik semmi (1pt)
+- Játékoldal: saját bábura kattintva, kijelölésre kerül (1pt)
+- Játékoldal: saját bábura kattintva, kijelölésre kerülnek azok a mezők, ahova léphetünk (1pt)
+- Játékoldal: kijelölt bábu mellett ugyanarra kattintva a kijelölés megszűnik (1pt)
+- Játékoldal: kijelölt bábu mellett nem léphető cellára kattintva nem történik semmi (1pt)
+- Játékoldal: kijelölt bábu mellett léphető cellát kijelölve odalép a bábu (3pt)
+- Játékoldal: ha üres cellára lépett, a másik játékos jön (1pt)
+- Játékoldal: ha ellenséges bábura lépett, akkor megjelenik mindkét játékos száma/ereje/karaktere 3mp-ig. 3mp után az erőviszonyoktól függően levételre kerül egy vagy két bábu. (2pt)
+- Játékoldal: A leszedett bábuk megjelennek a tábla mellett játékosonként. (1pt)
+- Játékoldal: Harc után a másik játékos lesz kiválasztva. (1pt)
+- Játékoldal: Ellenséges zászlót elérve véget ér a játék (2pt)
+- Előkészítő oldal: A tábla megjelenik üresen, egy külön területen pedig (kéz) a felrakandó bábuk. (1pt)
+- Előkészítő oldal: A táblán jelölve vannak azok a cellák (pl. háttérszínnel vagy kerettel), ahova a bábuk helyezhetők. (1pt)
+- Előkészítő oldal: bábura kattintva (mindegy, hogy a táblán vagy a kézben), az a bábu kijelölődik. Ha volt korábban bábu kijelölve, akkor annak kijelölése megszűnik. (1pt)
+- Előkészítő oldal: Ha ki van jelölve bábu, akkor üres és engedélyezett mezőre kattintva (mindegy, hogy a táblán vagy a kézben) a bábu odahelyeződik. (1pt)
+- Előkészítő oldal: Az egyik játékos bábui felrakhatóak. (1pt)
+- Előkészítő oldal: Ha a kézből az összes bábu a pályán van, akkor a Tovább gomb elérhető. (1pt)
+
+
+## 3. felvonás (30 pont)
 
 Eddig nem volt igazán kétszemélyes a játék, mert a két játékos láthatta egymás bábuit. Most Websocket kapcsolattal két böngészőt kötünk össze egy szobában, és egymás bábuit nem fogják látni. A fő feladatod az lesz, hogy a játék állapotterét és a megjelenítést ennek megfelelően alakítsd át. A folyamat a következő:
 
@@ -81,6 +132,15 @@ Eddig nem volt igazán kétszemélyes a játék, mert a két játékos láthatta
 - Játék állapotban megjelenik a játéktábla. Mindketten csak a saját bábuikat láthatják. Csak akkor léphetnek, ha rajtuk van a sor.
 
 A játék állapotát folyamatosan szinkronban kell tartani a két játékos között. Ezt most úgy érjük el, hogy minden akció esetén elküldjük a tábla és a játékosok állapotát a szervernek, amely minden szobára tárolja azt, és a szerver kiküldi minden résztvevőnek, akik befrissítik az alapján a saját állapotukat.
+
+
+### Értékelés
+
+- 1. játékos a főoldalon új játékszobát indít, és bekerül a várakozó szobába (itt jelenik meg a szoba kódja, amit el tud küldeni a játékon kívül a 2. játékosnak). A 2. játékos a főoldalon beírja a kódot, és így csatlakozik egy meglévő szobához. Ekkor az 1. és a 2. játékos is az előkészítő szobába kerül. (8pt)
+- Főoldal: szobához csatlakozásnál ha érvénytelen a kód, akkor nem tud továbblépni. (Érvénytelen kód: nem létező szobaazonosító, vagy olyan szoba, amelyben már két játékos van, vagy lezárt játék van. A kód érvényességét a szerver ellenőrzi.) (3pt)
+- Az előkészítő szobában mindkét játékos csak a saját bábúit láthatja és pakolhatja fel. Ha az egyik játékos készen van és a tovább gombra kattint, akkor várakozó állapotba kerül (vagy itt az előkészítő szobában, vagy a játékoldalon). Ha a másik játékos is végez, akkor mindketten a játékoldalra jutnak. Játékot elkezdeni csak akkor lehet, ha mindketten felpakolták a bábuikat. (8pt)
+- A játékoldalon megjelenik a játéktábla. Mindketten csak a saját bábuikat és az általuk leszedett bábukat láthatják. A másik játékos bábuinak csak a pozícióit látják. Csak akkor csinálhatnak bármit is, ha rajtuk van a sor, azaz ők az aktív játékosok. (8pt)
+- Játék végén egy gombra kattintva visszakerülnek a főoldalra. (3pt)
 
 ## README
 

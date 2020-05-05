@@ -27,7 +27,7 @@ A feladatot Laravel alkalmazásként kell megvalósítani, lokális SQLite adatb
 ```bash
 composer install
 php artisan migrate:fresh
-php artisan seed --class=LmsSeeder
+php artisan db:seed --class=LmsSeeder
 php artisan serve
 ```
 

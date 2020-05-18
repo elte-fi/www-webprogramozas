@@ -1,6 +1,8 @@
 # Stratego Socket.io szerver
 
-Két játékos kapcsolattartására szolgáló függvények. A szobakezeléshez és az állapotszinkronizáláshoz adnak eszközöket. Ez utóbbit többféleképpen meg lehet tenni. Alapvetően két üzenet van, és ez is kétféleképpen használható. A `sync-state` üzenet az egész állapottér szinkronizálsára szolgál. A `sync-action` üzenet egy action továbbítására szolgál. Mindkettő meghívható úgy, hogy csak a másik játékos kapja meg a szervertől a továbbított adatot, de úgy is, hogy mindketten megkapják. 
+A szerver itt érhető el: `webprogramozas.inf.elte.hu:3030`
+
+Két játékos kapcsolattartására szolgáló függvényeket definiál. A szobakezeléshez és az állapotszinkronizáláshoz adnak eszközöket. Ez utóbbit többféleképpen meg lehet tenni. Alapvetően két üzenet van, és ez is kétféleképpen használható. A `sync-state` üzenet az egész állapottér szinkronizálsára szolgál. A `sync-action` üzenet egy action továbbítására szolgál. Mindkettő meghívható úgy, hogy csak a másik játékos kapja meg a szervertől a továbbított adatot, de úgy is, hogy mindketten megkapják. 
 
 Erre többféle szinkronizálási stratégia építhető fel. Pl. minden action dispatch-elésekor azt egy middleware nem engedi a store-ig eljutni, hanem a `sync-action`-nel fellövi a szervernek úgy, hogy mindenki (azaz a küldő kliens is) megkapja. Az `action-sent` eseményt figyelő függvény pedig dispatcheli a store felé az actiont. Persze a dispatch-et újra elkaphatja az első middleware, ezért a kapott action-be elhelyezhetünk egy metaadatot, hogy a szerverről érkezett, és ezt a middleware-ben megadjuk, hogy ne küldje újra a szervernek.
 

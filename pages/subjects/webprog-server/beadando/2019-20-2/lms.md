@@ -164,7 +164,7 @@ Diák funkciók:
 
 27. **Feladatok listája** Egy külön oldalon (menüből elérhető) jelenjen meg az aktív feladatok listája tárgyankénti csoportosításban. Itt a feladat nevére kattintva a feladat megoldás oldalra jutunk.
 
-28. **Fájl feltöltése** Legyen lehetőség fájl feltöltésére a feladat megoldása oldalon. Ha van feltöltött fájl, akkor a feladatok listájában (mindkét helyen a tárgynál és az összesített listában is) legyen egy link a listában, amire kattintva [a fájl letölthető](https://laravel.com/docs/7.x/filesystem#downloading-files) (vagy [így](https://laravel.com/docs/7.x/responses#file-downloads)).
+28. **Fájl feltöltése** Legyen lehetőség fájl feltöltésére a feladat megoldása oldalon. Ha van feltöltött fájl, akkor az jelenjen meg és legyen [letölthető](https://laravel.com/docs/7.x/filesystem#downloading-files) (vagy [így](https://laravel.com/docs/7.x/responses#file-downloads)) a Megoldás értékelése (24. pont) oldalon. (RÉGI VERZIÓ: Ha van feltöltött fájl, akkor a feladatok listájában (mindkét helyen a tárgynál és az összesített listában is) legyen egy link a listában, amire kattintva [a fájl letölthető](https://laravel.com/docs/7.x/filesystem#downloading-files) (vagy [így](https://laravel.com/docs/7.x/responses#file-downloads))).
 
 ## További melléklet
 

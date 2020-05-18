@@ -131,7 +131,9 @@ Eddig nem volt igazán kétszemélyes a játék, mert a két játékos láthatta
 - Az előkészítő oldalon csak a saját bábuikat látják. Ha készen van az egyik, akkor megnyomja a Tovább gombot, és ezzel játékra várakozó állapotba kerül. A másik közben még rakosgat. Ha ő is elkészül, akkor mindketten játék állapotba kerülnek.
 - Játék állapotban megjelenik a játéktábla. Mindketten csak a saját bábuikat láthatják. Csak akkor léphetnek, ha rajtuk van a sor.
 
-A játék állapotát folyamatosan szinkronban kell tartani a két játékos között. Ezt most úgy érjük el, hogy minden akció esetén elküldjük a tábla és a játékosok állapotát a szervernek, amely minden szobára tárolja azt, és a szerver kiküldi minden résztvevőnek, akik befrissítik az alapján a saját állapotukat.
+A játék állapotát folyamatosan szinkronban kell tartani a két játékos között. Ezt most úgy érjük el, hogy minden akció esetén szinkronizáljuk az állapotteret a két játékos között. Ezt egyrészt megtehetjük úgy, hogy elküldjük a tábla és a játékosok állapotát a szervernek, amely minden szobára tárolja azt, és a szerver kiküldi minden résztvevőnek, akik befrissítik az alapján a saját állapotukat. De úgy is megtehető, hogy az akciót küldjük el a szervernek, amely minden résztvevőnek továbbküldi, és az akció alapján frissül a játékosok állapottere ugyanolyan módon.
+
+[A Websocket szerver leírása itt található.](http://webprogramozas.inf.elte.hu/#!/subjects/webprog-client/handouts/stratego-ws)
 
 
 ### Értékelés

@@ -101,7 +101,7 @@ Adatok: objektum
 - `state`: adatbázisban tárolt érték, szöveges formában, a kliensnek vissza kell sorosítania nagy valószínűséggel
 - `player`: játékosazonosító (1 vagy 2)
 
-### `player-join`
+### `player-joined`
 
 Leírás:
 Új játékosnak a szobához való csatlakozásakor hívódik meg.

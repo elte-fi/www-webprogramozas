@@ -13,9 +13,9 @@
   url: "#!/subjects/webfejl2-otak"
   color: accent
 
-- name: Alkalmazások fejlesztése
-  details: Prog. informatikus BSc (C)
-  url: "#!/subjects/alkfejl"
+- name: Full-stack webprogramozás
+  details: Prog. informatikus BSc (KV)
+  url: "#!/subjects/full-stack"
   color: accent
 
 - name: Webes szoftvertechnológia labor
@@ -41,6 +41,11 @@
 - name: Web engineering
   details: Computer Science MSc
   url: "#!/subjects/webeng"
+  color: gray
+
+- name: Alkalmazások fejlesztése
+  details: Prog. informatikus BSc (C)
+  url: "#!/subjects/alkfejl"
   color: gray
 
 - name: Játékprogramok készítése

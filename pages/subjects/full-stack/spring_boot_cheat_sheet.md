@@ -1,4 +1,4 @@
-# Alkalmazások fejlesztése -- Spring Boot Cheat Sheet
+# Full-stack webprogramozás -- Spring Boot Cheat Sheet
 
 ## Getting Started
 
@@ -102,6 +102,17 @@ private List<Foo> foos;
 
 One of the two properties must have the `@JsonIgnore` annotation otherwise the JSON response will have circluar references.
 
+Adding a new item to a relation is just setting the many side of the relation:
+
+```java
+// Add a new bar to foo
+bar.setFoo(foo)
+barRepository.save(bar);
+
+// Deleting bar
+barRepository.delete(bar)
+```
+
 #### Many-To-Many relations
 ```java
 // Bar.java
@@ -117,6 +128,13 @@ private List<Bar> bars;
 
 One of the two properties must have the `@JsonIgnore` annotation otherwise the JSON response will have circluar references.  
 The `@JoinTable` annotation marks the "owner" of the relationship.
+You can add or delete to the relation by setting the collection elements on the owner side:
+
+```java
+// Connecting a foo and a bar
+foo.setBars(bars);
+fooRepository.save(foo);
+```
 
 ## Repositories
 

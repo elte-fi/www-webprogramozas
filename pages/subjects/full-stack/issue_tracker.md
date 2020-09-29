@@ -1,4 +1,4 @@
-# Alkalmazások fejlesztése -- 2. gyakorlat: REST API: projekt, vezérlők, adatbázis
+# Full-stack webprogramozás -- 2. gyakorlat: REST API: projekt, vezérlők, adatbázis
 
 ## Tervezés
 

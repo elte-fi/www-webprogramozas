@@ -1,21 +1,30 @@
-# Alkalmazások fejlesztése -- A TypeScript nyelv
+# Full-stack webprogramozás -- A TypeScript nyelv
 
-[TypeScript honlap][ts honlap]
+## Introduction
 
-## Bevezetés
+> TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
-- JavaScript
-- TypeScript
+JavaScript is dynamic, weakly typed, interpreted language. TypeScript brings static types and compilation into the language. Advantages:
 
-## Futtató környezet
+- type errors during compilation
+- enhanced code completion
 
-- böngésző (JavaScript)
-- parancssor, Node.js (JavaScript)
+## Documentation
+
+- [TypeScript homepage][ts honlap]
+- [TypeScript documentation][ts docs]
+- [TypeScript in 5 minutes][ts in 5 minutes] (Getting started)
+- [TypeScript handbook][ts handbook] (detailed descriptions)
+
+## Runtime environment
+
+- browser (JavaScript)
+- command line, Node.js (JavaScript)
 - REPL: [TypeScript Playground]
 
-## Szerkesztő
+## Editor
 
-- Visual Studio Code
+**Visual Studio Code** is tailored for editing TypeScript code.
 
 ## Lokális futtatás
 
@@ -26,8 +35,11 @@
 mkdir ts-proba
 cd ts-proba
 
+# Node projekt inicializálása
+npm init --yes
+
 # TypeScript fordító telepítése
-npm install typescript
+npm install --save-dev typescript
 
 # Konfigurációs fájlok létrehozása (opcionális)
 tsc --init
@@ -42,25 +54,68 @@ npx tsc file.ts     # npm 5.2 felett
 node file.js
 ```
 
-Továbbfejlesztve (változások figyelése és automatikus újratöltés):
+Implicit fordítással:
 
 ```sh
-npm install nodemon
-
-# console 1
-npx tsc --watch file.ts
-./node_modules/.bin/tsc --watch file.ts     # régebbi npm
-
-# console 2
-npx nodemon file.js
-./node_modules/.bin/nodemon file.js         # régebbi npm
+npm install --save-dev ts-node
+npx ts-node file.ts
 ```
 
-Vagy mindezt előkészítve használhatjuk [ezt a kódtárat](https://github.com/vimtaai/typescript-repl) letöltve.
+Változások figyelése és automatikus újratöltés:
 
-### Editor plugin
+```sh
+npm install --save-dev nodemon
+nodemon file.ts
+```
 
-Használhatjuk a [Quokka.js](https://quokkajs.com/docs/) plugint, ami helyben futtatja a kódot és jeleníti meg a kifejezések értékeit.
+## Examples
+
+### JavaScript is a subset of TypeScript
+
+```js
+function add(a, b) {
+    return a + b;
+}
+const c = add(3, 5);
+```
+
+### Variables and constants
+
+```js
+const i: number = 12;
+const s: string = "apple";
+const b: boolean = true;
+
+// Type annotation is optional
+const j = 13;
+```
+
+### Functions
+
+```js
+function add(a: number, b: number): number {
+    return a + b;
+}
+const c: number = add(3, 5);
+```
+
+### Interfaces
+
+```js
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = { firstName: "Jane", lastName: "User" };
+
+console.log(greeter(user));
+```
+
 
 ## Témakörök
 
@@ -81,7 +136,7 @@ Használhatjuk a [Quokka.js](https://quokkajs.com/docs/) plugint, ami helyben fu
 6. [JSON értelmezés][ts json]
 
 
-## Feladatok
+## Tasks
 
 1. Define a variable with each basic type!
 
@@ -127,10 +182,10 @@ Használhatjuk a [Quokka.js](https://quokkajs.com/docs/) plugint, ami helyben fu
 
 
 [ts honlap]: https://www.typescriptlang.org/
-[ts docs]: https://www.typescriptlang.org/docs/home.html
+[ts docs]: https://www.typescriptlang.org/docs
 [ts in 5 minutes]: https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 [ts handbook]: https://www.typescriptlang.org/docs/handbook/basic-types.html
-[TypeScript Playground]: https://www.typescriptlang.org/play/index.html 
+[TypeScript Playground]: https://www.typescriptlang.org/play 
 [ts json]: http://choly.ca/post/typescript-json/
 [decorator]: https://www.typescriptlang.org/docs/handbook/decorators.html
 [btree1]: https://github.com/basarat/typescript-collections/blob/release/src/lib/BSTree.ts

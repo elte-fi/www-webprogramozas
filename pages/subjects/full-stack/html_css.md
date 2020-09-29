@@ -1,4 +1,4 @@
-# Alkalmazások fejlesztése -- HTML és CSS
+# Full-stack webprogramozás -- HTML és CSS
 
 ## HTML, CSS tananyagok, referenciák
 

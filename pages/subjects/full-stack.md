@@ -30,7 +30,7 @@ Környezet
     - [TypeScript](#!/subjects/full-stack/typescript)
 5. TypeScript REST API szerver
 6. Git használat, CI pipeline, deployment
-7. REST API tesztelés, hitelesítés
+7. REST API tesztelés ([Java](#!/subjects/full-stack/java-rest-test)), hitelesítés
 -  őszi szünet
 8. Angular: kezdő lépések, statikus komponensek, routing, CSS library (végén 2. mérföldkő)
 9. Angular: dinamikus komponensek, komponens interakció, service-ek

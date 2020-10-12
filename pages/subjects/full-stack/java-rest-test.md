@@ -66,13 +66,13 @@ For writing tests, create a new class in `src/test/your/app/` directory, e.g. `I
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class IssueControllerRestTest {
 
-    @LocalServerPort
-    private int port;
+  @LocalServerPort
+  private int port;
 
-    @Autowired
-    private TestRestTemplate restTemplate;
+  @Autowired
+  private TestRestTemplate restTemplate;
 
-    // Tests should go here...
+  // Tests should go here...
 }
 ```
 

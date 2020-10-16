@@ -56,7 +56,7 @@ spring.datasource.platform=h2
 spring.datasource.url=jdbc:h2:mem:issuedb
 ```
 
-Spring Boot will drop all tables, and create them again between every test. Also it will use the `import.sql` or `data.sql` file from the `main` directory, so the test database will also be seeded every time a new test starts.
+Spring Boot will drop all tables, and create them again when the Application context starts. So if you need to reset the database, then you need to invalidate the application context. Also it will use the `import.sql` or `data.sql` file from the `main` directory, so the test database will also be seeded every time a new test starts.
 
 ### Writing tests
 

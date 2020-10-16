@@ -29,8 +29,11 @@ Környezet
 4. TypeScript, TypeScript REST API szerver (vége: 1. mérföldkő)
     - [TypeScript](#!/subjects/full-stack/typescript)
 5. TypeScript REST API szerver
-6. Git használat, CI pipeline, deployment
-7. REST API tesztelés ([Java](#!/subjects/full-stack/java-rest-test)), hitelesítés
+6. REST API tesztelés, hitelesítés
+    - [Java](#!/subjects/full-stack/java-rest-test)
+7. Git használat, CI pipeline, deployment
+    - [Git](#!/subjects/full-stack/git)
+    - [Creating a CI pipeline](#!/subjects/full-stack/git-ci-deploy)
 -  őszi szünet
 8. Angular: kezdő lépések, statikus komponensek, routing, CSS library (végén 2. mérföldkő)
 9. Angular: dinamikus komponensek, komponens interakció, service-ek
@@ -47,13 +50,13 @@ Környezet
 
 * Összetett webes feladat készítése
 * Határidők:
-    * [Projektötlet](#!/subjects/alkfejl#projektötlet)  
+    * [Projektötlet](#!/subjects/full-stack#projektötlet)  
       4\. tanulmányi hét (2020.10.04.)
-    * [Backend megvalósítása](#!/subjects/alkfejl#backend-megvalósítása)  
+    * [Backend megvalósítása](#!/subjects/full-stack#backend-megvalósítása)  
       8\. tanulmányi hét (2020.11.08)
-    * [Működő prototípus megvalósítása](#!/subjects/alkfejl#működő-prototípus)  
+    * [Működő prototípus megvalósítása](#!/subjects/full-stack#működő-prototípus)  
       10\. tanulmányi hét (2020.11.22.)
-    * [Kész alkalmazás, dokumentáció, bemutatás](#!/subjects/alkfejl#kész-alkalmazás)  
+    * [Kész alkalmazás, dokumentáció, bemutatás](#!/subjects/full-stack#kész-alkalmazás)  
       Vizsgaidőszak (2021.01.??.)
 
 
@@ -167,11 +170,11 @@ Minden esetben 0-10 pont kapható, ezt a csoport két tagja saját belátása sz
 * [Dinamikus weboldalak előállítása szerveroldali technológiákkal (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/szerver/)
 * [Bevezetés a kliens- és szerveroldali webalkalmazások készítésébe (elektronikus tananyag)](http://webprogramozas.inf.elte.hu/tananyag/wf2/)
 * [Webadatbázis-programozás (elektronikus tananyag, PHP alapokon, de a tervezés, az MNV-minta bemutatása és a kliensoldali fejlesztés része itt is aktuális)](http://ade.web.elte.hu/wabp)
-* [A tárgy tavalyi Github oldala](https://github.com/horvathgyozo/alkfejl-2017)
-* [Segítség a dokumentációhoz](https://github.com/horvathgyozo/alkfejl_minta)
+* [A tárgy tavalyi Github oldala](https://github.com/horvathgyozo/full-stack-2017)
+* [Segítség a dokumentációhoz](https://github.com/horvathgyozo/full-stack_minta)
 * Mintadokumentációk
     - [Képgalériás alkalmazás (Bartalos Gábor)](https://github.com/KisGabo/gallery-elteik/wiki)
-    - [Szerepjáték (Teleki Miklós)](https://github.com/Telmike91/alkfejlszerver)
+    - [Szerepjáték (Teleki Miklós)](https://github.com/Telmike91/full-stackszerver)
 
 ## Oktatók
 

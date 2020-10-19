@@ -106,6 +106,7 @@ PDF-ben nyomtatáshoz válasszuk a `pdf` linket, majd állítsuk be a következ�
 - [10. gyakorlat](#!/subjects/webprog-pti/gyak/10)
 - [11. gyakorlat](#!/subjects/webprog-pti/gyak/11)
 - [12. gyakorlat](#!/subjects/webprog-pti/gyak/12)
+- [13. gyakorlat](#!/subjects/webprog-pti/gyak/13)
 
 ## A ZH tesztelőrendszeréről
 

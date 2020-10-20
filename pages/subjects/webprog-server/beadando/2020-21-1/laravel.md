@@ -55,7 +55,7 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 	- Admin
 
 ## 1. Felvonás
-### Határidő: 2020. 11. 10. 23:59
+### Határidő: 2020. 11. 15. 23:59
 
 - Vendég:
 	- Regisztráció **(/register)**:
@@ -108,7 +108,7 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 		- A rendelésnél látszódjon a rendelt dolgok listája, a teljes ár, valamint a rendelés állapota (feldolgozás alatt, elfogadva, elutasítva)
 
 ## 2. Felvonás
-### Határidő: 2020. 11. 24. 23:59
+### Határidő: 2020. 11. 29. 23:59
 
 A második felvonáshoz az első felvonásban létrehozott alkalmazást és annak funkcióit kell továbbfejleszteni, kiegészíteni.
 

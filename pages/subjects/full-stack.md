@@ -31,6 +31,7 @@ Környezet
 5. TypeScript REST API szerver
 6. REST API tesztelés, hitelesítés
     - [Java tesztelés](#!/subjects/full-stack/java-rest-test)
+    - [Java JWT hitelesítés](#!/subjects/full-stack/java-jwt-auth)
 7. Git használat, CI pipeline, deployment
     - [Git](#!/subjects/full-stack/git)
     - [Creating a CI pipeline](#!/subjects/full-stack/git-ci-deploy)

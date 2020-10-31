@@ -1,3 +1,7 @@
+
+
+
+
 # Szerveroldali webprogramozás beadandó
 ## Beadandó két felvonásban
 
@@ -21,10 +25,12 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 	- Order
 		- id
 		- user_id
-		- address (string)
+		- address (string, nullable)
 		- comment (string, nullable)
-		- payment_method (enum: CASH, CARD)
+		- payment_method (enum: CASH, CARD) (default: CASH)
 		- status (enum: CART, RECEIVED, REJECTED, ACCEPTED)
+		- received_on (datetime, nullable)
+		- processed_on (datetime, nullable)
 		- timestamps
 		
 	- OrderedItem
@@ -42,11 +48,10 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 
 ## Relációk
 - A modellek közötti relációk a következőképpen alakulnak:
-	- Egy kategóriához több item is tartozhat, és egy item-hez is tartozhat több kategória. Egy felhasználónak lehet több leadott rendelése is. Egy rendeléshez pedig több rendelt item is tartozhat. A megrendelt item pedig egyértelműen kapcsolódik egy adott itemhez, csak amellett még leírja a mennyiséget is.
 		- Category N - N Item
 		- User 1 - N Order
 		- Order 1 - N OrderedItem
-		- OrderedItem 1 - 1 Item
+		- Item 1 - N OrderedItem
 
 ## Szerepkörök
 - A szerepkörök a következők:
@@ -79,27 +84,34 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 
 - Felhasználó:
 	- Menü **(/menu)**:
+		- Felül listázd ki valamilyen módon a kategóriákat (lehet badge, select, stb)
+			- Ha a user kiválaszt egy kategóriát, akkor csak ahhoz a kategóriához adja be az item-eket **(GET: /menu/category/{id})** 
+			- Ha egy adott kategória van megnyitva, akkor is ugyanúgy jelenjenek meg felül a kategóriák, alatta pedig írja, hogy melyik kategóriához vannak éppen listázva az item-ek
 		- Listázza ki valamilyen módon az item-eket (pl. card-ként)!
+		- Az item-ek kategóriák szerint legyenek listázva, pl. kiírod a kategória nevét, és alatta listázod az oda tartozó item-eket.
 		- Az item-hez tartozzon egy form, ami a következőképpen épül fel: 
 			- Egy számbevliteli mező, aminek a minimális értéke 1, az alapértelmezett értéke 1, és a maximális értéke 10.
-			- Egy "Kosárba" nevű gomb, amire rákattintva adja hozzá az item-et a megadott mennyiségben és irányítson is át a kosárra, ami már úgy jelenjen meg, hogy az item hozzá van adva! **(POST: /cart/add/{itemId}/quantity/{quantity})**
-			- Segítség, ötlet:
-				- Ha a kiválasztott item már bent van a kosárban, akkor csak a mennyiség növekedjen.
-				- Az Order-nek van CART állapota, és az Order egyértelműen hozzáköthető egy felhasználóhoz.
+			- Egy "Kosárba" nevű gomb, amire rákattintva adja hozzá az item-et a megadott mennyiségben és irányítson is át a kosárra, ami már úgy jelenjen meg, hogy az item hozzá van adva! **(POST: /cart/add, az item id és a mennyiség request body-ban menjen át)**
+				- Teljesen opcionális, de lehet akár úgy is csinálni, hogy az item-nek legyen külön oldala, és onnan lehessen kosárba rakni, ne a card-ok közül **(GET: /menu/item/{id})**
+				- Ha valamilyen validációs hiba történik, akkor az a Kosár oldalon jelenjen meg
+				- Segítség, ötlet:
+					- Ha a kiválasztott item már bent van a kosárban, akkor csak a mennyiség növekedjen.
+					- Az Order-nek van CART állapota, és az Order egyértelműen hozzáköthető egy felhasználóhoz.
 
 	- Kosár **(/cart)**:
 		- Listázza ki a kosárban levő item-eket, hozzájuk a mennyiségüket és az árukat
 			- Ha még nincs item a kosárban, akkor jelenjen meg erről egy üzenet vagy valamilyen értelmes visszajelzés a felhasználónak 
 		- Legyen az itemek mellett egy törlés gomb, arra kattintva pedig törölje a kosárból az adott item-et **(POST: /cart/remove/{itemId})**
-		- Alul írja ki a teljes árat, tehát adja össze az itemek árát, figyelembe véve a megadott mennyiségeket is.
-		- Legyen egy cím mező, az egyszerűség kedvéért ez csak egy szövegbeviteli mező, ahol megadja a user a szállítási címét.
+		- Alul írja ki a teljes árat, tehát adja össze az itemek árát.
+		- Legyen egy cím mező, az egyszerűség kedvéért ez csak egy szövegbeviteli mező, ahol megadja a user a szállítási címét. Ugyan a cím nullable, viszont a form-nál elvárjuk, hogy meg legyen adva, és csak így jöhet létre rendelés.
 		- Legyen egy komment textarea, ahol megjegyzést lehet fűzni a rendeléshez, ez nem kötelezően kitöltendő mező.
 		- Valamilyen módon ki lehessen választani a fizetés módját (készpénz vagy bankkártya).
 		- A legvégén pedig legyen egy "Megrendelem", "Rendelés leadása", stb. nevű gomb **(POST: /cart/send)**
 			- A kosár a beküldéskor legyen validálva:
 				- A szállítási cím és a fizetés módjának megadása legyen kötelező
 				- Üres kosarat ne lehessen elküldeni
-	
+			- A rendelés állapota a sikeres leadást követően RECEIVED legyen, a received_on mező pedig kapja meg az aktuális időt értékként
+			
 	- Profil **(/profile)**:
 		- Írja ki az aktuálisan bejelentkezett user adatait (nevét, email címét, és szerepkörét (sima felhasználó / admin))
 	
@@ -126,9 +138,11 @@ A második felvonáshoz az első felvonásban létrehozott alkalmazást és anna
 		- A kategória létrehozó form ide küldje el az adatokat:  **/admin/category/store**
 		- Kategória szerkesztő form: **/admin/category/{id}/edit**
 		- A kategória szerkesztő form ide küldje el az adatokat:  **/admin/category/{id}/update**
+		- Kategória törlése: **POST /admin/category/delete**
 	- Tudjon itemet létrehozni, szerkeszteni, törölni és visszaállítani
-		- A logika ugyanaz, mint a kategóriánál
-		- A visszaállítás route-ja ez legyen:  **/admin/item/{id}/restore**
+		- A logika ugyanaz, mint a kategóriánál, törölt itemet pedig ne lehessen szerkeszteni
+			- Ha törölt item-et próbál szerkeszteni a felhasználó, akkor elég egy hibaüzenet, ami jelzi, hogy az item törölve van, de aki akarja, csinálhat egy például egy "Visszaállítás" gombot is, és az admin közvetlenül a hibaüzenetből vissza is tudja állítani az item-et
+		- A visszaállítás route-ja ez legyen:  **POST /admin/item/{id}/restore**
 		- Fontos, hogy ha az item a soft delete funkcionalitást használja, akkor "nem törlődik ki ténylegesen", csak kap egy deleted_at mezőt
 	- Rendelések kezelése **(/admin/manage)**
 		- Az admin tudja kezelni a rendeléseket, ez azt jelenti, hogy amikor bejön egy rendelés, annak a status mezője RECEIVED lesz, és az admin dönti el, hogy elfogadja (ACCEPTED) vagy elutasítja (REJECTED) a rendelést **(POST /admin/manage/accept/{orderId}) és (POST /admin/manage/reject/{orderId})**. Ezt jelenti a feldolgozás, és ekkor kap értéket a 'processed_on' mező is (now).
@@ -144,7 +158,8 @@ A második felvonáshoz az első felvonásban létrehozott alkalmazást és anna
 			- Feldolgozott, már lezárt rendelések **(/admin/manage/processed)**:
 				- A már lezárt rendelések vannak itt.
 				- Itt ugyanaz a logika, mint a folyamatban levő rendeléseknél, tehát megjelenik ugyanaz az adatlap oldal a rendelésre kattintva, annyi különbséggel, hogy alul nem 2 gomb van, hanem csak annyi, hogy a rendelés már fel lett dolgozva
-
+	- Nem probléma, ha az admin is tud rendelést leadni, de megcsinálhatod úgy is, hogy ne tudjon
+	
 ## További követelmények
 - **Ezek a követelmények mindkét felvonásra egyaránt vonatkoznak!**
 - Az alkalmazást Laravel 8 keretrendszerben kell megvalósítani.
@@ -203,7 +218,8 @@ A beadandót nem értékeljük, amíg a STATEMENT.md nincs mellékelve, vagy az 
 
 ## Hasznos hivatkozások
 Az alábbiakban adunk néhány hasznos hivatkozást, amiket érdemes szemügyre venni a beadandó elkészítésekor.
-- [Példaalkalmazás](https://totadavid.hu/files/szerveroldali_peldaalkalmazas_2020_21_1.zip)
+- [Példaalkalmazás 1](https://totadavid.hu/files/szerveroldali_peldaalkalmazas_2020_21_1.zip)
+- [Példaalkalmazás 2](https://totadavid.hu/files/szerveroldali_peldaalkalmazas_2020_21_1_esti.zip)
 - [Laravel nyelvi csomag - magyarosításhoz](https://github.com/Laravel-Lang/lang)
 - Tantárgyi Laravel jegyzetek
 	- [Kimenet generálása](http://webprogramozas.inf.elte.hu/#!/subjects/webprog-server/handouts/laravel-01-kimenet)
@@ -227,3 +243,18 @@ Az alábbiakban adunk néhány hasznos hivatkozást, amiket érdemes szemügyre 
 	- [Material Bootstrap](https://mdbootstrap.com/)
 	- [Materialize](https://materializecss.com/)
 	- [Bulma](https://bulma.io/)
+
+# Changelog
+- október. 31. 
+	-  [Pótolva] A feladat elején az Order-ből lemaradt a processed_on mező.
+	- [Új] Az Orderhez hozzá kell adni ezen felül egy received_on mezőt is, mivel ha CART statusba kerül, akár 1 héttel utána is le lehet adni rendelésként, ezért kell egy időpont, hogy konkrétan mikor lett leadva a rendelés.
+	- [Javítva] Az Item és az OrderedItem között 1-N kapcsolat kell
+	- [Pótolva] Amíg az Order CART-ként működik, a rendelés leadásához szükséges mezők lehetnek null/default értékűek (pl. address)
+	- [Új] A Menü oldal elején listázni kell a kategóriákat, és biztosítani kell, hogy meg lehessen tekinteni az egyes kategóriákhoz tartozó item-eket.
+	- [Új] A Menü oldalon az item-eket kategóriák szerint rendezve kell megjeleníteni.
+	- [Új] Opcionálisan készíthető az item-nek saját oldal és onnan is berakható kosárba.
+	- [Javítva] Az item kosárba rakásának útvonala megváltozott, hogy könnyebb legyen átadni a mennyiséget.
+	- [Pótolva] Az admin route-oknál lemaradt a delete útvonal.
+	- [Új] Az admin ne tudjon törölt item-et szerkeszteni.
+	- [Pótolva] Ki lett emelve, hogy az admin route-oknál a restore POST.
+	- [Új] A hivatkozások közé bekerült egy 2. példaprogram is.  

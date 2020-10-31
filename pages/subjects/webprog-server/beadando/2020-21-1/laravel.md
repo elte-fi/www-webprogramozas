@@ -48,10 +48,10 @@ A feladatod az alábbi beadandó feladat megvalósítása. Az elkészült beadan
 
 ## Relációk
 - A modellek közötti relációk a következőképpen alakulnak:
-		- Category N - N Item
-		- User 1 - N Order
-		- Order 1 - N OrderedItem
-		- Item 1 - N OrderedItem
+	- Category N - N Item
+	- User 1 - N Order
+	- Order 1 - N OrderedItem
+	- Item 1 - N OrderedItem
 
 ## Szerepkörök
 - A szerepkörök a következők:

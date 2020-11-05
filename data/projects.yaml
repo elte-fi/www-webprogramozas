@@ -1,3 +1,11 @@
+- name: Szakdolgozati témák
+  description: Szakdolgozatként készíthető alkalmazások, projektek.
+  url: "#!/projects/thesis"
+  color: blue
+  labels:
+    - title: web
+      color: white
+
 - name: Webes programozási környezet fejlesztése
   description: Különböző oktatási és módszertani igényeket kiszolgáló webes programozási környezet fejlesztése. A felület egy egyoldalas alkalmazás amely REST API-n keresztül kapcsolódik a szerveroldali logikához ahol a programkódok virtuális konténerekben futnak le. Jelenleg TypeScript és C++ nyelveket támogatja a környezet.
   url: "#!/projects/progenv"

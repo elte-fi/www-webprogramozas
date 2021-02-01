@@ -6,11 +6,16 @@
 - name: Web programming
   details: Computer Science BSc
   url: "#!/subjects/webprog-eng"
-  color: accent
+  color: gray
 
 - name: Web-fejlesztés 2.
   details: Informatika osztatlan tanárképzés
   url: "#!/subjects/webfejl2-otak"
+  color: gray
+
+- name: Progresszív szoftverarchitektúrák a felhőben
+  details: Prog. informatikus BSc és MSc
+  url: "#!/subjects/progarch"
   color: accent
 
 - name: Full-stack webprogramozás
@@ -21,11 +26,6 @@
 - name: Webes szoftvertechnológia labor
   details: Prog. informatikus MSc
   url: "#!/subjects/webtech"
-  color: accent
-
-- name: JavaScript techológiák
-  details: Prog. informatikus BSc
-  url: "#!/subjects/jstech"
   color: accent
 
 - name: Webtechnológiák mobil környezetben
@@ -44,13 +44,8 @@
   color: gray
 
 - name: Alkalmazások fejlesztése
-  details: Prog. informatikus BSc (C)
+  details: ld. Full-stack webprogramozás
   url: "#!/subjects/alkfejl"
-  color: gray
-
-- name: Játékprogramok készítése
-  details: Prog. informatikus BSc
-  url: "#!/subjects/jatek"
   color: gray
 
 - name: Web-fejlesztés 2.
@@ -58,7 +53,17 @@
   url: "#!/subjects/webfejl2-lev"
   color: gray
 
+- name: JavaScript techológiák
+  details: Prog. informatikus BSc (megszűnt)
+  url: "#!/subjects/jstech"
+  color: gray
+
+- name: Játékprogramok készítése
+  details: Prog. informatikus BSc (megszűnt)
+  url: "#!/subjects/jatek"
+  color: gray
+
 - name: Korszerű webfejlesztés
-  details: Prog. informatikus BSc
+  details: Prog. informatikus BSc (szünetel)
   url: "#!/subjects/korszweb"
   color: gray

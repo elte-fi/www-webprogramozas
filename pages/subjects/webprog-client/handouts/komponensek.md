@@ -51,16 +51,16 @@ A `--save-dev` kapcsolónak köszönhetően a _package.json_ állományon belül
 module.exports = {
   parser: "babel-eslint",
   parserOptions: {
-    sourceType: "module"
+    sourceType: "module",
   },
   extends: ["react-app", "plugin:prettier/recommended"],
   env: {
-    jest: true
+    jest: true,
   },
   globals: {
     window: true,
-    document: true
-  }
+    document: true,
+  },
 };
 ```
 
@@ -81,7 +81,7 @@ module.exports = {
 - **src**: A projekt forráskódja
   - **index.js**: Az alkalmazás belépési pontja.
   - **setupTests.js**: A tesztek futtatásához szükséges globális előkészítések.
-  - **serviceWorker.js**: Service worker telepítése.
+  - **reportWebVitals.js**: Az oldal teljesítményét, metrikáit figyelő, reportoló eszköz előkészítése.
   - **App.js**: Egy komponens.
 
 ## Projektötlet
@@ -145,8 +145,6 @@ Elsőként, még szétbontás nélkül, készítsünk komponenst a htmlből. Mó
 alábbira az App.js fájl tartalmát:
 
 ```jsx
-import React from "react";
-
 export function App() {
   return (
     <div className="w-screen h-screen bg-gray-200 pt-2">
@@ -186,15 +184,7 @@ export function App() {
 }
 ```
 
-Két dologra érdemes most figyelni. Az egyik az, hogy a class-ok helyett
-className-ként kell megadnunk az elemekre felhelyezendő classokat. A másik pedig,
-hogy habár a React kulcsszó sehol sem jelenik meg az import-on kívül, mégis
-szükségünk van erre. Érdemes kipróbálni, hogy mi történik, ha kikommentezzük. A
-következő hibaüzenet jelenik meg:
-
-```
-'React' must be in scope when using JSX.
-```
+A class-ok helyett className-ként kell megadnunk az elemekre felhelyezendő classokat.
 
 <!-- TODO: Mi is az a JSX? Mi a célja? Mire fordul? - lehet, hogy elég előadáson is, de
 én szívesen megmutatnám gyakorlaton is a hallgatóknak -->
@@ -209,8 +199,6 @@ Bontsuk tovább a komponenseinket.
 TrackList.js:
 
 ```jsx
-import React from "react";
-
 export function TrackList() {
   return (
     <div className="max-w-sm mx-auto flex flex-col bg-gray-700 rounded-lg shadow-xl">
@@ -251,7 +239,6 @@ export function TrackList() {
 App.js:
 
 ```jsx
-import React from "react";
 import { TrackList } from "./TrackList";
 
 export function App() {
@@ -276,12 +263,10 @@ track adataival.
 Track.js
 
 ```jsx
-import React from "react";
-
 const track = {
   thumbnailSrc: "https://via.placeholder.com/70",
   name: "Shooting Stars",
-  author: "Bag Raiders"
+  author: "Bag Raiders",
 };
 
 export function Track() {
@@ -350,8 +335,8 @@ Track.propTypes = {
   track: PropTypes.shape({
     thumbnailSrc: PropTypes.string,
     name: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired
-  })
+    author: PropTypes.string.isRequired,
+  }),
 };
 ```
 
@@ -364,19 +349,19 @@ const trackList = [
     id: 1,
     thumbnailSrc: "https://via.placeholder.com/70",
     name: "Shooting Stars",
-    author: "Bag Raiders"
+    author: "Bag Raiders",
   },
   {
     id: 2,
     name: "All Start",
-    author: "Smash Mouth"
+    author: "Smash Mouth",
   },
   {
     id: 3,
     thumbnailSrc: "https://via.placeholder.com/70",
     name: "Sandstorm",
-    author: "Darude"
-  }
+    author: "Darude",
+  },
 ];
 ```
 
@@ -384,7 +369,7 @@ Jelenítsük meg annyi Track-et, ahány trackünk van:
 
 ```jsx
 export function TrackList() {
-  const tracks = trackList.map(track => (
+  const tracks = trackList.map((track) => (
     <Track track={track} key={track.id}></Track>
   ));
   return (

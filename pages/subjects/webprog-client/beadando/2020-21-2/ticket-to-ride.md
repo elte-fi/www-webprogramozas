@@ -1,10 +1,10 @@
 # Ticket-to-ride -- Kliensoldali webprogramozás
 
-*Beadandó három felvonásban*
+_Beadandó három felvonásban_
 
 ## Feladat
 
-- [A fejlesztéshez szükséges térkép és adatok](ticket-ride-europe-assets.zip)
+- [A fejlesztéshez szükséges térkép és adatok](http://webprogramozas.inf.elte.hu/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip)
 - [A táblajáték szabálya](https://tarsasjatekrendeles.hu/shop_ordered/7237/pic/Compaya/Ticket_To_Ride_Europe.pdf)
 - [A táblajáték videó bemutatója](https://www.youtube.com/watch?v=93grcuFXw2w)
 - [Az online játék bemutatója](https://www.youtube.com/watch?v=Ox4YI-9HG2c) (nem így kell kinéznie, ez csak egy érdekesség, illetve lehet belőle ötleteket meríteni)
@@ -14,15 +14,18 @@
 Feladatod a Ticket-to-ride Europe nevű társasjáték egyszerűsített változatának számítógépes megvalósítása. A fenti linkeken lehet az eredeti táblajáték leírását és ismertetését megtekinteni, ebben a feladatban azonban eltekintünk néhány játékelemtől, az alagútaktól és a vasútállomásoktól. A játékot 1-5 játékos játszhatja. Célunk vasútvonalak építésével minél több pontot szerezni. Pontot a megépített vasútvonalak hossza után, illetve a játék közben húzott célok (menetjegy-kártyák) teljesítésével lehet kapni, illetve a játék végén plusz pont jár a leghosszabb összefüggő vasútvonalért is. A nem teljesített célok pontjai levonásra kerülnek. A játék elején minden játékos kap 1 hosszú célt, és 3 rövid célt. A 3 rövid célból legalább 1-et meg kell tartani. A célok mellett kapunk még 4 vasútkocsi-kártyát is. Az asztalon elő van készítve 5 felfedett vasútkocsi kártya, a vasútkocsi-kártyák talonja, valamint a célok talonja. Minden játékosnak emellett van 45 vagonja is.
 
 Egy játékos a körében a következő három lehetőség közül választ:
+
 1. **Vasútkocsi-kártyát húz**: ezt megteheti a felfedett kártyák közül, ilyenkor húzás után azonnal pótolni kell a lapot, vagy a talonból is húzhat. A mozdony két kártyát ér, így azt másodkként nem lehet húzni a felfedettek közül (talonból akár 2 is húzható). Ha a felfedett lapok között 3 mozdony van, akkor az 5 lap megy a dobópakliba, és 5 újat kell osztani.
 2. **Útvonalat épít**: ekkor az útvonal színének megfelelő mennyiségű lapot kell kijátszania a kezéből. Szürke utak bármilyen, de egyféle színből megépíthetők. A mozdonyt ábrázoló utakhoz legalább annyi mozdonyt kell kijátszani, ahányat az út ábrázol. A mozdony egyébként joker, bármilyen vonatkocsi-kártyát helyettesíthet. A vagonokat fel kell helyezni a táblára. Az épített út pontértéke azonnal feltüntetésre kerül. A dupla sínpárokat az alap feladatból kihagyjuk, azaz minden várost csak egy sínpár köt össze. Plusz pontért lehet a dupla sínpárokat figyelembe venni: ahol dupla sínpár van két város között, oda ugyanaz a játékos nem építhet kétszer. Továbbá 1-3 játékos esetén pedig csak az egyik sínpár építhető meg, de ezt a szabályt is plusz pontért lehet alkalmazni.
 3. **Új célkártyákat húz**: 3 új célkártya húzható, ebből legalább 1-et (legfeljebb 3-at) meg kell tartani. Ezt úgy egyszerűsítjük, hogy ezt a fázist kihagyjuk, és a játék elején mindenki kap 5 célkártyát, amiket teljesíteni kell. Plusz pontért lehet implementálni ezt a funkciót. Ld. a pontozásokat.
 
 Vasútkocsi-kártyák:
+
 - lila, fehér, kék, sárga, narancs, fekete, piros, zöld: mindegyikből 12db
 - mozdony: 14db
 
 A játék akkor ér véget, ha valamelyik játékos raktárában a vagonok száma 2 vagy kevesebb lesz. Ekkor az összes játékosnak van még egy utolsó köre, beleértve azt is, akinek először lefogyott ennyire. Ezután a pontok kiszámítása következik:
+
 - (az utak hosszát menet közben számoljuk;)
 - a teljesített célok pontértéke hozzáadásra kerül;
 - a nem teljesített célok értéke levonásra kerül;
@@ -31,6 +34,7 @@ A játék akkor ér véget, ha valamelyik játékos raktárában a vagonok szám
 ## Képernyők és működésük
 
 A tábla mellett a játék működtetéséhez egyéb képernyők is kellenek:
+
 - **Főoldal**: logó, játékszabály (akár külön oldalon), és két funkció
   - új játék indítása: ki kell választani, hogy hányan játszanak, meg kell adni egy nevet (nem lehet üres), majd egy gomb megnyomására egy várakozó "szobába" kerülünk, ahol a megjelenik a szoba azonosítója. Ezt az azonosítót lehet valamilyen csatornán körbeküldeni a játékostársaknak.
   - csatlakozás szobához: meg kell adni egy nevet (nem lehet üres), és egy szöveges beviteli mezőbe kell beírni a szoba azonosítóját, majd egy gombot megnyomni. A gomb megnyomására a várakozó "szobába" kerülünk.
@@ -38,6 +42,7 @@ A tábla mellett a játék működtetéséhez egyéb képernyők is kellenek:
 - **Játékoldal**: megjelenik a játéktábla, és elkezdődik a játék. Ha valamelyikük nyer, akkor visszaléphetünk a főoldalra.
 
 A játék folyamata: amikor elkezdődik a játék, akkor a tábla elő van készítve. Mindenki kap 4 vasútkocsi-kártyát, 45 vagont és 1 hosszú célt. Ha a célok közül az egyszerűbb megoldást választod, akkor mindenki kap még 5 véletlen kiscélt is. Ha plusz pontokért dolgozol, akkor az első lépése mindenkinek az, hogy automatikusan kap 3 hosszú célt, ami közül választani kell legalább 1-et, de akár az összeset is. (Ez mehetne a játékosok között párhuzamosan, de ez egy külön játékfázist jelentene. Így viszont szépen beépíthető a játék normál menetébe az első lépés is.) A játéktáblán fel kell tüntetni:
+
 - a térképet
 - az 5 felfedett vasútkocsi-kártyát (ezek gyakorlatilag színek, nem is kell egyéb design elem)
 - a vasútkocsi-kártya húzópaklit
@@ -61,21 +66,27 @@ A játék folyamata: amikor elkezdődik a játék, akkor a tábla elő van kész
   - a kezében lévő vasútkocsi-kártyákat: melyik színből hány darab van
 
 Az aktuális játékos háromféle tevékenységét a következőképpen kell megoldani:
-- **Vasútkocsi-kártya húzása**: ha a játékos az 5 felfedett kártya valamelyikére vagy a vasútkocsi-kártya húzópaklira kattint, akkor vasútkocsi-kártyát húz. A húzásnál ügyelni kell a fent leírt szabályokra (mozdony esetén csak 1 húzható; ha 3 mozdony van, akkor az 5 kártya a dobópakliba kerül, és 5 újat kell osztani). Ha meg tudod oldani, akkor érdemes  a húzott kártyát az adott játékoshoz mozgatni (animáció). Ebben a fázisban építeni vagy célokat húzni nem lehet. Ha a húzópakli elfogyott, akkor a dobópaklit megkeverve kell a húzópakli helyébe tenni.
+
+- **Vasútkocsi-kártya húzása**: ha a játékos az 5 felfedett kártya valamelyikére vagy a vasútkocsi-kártya húzópaklira kattint, akkor vasútkocsi-kártyát húz. A húzásnál ügyelni kell a fent leírt szabályokra (mozdony esetén csak 1 húzható; ha 3 mozdony van, akkor az 5 kártya a dobópakliba kerül, és 5 újat kell osztani). Ha meg tudod oldani, akkor érdemes a húzott kártyát az adott játékoshoz mozgatni (animáció). Ebben a fázisban építeni vagy célokat húzni nem lehet. Ha a húzópakli elfogyott, akkor a dobópaklit megkeverve kell a húzópakli helyébe tenni.
 - **Útvonal építése**: útvonal építését többféleképpen meg lehet valósítani. Az alábbiakban csak javaslatokat adunk.
+
   - 1\. javaslat: ha a térképen egy adott városra kattintunk, akkor építés fázisba kerülünk. Ekkor a város kijelölésre kerül, majd a szomszéd városai közül azok, amelyekbe utat tud építeni, megjelölődnek (van hozzá elég vagon, és van hozzá kártya, nem foglalt az útvonal mások által, dupla útvonalak figyelembe vétele). Ezek egyikére kattintva megjelenik egy lista, hogy kártyáink közül milyen kombinációkkal tudjuk azt megépíteni. Pl. ha a kezünkben van két piros és két mozdony, és egy két hosszú piros útvonalat akarunk építeni, akkor a listában megjelenik:
+
     - 2 piros
     - 1 piros-1 mozdony
     - 2 mozdony
-  
+
     A lista egy elemére kattintva az adott út az adott kártyákkal megépítésre kerül, a térképen is jelölve. A felhasznált kártyák a dobópakliba kerülnek.
+
   - 2\. javaslat: a kezünkben lévő kártyákra kattintva kártyákat jelölünk ki (bal gomb növel, jobb csökkent), és a kijelölt kártyák leszűkítik a lehetséges útvonalakat, és ezek közül választunk.
   - 3\. javaslat: 2 várost jelünk ki, kártyákat választunk ki, és a gép eldönti, hogy a két város közötti út megépíthető-e a kártyákból.
 
   Az építés eredménye valamilyen kiemelő animációval jelenjen meg a térképen. Ez akkor hasznos, ha nem az aktuális játékos épített.
+
 - **Új célok húzása** (plusz pontért): ha a célkártya húzópaklira kattintunk, akkor három cél jelenjen meg egy listában. Föléjük húzva az egeret, a térképen kijelölésre kerülnek a városok. A célra kattintva megjelöljük megtartásra, még egyszer kattintva a kijelölés megszűnik. Egy gombra kattintva a kijelölt célok átkerülnek a céljaink közé. A többi kártya visszakerül a célpakli aljára. A gomb csak akkor kattintható, ha van kijelölve cél. Ha meg tudod oldani, akkor húzáskor a 3 kártya animálva mozogjon az adott játékoshoz.
 
 Ha a játék véget ér, akkor egy összesítő táblázatnak kell megjelennie, amely minden játékosnál megjeleníti:
+
 - az utak hosszának pontértékét (1 hosszú-1 pont, 2h-2p, 3h-4p, 4h-7p, 6h-15p, 7h-21p)
 - a célokért kapott pontokat összpontszámot (a teljesített célok pontértéke hozzáadásra kerül; a nem teljesített célok értéke levonásra kerül)
   - ugyanitt egy céllista is megjelenik, zölddel a teljesített, pirossal a teljesítetlen, egérrel fölé víve pedig megjelenik a teljesített útvonal
@@ -85,7 +96,8 @@ A fent leírtak működési elvektől kreatív módon el lehet térni, amíg az 
 
 ## Mellékletek
 
-A [melléklet](ticket-ride-europe-assets.zip) tartalmazza:
+A [melléklet](http://webprogramozas.inf.elte.hu/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip) tartalmazza:
+
 - a játék térképét
 - egy JavaScript fájlt, amiben meg vannak adva
   - a városok nevei és koordinátái (`cities`);
@@ -104,11 +116,13 @@ A [melléklet](ticket-ride-europe-assets.zip) tartalmazza:
 ## 1. felvonás (20 pont)
 
 React használatával készítsd el az egyes oldalak kvázi-statikus komponenseit és működését. Az első felvonásban alapvetően a HTML és CSS ismereteidre lesz szükség (sitebuild), majd az így elkészített prototípusokat komponensekbe kell helyezned. Ekkor már átgondolhatod, hogy mely oldalrészeket kell külön komponensbe kiszervezned. Annyi dinamikát kell tartalmaznia az oldalnak, hogy az egyes képernyők a megfelelő gombnyomásokra bejárhatóak legyenek. A következő képernyőket kell elkészíteni:
+
 - főoldal
 - várakozó szoba
 - játékoldal
 
 Ezek tkp. a játék egyes állapotaihoz kapcsolódnak:
+
 - MAIN_PAGE
 - WAITING_FOR_PLAYERS
 - IN_GAME
@@ -116,6 +130,7 @@ Ezek tkp. a játék egyes állapotaihoz kapcsolódnak:
 Az egyes oldalakat nem kell külön útvonal alá tenni, és nem is szükséges react-routert használni. A játék állapotának megfelelően lehet egy elágazást csinálni, és eszerint a megfelelő komponenst megjeleníteni.
 
 A játékoldalnak a fent már leírt elemeket kell tartalmaznia. Ezen kívül mutasd meg (ha kell, akkor csak sima statikus CSS-sel vagy elemekkel), hogyan építünk, hogyan húzunk 3 új célt, hogyan jelennek meg ezek a felületen, milyen a játék végi összegző táblázat. Ezek egyébként a játék egyes állapotainak felelnek meg, kb. így:
+
 - USER_BEGIN
   - or DRAW_CARDS
     - (DRAW_CARD1) -- nem biztos, hogy meg kell különböztetni
@@ -126,8 +141,8 @@ A játékoldalnak a fent már leírt elemeket kell tartalmaznia. Ezen kívül mu
     - SELECT_CARDS
   - or NEW_DESTINATIONS
 - END_GAME
-  
-Ha meg tudod oldani, akkor az alap animációkat is beleteheted. Az animációk mehetnek sima top-left vagy transform transition-ökkel, vagy kísérletezhetsz animációs függvénykönyvtárakkal, mint pl. a react-spring. 
+
+Ha meg tudod oldani, akkor az alap animációkat is beleteheted. Az animációk mehetnek sima top-left vagy transform transition-ökkel, vagy kísérletezhetsz animációs függvénykönyvtárakkal, mint pl. a react-spring.
 
 Elvárás az igényes kinézet. Ehhez érdemes valamilyen CSS keretrendszert vagy komponenskönyvtárat használni. Egy-egy háttérkép vagy háttérszín már sokat dob a megjelenésen. Próbáld megoldani, hogy a játékoldal minden eleme egy képernyőre kiférjen képernyőmérettől függetlenül (pl. Flexbox-szal).
 
@@ -225,7 +240,6 @@ A játék állapotát folyamatosan szinkronban kell tartani a játékosok közö
 
 [A Websocket szerver leírása itt található.](http://webprogramozas.inf.elte.hu/#!/subjects/webprog-client/handouts/stratego-ws)
 
-
 ### Értékelés
 
 <!-- - 1. játékos a főoldalon új játékszobát indít, és bekerül a várakozó szobába (itt jelenik meg a szoba kódja, amit el tud küldeni a játékon kívül a 2. játékosnak). A 2. játékos a főoldalon beírja a kódot, és így csatlakozik egy meglévő szobához. Ekkor az 1. és a 2. játékos is az előkészítő szobába kerül. (8pt)
@@ -247,8 +261,8 @@ Ezt a megoldást <Név, Neptun ID> küldte be és készítette a <Tárgy neve> k
 Kijelentem, hogy ez a megoldás a saját munkám.
 Nem másoltam vagy használtam harmadik féltől származó megoldásokat.
 Nem továbbítottam megoldást hallgatótársaimnak, és nem is tettem közzé.
-Az Eötvös Loránd Tudományegyetem Hallgatói Követelményrendszere (ELTE szervezeti és működési szabályzata, II. Kötet, 74/C. §) kimondja, 
-hogy mindaddig, amíg egy hallgató egy másik hallgató munkáját - vagy legalábbis annak jelentős részét - saját munkájaként mutatja be, 
+Az Eötvös Loránd Tudományegyetem Hallgatói Követelményrendszere (ELTE szervezeti és működési szabályzata, II. Kötet, 74/C. §) kimondja,
+hogy mindaddig, amíg egy hallgató egy másik hallgató munkáját - vagy legalábbis annak jelentős részét - saját munkájaként mutatja be,
 az fegyelmi vétségnek számít. A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az egyetemről.
 ```
 

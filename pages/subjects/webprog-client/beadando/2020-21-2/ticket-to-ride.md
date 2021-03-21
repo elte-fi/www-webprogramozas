@@ -4,7 +4,7 @@ _Beadandó három felvonásban_
 
 ## Feladat
 
-- [A fejlesztéshez szükséges térkép és adatok](http://webprogramozas.inf.elte.hu/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip)
+- [A fejlesztéshez szükséges térkép és adatok](http://webprogramozas.inf.elte.hu/pages/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip)
 - [A táblajáték szabálya](https://tarsasjatekrendeles.hu/shop_ordered/7237/pic/Compaya/Ticket_To_Ride_Europe.pdf)
 - [A táblajáték videó bemutatója](https://www.youtube.com/watch?v=93grcuFXw2w)
 - [Az online játék bemutatója](https://www.youtube.com/watch?v=Ox4YI-9HG2c) (nem így kell kinéznie, ez csak egy érdekesség, illetve lehet belőle ötleteket meríteni)
@@ -96,7 +96,7 @@ A fent leírtak működési elvektől kreatív módon el lehet térni, amíg az 
 
 ## Mellékletek
 
-A [melléklet](http://webprogramozas.inf.elte.hu/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip) tartalmazza:
+A [melléklet](http://webprogramozas.inf.elte.hu/pages/subjects/webprog-client/beadando/2020-21-2/ticket-to-ride-assets.zip) tartalmazza:
 
 - a játék térképét
 - egy JavaScript fájlt, amiben meg vannak adva

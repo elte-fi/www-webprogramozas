@@ -4,10 +4,10 @@
 
 ## Feladat
 
+- [A fejlesztéshez szükséges térkép és adatok](ticket-ride-europe-assets.zip)
 - [A táblajáték szabálya](https://tarsasjatekrendeles.hu/shop_ordered/7237/pic/Compaya/Ticket_To_Ride_Europe.pdf)
 - [A táblajáték videó bemutatója](https://www.youtube.com/watch?v=93grcuFXw2w)
-<!-- - [Az online játék bemutatója](https://www.youtube.com/watch?v=Ox4YI-9HG2c) -->
-<!-- - [Map](https://boardgamegeek.com/image/70732/ticket-ride-europe) -->
+- [Az online játék bemutatója](https://www.youtube.com/watch?v=Ox4YI-9HG2c) (nem így kell kinéznie, ez csak egy érdekesség, illetve lehet belőle ötleteket meríteni)
 
 ![Kép a játékról](https://scotscoop.com/wp-content/uploads/2020/03/IMG_8927-1-900x600.jpg)
 
@@ -15,13 +15,12 @@ Feladatod a Ticket-to-ride Europe nevű társasjáték egyszerűsített változa
 
 Egy játékos a körében a következő három lehetőség közül választ:
 1. **Vasútkocsi-kártyát húz**: ezt megteheti a felfedett kártyák közül, ilyenkor húzás után azonnal pótolni kell a lapot, vagy a talonból is húzhat. A mozdony két kártyát ér, így azt másodkként nem lehet húzni a felfedettek közül (talonból akár 2 is húzható). Ha a felfedett lapok között 3 mozdony van, akkor az 5 lap megy a dobópakliba, és 5 újat kell osztani.
-2. **Útvonalat épít**: ekkor az útvonal színének megfelelő mennyiségű lapot kell kijátszania a kezéből. Szürke utak bármilyen, de egyféle színből megépíthetők. A mozdonyt ábrázoló utakhoz legalább annyi mozdonyt kell kijátszani, ahányat az út ábrázol. A mozdony egyébként joker, bármilyen vonatkocsi-kártyát helyettesíthet. A vagonokat fel kell helyezni a táblára. Az épített út pontértéke azonnal feltüntetésre kerül. Ahol dupla sínpár van két város között, oda ugyanaz a játékos nem építhet kétszer. (1-3 játékos esetén pedig csak az egyik sínpár építhető meg, de ezt a szabályt nem kell alkalmazni.)
-3. **Új célkártyákat húz**: 3 új célkártya húzható, ebből legalább 1-et (legfeljebb 3-at) meg kell tartani.
+2. **Útvonalat épít**: ekkor az útvonal színének megfelelő mennyiségű lapot kell kijátszania a kezéből. Szürke utak bármilyen, de egyféle színből megépíthetők. A mozdonyt ábrázoló utakhoz legalább annyi mozdonyt kell kijátszani, ahányat az út ábrázol. A mozdony egyébként joker, bármilyen vonatkocsi-kártyát helyettesíthet. A vagonokat fel kell helyezni a táblára. Az épített út pontértéke azonnal feltüntetésre kerül. A dupla sínpárokat az alap feladatból kihagyjuk, azaz minden várost csak egy sínpár köt össze. Plusz pontért lehet a dupla sínpárokat figyelembe venni: ahol dupla sínpár van két város között, oda ugyanaz a játékos nem építhet kétszer. Továbbá 1-3 játékos esetén pedig csak az egyik sínpár építhető meg, de ezt a szabályt is plusz pontért lehet alkalmazni.
+3. **Új célkártyákat húz**: 3 új célkártya húzható, ebből legalább 1-et (legfeljebb 3-at) meg kell tartani. Ezt úgy egyszerűsítjük, hogy ezt a fázist kihagyjuk, és a játék elején mindenki kap 5 célkártyát, amiket teljesíteni kell. Plusz pontért lehet implementálni ezt a funkciót. Ld. a pontozásokat.
 
 Vasútkocsi-kártyák:
 - lila, fehér, kék, sárga, narancs, fekete, piros, zöld: mindegyikből 12db
-- mozdony: 14 db
-
+- mozdony: 14db
 
 A játék akkor ér véget, ha valamelyik játékos raktárában a vagonok száma 2 vagy kevesebb lesz. Ekkor az összes játékosnak van még egy utolsó köre, beleértve azt is, akinek először lefogyott ennyire. Ezután a pontok kiszámítása következik:
 - (az utak hosszát menet közben számoljuk;)
@@ -33,12 +32,12 @@ A játék akkor ér véget, ha valamelyik játékos raktárában a vagonok szám
 
 A tábla mellett a játék működtetéséhez egyéb képernyők is kellenek:
 - **Főoldal**: logó, játékszabály (akár külön oldalon), és két funkció
-  - új játék indítása: ki kell választani, hogy hányan játszanak, majd egy gomb megnyomására egy várakozó "szobába" kerülünk, ahol a megjelenik a szoba azonosítója. Ezt az azonosítót lehet valamilyen csatornán körbeküldeni a játékostársaknak.
-  - csatlakozás szobához: egy szöveges beviteli mezőbe kell beírni a szoba azonosítóját, majd egy gombot megnyomni. A gomb megnyomására a várakozó "szobába" kerülünk.
-- **Várakozó szoba**: egy szobaszám és egy Vissza gomb, ami a főoldalra visz. Itt van egy szöveges beviteli mező is, amelyben megadhatjuk a nevünket, alapértelmezetten valamilyen névvel van feltöltve (pl. 1. játékos). Itt addig várakozunk, amíg a szoba meg nem telik a kívánt számű játékossal. Ha megtelik, akkor minden játékos a játékoldalra jut.
+  - új játék indítása: ki kell választani, hogy hányan játszanak, meg kell adni egy nevet (nem lehet üres), majd egy gomb megnyomására egy várakozó "szobába" kerülünk, ahol a megjelenik a szoba azonosítója. Ezt az azonosítót lehet valamilyen csatornán körbeküldeni a játékostársaknak.
+  - csatlakozás szobához: meg kell adni egy nevet (nem lehet üres), és egy szöveges beviteli mezőbe kell beírni a szoba azonosítóját, majd egy gombot megnyomni. A gomb megnyomására a várakozó "szobába" kerülünk.
+- **Várakozó szoba**: egy szobaszám és egy Vissza gomb, ami a főoldalra visz. Itt addig várakozunk, amíg a szoba meg nem telik a kívánt számű játékossal. Ha megtelik, akkor minden játékos a játékoldalra jut.
 - **Játékoldal**: megjelenik a játéktábla, és elkezdődik a játék. Ha valamelyikük nyer, akkor visszaléphetünk a főoldalra.
 
-A játék folyamata: amikor elkezdődik a játék, akkor a tábla elő van készítve. Mindenki kap 4 vasútkocsi-kártyát, 45 vagont és 1 hosszú célt. Az első lépése mindenkinek az,  hogy automatikusan kap 3 hosszú célt, ami közül választani kell legalább 1-et, de akár az összeset is. (Ez mehetne a játékosok között párhuzamosan, de ez egy külön játékfázist jelentene. Így viszont szépen beépíthető a játék normál menetébe az első lépés is.) A játéktáblán fel kell tüntetni:
+A játék folyamata: amikor elkezdődik a játék, akkor a tábla elő van készítve. Mindenki kap 4 vasútkocsi-kártyát, 45 vagont és 1 hosszú célt. Ha a célok közül az egyszerűbb megoldást választod, akkor mindenki kap még 5 véletlen kiscélt is. Ha plusz pontokért dolgozol, akkor az első lépése mindenkinek az, hogy automatikusan kap 3 hosszú célt, ami közül választani kell legalább 1-et, de akár az összeset is. (Ez mehetne a játékosok között párhuzamosan, de ez egy külön játékfázist jelentene. Így viszont szépen beépíthető a játék normál menetébe az első lépés is.) A játéktáblán fel kell tüntetni:
 - a térképet
 - az 5 felfedett vasútkocsi-kártyát (ezek gyakorlatilag színek, nem is kell egyéb design elem)
 - a vasútkocsi-kártya húzópaklit
@@ -63,17 +62,18 @@ A játék folyamata: amikor elkezdődik a játék, akkor a tábla elő van kész
 
 Az aktuális játékos háromféle tevékenységét a következőképpen kell megoldani:
 - **Vasútkocsi-kártya húzása**: ha a játékos az 5 felfedett kártya valamelyikére vagy a vasútkocsi-kártya húzópaklira kattint, akkor vasútkocsi-kártyát húz. A húzásnál ügyelni kell a fent leírt szabályokra (mozdony esetén csak 1 húzható; ha 3 mozdony van, akkor az 5 kártya a dobópakliba kerül, és 5 újat kell osztani). Ha meg tudod oldani, akkor érdemes  a húzott kártyát az adott játékoshoz mozgatni (animáció). Ebben a fázisban építeni vagy célokat húzni nem lehet. Ha a húzópakli elfogyott, akkor a dobópaklit megkeverve kell a húzópakli helyébe tenni.
-- **Útvonal építése**: ha a térképen egy adott városra kattintunk, akkor építés fázisba kerülünk. Ekkor a város kijelölésre kerül, majd a szomszéd városai közül azok, amelyekbe utat tud építeni, megjelölődnek (van hozzá elég vagon, és van hozzá kártya). Ezek egyikére kattintva megjelenik egy lista, hogy kártyáink közül milyen kombinációkkal tudjuk azt megépíteni. Pl. ha a kezünkben van két piros és két mozdony, és egy két hosszú piros útvonalat akarunk építeni, akkor a listában megjelenik:
-  - 2 piros
-  - 1 piros-1 mozdony
-  - 2 mozdony
+- **Útvonal építése**: útvonal építését többféleképpen meg lehet valósítani. Az alábbiakban csak javaslatokat adunk.
+  - 1\. javaslat: ha a térképen egy adott városra kattintunk, akkor építés fázisba kerülünk. Ekkor a város kijelölésre kerül, majd a szomszéd városai közül azok, amelyekbe utat tud építeni, megjelölődnek (van hozzá elég vagon, és van hozzá kártya, nem foglalt az útvonal mások által, dupla útvonalak figyelembe vétele). Ezek egyikére kattintva megjelenik egy lista, hogy kártyáink közül milyen kombinációkkal tudjuk azt megépíteni. Pl. ha a kezünkben van két piros és két mozdony, és egy két hosszú piros útvonalat akarunk építeni, akkor a listában megjelenik:
+    - 2 piros
+    - 1 piros-1 mozdony
+    - 2 mozdony
   
-  A lista egy elemére kattintva az adott út az adott kártyákkal megépítésre kerül, a térképen is jelölve. A felhasznált kártyák a dobópakliba kerülnek.
-
-  (Másképpen is kivitelezhető az építés. Pl. kártyákat jelölünk ki, és a kijelölt kártyák leszűkítik a lehetséges útvonalakat, és ezek közül választunk.)
+    A lista egy elemére kattintva az adott út az adott kártyákkal megépítésre kerül, a térképen is jelölve. A felhasznált kártyák a dobópakliba kerülnek.
+  - 2\. javaslat: a kezünkben lévő kártyákra kattintva kártyákat jelölünk ki (bal gomb növel, jobb csökkent), és a kijelölt kártyák leszűkítik a lehetséges útvonalakat, és ezek közül választunk.
+  - 3\. javaslat: 2 várost jelünk ki, kártyákat választunk ki, és a gép eldönti, hogy a két város közötti út megépíthető-e a kártyákból.
 
   Az építés eredménye valamilyen kiemelő animációval jelenjen meg a térképen. Ez akkor hasznos, ha nem az aktuális játékos épített.
-- **Új célok húzása**: ha a célkártya húzópaklira kattintunk, akkor három cél jelenjen meg egy listában. Föléjük húzva az egeret, a térképen kijelölésre kerülnek a városok. A célra kattintva megjelöljük megtartásra, még egyszer kattintva a kijelölés megszűnik. Egy gombra kattintva a kijelölt célok átkerülnek a céljaink közé. A többi kártya visszakerül a célpakli aljára. A gomb csak akkor kattintható, ha van kijelölve cél. Ha meg tudod oldani, akkor húzáskor a 3 kártya animálva mozogjon az adott játékoshoz.
+- **Új célok húzása** (plusz pontért): ha a célkártya húzópaklira kattintunk, akkor három cél jelenjen meg egy listában. Föléjük húzva az egeret, a térképen kijelölésre kerülnek a városok. A célra kattintva megjelöljük megtartásra, még egyszer kattintva a kijelölés megszűnik. Egy gombra kattintva a kijelölt célok átkerülnek a céljaink közé. A többi kártya visszakerül a célpakli aljára. A gomb csak akkor kattintható, ha van kijelölve cél. Ha meg tudod oldani, akkor húzáskor a 3 kártya animálva mozogjon az adott játékoshoz.
 
 Ha a játék véget ér, akkor egy összesítő táblázatnak kell megjelennie, amely minden játékosnál megjeleníti:
 - az utak hosszának pontértékét (1 hosszú-1 pont, 2h-2p, 3h-4p, 4h-7p, 6h-15p, 7h-21p)
@@ -83,6 +83,23 @@ Ha a játék véget ér, akkor egy összesítő táblázatnak kell megjelennie, 
 
 A fent leírtak működési elvektől kreatív módon el lehet térni, amíg az a játék eredeti céljainak megfelel.
 
+## Mellékletek
+
+A [melléklet](ticket-ride-europe-assets.zip) tartalmazza:
+- a játék térképét
+- egy JavaScript fájlt, amiben meg vannak adva
+  - a városok nevei és koordinátái (`cities`);
+  - a városok közötti kapcsolatok (`connections`)
+    - `from`, `to`: az összekötött városok id-ja,
+    - `locomotive`: hány mozdony kell hozzá
+    - `color`: az útvonal színe
+    - `elements`: az útvonal elemeinek koordinátái
+  - a rövid célok (`destinations`)
+    - `from`, `to`: a végállomások id-ja
+    - `value` a pontérték
+  - a hosszú célok (`longDestinations`)
+    - `from`, `to`: a végállomások id-ja
+    - `value` a pontérték
 
 ## 1. felvonás (20 pont)
 
@@ -129,13 +146,13 @@ A fentiekkel és alábbi értékelési szempontokkal kapcsolatban még egyszer h
 - Játékoldal: megvan (1pt)
 - Játékoldal: térkép (1pt)
 - Játékoldal: 5 felfedett vasútkocsi-kártya, húzópakli, célok húzópaklija (1pt)
-- Játékoldal: játékosok adatai (1pt)
-- Játékoldal: aktuális játékos keze: vasútkocsi-kártyák, célok (1pt)
+- Játékoldal: játékosok adatai (2pt)
+- Játékoldal: aktuális játékos keze: vasútkocsi-kártyák, célok (2pt)
 - Játékoldal: építés elemei: városok kijelölése, kártyák kiválasztása (2pt)
-- Játékoldal: 3 új cél húzásának elemei (2pt)
 - Játékoldal: összegző táblázat (2pt)
 - Játékoldal: igényes megjelenésű (1pt)
-- Játékoldal: animációk használata (+5pt)
+- Játékoldal: 3 új cél húzásának elemei (+2pt)
+- Játékoldal: animációk használata (+3pt)
 
 ## 2. felvonás (40 pont)
 
@@ -146,6 +163,8 @@ A főoldalról mindenféle szobalogika bélkül jussunk el a játékoldalra. A j
 Az egyes tevékenységeket jelezzük az utolsó műveletek között. Ha meg tudod oldani, akkor használj animációkat a kártyák mozgatásakor és az építéskor!
 
 Gondold meg, milyen adatok kellenek a játék működtetéséhez! Gondold át az akciókat is!
+
+Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-devtool-ból mentettél ki, és amiket értékeléskor a gyakorlatvezetők be tudnak importálni. Ezek az állapotok lehetővé teszik, hogy ne mindig elölről kelljen ellenőrizni a feladatot, hanem egy adott pontra ugorjunk.
 
 ### Értékelés (még nem jó a pontozás!!!)
 

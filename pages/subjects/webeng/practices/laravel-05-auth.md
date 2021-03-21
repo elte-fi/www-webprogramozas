@@ -41,6 +41,17 @@ npm run dev
 ```
 
 Be aware, that this will overwrite the `routes/web.php` file!
+
+Another way of doing this:
+
+```bash
+composer require laravel/ui
+php artisan ui bootstrap --auth
+php artisan migrate
+npm install
+npm run dev
+```
+
 These add the right login, registration pages, routes, controllers, views to the application with their own templates. If we want to fit them to our own application, at first it is enough to point them to our layout view. Of course, we can customize further the layout and the templates to better meet to our expectations.
 
 ### Fine tuning

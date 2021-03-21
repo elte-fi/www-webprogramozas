@@ -113,6 +113,8 @@ A [melléklet](http://webprogramozas.inf.elte.hu/pages/subjects/webprog-client/b
     - `from`, `to`: a végállomások id-ja
     - `value` a pontérték
 
+Minden koordináta a kép méretéhez képesti százalékban van megadva!
+
 ## 1. felvonás (20 pont)
 
 React használatával készítsd el az egyes oldalak kvázi-statikus komponenseit és működését. Az első felvonásban alapvetően a HTML és CSS ismereteidre lesz szükség (sitebuild), majd az így elkészített prototípusokat komponensekbe kell helyezned. Ekkor már átgondolhatod, hogy mely oldalrészeket kell külön komponensbe kiszervezned. Annyi dinamikát kell tartalmaznia az oldalnak, hogy az egyes képernyők a megfelelő gombnyomásokra bejárhatóak legyenek. A következő képernyőket kell elkészíteni:

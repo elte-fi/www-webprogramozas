@@ -1,11 +1,5 @@
 # JavaScript -- Web engineering
 
-## Table of contents
-
-- Basic language elements
-- Functions, arrays and objects
-- Modules
-
 ## JavaScript documentations
 
 - [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -16,278 +10,110 @@
 ## Programming environment
 
 - Runtime environment
-    - Node.js (command-line JavaScript interpreter)
-        + npm: Node Package Manager for installing and managing JavaScript modules
-    - Browser
+  - Browser
+  - Node.js (command-line JavaScript interpreter)
+    - npm: Node Package Manager for installing and managing JavaScript modules
 - Editor: Visual Studio Code (Notepad++, Visual Studio)
 
 ## Trying out
 
+- Browser console
+- Command line (Node.js)
 - [Repl.it](https://repl.it/languages/javascript)
 - [JSBin](https://jsbin.com)
 
-## JavaScript: basic language elements, arrays and functions
+## Node, npm, npx
 
--  JavaScript is a "high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language"
+Install [Node.js](https://nodejs.org/en/) and it will install npm too.
 
-- Versions
-    + -2011: ECMAScript 3
-    + 2011: ECMAScript 5
-    + 2015: ECMAScript 2015 (ECMAScript 6, ES6, ES2015)
-    + 2016: ECMAScript 2016
-    + 2017: ECMAScript 2017
-    + ... new version every year
+### JavaScript REPL
 
-- C-like syntax --> control flow, operators
+```sh
+node
+```
 
-- literals
+### Run JavaScript file
 
-    ```js
-    // boolean
-    true, false
-    // number
-    12, 13.45, 1e5
-    // string
-    'apple'
-    "peach"
-    `plum`
-    // special
-    null
-    undefined
-    // array
-    ['one', 'two', 'three']
-    // object
-    {
-        name: 'Nobody',
-        age: 99
-    }
-    ```
+```sh
+node main.js
+```
 
-- variable declaration
+### Managing dependencies
 
-    ```js
-    // ES2015+
-    const a = 12;
-    let b; // undefined
-    let c = 13;
-    // old
-    var d; // undefined
-    var e = 14;
-    ```
+```sh
+# package.json
+npm init --yes
+# or
+echo "{}" > package.json
 
-- control flow
-    + `if`, `switch`
-    + `for`, `for..of`, `for..in`, `while`, `do..while`
+# Install package
+npm install package-name
+npm i package-name
+# Install locally (recommended)
+npm install --save-dev package-name
+npm i -D package-name
+# Install globally (in rare cases, for general utilities)
+npm install -g package-name
 
-- functions
-    
-    ```js
-    function add(a, b) {
-        return a + b;
-    }
-    ```
+# Running local packages
+npx package <par>
+./node_modules/.bin/package <par>
+```
 
-- complex data structures (with nesting)
+## ES2015 modules
 
-    ```js
-    {
-        name: 'Some Body',
-        subjects: [
-            {
-                id: 12,
-                name: 'Web engineering',
-                code: 'ITE1234'
-            },
-            {
-                id: 13,
-                name: 'Java language',
-                code: 'ITE3456'
-            }
-        ]
-    }
-    ```
+To use ES2015 modules, we have to indicate it in the `package.json` file:
 
-- JavaScript Object Notation (JSON)
+```json
+{
+  "type": "module"
+}
+```
 
-    ```js
-    {
-        "name": "Some Body",
-        "subjects": [
-            {
-                "id": 12,
-                "name": "Web engineering",
-                "code": "ITE1234"
-            },
-            {
-                "id": 13,
-                "name": "Java language",
-                "code": "ITE3456"
-            }
-        ]
-    }
-    ```
+```js
+// math.js
+export const add = (a, b) => a + b;
+```
 
-- Built-in objects
-    + Math
-    + String
-    + Date
-    + Array
-    + RegExp
+```js
+// app.js
+import { add } from "./math.js";
 
-- Functions
-    
-    ```js
-    // function declaration
-    function add(a, b) {
-        return a + b;
-    }
-    // function expression
-    let add = function (a, b) {
-        return a + b;
-    }
-    // arrow function
-    let add = (a, b) => a + b;
-    
-    // function as a parameter
-    function linearSearch(x, T) {
-        var i = 0;
-        while (i < x.length && !T(x[i])) {
-            i++;
-        }
-        return {
-            isExist: i < x.length,
-            offset: i
-        };
-    }
+console.log(add(3, 5));
+```
 
-    function isNegative(p) {
-        return p < 0;
-    }
-      
-    var myArr = [1, 3, -2, 8];
-    linearSearch(myArr, isNegative);
+You can also require external dependency:
 
-    // function as a return value
-    function operationGenerator(op) {
-        if (op === '+') {
-            return function (a, b) {
-                return a + b;
-            };
-        }
-        else if (op === '*') {
-            return function (a, b) {
-                return a * b;
-            };
-        }
-    }
-      
-    //Generating a summing function
-    var operation = operationGenerator('+');
-    operation(10, 32);    //42
+```js
+import { something } from "package-name";
+```
 
-    // closure
-    // Every function remain in connection with the containing function, even if the external function ends.
-    function createIncrementor(start) {
-        return function () {  // (1)
-            start++;
-            return start;
-        }
-    }
+## CommonJS modules
 
-    var inc = createIncrementor(5);
-    inc()   // 6
-    inc()   // 7
-    inc()   // 8
-    ```
+```js
+// math.js
+const add = (a, b) => a + b;
 
-- Arrays
+// one value
+module.exports = add;
+// multiple values
+module.exports.add = add;
+// shorthand
+module.exports = { add };
+```
 
-    ```js
-    const x = [1, 2, 3, 4, 5];
-    // iteration 1
-    for (let i = 0; i<x.length; i++) {
-        console.log(x[i]);
-    }
-    // iteration 2
-    for (let e of x) {
-        console.log(e);
-    }
-    // iteration 3
-    x.forEach(e => console.log(e));
-    ```
+```js
+// app.js
+const { add } = require("./math");
 
-    + `map`, `filter`, `reduce`, `reduceRight`, `some`, `every`, `find`, `findIndex`
+console.log(add(3, 5));
+```
 
-        ```js
-        const x = [1, 2, 3, 4, 5];
-        const evens = x.filter(e => e % 2 === 0)
-        ```
+You can also require external dependency:
 
-    + `push`, `pop`, `shift`, `unshift`, `sort`, `reverse`, `indexOf`, `includes`
-
-- Objects
-    + dynamic objects
-
-        ```js
-        //Creating an object
-        var obj = {
-            a: 1,
-            b: 2
-        };
-
-        //New property
-        obj.c = 3;      
-
-        //Accessing property (read)
-        obj.a    === 1
-        obj['a'] === 1  
-        obj.d    === undefined
-
-        //Modifying the value of a property (write)
-        obj.b = 42;   
-
-        //Deleting a property
-        delete obj.c;
-        ```
-
-    + prototype object
-    + object generators
-    + object constructors, classes
-
-        ```js
-        class Person {
-            constructor(name) {
-                this.name = name;
-            }
-
-            describe() {
-                return 'Person called '+this.name;
-            }
-        }
-
-        //Inheritance
-        class Employee extends Person {
-            constructor(name, title) {
-                super(name);
-                this.title = title;
-            }
-
-            describe() {
-                return super.describe() + ' (' + this.title + ')';
-            };
-        }
-        ```
-
-- Modules
-    + ECMAScript: `export`, `import`
-    + Node: `module.exports`, `require`
-
-- External modules
-    + npm (Node Package Manager) (aka mvn)
-    + `package.json` (aka `pom.xml`)
-    + `npm init`
-    + `npm install --save` or `npm install --save-dev`
-    + scripts, `npm run script-name`
+```js
+const { something } = require("package-name");
+```
 
 ## Tasks
 
@@ -295,13 +121,12 @@
 
 2. Given an array of numbers. Filter the negative numbers into a new array!
 
-    a. Own function
-    b. General function
-    c. With array method (`filter`)
+   a. Own function
+   b. General function
+   c. With array method (`filter`)
 
 3. Model an address structure with a JavaScript object! (object literal, dynamic object) Extend it with methods!
 
-4. Create constructors generating point and circle objects! (`class`, `extends`, prototype) 
+4. Create constructors generating point and circle objects! (`class`, `extends`, prototype)
 
 5. Create a mathematical module with add and multiply functionality! Use this module in the main program! (`module.exports`, `require`)
-

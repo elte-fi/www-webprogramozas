@@ -1,4 +1,4 @@
-# Practice lesson: The TypeScript language -- Web engineering
+# The TypeScript language -- Web engineering
 
 > TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
@@ -22,7 +22,8 @@ Visual Studio Code is tailored for editing TypeScript code.
 
 ### Online REPL
 
-[TypeScript Playground]
+- [TypeScript Playground]
+- [REPL.it](https://replit.com/languages/typescript)
 
 ### Local compilation and execution
 
@@ -48,7 +49,7 @@ npm install nodemon
 
 ```js
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 const c = add(3, 5);
 ```
@@ -68,7 +69,7 @@ const j = 13;
 
 ```js
 function add(a: number, b: number): number {
-    return a + b;
+  return a + b;
 }
 const c: number = add(3, 5);
 ```
@@ -77,12 +78,12 @@ const c: number = add(3, 5);
 
 ```js
 interface Person {
-    firstName: string;
-    lastName: string;
+  firstName: string;
+  lastName: string;
 }
 
 function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
+  return "Hello, " + person.firstName + " " + person.lastName;
 }
 
 let user = { firstName: "Jane", lastName: "User" };
@@ -175,22 +176,22 @@ console.log(f1.Left.Left.isEmpty());
 
 2. Count
 
-    Define the `count` function, if we would like to use it in this way:
+   Define the `count` function, if we would like to use it in this way:
 
-    ```ts
-    count([1, 11, 22, 4, 33], e => e % 2 === 0);
-    count(['alma', 'korte', 'szilva'], e => e.startsWith('a'));
-    ```
+   ```ts
+   count([1, 11, 22, 4, 33], (e) => e % 2 === 0);
+   count(["apple", "pear", "plum"], (e) => e.startsWith("a"));
+   ```
 
 3. What is the difference between the `var`, `let` and `const` keywords?
 
 4. Define the `Square` and `Circle` classes which implement a common interface called `IShape`!
 
-    ```ts
-    interface IShape {
-        getArea(): number;
-    }
-    ```
+   ```ts
+   interface IShape {
+     getArea(): number;
+   }
+   ```
 
 5. Define a generic Stack<T> class!
 
@@ -198,9 +199,9 @@ console.log(f1.Left.Left.isEmpty());
 
 7. Define a generic BinaryTree class!
 
-    ```ts
-    let bt: BinaryTree<number>;
-    ```
+   ```ts
+   let bt: BinaryTree<number>;
+   ```
 
 8. Define a generic LinkedList class!
 
@@ -208,10 +209,8 @@ console.log(f1.Left.Left.isEmpty());
 
 10. Define a [decorator] that adds a static field indicating that the subject has been decorated!
 
-
-
 [ts honlap]: https://www.typescriptlang.org/
 [ts docs]: https://www.typescriptlang.org/docs/home.html
 [ts in 5 minutes]: https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 [ts handbook]: https://www.typescriptlang.org/docs/handbook/basic-types.html
-[TypeScript Playground]: https://www.typescriptlang.org/play/index.html 
+[typescript playground]: https://www.typescriptlang.org/play/index.html

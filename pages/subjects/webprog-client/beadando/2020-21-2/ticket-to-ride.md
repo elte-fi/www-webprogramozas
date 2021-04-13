@@ -170,6 +170,8 @@ A fentiekkel és alábbi értékelési szempontokkal kapcsolatban még egyszer h
 - Játékoldal: igényes megjelenésű (1pt)
 - Játékoldal: 3 új cél húzásának elemei (+2pt)
 - Játékoldal: animációk használata (+3pt)
+- 1 hét késés (-3 pont)
+- 2 hét késés (-6 pont)
 
 ## 2. felvonás (40 pont)
 

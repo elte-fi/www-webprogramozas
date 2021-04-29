@@ -231,6 +231,8 @@ Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-d
 - Játékoldal: összegző táblázatban a célok listája zöld/piros (2pt)
 - Játékoldal: összegző táblázatban a célok listájában fölé víve az egeret megjelenik az útvonal (2pt)
 - Játékoldal: összegző táblázatban a leghosszabb út (1pt)
+- 1 hét késés (-4 pont)
+- 2 hét késés (-8 pont)
 
 ## 3. felvonás (30 pont)
 

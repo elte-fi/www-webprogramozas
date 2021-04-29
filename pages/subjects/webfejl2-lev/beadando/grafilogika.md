@@ -31,12 +31,12 @@ Az egyik feladatrészben szereplő többlet pontok hozzáadódnak a másik felad
 <tr>
 <td>
 
-![](kis.png)
+![](pages/subjects/webfejl2-lev/beadando/kis.png)
 
 </td>
 <td>
 
-![](kis_mo.png)
+![](pages/subjects/webfejl2-lev/beadando/kis_mo.png)
 
 </td>
 </tr>

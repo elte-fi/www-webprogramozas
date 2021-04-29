@@ -115,7 +115,7 @@ A [melléklet](http://webprogramozas.inf.elte.hu/pages/subjects/webprog-client/b
 
 Minden koordináta a kép méretéhez képesti százalékban van megadva!
 
-## 1. felvonás (20 pont)
+## 1. felvonás (20 pont + 5 plusz pont)
 
 React használatával készítsd el az egyes oldalak kvázi-statikus komponenseit és működését. Az első felvonásban alapvetően a HTML és CSS ismereteidre lesz szükség (sitebuild), majd az így elkészített prototípusokat komponensekbe kell helyezned. Ekkor már átgondolhatod, hogy mely oldalrészeket kell külön komponensbe kiszervezned. Annyi dinamikát kell tartalmaznia az oldalnak, hogy az egyes képernyők a megfelelő gombnyomásokra bejárhatóak legyenek. A következő képernyőket kell elkészíteni:
 
@@ -173,19 +173,19 @@ A fentiekkel és alábbi értékelési szempontokkal kapcsolatban még egyszer h
 - 1 hét késés (-3 pont)
 - 2 hét késés (-6 pont)
 
-## 2. felvonás (40 pont)
+## 2. felvonás (40 pont + 10 plusz pont)
 
 Ebben a felvonásban adjuk hozzá a játéklogikát az alkalmazáshoz. Ehhez használjunk redux-ot. Gondoljuk át, hogy milyen adatokat kell tárolni ahhoz, hogy az egyes funkciók működtethetők legyenek. Gondoljuk át az akciókat is, bár ezek majd fejlesztés közben szépen bővülnek majd. Itt most csak a játékoldalt kell fejleszteni úgy, hogy 2 játékossal működjön a játék.
 
-A főoldalról mindenféle szobalogika nélkül jussunk el a játékoldalra. A játék állapotterét készítsük elő: 2 játékos játszik, megkevert vasútkocsi- és célkártyák, kiosztott hosszú cél kártya, stb. Normál esetben 5 rövid cél is kiadásra kerül minden játékosnak. Plusz pontokért az első lépés kötelezően 3 új cél húzása, azaz az első körben a játékos automatikusan a `NEW_DESTINATIONS` állapotban van. Ezt követően azonban a normális játékmenet van. Azaz: akár a játékoson van a sor, akár nem, a célkártyáit tudja böngészni, föléjük víve az egeret a két végpont kijelölődik, ha pedig teljesített is a cél, akkor a köztük lévő út is kijelölődik. Ha a játékosra kerül a sor, akkor vagy kártyát húz a felfordított 5 lap közül vagy a talonból; vagy épít egy várost kijelölve; vagy 3 új célt húz a célkártya paklira kattintva. Ezeknek a részletes leírása fentebb megtalálható. Ha az adott játékos végzett, akkor a másik játékos következik, ami annyit jelent, hogy a kézben lévő dolgokat át kell váltani (vasútkocsi-kártyák és a célok). Ha valakinek kettő vagy kevesebb vagonja lett, akkor még van egy teljes kör, majd a játék véget ér és megjelenik az összegző táblázat.
+A főoldalról mindenféle szobalogika nélkül jussunk el a játékoldalra. A játék állapotterét készítsük elő: 2 játékos játszik, megkevert vasútkocsi- és célkártyák, kiosztott hosszú cél kártya, stb. Normál esetben 5 rövid cél is kiadásra kerül minden játékosnak. Plusz pontokért az első lépés kötelezően 3 új cél húzása, azaz az első körben a játékos automatikusan a `NEW_DESTINATIONS` állapotban van. Ezt követően azonban a normális játékmenet van. Azaz: akár a játékoson van a sor, akár nem, a célkártyáit tudja böngészni, föléjük víve az egeret a két végpont kijelölődik, ha pedig teljesített is a cél, akkor a köztük lévő út is kijelölődik. Ha a játékosra kerül a sor, akkor vagy kártyát húz a felfordított 5 lap közül vagy a talonból; vagy utat épít; vagy 3 új célt húz a célkártya paklira kattintva (ez utóbbi plusz pontért). Ezeknek a részletes leírása fentebb megtalálható. Ha az adott játékos végzett, akkor a másik játékos következik, ami annyit jelent, hogy a kézben lévő dolgokat át kell váltani (vasútkocsi-kártyák és a célok). E váltás persze nem jelent az állapottérben változást, csupán a redux-os selectorban az aktuális játékos kezének adatait adjuk vissza. Ha valakinek kettő vagy kevesebb vagonja lett, akkor még van egy teljes kör, majd a játék véget ér és megjelenik az összegző táblázat.
 
-Az egyes tevékenységeket jelezzük az utolsó műveletek között. Ha meg tudod oldani, akkor használj animációkat a kártyák mozgatásakor és az építéskor!
+Az egyes tevékenységeket jelezzük az utolsó műveletek között. Ha meg tudod oldani, akkor használj animációkat a kártyák mozgatásakor és az építéskor plusz pontért!
 
-Gondold meg, milyen adatok kellenek a játék működtetéséhez! Gondold át az akciókat is!
+Gondold meg, milyen adatok kellenek a játék működtetéséhez! Gondold át az akciókat is! Képzeld magad egy valós játékasztal mellé, és gondold meg, hogy az aktuális helyzetet milyen adatok írják le! Próbáld meg csak a szükséges adatokat megadni, a származtatottakat majd a selectorok biztosítják!
 
-Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-devtool-ból mentettél ki, és amiket értékeléskor a gyakorlatvezetők be tudnak importálni. Ezek az állapotok lehetővé teszik, hogy ne mindig elölről kelljen ellenőrizni a feladatot, hanem egy adott pontra ugorjunk.
+Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-devtool-ból mentettél ki (alul a lefele mutató nyilacska), és amiket értékeléskor a gyakorlatvezetők be tudnak importálni. Ezek az állapotok lehetővé teszik, hogy ne mindig elölről kelljen ellenőrizni a feladatot, hanem egy adott pontra ugorjunk.
 
-### Értékelés (még nem jó a pontozás!!!)
+### Értékelés
 
 - Redux használata (1pt)
 - Legalább 2 action (1pt)
@@ -193,40 +193,43 @@ Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-d
 - A root reducer legalább két alreducerre van bontva (1pt)
 - Jól szervezett könyvtárstruktúra (1pt)
 - Redux-dev-tool-lal oda-vissza léptethető állapottér (1pt)
-- Játékoldal: a játékoldalra érve a játéktábla 2 játékossal elő van készítve (1pt)
+- Redux-dev-tool-ba betölthető előre elkészített állapotterek és lépések (1pt)
+- Játékoldal: a játékoldalra érve a játéktábla 2 játékossal elő van készítve (2pt)
 - Játékoldal: aktív játékos jelölése (1pt)
+- Játékoldal: az aktív játékosnál a megfelelő adatok jelennek meg (célok, kártyák, vagonok) (2pt)
+- Játékoldal: az aktív játékosnál az utolsó két művelete feltüntetésre kerül (1pt)
 - Játékoldal: teljesítetlen cél fölé víve az egeret a két végpont megjelölésre kerül a térképen (1pt)
-- Játékoldal: teljesített cél fölé víve az egeret a két végpont megjelölésre kerül a térképen és az útvonal is kiemelt lesz (1pt)
+- Játékoldal: teljesített cél fölé víve az egeret a két végpont megjelölésre kerül a térképen és az útvonal is kiemelt lesz (2pt)
 - Játékoldal: ha most került ránk a sor, tudunk az asztalról egy vasútkocsi-kártyalapot húzni (1pt)
 - Játékoldal: ha most került ránk a sor, tudunk a pakliból egy vasútkocsi-kártyalapot húzni (1pt)
 - Játékoldal: tudunk még egy kártyalapot húzni (1pt)
-- Játékoldal: ha mozdonyt húztunk a felfedett lapok közül, akkor nem tudunk még egy kártyalapot húzni (1pt)
+- Játékoldal: ha mozdonyt húztunk a felfedett lapok közül, akkor nem tudunk még egy kártyalapot húzni (2pt)
 - Játékoldal: a húzott lapok megjelennek a kezünkben (1pt)
 - Játékoldal: a húzás során a kártyák animálva kerülnek a kezünkbe vagy a játékos adataihoz (+1pt)
 - Játékoldal: húzás közben nem lehet építeni vagy célkártyát húzni (1pt)
 - Játékoldal: húzás befejeztével a másik játékos jön (1pt)
-- Játékoldal: ha most került ránk a sor, akkor egy városra kattintva elkezdhetünk építkezni, a város kijelölésre kerül (1pt)
-- Játékoldal: építkezésnél ha az első város ki van jelölve, akkor a szomszédai közül azok kerülnek kijelölésre, ahova tudunk menni (van elég vagon, és van hozzá kártyánk) (1pt)
-- Játékoldal: egy kijelölt városra újra kattintva a kijelölés megszűnik (azaz a `BEGIN` fázisba kerülünk) (1pt)
-- Játékoldal: a második város kijelölésekor megjelenik egy lista, hogy milyen kártyakombinációkkal tudunk az adott helyre menni (1pt)
-- Játékoldal: a kártyakombinációs listából választva egy elemet az út megépítésre kerül, a kártyák a kezünkből a dobópakliba kerülnek, a vagonok száma csökken (1pt)
+- Játékoldal: ha most került ránk a sor, akkor elkezdhetünk utat építeni (1pt)
+- Játékoldal: építkezésnél csak szomszédos városok között tudunk utat építeni (1pt)
+- Játékoldal: építkezésnél csak akkor tudunk utat építeni, ha van hozzá kártya a kezünkben (1pt)
+- Játékoldal: építkezésnél a szükséges kártyákat akár többféle kombinációból összeállíthatjuk, mozdonyok segítségével (2pt)
+- Játékoldal: építkezés végén az út megépítésre kerül, a kártyák a kezünkből a dobópakliba kerülnek, a vagonok száma csökken (1pt)
 - Játékoldal: a vagonok animálva kerülnek a táblára (+1pt)
 - Játékoldal: építkezés közben nem lehet vasútkocsi-kártyát vagy célkártyát húzni (1pt)
 - Játékoldal: az építkezés befejeztével a másik játékos jön (1pt)
-- Játékoldal: ha most került ránk a sor, akkor a célkártyapaklira kattintva 3 új célkártyát kapunk (1pt)
-- Játékoldal: egy célkártyára kattintva megjelölhető (1pt)
-- Játékoldal: megjelölt célkártyára kattintva a jelölés visszavonódik (1pt)
-- Játékoldal: egy gomb akkor elérhető, ha legalább 1 célkártya ki van választva (1pt)
-- Játékoldal: erre a gombra kattintva a kijelölt kártyák átkerülnek a céljaink közé, a többi a célkártya pakli aljára (1pt)
-- Játékoldal: célkártyahúzás közben nem lehet vasútkocsi-kártyát húzni vagy építkezni (1pt)
+- Játékoldal: ha most került ránk a sor, akkor a célkártyapaklira kattintva 3 új célkártyát kapunk (+1pt)
+- Játékoldal: egy célkártyára kattintva megjelölhető (+1pt)
+- Játékoldal: megjelölt célkártyára kattintva a jelölés visszavonódik (+1pt)
+- Játékoldal: egy gomb akkor elérhető, ha legalább 1 célkártya ki van választva (+1pt)
+- Játékoldal: erre a gombra kattintva a kijelölt kártyák átkerülnek a céljaink közé, a többi a célkártya pakli aljára (+1pt)
+- Játékoldal: célkártyahúzás közben nem lehet vasútkocsi-kártyát húzni vagy építkezni (+0,5pt)
 - Játékoldal: célkártyák animálva kerülnek a kezünkbe vagy a játékos adataihoz (+1pt)
-- Játékoldal: a célkártyahúzás befejeztével a másik játékos jön (1pt)
+- Játékoldal: a célkártyahúzás befejeztével a másik játékos jön (+0,5pt)
 - Játékoldal: ha valakinek kettő vagy kevesebb vagonja van, akkor még egy teljes kör mehet (+1pt)
 - Játékoldal: a játék végén megjelenik az összegző táblázat (1pt)
 - Játékoldal: összegző táblázatban az utak pontszáma (1pt)
 - Játékoldal: összegző táblázatban a célok pontszáma (1pt)
-- Játékoldal: összegző táblázatban a célok listája zöld/piros (1pt)
-- Játékoldal: összegző táblázatban a célok listájában fölé víve az egeret megjelenik az útvonal (1pt)
+- Játékoldal: összegző táblázatban a célok listája zöld/piros (2pt)
+- Játékoldal: összegző táblázatban a célok listájában fölé víve az egeret megjelenik az útvonal (2pt)
 - Játékoldal: összegző táblázatban a leghosszabb út (1pt)
 
 ## 3. felvonás (30 pont)

@@ -2,95 +2,14 @@
 
 ## Tasks
 
-1. Add REST functionalities to the server-side (Java) application! Try it with a REST client!
-    - a. Download the the prepared server-side application!
-    - b. Analyze the `IssueRestController` class!
-    - c. Note the `@JsonIgnore` annotation in the entity files.
-    - d. Try it with a REST client (e.g. [Advanced Rest Client in Chrome](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo))
-2. Before using the REST API from the client, [read about the different solutions on handling asynchrony in JavaScript](#!/subjects/webeng/practices/async).
-3. Manage issues from the REST API in the issue service!
-    - a. Add `HttpClientModule` to the client-side application, and use for sending HTTP request towards the server!
-    - b. Get issues from the REST API, and so on!
-    - c. Get one issue from the REST API!
-    - d. Create a new issue on the server from the service.
-    - e. Modify an issue!
-    - f. Delete an issue!
-
-## Server-side improvements
-
-### Controllers
-
-REST controllers should be annotated by `@RestController`:
-
-```java
-@RestController
-@RequestMapping("/api")
-public class FooController {
-  @Autowired
-  private FooRepository fooRepository;
-}
-```
-
-### Endpoint methods
-
-For a REST HTTP response use the `ResponseEntity` class for generating output (JSON). Input parameters usually come in the path (`@PathVariable`) or in the request body (`@RequestBody`):
-
-```java
-@GetMapping("")
-public ResponseEntity<Iterable<Foo>> getAll() {}
-
-@GetMapping("/{id}")
-public ResponseEntity<Foo> get(@PathVariable Integer id) {}
-
-@PostMapping("")
-public RepsonseEntity<Foo> post(@RequestBody Foo foo) {}
-
-@DeleteMapping("/{id}")
-public ResponseEntity delete(@PathVariable Integer id) {}
-
-@PutMapping("/{id}")
-public ResponseEntity<Foo> put(@PathVariable Integer id, @RequestBody Foo foo) {}
-```
-
-### Preventing circular JSON generation
-
-```java
-// Foo.java
-@OneToMany(mappedBy = "bar")
-private List<Bar> bars;
-
-// Bar.java
-@ManyToOne
-@JoinColumn
-@JsonIgnore       // important!
-private Foo foo;
-```
-
-### Cross-Origin Resource Sharing
-
-If we need to enable Cross-Origin Resource Sharing (CORS) in the REST API, then in the simplest cases this can be done in two steps:
-
-1. Annotate the controller classes with the `@CrossOrigin` annotation.
-
-    ```java
-    @CrossOrigin
-    @RestController
-    @RequestMapping("/issues")
-    public class IssueController {
-        // ...
-    }
-    ```
-
-2. Indicate CORS handling towards Spring Security in the `WebSecurityConfig` class:
-
-    ```java
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .cors()
-                .and()
-            // ...
-    }
-    ```
+1. Before using the REST API from the client, [read about the different solutions on handling asynchrony in JavaScript](#!/subjects/webeng/practices/async).
+2. Manage issues from the REST API in the issue service!
+   - a. Add `HttpClientModule` to the client-side application, and use for sending HTTP request towards the server!
+   - b. Get issues from the REST API, and so on!
+   - c. Get one issue from the REST API!
+   - d. Create a new issue on the server from the service.
+   - e. Modify an issue!
+   - f. Delete an issue!
 
 ## HTTP communication with a REST API
 
@@ -101,11 +20,9 @@ import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   /* ... */
-  imports: [
-    HttpClientModule,
-  ],
+  imports: [HttpClientModule],
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 Then we can use `HttpClient` in our service:
@@ -114,7 +31,7 @@ Then we can use `HttpClient` in our service:
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 
+  headers: new HttpHeaders({
     'Content-Type': 'application/json',
     'X-Requested-With': 'XMLHttpRequest',
   })
@@ -177,33 +94,33 @@ Using proxy:
 
 2. Add the following content to the new proxy file:
 
-    ```json
-    {
-        "/api": {
-            "target": "http://localhost:8080",
-            "secure": false
-        }
-    }
-    ```
+   ```json
+   {
+     "/api": {
+       "target": "http://localhost:8080",
+       "secure": false
+     }
+   }
+   ```
 
 3. In the CLI configuration file, `angular.json`, add the `proxyConfig` option to the serve target:
 
-    ```json
-    ...
-    "architect": {
-      "serve": {
-        "builder": "@angular-devkit/build-angular:dev-server",
-        "options": {
-          "browserTarget": "your-application-name:build",
-          "proxyConfig": "src/proxy.conf.json"    // important!
-        },
-    ...
-    ```
+   ```json
+   ...
+   "architect": {
+     "serve": {
+       "builder": "@angular-devkit/build-angular:dev-server",
+       "options": {
+         "browserTarget": "your-application-name:build",
+         "proxyConfig": "src/proxy.conf.json"    // important!
+       },
+   ...
+   ```
 
-References: 
+References:
+
 - [Official guide](https://angular.io/guide/build#proxying-to-a-backend-server)
 - [Another tutorial](https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/)
-
 
 ### Transforming the response
 
@@ -222,21 +139,23 @@ If the response is wrapped into an object, then we have to define an interface f
 The `data` property is what we would like to return, so we have to dig for that:
 
 ```js
-import 'rxjs/add/operator/map';
+import "rxjs/add/operator/map";
 
 interface FeathersResponse<T> {
-  total: number,
-  limit: number,
-  skip: number,
-  data: T[]
-};
+  total: number;
+  limit: number;
+  skip: number;
+  data: T[];
+}
 
 @Injectable()
 export class IssueService {
   getIssues(): Promise<Issue[]> {
-    return this.http.get<FeathersResponse<Issue>>(this.issueUrl)
-      .map(response => response.data)
-      .toPromise();
+    return (
+      this.http.get <
+      FeathersResponse <
+      Issue >> this.issueUrl.map((response) => response.data).toPromise()
+    );
   }
 }
 ```

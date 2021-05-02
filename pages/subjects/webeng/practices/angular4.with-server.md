@@ -2,7 +2,7 @@
 
 ## Tasks
 
-1. Try the security features of your REST API with a REST client!
+1. Secure the REST API! Try it with a REST client!
 2. Introduce an auth service with the necessary properties.
 3. Use this information to update the navigation bar.
 4. Protect endpoints with route guards.
@@ -10,13 +10,111 @@
 6. Connect your login logic to the REST API.
 7. Introduce role-based authorization.
 
-## 1. REST API
 
-Use a REST client. The authentication method may be one of the followings:
+## 1. Securing the REST API
 
-- HTTP Basic
-- Token-based authentication (Laravel Sanctum, JWT)
-- Session-based authentication (Laravel Sanctum + Laravel Fortify)
+### Concepts
+
+We will use *Spring Security* for securing our REST API. It provides different types of authentication and authorization, but in this case we will use the so-called HTTP Basic authentication method. This is part of the HTTP standard, all the necessary information is transferred in HTTP headers. In this case we need to send an `Authorization` header with username and password [encoded in base64](http://www.utilities-online.info/base64) in `username:password` format:
+
+```txt
+Authorization: Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0...
+```
+
+Spring Security intercepts the server process and should check two things:
+
+1. The username and password pair is a valid credential. (authentication)
+2. The authenticated user has rights to access the required resource. (authorization)
+
+In a REST API the authentication process should be stateless, so neither sessions, nor cookies are stored during the process. On the other side, on every request the credentials should be validated, which gives pressure on the authentication service (e.g. on the database).
+
+A much better solution would be using Json Web Tokens (JWT). In this case, after the authentication, a token is generated and sent to the client. From here, the client sends this token in every request, and the server needs to check only the validity of the token and its content, which may contain several useful informations, like roles, etc. However, while HTTP Basic is well supported by Spring Security, there is no easy solution to integrate JWT authentication into the security workflow. 
+
+
+### Different security configuration for different endpoints
+
+We put our REST API into the traditional server-side application. `/api/**` endpoints are for the REST API, the others for the normal application. The former needs to use HTTP Basic authentication, the latter uses form login and session based authentication. These need different configuration. Spring Security makes it available to include multiple configurations. E.g. introduce a `MultipleEntryPointsSecurityConfig.java` class in the security package with the following content:
+
+```java
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
+public class MultipleEntryPointsSecurityConfig {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+    }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Configuration
+    @Order(1)
+    public static class RestWebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.antMatcher("/api/**")
+              .authorizeRequests()
+                  .anyRequest().authenticated()
+                  .and()
+              .httpBasic()
+                  .and()
+              .csrf()
+                  .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+
+        }
+    }
+    
+    @Configuration
+    @Order(2)
+    public static class ApplWebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.antMatcher("/**")
+                .authorizeRequests()
+                    .antMatchers("/", "/h2/**", "/register").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .permitAll()
+                    .and()
+                .logout()
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                    .logoutSuccessUrl("/")
+                    .and()
+                .csrf() // important!
+                    .ignoringAntMatchers("/h2/**")
+                    .and()
+                .headers()
+                    .frameOptions().disable(); // important!
+        }
+    }
+}
+```
+
+Just look at the two inner static classes with the `configure` method. The `@Order` annotation defines the order of the execution of those configurations.
+
+### Securing endpoints
+
+We can use the [same concepts for securing a controller method](#!/subjects/webeng/practices/04#securing-endpoints) as in the traditional server-side application. We can use the `@EnableGlobalMethodSecurity` and the `@Secured` annotation for this purpose.
+
+### Getting user information
+
+Getting user information is the same: we can get the authenticated username through a `Principal` object, and from this we can read the user information from the database with the help of the `UserRepository`.
+
+### Login method
+
+Finally we can introduce a `login` method in an `AuthRestController`. If we reach this endpoint we can be sure that we went through the validation process by providing the necessary and rigth user credentials.
+
 
 ## 2. Auth service
 
@@ -41,9 +139,9 @@ Methods:
 We can store the **access token** in the `localStorage` store of the browser.
 
 ```js
-window.localStorage.setItem("token", token);
-window.localStorage.getItem("token");
-window.localStorage.removeItem("token");
+window.localStorage.setItem('token', token);
+window.localStorage.getItem('token');
+window.localStorage.removeItem('token');
 ```
 
 The access token should be sent with HTTP request in the `Authorization` header:
@@ -51,10 +149,10 @@ The access token should be sent with HTTP request in the `Authorization` header:
 ```ts
 export const httpOptions = {
   headers: new HttpHeaders({
-    "Content-Type": "application/json",
-    Authorization: "Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0...",
-    "X-Requested-With": "XMLHttpRequest",
-  }),
+    'Content-Type': 'application/json',
+    'Authorization': 'Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0...',
+    'X-Requested-With': 'XMLHttpRequest',
+  })
 };
 ```
 
@@ -123,39 +221,30 @@ In `routing.module.ts` protect the endpoints with the `canActivate` attribute:
 
 ```html
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div *ngIf="message">{{ message }}</div>
+
+  <div *ngIf="message">
+    {{ message }}
+  </div>
 
   <div class="form-group">
     <label for="username">Username</label>
-    <input
-      type="text"
-      class="form-control"
-      id="username"
-      placeholder="Username"
-      required
-      formControlName="username"
-      [class.is-invalid]="username.invalid && (username.dirty || username.touched)"
-    />
-    <div class="invalid-feedback">Please provide a username!</div>
+    <input type="text" class="form-control" id="username" placeholder="Username" required formControlName="username"
+      [class.is-invalid]="username.invalid && (username.dirty || username.touched)" />
+    <div class="invalid-feedback">
+      Please provide a username!
+    </div>
   </div>
 
   <div class="form-group">
     <label for="password">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      placeholder="Password"
-      required
-      formControlName="password"
-      [class.is-invalid]="password.invalid && (password.dirty || password.touched)"
-    />
-    <div class="invalid-feedback">Please provide a password!</div>
+    <input type="password" class="form-control" id="password" placeholder="Password" required formControlName="password"
+      [class.is-invalid]="password.invalid && (password.dirty || password.touched)" />
+    <div class="invalid-feedback">
+      Please provide a password!
+    </div>
   </div>
 
-  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
-    Submit
-  </button>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
 </form>
 ```
 
@@ -234,6 +323,7 @@ npx ng generate class AuthInterceptor
 ```ts
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
+
   constructor(private authService: AuthService) {}
 
   intercept(
@@ -242,8 +332,8 @@ export class AuthInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
-        Authorization: `Basic ${authService.token}`,
-      },
+        Authorization: `Basic ${authService.token}`
+      }
     });
     return next.handle(request);
   }

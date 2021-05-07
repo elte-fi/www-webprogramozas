@@ -1,6 +1,12 @@
 # Socket.io szerver
 
-A szerver egy publikus verziója elérhető itt: `http://webprogramozas.inf.elte.hu:3031`
+## Elérhetőségek
+
+A szerver egy publikus verziója elérhető itt: [`http://webprogramozas.inf.elte.hu:3031`](http://webprogramozas.inf.elte.hu:3031)
+
+Ha lokálisan szeretnéd a szervert használni, akkor töltsd le [ezt a repot](https://github.com/horvathgyozo/websocket-sync-server), majd `npm install` és `npm start`.
+
+## Általános leírás
 
 Több játékos kapcsolattartására szolgáló függvényeket definiál. A szobakezeléshez és az állapotszinkronizáláshoz adnak eszközöket. Ez utóbbit többféleképpen meg lehet tenni. Alapvetően két üzenet van, és ez is kétféleképpen használható. A `sync-state` üzenet az egész állapottér szinkronizálsára szolgál. A `sync-action` üzenet egy action továbbítására szolgál. Mindkettő meghívható úgy, hogy csak a többi játékos kapja meg a szervertől a továbbított adatot, de úgy is, hogy mindenki (azaz a küldő is) megkapja.
 

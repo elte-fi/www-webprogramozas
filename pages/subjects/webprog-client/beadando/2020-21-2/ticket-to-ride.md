@@ -234,28 +234,40 @@ Egy mellékelt `README.md` fájlban mellékelj pár state JSON-t, amit a Redux-d
 - 1 hét késés (-4 pont)
 - 2 hét késés (-8 pont)
 
-## 3. felvonás (30 pont)
+## 3. felvonás (30 pont + 5 plusz pont)
 
-Eddig nem volt igazán többszemélyes a játék, mert a játékosok láthatták egymás kezében lévő lapokat. Most Websocket kapcsolattal több böngészőt kötünk össze egy szobában, és egymás lapjait nem fogják látni. A fő feladatod az lesz, hogy a játék állapotterét és a megjelenítést ennek megfelelően alakítsd át. A folyamat a következő:
+Eddig nem volt igazán többszemélyes a játék, mert a játékosok láthatták egymás kezében lévő lapokat, ahogy egy böngészőben a játékosok váltották egymást. Most Websocket kapcsolattal több böngészőt kötünk össze egy szobában, és egymás lapjait nem fogják látni. A fő feladatod az lesz, hogy a játék állapotterét és a megjelenítést ennek megfelelően alakítsd át. A folyamat a következő:
 
 - Az összes játékos még a főoldalon van.
-- Az első játékos egy új szobát hoz létre és kapcsolódik. A szoba kódját elküldi pl. emailben vagy chatben a barátainak.
-- A szoba létrehozásával egy közös tábla is elkészül.
-- A többi játékos megkapja a kódot és a főoldalon beírja. Ők is kapcsolódnak, és amikor a kapcsolódott játékosok száma eléri a megadott játékosok számát, akkor mindenki a játékoldalra kerül.
+- Az első játékos egy új szobát hoz létre (megadja, hányan szeretnének játszani) és kapcsolódik. A szoba kódját elküldi pl. emailben vagy chatben a barátainak.
+- A szoba létrehozásával egy közös játéktábla is inicializálásra kerül.
+- A többi játékos megkapja a kódot és a főoldalon beírja. Ők is kapcsolódnak, a várakozó szobába kerülnek. A várakozó szobában tüntessük fel a már kapcsolódott játékosok nevét. Amikor a kapcsolódott játékosok száma eléri a megadott játékosok számát, akkor mindenki a játékoldalra kerül.
 - A játékoldalon megjelenik a játéktábla. Mindenki csak a saját lapjait láthatja. Csak akkor léphetnek, ha rajtuk van a sor.
 - Ha nem az adott játékoson van a sor, akkor is látnia kell, hogy ki az aktuális játékos. Az ő tevékenységéről vagy az előzmények (history) panelen keresztül értesül, vagy animációkkal. Ez azt jelenti, hogy ha nincs rajtunk a sor, akkor is látjuk, hogy mozognak a kártyák. Ha nem is használunk animációkat, azt közösen mindenki látja, ha változtak pl. a felfedett vasútkocsi-kártyák vagy építettek egy útvonalat.
 
 A játék állapotát folyamatosan szinkronban kell tartani a játékosok között. Ezt most úgy érjük el, hogy minden akció esetén szinkronizáljuk az állapotteret a játékosok között. Ezt egyrészt megtehetjük úgy, hogy elküldjük a tábla és a játékosok állapotát a szervernek, amely minden szobára tárolja azt, és a szerver kiküldi minden résztvevőnek, akik befrissítik az alapján a saját állapotukat. De úgy is megtehető, hogy az akciót küldjük el a szervernek, amely minden résztvevőnek továbbküldi, és az akció alapján frissül a játékosok állapottere ugyanolyan módon.
 
-[A Websocket szerver leírása itt található.](http://webprogramozas.inf.elte.hu/#!/subjects/webprog-client/handouts/stratego-ws)
+[A Websocket szerver leírása itt található.](http://webprogramozas.inf.elte.hu/#!/subjects/webprog-client/handouts/websocket-server)
 
 ### Értékelés
 
-<!-- - 1. játékos a főoldalon új játékszobát indít, és bekerül a várakozó szobába (itt jelenik meg a szoba kódja, amit el tud küldeni a játékon kívül a 2. játékosnak). A 2. játékos a főoldalon beírja a kódot, és így csatlakozik egy meglévő szobához. Ekkor az 1. és a 2. játékos is az előkészítő szobába kerül. (8pt)
-- Főoldal: szobához csatlakozásnál ha érvénytelen a kód, akkor nem tud továbblépni. (Érvénytelen kód: nem létező szobaazonosító, vagy olyan szoba, amelyben már két játékos van, vagy lezárt játék van. A kód érvényességét a szerver ellenőrzi.) (3pt)
-- Az előkészítő szobában mindkét játékos csak a saját bábúit láthatja és pakolhatja fel. Ha az egyik játékos készen van és a tovább gombra kattint, akkor várakozó állapotba kerül (vagy itt az előkészítő szobában, vagy a játékoldalon). Ha a másik játékos is végez, akkor mindketten a játékoldalra jutnak. Játékot elkezdeni csak akkor lehet, ha mindketten felpakolták a bábuikat. (8pt)
-- A játékoldalon megjelenik a játéktábla. Mindketten csak a saját bábuikat és az általuk leszedett bábukat láthatják. A másik játékos bábuinak csak a pozícióit látják. Csak akkor csinálhatnak bármit is, ha rajtuk van a sor, azaz ők az aktív játékosok. (8pt)
-- Játék végén egy gombra kattintva visszakerülnek a főoldalra. (3pt) -->
+- 2 játékos esetén
+  - Az 1. játékos a főoldalon megadja a nevét, beállítja a játékosok számát 2-re és új játékszobát indít. Ekkor bekerül a várakozó szobába (itt jelenik meg a szoba kódja, amit el tud küldeni a játékon kívül a 2. játékosnak). (2pt)
+  - A 2. játékos a főoldalon beírja a kódot, és így csatlakozik egy meglévő szobához. Mivel a szoba így megtelt, a folyamat végén mindkét játékos a játékoldalra kerül. (3pt)
+  - A főoldalon a szobához csatlakozásnál ha érvénytelen a kód, akkor nem tud továbblépni. (Érvénytelen kód: nem létező szobaazonosító, vagy olyan szoba, amelyben már megtelt, vagy lezárt játék van. A kód érvényességét a szerver ellenőrzi.) (2pt)
+  - A játékoldalon megjelenik a játéktábla. Mindkét játékos ugyanazokat az adatokat látja (térkép, játékosok, kirakott lapok, stb), kivéve azt, hogy mindegyik játékos a saját kezét látja. (3pt)
+  - Az aktív játékos lépéséről a 2. játékos is értesül (változnak a kirakott lapok, megjelenik egy épített út a térképen, módosul a játékos history) (3pt)
+  - Az aktív játékos lépéséről a 2. játékos animációval értesül (+2pt)
+  - Amíg az 1. játékos aktív, addig a 2. játékos csak "nézegetni" tud, kezében a lapokat, a céljait, de lépni nem tud. (3pt)
+  - Az 1. játékos végeztével a 2. játékos lesz az aktív, és minden igaz rá, ami fentebb az 1. játékosra, csak fordítva. (2pt)
+  - Játék végén egy gombra kattintva visszakerülnek a főoldalra. (2pt)
+- 3-5 játékos esetén
+  - A várakozó szobába kerülnek a játékosok, amíg össze nem gyűlik az elején beállított játékosszám. (2pt)
+  - A várakozó szobában feltüntetésre kerül a kapcsolódott játékosok neve. (+3pt)
+  - A játékoldalon a játéktér állapota szinkronizálva van az összes játékossal. (2pt)
+  - Csak az aktív játékos léphet. (2pt)
+  - A nem aktív játékosok csak "nézelődhetnek" (kéz, célok, stb) (2pt)
+  - Az aktív játékos lépésének befejeztével ciklikusan a következő játékos jön. (2pt)
 
 ## README
 

@@ -268,6 +268,8 @@ A játék állapotát folyamatosan szinkronban kell tartani a játékosok közö
   - Csak az aktív játékos léphet. (2pt)
   - A nem aktív játékosok csak "nézelődhetnek" (kéz, célok, stb) (2pt)
   - Az aktív játékos lépésének befejeztével ciklikusan a következő játékos jön. (2pt)
+- 1 hét késés (-3 pont)
+- 2 hét késés (-6 pont)
 
 ## README
 

@@ -1,4 +1,4 @@
-# Rasztergrafika használata -- Flappy bird
+# Flappy bird
 
 Készíts egy Flappy bird jellegű játékot! Legyen egy madár, aminek a közeledő oszlopokon kell áthaladnia az oszlopok érintése nélkül. A madár lefele zuhan, de gombnyomásra felugrik egy kicsit!
 
@@ -55,12 +55,14 @@ ctx.closePath()
 ctx.stroke()
 ```
 
-**Feladatok**
+## Háttér
 
-1. Fessük a rajzvászon hátterét kékre! (rajzoljunk egy kék téglalapot teljes szélességben (`canvas.width`) és magassá
+Fessük a rajzvászon hátterét kékre! (rajzoljunk egy kék téglalapot teljes szélességben (`canvas.width`) és magassá
 gban (`canvas.height`))
 
-2. Rajzoljuk ki a madarat egy barna téglalapként, függőlegesen középre, balról 50px-re.
+## Madár
+
+Rajzoljuk ki a madarat egy barna téglalapként, függőlegesen középre, balról 50px-re.
 
 Ez utóbbi feladathoz vegyünk fel egy objektumot, amiben a madár adatait tároljuk:
 

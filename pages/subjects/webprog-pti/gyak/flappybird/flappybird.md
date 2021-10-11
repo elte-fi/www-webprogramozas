@@ -278,7 +278,7 @@ function jatekciklus(now = 0) {
 
 ## Képek alkalmazása
 
-**Képek gyűjteménye és betöltése** ([például](assets/compressed/webprog/flappybird/images.zip)):
+**Képek gyűjteménye és betöltése** ([például](assets/images/webprog/flappybird/images.zip)):
 
 ```js
 const kepek = {
